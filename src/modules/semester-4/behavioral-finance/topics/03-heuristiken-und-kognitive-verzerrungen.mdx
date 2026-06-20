@@ -1,0 +1,872 @@
+<section id="wahrnehmung-und-illusionen">
+
+## Wahrnehmung, Täuschungen und selektive Wahrnehmung
+
+<Callout type="merksatz" title="Wahrnehmung ist nicht objektiv">
+Das Gehirn nutzt unbewusste Heuristiken (z. B. die <Exam>„Licht-von-oben"-Heuristik</Exam>), um Eindrücke an erwartete Schemata anzugleichen. Das führt zu systematischen Fehldeutungen — ein und derselbe Fußabdruck wirkt je nach Drehung als Erhebung oder als Vertiefung.
+</Callout>
+
+### 1 · Optische Täuschungen als Beleg
+
+<Columns count={2}>
+  <Card title="Erwartung steuert Wahrnehmung" tone="accent">
+    - Spielkarten-Versuch (Bruner/Postman): farb-/symbolwidrige Karten (z. B. „3" mit Herzen, „5" mit Herzen statt Pik) werden beim flüchtigen Sehen **übersehen**
+    - Auflösung: <Exam>„You see what you expect!"</Exam>
+    - Vorwissen und Schemata füllen Wahrnehmungslücken
+  </Card>
+  <Card title="Müller-Lyer-Täuschung" tone="teal">
+    - zwei **gleich lange** Linien mit gegensätzlichen Endpfeilen
+    - obere: Pfeile nach außen · untere: Pfeile nach innen
+    - werden je nach Endorientierung unterschiedlich lang wahrgenommen
+    - schon die reine **Informationsaufnahme** (Längenschätzung) ist verzerrt
+  </Card>
+</Columns>
+
+<Columns count={3}>
+  <Card title="Hermann-Gitter" tone="purple" compact>
+    - Raster schwarzer Quadrate mit grauen Stegen, weiße Punkte an den Kreuzungen
+    - an nicht fixierten Kreuzungen erscheinen **flackernde dunkle Punkte**, die physikalisch nicht existieren
+    - belegt: begrenzte Informationsverarbeitungskapazität
+  </Card>
+  <Card title="Café-Wall-Illusion" tone="purple" compact>
+    - versetzte schwarz-weiße Blockreihen mit grauen Trennlinien
+    - die exakt **parallelen** Linien wirken durch den Versatz geneigt
+    - auch geometrische Parallelität wird fehlerhaft beurteilt
+  </Card>
+  <Card title="Ebbinghaus-Kontrast" tone="orange" compact>
+    - gleich große Mittelkreise, umgeben von 5 großen bzw. ~10 kleinen Kreisen
+    - der von kleinen Kreisen umgebene wirkt **größer**
+    - Merksatz: bei starkem Kontrast wird eine Information **überhöht** wahrgenommen
+  </Card>
+</Columns>
+
+### 2 · Wahrnehmung als hypothesengeleiteter Prüfprozess
+
+<Diagram
+  title="Dreistufiges Prüfverfahren der Wahrnehmung (mit Rücksprung)"
+  source="Behavioral Finance · Folie 11"
+  chart={`flowchart TD
+  S1["1. Wahrnehmungshypothese<br/>aktivieren"]
+  S2["2. Information ueber den<br/>Gegenstand eingeben"]
+  S3{"3. Hypothese<br/>bestaetigt?"}
+  E[Ende]
+  S1 --> S2 --> S3
+  S3 -- ja --> E
+  S3 -- nein: andere Hypothese --> S1`}
+/>
+
+<Card title="Hypothesenstärke" tone="neutral">
+- je **stärker** die Hypothese, desto eher wird sie in Schritt 1 aktiviert und desto **weniger** Information ist zur Bestätigung nötig
+- die Stärke hängt ab von: (1) Häufigkeit früherer Bestätigungen, (2) Anzahl verfügbarer Alternativhypothesen, (3) Vorliegen von Dissonanzen
+- Folge: vorgefasste Hypothesen werden bevorzugt und mit wenig Evidenz bestätigt
+</Card>
+
+### 3 · Selektive Wahrnehmung
+
+<Columns count={2}>
+  <Card title="Beispiele" tone="accent">
+    - **Beispiel 1:** Nach dem Autokauf liest man in der ADAC-Zeitung vor allem die Anzeigen des gekauften Modells
+    - **Beispiel 2:** Bei einer im Wert gefallenen XY-AG-Aktie liest der Anleger eher den **positiven** als den negativen Bericht
+    - in beiden Fällen: verzerrte, nicht mehr objektive Informationsaufnahme
+  </Card>
+  <Card title="Fehleinschätzung & Confirmation Bias" tone="negative">
+    - **Grundlage:** kognitive Dissonanz
+    - widersprechende Informationen werden ignoriert, nur bestätigende wahrgenommen (<Exam>Confirmation Bias</Exam>)
+    - **Folgen:** höhere Gefahr von Herdenverhalten und Festhalten an Verliereraktien
+  </Card>
+</Columns>
+
+<Callout type="tip" title="Tipp zur Verbesserung der Rationalität">
+- gezielt nach Informationen suchen, die den eigenen Erwartungen und Stimmungslagen **entgegenstehen**
+- merken: Wahrnehmung ist **vereinfachend, selektiv und kontrastabhängig**
+</Callout>
+
+</section>
+
+<section id="heuristik-vs-algorithmus">
+
+## Heuristik vs. Algorithmus und Systematisierung
+
+<CompareCard
+  items={[
+    {
+      tag: 'System 1',
+      title: 'Heuristik',
+      subtitle: 'altgr. heurísko „ich finde" (Wurzel wie Heureka)',
+      accent: 'accent',
+      points: [
+        'Problemlösungsstrategie bei **eingeschränktem Wissen und wenig Zeit**',
+        'Daumen-/Faustregel zur kognitiven **Entlastung** von System 2',
+        'führt zu **schneller** Entscheidung und Verringerung an Alternativen',
+        'aber: **systematisch verzerrt** → Biases',
+      ],
+    },
+    {
+      tag: 'System 2',
+      title: 'Algorithmus',
+      subtitle: 'normativ, meist mathematisch strukturiert',
+      accent: 'teal',
+      points: [
+        'Handlungsanweisung mit **gleichen Ergebnissen in gleichen Situationen**',
+        'reproduzierbar, prüfbar',
+        'normativer Maßstab („richtige" Lösung)',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="info" title="Der Mensch als „kognitiver Geizhals“">
+- Kapazität für komplexe Zusammenhänge sinkt nach kurzer Zeit **rapide**
+- der **begrenzt rationale** Mensch greift bei Problemen ohne festen Algorithmus zu Heuristiken
+- Grundidee nach Kahneman/Tversky (Beck, S. 26): Wahrscheinlichkeiten werden **nicht explizit berechnet**, sondern durch vereinfachende Regeln ersetzt
+</Callout>
+
+### 1 · Wann werden Heuristiken angewendet?
+
+<DataTable
+  caption="Kriterien für die Anwendung von Heuristiken (Folie 19)"
+  columns={[
+    { key: 'kriterium', label: 'Kriterium' },
+    { key: 'bedingung', label: 'Bedingung' },
+  ]}
+  rows={[
+    { kriterium: 'Zeit', bedingung: 'Entscheidungen müssen schnell und kurzfristig getroffen werden' },
+    { kriterium: 'Priorität', bedingung: 'keine langfristigen oder existenziellen Konsequenzen zu erwarten' },
+    { kriterium: 'Information', bedingung: 'unvollständige oder als zu wenig erachtete Informationslage' },
+    { kriterium: 'Erfahrung', bedingung: 'Fehlen von Referenzfällen für komplexe / neuartige Situationen' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Stimmung steuert den Verarbeitungsmodus">
+Positive Stimmung → **heuristisches** (fehleranfälliges) Bewerten · negative Stimmung → **analytisches** Bewerten. Merksatz der Folie: <Exam>Bei positiver Stimmung werden die meisten Fehler gemacht.</Exam>
+</Callout>
+
+### 2 · Systematisierung nach dem Objekt der Fehleinschätzung
+
+<DataTable
+  caption="Heuristiken lassen sich danach unterteilen, was fehlerhaft eingeschätzt wird (Folie 21)"
+  columns={[
+    { key: 'kategorie', label: 'Kategorie (Objekt der Fehleinschätzung)' },
+    { key: 'beispiel', label: 'Beispiel' },
+  ]}
+  rows={[
+    { kategorie: 'Eintrittswahrscheinlichkeiten', beispiel: 'Verfügbarkeitsheuristik' },
+    { kategorie: 'Informationen', beispiel: 'selektive Wahrnehmung' },
+    { kategorie: 'objektive Realitäten (Emotionen)', beispiel: 'Mental Accounting, Herdenverhalten' },
+    { kategorie: 'eigene Fähigkeiten', beispiel: 'Overconfidence' },
+  ]}
+/>
+
+### 3 · Überblick: behandelte Heuristiken und exogene Einflüsse
+
+<Columns count={2}>
+  <Card title="Heuristiken" tone="purple">
+    - Verfügbarkeitsheuristik
+    - Repräsentativitätsheuristik
+    - Verankerungsheuristik (Anker)
+    - Bestätigungsirrtum
+    - Überoptimismus
+    - Affektheuristik
+    - Herdenverhalten
+    - Versuchung · Framing
+  </Card>
+  <Card title="Exogene Einflüsse" tone="teal">
+    - Rückschaufehler
+    - Endowment-Effekt
+    - Status-Quo-Bias
+    - Halo-Effekt
+    - WYSIATI
+    - Priming-Effekt
+    - Mentale Kontenführung
+    - Relativer Vergleich
+  </Card>
+</Columns>
+
+#### Cognitive Bias Codex — vier Grundprobleme
+
+<Columns count={2}>
+  <Card title="What Should We Remember?" tone="neutral" compact>
+    - was bleibt im Gedächtnis, was wird verworfen
+  </Card>
+  <Card title="Too Much Information" tone="neutral" compact>
+    - Filtern bei Informationsüberlast
+  </Card>
+  <Card title="Need To Act Fast" tone="neutral" compact>
+    - Entscheidungen unter Zeitdruck
+  </Card>
+  <Card title="Not Enough Meaning" tone="neutral" compact>
+    - Lückenfüllen bei unklarem Sinn
+  </Card>
+</Columns>
+
+<Callout type="info" title="Sehr große Zahl an Verzerrungen">
+Der Cognitive Bias Codex (Wikipedia) ordnet die sehr große Zahl kognitiver Verzerrungen diesen vier Grundproblemen der Informationsverarbeitung zu.
+</Callout>
+
+</section>
+
+<section id="verfuegbarkeitsheuristik">
+
+## Verfügbarkeitsheuristik (Availability Bias)
+
+<DefinitionBox term="Verfügbarkeitsheuristik" source="Behavioral Finance · Folie 24">
+Beurteilung auf Basis der **Zugänglichkeit** relevanter Erinnerungen: Szenarien, die auf leicht abrufbaren Erinnerungen basieren, werden als **wahrscheinlicher** erachtet. Die (manchmal falsche) Umkehrung lautet: „Woran man sich leicht erinnert, kommt häufig vor."
+</DefinitionBox>
+
+### 1 · Folgen für die Investitionsauswahl & Priming
+
+<Columns count={2}>
+  <Card title="Verzerrte Anlageentscheidungen" tone="accent">
+    Investitionen auf Basis von …
+    - leicht rückholbaren Informationen (z. B. Werbung)
+    - kategorischen Eigenschaften (z. B. Region → Home Bias)
+    - eingeschränkten Erfahrungen (z. B. Fokus auf Tech-Aktien)
+    - persönlichen Ansichten (z. B. Value vs. Growth)
+  </Card>
+  <Card title="Priming-Effekt" tone="purple">
+    - Einflüsse durch bereits bekannte Informationen
+    - unterschwellige Aktivierung von Assoziationen aufgrund vergangener Erfahrungen
+    - Beispiel: „Woran denken Sie bei **Jaguar**?" → Raubkatze oder Sportwagen
+  </Card>
+</Columns>
+
+### 2 · Determinanten und Fehleinschätzungen
+
+<Columns count={2}>
+  <Card title="Determinanten der Verfügbarkeit" tone="teal">
+    - öffentliche Sichtbarkeit (z. B. Promi-Berichterstattung)
+    - Kontext der Informationen
+    - Zeithorizont (je weiter zurück, desto weniger präsent)
+    - persönliche Erfahrungen
+    - dramatische Ereignisse
+    - subjektive Abrufanstrengung
+  </Card>
+  <Card title="Fehleinschätzungen auf Grund von" tone="negative">
+    - Verfügbarkeit ist **nicht** gleich Häufigkeit
+    - **Verfügbarkeitskaskaden:** Medien und öffentliche Wahrnehmung befeuern sich gegenseitig
+    - Art der Suche nach einer Antwort (Wörter mit „g" am Anfang vs. an dritter Stelle)
+    - Vorstellbarkeit / persönliche Erfahrung individuell
+    - illusorische Korrelation (z. B. Pechsträhnen)
+  </Card>
+</Columns>
+
+<Callout type="info" title="Hinweis zur Originalschreibweise">
+Die Folie 26 schreibt „Determinaten" statt „Determinanten" — die fehlerhafte Schreibweise stammt aus dem Skript und wird hier nicht als Fachbegriff übernommen.
+</Callout>
+
+### 3 · Empirie: Risikowahrnehmung in den USA
+
+<DataTable
+  caption="Wahrgenommenes vs. tatsächliches Risiko (vgl. Kahneman 2012, S. 173 ff.)"
+  columns={[
+    { key: 'vergleich', label: 'Vergleich' },
+    { key: 'wahrnehmung', label: 'Wahrnehmung der Probanden' },
+    { key: 'realitaet', label: 'Tatsächliches Verhältnis' },
+  ]}
+  rows={[
+    { vergleich: 'Schlaganfall vs. Unfall', wahrnehmung: 'Unfalltod wahrscheinlicher', realitaet: 'Schlaganfälle fast doppelt so viele Tote' },
+    { vergleich: 'Tornado vs. Asthma', wahrnehmung: 'Tornado gefährlicher', realitaet: 'Asthma fordert 20× mehr Opfer' },
+    { vergleich: 'Blitzschlag vs. Lebensmittel', wahrnehmung: 'Blitzschlag weniger wahrscheinlich', realitaet: 'Blitzschlag 52× häufiger' },
+    { vergleich: 'Krankheit vs. Unfall', wahrnehmung: 'gleich wahrscheinlich beurteilt', realitaet: 'Krankheiten ca. 18× mehr Tote' },
+    { vergleich: 'Unfall vs. Diabetes', wahrnehmung: 'Unfälle 300× mehr Tote vermutet', realitaet: 'Verhältnis eigentlich nur 1 : 4' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Kernaussage der Empirie">
+Mediengetriebene, **dramatische** Risiken werden systematisch über-, häufige **stille** Risiken (Krankheiten) systematisch unterschätzt — ein direkter Beleg für die Verfügbarkeitsheuristik.
+</Callout>
+
+</section>
+
+<section id="repraesentativitaetsheuristik">
+
+## Repräsentativitätsheuristik und Bayes
+
+<DefinitionBox term="Repräsentativitätsheuristik" source="Behavioral Finance · Folie 29 · Beck (2014), S. 29 ff.">
+„Repräsentative" Ereignisse werden **überbewertet** bzw. es wird zu schnell auf **schematische** Denkmuster zurückgegriffen. Menschen halten etwas für wahrscheinlich, wenn es in ein Schema passt (Beispiel: „September ist ein Crash-Monat").
+</DefinitionBox>
+
+### 1 · Die sieben Folgen
+
+<Columns count={2}>
+  <Card title="Folgen 1–4" tone="accent">
+    1. **Conjunction Bias** (Verknüpfungstäuschung)
+    2. Vernachlässigung der **A-priori-Wahrscheinlichkeit**
+    3. falsches Verständnis von **Abweichungen** vom Durchschnitt
+    4. falsche **Prognosesicherheit**
+  </Card>
+  <Card title="Folgen 5–7" tone="purple">
+    5. Vernachlässigung des **Stichprobenumfangs**
+    6. falsche **Vorstellung vom Zufall**
+    7. **Gesetz der kleinen Zahlen**
+  </Card>
+</Columns>
+
+### 2 · Conjunction Bias und Base-rate-Fallacy
+
+<Columns count={2}>
+  <Card title="Linda-Experiment (Conjunction Bias)" tone="negative" exam>
+    - Linda: 31, intelligent, Philosophiestudium, Anti-Kernkraft-Demos
+    - Was ist wahrscheinlicher? **(1)** Linda ist Bankangestellte · **(2)** Bankangestellte UND in feministischer Bewegung aktiv
+    - Pointe: die **Konjunktion (2)** kann nie wahrscheinlicher sein als das Einzelmerkmal (1) — Verstoß gegen die Wahrscheinlichkeitslogik
+  </Card>
+  <Card title="Jack-Beispiel (Base rate fallacy)" tone="negative" exam>
+    - Jack stammt aus einer Gruppe von **70 Juristen / 30 Ingenieuren**
+    - konservativ, mathematische Denksportaufgaben → „Welchen Beruf hat Jack?"
+    - die **Basisrate** (70 % Juristen) wird zugunsten des Stereotyps **ignoriert**
+  </Card>
+</Columns>
+
+<Columns count={2}>
+  <Card title="Abweichungen & Prognosesicherheit" tone="teal">
+    - Regression zur Mitte wird fälschlich kausal gedeutet (Piloten: Lob → schlechter, Tadel → besser)
+    - redundante Informationen erhöhen die **Prognosezuversicht**, nicht die Treffsicherheit
+  </Card>
+  <Card title="Gesetz der kleinen Zahlen" tone="orange">
+    - kleine Stichproben gelten fälschlich als repräsentativ
+    - **größere** Stichprobe = repräsentativer (Gesetz der großen Zahl)
+    - Nierenkrebs-Beispiel: dünn besiedelte Landkreise zeigen **höchste UND niedrigste** Raten (reines Stichprobengrößen-Artefakt)
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Falsche Vorstellung vom Zufall">
+- Menschen lesen aus **zufälligen** Datenreihen Muster heraus
+- reine **Korrelation** wird als **Kausalität** gedeutet, sofern sie ins Schema passt
+- Beispiele: Butterproduktionsindex Bangladesch ≈ S&P 500 · Störche → höhere Geburtenraten
+</Callout>
+
+### 3 · Bayes-Theorem als normative Referenz
+
+<Formula
+  display
+  title="Satz von Bayes (Folie 35)"
+  expr="P(A\mid B) = \frac{P(B\mid A)\cdot P(A)}{P(B)}"
+  legend={[
+    { sym: 'P(A\\mid B)', desc: 'bedingte Wahrscheinlichkeit von A, gegeben B' },
+    { sym: 'P(B\\mid A)', desc: 'bedingte Wahrscheinlichkeit von B, gegeben A' },
+    { sym: 'P(A)', desc: 'A-priori-Wahrscheinlichkeit von A' },
+    { sym: 'P(B)', desc: 'A-priori-Wahrscheinlichkeit von B' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Verdrehen von Zusammenhängen: p(A|B) ≠ p(B|A)">
+- durch schematisches Denken werden p(A|B) und p(B|A) fälschlich **gleichgesetzt**
+- Beispiel (Dawes 1988): ein Arzt amputierte 90 Frauen einer Hochrisikogruppe vorsorglich, weil **93 %** der Brustkrebsfälle aus dieser Gruppe stammten
+- der Trugschluss: 93 % ist p(Hochrisikogruppe | Brustkrebs), **nicht** das Erkrankungsrisiko der Gruppe
+</Callout>
+
+<Formula
+  display
+  title="Bayes-Rechnung Brustkrebs-Beispiel (Folie 36)"
+  expr="p(Bk\mid Hr) = \frac{p(Bk)\cdot p(Hr\mid Bk)}{p(Hr)} = \frac{0{,}075 \cdot 0{,}93}{0{,}57} = 12{,}2\,\%"
+  legend={[
+    { sym: 'p(Hr\\mid Bk)=0{,}93', desc: 'Anteil Hochrisikogruppe unter Brustkrebsfällen' },
+    { sym: 'p(Bk)=0{,}075', desc: 'Wahrscheinlichkeit, Brustkrebs zu bekommen' },
+    { sym: 'p(Hr)=0{,}57', desc: 'Wahrscheinlichkeit, zur Hochrisikogruppe zu gehören' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Ergebnis">
+Das tatsächliche Brustkrebsrisiko innerhalb der Hochrisikogruppe beträgt korrekt nur <Exam>12,2 %</Exam> statt der intuitiv unterstellten 93 %.
+</Callout>
+
+<Callout type="info" title="Verdrehen von Zusammenhängen — weitere Beispiele (Folie 37)">
+Statistiken werden ohne Bezug zur Grundgesamtheit kausal fehlgedeutet:
+- „Über die Hälfte aller Unfälle in 30 km Umkreis vom Wohnort" → zuhause vorsichtiger fahren?
+- „80 % der Unfälle durch nicht alkoholisierte Fahrer" → lieber vorher trinken?
+- jede Tatsachenaussage führt zu einem **absurden Handlungsschluss**
+</Callout>
+
+### 4 · Kritik an der Repräsentativitätsheuristik (Folie 39)
+
+<Columns count={2}>
+  <Card title="Methodische Einwände" tone="neutral">
+    - **Missverständnis:** Probanden deuten die Frage anders (feministische vs. nicht-feministische Bankangestellte) — der Effekt zeigt sich aber auch in anderen Versuchsaufbauten
+    - **Häufigkeiten statt Wahrscheinlichkeiten:** fragt man „Wie viele von 100 …?", reduziert sich der Conjunction Bias
+    - **Anreize und Beratung** (finanziell, Dritte) reduzieren das Linda-Problem
+    - **Darstellung** beeinflusst die Wahrnehmung der Basisraten
+  </Card>
+  <Card title="Beliebigkeit & Empirie" tone="warning">
+    - **Beliebigkeit:** mit der Heuristik lässt sich alles erklären — Spielirrtum („nach viel Rot muss Schwarz kommen") vs. „Hot Hand" (nach Treffer folgt Treffer)
+    - **Shefrin (2007):** Privatinvestoren erwarten nach gutem Aktienjahr **steigende** Kurse, Profis eher **fallende**
+  </Card>
+</Columns>
+
+</section>
+
+<section id="bias-und-overconfidence">
+
+## Bestätigungsirrtum, Overconfidence, Affekt, Herde
+
+### 1 · Bestätigungsirrtum (Confirmation Bias)
+
+<DefinitionBox term="Confirmation Bias" source="Behavioral Finance · Folie 40">
+Menschen suchen und interpretieren Fakten im Sinne **bereits vorgefasster Meinungen**; hat man eine Meinung gefasst, rückt deren Verteidigung in den Mittelpunkt. Der Bias kann sowohl bei der **Suche** als auch bei der **Interpretation** von Informationen auftreten.
+</DefinitionBox>
+
+<Columns count={3}>
+  <Card title="Gründe (Auswahl)" tone="accent" compact>
+    - **Positive Test:** nur unterstützende Argumente werden gesucht
+    - **My-side-Bias:** eigene Argumente stärker gewichtet/erinnert
+    - **Belief Perseverance:** Festhalten an widerlegter Theorie
+  </Card>
+  <Card title="Weitere Gründe" tone="purple" compact>
+    - **Pseudodiagnostizität:** Deutung im Sinne der vermuteten Hypothese
+    - **Primacy Effect:** frühes Urteil (vs. Recency)
+    - **illusorische Korrelation**
+  </Card>
+  <Card title="Strategien dagegen" tone="positive" compact>
+    - Alternativen explizit und konkret durchdenken
+    - vertraute Themenbereiche
+    - elementare Regeln der Logik und Statistik
+  </Card>
+</Columns>
+
+<Callout type="info" title="Erklärungsansätze (Folie 42)">
+- **Menschen wollen glauben:** Dinge, von denen man sich wünscht, sie seien wahr, glaubt man leichter (z. B. Anlagebetrug, Schneeballsysteme)
+- dahinter: Wunsch nach einem **widerspruchsfreien Weltbild**
+- offen: nehmen Menschen widersprüchliche Informationen nicht auf, weil sie es nicht *können* oder nicht *wollen*?
+</Callout>
+
+### 2 · Überoptimismus (Overconfidence)
+
+<DefinitionBox term="Overconfidence" source="Behavioral Finance · Folie 43">
+Phänomen, dass Menschen sich selbst und ihre Fähigkeiten **eigennützig und egozentrisch** beurteilen. Folge: falsche Einschätzung von Wahrscheinlichkeiten.
+</DefinitionBox>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Variante 1',
+      title: 'Self-serving-Bias',
+      accent: 'accent',
+      points: ['Erfolge = eigene Fähigkeiten', 'Misserfolge = Zufall'],
+    },
+    {
+      tag: 'Variante 2',
+      title: 'Kontrollillusion',
+      accent: 'purple',
+      points: ['überhöhte Wahrscheinlichkeit für persönliche Erfolge', 'Zahlungsbereitschaft für **selbst gezogene** Lose'],
+    },
+    {
+      tag: 'Variante 3',
+      title: 'Selbstüberschätzung',
+      accent: 'teal',
+      points: ['überoptimistisch für das eigene Leben', '(Autounfälle, Lungenkrebs, Scheidung …)'],
+    },
+  ]}
+/>
+
+<KpiGrid
+  items={[
+    { value: '93 %', label: 'der US-Autofahrer halten sich für besser als der Durchschnitt (Svenson 1981)', accent: 'negative' },
+    { value: '68 %', label: 'der Analysten halten sich für besser als der Durchschnitt', accent: 'negative' },
+    { value: 'bis 4×', label: 'höhere Zahlungsbereitschaft für selbst gewählte Lotteriezahlen', accent: 'warning' },
+  ]}
+/>
+
+<Callout type="info" title="Hard-is-easy-Effekt & Konsequenzen">
+- mit steigender **Aufgabenschwierigkeit** steigt der Überoptimismus
+- bei leichten Aufgaben sogar **Unter**optimismus (Lichtenstein/Fischoff 1977)
+- Konsequenzen: höhere Risikobereitschaft, **exzessiver Handel**, Unterdiversifikation
+</Callout>
+
+<Columns count={2}>
+  <Card title="Determinanten von Überoptimismus" tone="neutral">
+    - **Informationsmenge:** mehr Infos → mehr Zuversicht, auch wenn unbrauchbar
+    - **Expertise:** sinkt mit Expertise, aber **Börsenhändler** neigen stärker dazu als Laien
+    - **finanzielle Anreize** reduzieren ihn leicht
+    - **Aufgabenschwierigkeit** (Hard-is-easy-Effekt)
+    - **Geschlecht** (bei männerbezogenen Themen)
+    - **Euphorie/Erfolg**, **Alkohol/Kokain**, **Alter** (nimmt tendenziell ab)
+  </Card>
+  <Card title="Kontrollmotiv (Folie 38)" tone="warning">
+    - der **Glaube**, eine Kausalbeziehung zu erkennen, erhöht das subjektive Kontrollgefühl
+    - überschätzte Kausalität speist sich aus Repräsentativität (Fortschreibung) und mangelnder Verfügbarkeit (Ausblenden von Zufallsfaktoren)
+  </Card>
+</Columns>
+
+### 3 · Overconfidence führt zu exzessivem Handel
+
+<Callout type="examfocus" title="Difference in Opinion">
+- Investoren gewichten ihre Informationen **höher als der Markt** und bewerten eine Aktie „anders"
+- diese <Exam>„Difference in Opinion"</Exam> führt zu **Handel**
+- empirisch handeln (alleinstehende) Männer wegen stärkerer Overconfidence **häufiger** als Frauen
+</Callout>
+
+<Columns count={2}>
+  <Card title="Jährlicher Depotumsatz nach Gruppe" tone="neutral">
+    Quelle: Barber/Odean, JoF 2000
+    - alleinstehende Männer: **85 %**
+    - verheiratete Männer: **73 %**
+    - verheiratete Frauen: **53 %**
+    - alleinstehende Frauen: **51 %**
+  </Card>
+  <Card title="Lesehilfe zum Diagramm" tone="warning">
+    - Anleger nach **Portfolioumsatz** in Quintile (Q1 = niedrigster Umsatz) eingeteilt
+    - Discount-Broker-Datensatz 1991–1997, Rendite nach Kosten
+    - die umsatzärmste Gruppe schlägt den S&P 500 leicht (nicht signifikant)
+    - Werte „ca.", **visuell** aus dem Folien-Diagramm abgelesen
+  </Card>
+</Columns>
+
+<DataChart
+  type="bar"
+  title="Jahresrendite nach Portfolioumsatz-Quintil (Werte visuell abgelesen)"
+  source="Behavioral Finance · Folie 49 · Barber/Odean 2000; aus Berk/DeMarzo 2011, S. 466"
+  xLabel="Quintil (Q1 = niedrigster Umsatz)"
+  yLabel="Jahresrendite in %"
+  xKey="quintil"
+  yDomain={[0, 20]}
+  data={[
+    { quintil: 'Q1', rendite: 18.5 },
+    { quintil: 'Q2', rendite: 17.8 },
+    { quintil: 'Q3', rendite: 17.0 },
+    { quintil: 'Q4', rendite: 15.3 },
+  ]}
+  series={[{ key: 'rendite', name: 'Ø Jahresrendite (nach Kosten)' }]}
+/>
+
+<Callout type="merksatz" title="Häufiger Handel schadet der Rendite">
+Höhere Handelsaktivität (steigender Portfolioumsatz von Q1 nach Q4) geht im Querschnitt mit **niedrigerer Nettorendite** einher.
+</Callout>
+
+### 4 · Affektheuristik, Herdenverhalten, Versuchung
+
+<Columns count={3}>
+  <Card title="Affektheuristik" tone="accent" compact>
+    - Gefühle ersetzen die rationale Analyse
+    - „Was **fühle** ich?" statt „Was **denke** ich?"
+    - Basisaffekte: Freude, Überraschung, Trauer, Wut, Ekel, Angst
+  </Card>
+  <Card title="Herdenverhalten" tone="purple" compact>
+    - „Tun, was andere tun" (Mode, Café, Sekte …)
+    - positiv: Lernen · negativ: „ansteckende" Verhaltensweisen (Fettleibigkeit, Rauchen)
+    - Basis späterer **Spekulationsblasen**
+  </Card>
+  <Card title="Versuchung" tone="teal" compact>
+    - fehlende **Selbstkontrolle** (Essen, Rauchen, Handy)
+    - in „kaltem" Zustand wird die Stärke heißer Zustände unterschätzt (Loewenstein 1996)
+    - Gegenmittel: Odysseus-Prinzip (System 2), öffentliche Wetten/Commitment
+  </Card>
+</Columns>
+
+</section>
+
+<section id="framing-und-weitere-verzerrungen">
+
+## Framing, Rückschau-, Endowment- und weitere Effekte
+
+<DefinitionBox term="Framing (Darstellungseffekt)" source="Behavioral Finance · Folie 53">
+Die **Formulierung** eines Problems kann die Wahl des Entscheiders beeinflussen — auch bei rechnerisch identischen Alternativen (z. B. „90 % fettfrei" vs. „mit 10 % Fett").
+</DefinitionBox>
+
+### 1 · Asian-Disease-Problem (2×2-Matrix)
+
+<DataTable
+  caption="Asian-Disease-Problem — sichere vs. riskante Alternative je Frame (Folie 53)"
+  columns={[
+    { key: 'frame', label: 'Frame' },
+    { key: 'a', label: 'Alternative A/C (sicher)' },
+    { key: 'b', label: 'Alternative B/D (riskant)' },
+    { key: 'wahl', label: 'Mehrheitswahl' },
+  ]}
+  rows={[
+    { frame: 'Gewinn (Rettung)', a: 'Therapie A: 200 sicher gerettet', b: 'Therapie B: 33,3 % → 600 gerettet, 66,7 % → niemand', wahl: 'A (risikoavers)' },
+    { frame: 'Verlust (Sterben)', a: 'Therapie C: 400 sterben sicher', b: 'Therapie D: 33,3 % → niemand stirbt, 66,7 % → 600 sterben', wahl: 'D (risikofreudig)' },
+  ]}
+  highlight={(row) => row.frame.startsWith('Verlust')}
+/>
+
+<Callout type="examfocus" title="Kernaussage des Framing-Effekts">
+Bei **identischem Erwartungswert** (A/C und B/D sind rechnerisch gleich) entscheiden Menschen im Gewinn-Frame **risikoavers** (sichere Rettung A) und im Verlust-Frame **risikofreudig** (Vermeidung sicherer Verluste, D).
+</Callout>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Nudging',
+      title: 'Zum Wohle des Entscheiders',
+      accent: 'positive',
+      points: [
+        'Frames helfen dem Entscheider',
+        'Beispiele: Ernährung, Gesundheit, Altersvorsorge',
+        'Verantwortung bei fürsorgender Person/Institution (Staat, Lehrer)',
+      ],
+    },
+    {
+      tag: 'Manipulation',
+      title: 'Zum Wohle des Manipulierers',
+      accent: 'negative',
+      points: [
+        'Frames übervorteilen den Gegenüber',
+        'Beispiele: Rabatte, Kontrasteffekt in Werbung',
+        'Ziel des Kunden: Frames entlarven, relevante Infos isolieren, rational entscheiden',
+      ],
+    },
+  ]}
+/>
+
+### 2 · Rückschaufehler (Hindsight Bias)
+
+<DefinitionBox term="Hindsight Bias" source="Behavioral Finance · Folie 55–56">
+Das Wissen um den **Ausgang** eines Ereignisses verändert das Urteil rückblickend: Man meint, das Ereignis als wahrscheinlicher eingeschätzt zu haben, als man es tatsächlich tat („I knew it all along"). Varianten: Gedächtnisdesign, hypothetisches Design, Outcome Effect.
+</DefinitionBox>
+
+<DataChart
+  type="bar"
+  title="Hindsight Bias: Schätzung, Lösung, erinnerte Schätzung (Werte visuell abgelesen)"
+  source="Behavioral Finance · Folie 56"
+  xLabel=""
+  yLabel="Wert"
+  xKey="kategorie"
+  yDomain={[0, 60]}
+  data={[
+    { kategorie: 'Schätzung', basis: 30, rueckschau: 0 },
+    { kategorie: 'Lösung', basis: 50, rueckschau: 0 },
+    { kategorie: 'Erinnerte Schätzung', basis: 30, rueckschau: 10 },
+  ]}
+  series={[
+    { key: 'basis', name: 'ursprünglich / Lösung' },
+    { key: 'rueckschau', name: 'Rückschaufehler-Aufschlag' },
+  ]}
+/>
+
+<Callout type="info" title="Lesart des Diagramms">
+- **erinnerte** Schätzung (40) liegt höher als die tatsächlich abgegebene Schätzung (30)
+- damit näher an der bekannten Lösung (50)
+- die Differenz (rotes Segment, ~10) ist der **Rückschaufehler**
+- Balkenhöhen 30/50/30+10 wurden **visuell** abgelesen
+</Callout>
+
+### 3 · Endowment, Status-Quo, Halo, WYSIATI, Priming
+
+<Columns count={2}>
+  <Card title="Endowment-Effekt (Besitztumseffekt)" tone="accent">
+    - bloßer **Besitz** erhöht die subjektive Wertschätzung
+    - Basketball-Experiment (Ariely): Verkaufspreis **USD 2.400** vs. Zahlungsbereitschaft **USD 170**
+    - Tauschexperiment Krug/Schokoriegel: **90 %** behalten das zuerst erhaltene Gut
+    - Erklärung: Verlustaversion der Prospect Theory
+  </Card>
+  <Card title="Status-Quo-Bias" tone="purple">
+    - Präferenz für den **gegenwärtigen Zustand**
+    - Folgen: Amtsbonus, Reformwiderstand, höhere Zahlungsbereitschaft Bestandskunden, Festhalten an erfolglosen Geschäftsmodellen
+    - Erklärung: Folge des Besitztumseffekts; effiziente Heuristik
+  </Card>
+</Columns>
+
+<Columns count={3}>
+  <Card title="Halo-Effekt" tone="teal" compact>
+    - eine herausragende Eigenschaft strahlt auf das **Gesamturteil** ab
+    - „Nur was man gerade weiß, zählt" (erster Eindruck)
+    - System 1 empfindlich für Qualität/Quantität der Eindrücke
+  </Card>
+  <Card title="WYSIATI" tone="orange" compact>
+    - „**What you see is all there is**"
+    - System 1 baut aus wenigen Infos eine kohärente Geschichte
+    - Kahneman (S. 115): wenig Wissen erleichtert kognitive Leichtigkeit
+  </Card>
+  <Card title="Priming-Effekt" tone="neutral" compact>
+    - vorheriger Reiz aktiviert unbewusst Assoziationen
+    - „so_p" → soup/soap je nach Kontext
+    - Farbfragen-Falle: 3× „Weiß" → „Was trinkt die Kuh?" → reflexhaft „Milch"
+  </Card>
+</Columns>
+
+<Diagram
+  title="Priming-Kausalkette — Florida-Experiment (Bargh/Chen/Burrows 1996)"
+  source="Behavioral Finance · Folie 64"
+  height={150}
+  chart={`flowchart LR
+  W[Menge der Woerter<br/>z. B. Florida, grau, Falte] -- primt --> G[Gedanken]
+  G -- primt --> V[Verhalten<br/>langsameres Gehen]`}
+/>
+
+<Callout type="info" title="Watching-Eyes-Experiment (Bateson/Nettle/Roberts 2006)">
+- Büroküche-Vertrauenskasse: wochenweise Fotos von **Augen** bzw. **Blumen** über der Preisliste
+- in „Augenwochen" zahlten Mitarbeitende pro Liter Milch **mehr** als in „Blumenwochen"
+- das geprimte Gefühl, **beobachtet** zu werden, erhöht kooperatives Verhalten
+- (exakte Beträge der Folie nicht sicher ablesbar)
+</Callout>
+
+</section>
+
+<section id="mental-accounting-und-anker">
+
+## Mentale Konten, Verankerung und Decoy-Effekt
+
+<DefinitionBox term="Mental Accounting (Thaler 1999)" source="Behavioral Finance · Folie 68–69">
+Statt alle relevanten Tatbestände einzubeziehen, ordnen Menschen die Konsequenzen verschiedenen **mentalen Konten** zu (z. B. nach Verwendungszweck oder Anlagedauer).
+</DefinitionBox>
+
+### 1 · Kinobeispiel und Diversifikation
+
+<DataTable
+  caption="Kinobeispiel — derselbe Geldverlust, unterschiedliches Verhalten (Folie 68–69)"
+  columns={[
+    { key: 'situation', label: 'Situation' },
+    { key: 'verlust', label: 'Verlust an der Kasse' },
+    { key: 'ergebnis', label: 'Ergebnis' },
+  ]}
+  rows={[
+    { situation: 'Situation 1', verlust: '10-€-Karte (vorab gekauft) verloren', ergebnis: '54 % kaufen keine neue Karte' },
+    { situation: 'Situation 2', verlust: '10-€-Schein verloren (Karte noch zu kaufen)', ergebnis: '12 % kaufen keine neue Karte' },
+  ]}
+  highlight={(row) => row.situation === 'Situation 1'}
+/>
+
+<Callout type="examfocus" title="Mentale Kontenzuordnung steuert das Verhalten">
+Obwohl in beiden Fällen ökonomisch 10 € verloren sind, verzichten bei der verlorenen Karte (Konto „Kino") <Exam>54 %</Exam> auf den Neukauf, bei verlorenem Bargeld (Konto „Bargeld") nur **12 %**.
+</Callout>
+
+<DataTable
+  caption="Wetter-Diversifikationsmatrix — getrennte mentale Konten verdecken den Diversifikationseffekt (Folie 70)"
+  columns={[
+    { key: 'unternehmen', label: 'Investment' },
+    { key: 'gut', label: 'gutes Wetter', align: 'center' },
+    { key: 'schlecht', label: 'schlechtes Wetter', align: 'center' },
+  ]}
+  rows={[
+    { unternehmen: 'A (Badehosen)', gut: '++', schlecht: '−' },
+    { unternehmen: 'B (Regenbekleidung)', gut: '−', schlecht: '++' },
+    { unternehmen: 'Summe', gut: '+', schlecht: '+' },
+  ]}
+  highlight={(row) => row.unternehmen === 'Summe'}
+/>
+
+<Columns count={2}>
+  <Card title="Folgen & Erklärungsansätze" tone="warning">
+    - **Sunk-cost-Effekt:** zusätzliche Kosten, um eine „verbuchte" Ausgabe nicht verloren zu geben
+    - Zerstörung der Ausgabendisziplin
+    - nützlich als Übersichts-Heuristik
+    - Prospect Theory: Verluste höher gewichtet → Sunk-cost-Effekt
+  </Card>
+  <Card title="Diversifikation übersehen" tone="accent">
+    - zwei gegenläufige Investments ergeben in **jedem** Wetterszenario eine positive Summe (+/+)
+    - wer beide getrennt auf mentalen Konten betrachtet, übersieht diesen **Diversifikationseffekt**
+    - „Risikodiversifikationseffekte in Portfolien werden häufig nicht genügend beachtet"
+  </Card>
+</Columns>
+
+### 2 · Verankerungseffekt (Anchoring)
+
+<DefinitionBox term="Verankerungseffekt" source="Behavioral Finance · Folie 73">
+Bei der Schätzung unbekannter Größen orientieren sich Menschen an einem zuvor genannten **Ausgangswert** (Anker) — selbst wenn dieser **nichts** mit der Schätzung zu tun hat. „Der erste Anker verzerrt die nachfolgenden Schätzungen."
+</DefinitionBox>
+
+<DataTable
+  caption="Hausbewertung — höherer Anker erzeugt höhere Schätzung (Folie 74, Marktwert $74.900)"
+  columns={[
+    { key: 'rolle', label: 'Schätzer' },
+    { key: 'niedrig', label: 'Anker $65.900', align: 'right' },
+    { key: 'hoch', label: 'Anker $83.900', align: 'right' },
+  ]}
+  rows={[
+    { rolle: 'Studenten', niedrig: '$63.571', hoch: '$71.196' },
+    { rolle: 'Makler (Experten)', niedrig: '$67.811', hoch: '$75.190' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Auch Experten unterliegen dem Anker">
+- Laien **und Makler** verschieben ihre Schätzungen in Richtung des zufällig gesetzten Ankers
+- UN-Anteil afrikanischer Staaten — Gruppe A (Anker 10 %) schätzt **25 %**, Gruppe B (Anker 60 %) schätzt **45 %**
+</Callout>
+
+<Formula
+  display
+  title="Ankerungsindex — Messung des Verankerungseffekts (Folie 76, Mammutbaum-Beispiel)"
+  expr="\text{Ankerungsindex} = \frac{\text{Differenz Schätzung}}{\text{Differenz Anker}} = \frac{257-86}{366-55} = \frac{171}{311} = 55\,\%"
+/>
+
+<Callout type="info" title="Interpretation des Ankerungsindex">
+- **100 %** = Menschen wählen sklavisch den Anker
+- **0 %** = der Anker spielt keine Rolle
+- im Beispiel folgten die Schätzungen dem Anker zu gut der Hälfte (<Exam>55 %</Exam>)
+</Callout>
+
+### 3 · Sozialversicherungsnummer-Experiment
+
+<Callout type="examfocus" title="Coherent Arbitrariness (Ariely et al. 2003)">
+- 55 MBA-Studenten (MIT Sloan), sechs Produkte
+- Schritt 1: würden sie einen Betrag in Höhe der **letzten zwei Ziffern ihrer Sozialversicherungsnummer** zahlen?
+- Schritt 2: maximale Zahlungsbereitschaft angeben
+- die Nummer ist ein völlig <Exam>sachfremder Anker</Exam>
+</Callout>
+
+<DataTable
+  caption="Ø Zahlungsbereitschaft (USD) nach Quintil der Sozialversicherungsnummer — Ariely et al. (2003), S. 76"
+  columns={[
+    { key: 'q', label: 'Quintil SS#' },
+    { key: 'trackball', label: 'Trackball', align: 'right' },
+    { key: 'keyboard', label: 'Keyboard', align: 'right' },
+    { key: 'avgwine', label: 'Ø Wein', align: 'right' },
+    { key: 'rarewine', label: 'edler Wein', align: 'right' },
+    { key: 'book', label: 'Design-Buch', align: 'right' },
+    { key: 'choc', label: 'Schokolade', align: 'right' },
+  ]}
+  rows={[
+    { q: '1 (niedrig)', trackball: '8,64', keyboard: '16,09', avgwine: '8,64', rarewine: '11,73', book: '12,82', choc: '9,55' },
+    { q: '2', trackball: '11,82', keyboard: '26,82', avgwine: '14,45', rarewine: '22,45', book: '16,18', choc: '10,64' },
+    { q: '3', trackball: '13,45', keyboard: '29,27', avgwine: '12,55', rarewine: '18,09', book: '15,82', choc: '12,45' },
+    { q: '4', trackball: '21,18', keyboard: '34,55', avgwine: '15,45', rarewine: '24,55', book: '19,27', choc: '13,27' },
+    { q: '5 (hoch)', trackball: '26,18', keyboard: '55,64', avgwine: '27,91', rarewine: '37,55', book: '30,00', choc: '20,64' },
+    { q: 'Korrelation', trackball: '.415', keyboard: '.516', avgwine: '.328', rarewine: '.328', book: '.319', choc: '.419' },
+  ]}
+  highlight={(row) => row.q === '5 (hoch)'}
+/>
+
+<Callout type="merksatz" title="Starker Beleg für den Anker">
+- Zahlungsbereitschaft steigt für **alle sechs Produkte** monoton vom 1. zum 5. Quintil
+- alle Korrelationen positiv (**0,319 bis 0,516**) und signifikant (p ≤ .0172)
+- obwohl die Sozialversicherungsnummer **keinerlei** Bezug zum Produktwert hat
+</Callout>
+
+### 4 · Relativer Vergleich: Decoy- und Phantom-Lockvogel-Effekt
+
+<DataTable
+  caption="Economist-Abo: Decoy-Effekt (asymmetrische Dominanz) — Folie 81"
+  columns={[
+    { key: 'variante', label: 'Variante' },
+    { key: 'preis', label: 'Preis', align: 'right' },
+    { key: 'ohne', label: 'ohne Köder', align: 'right' },
+    { key: 'mit', label: 'mit Köder', align: 'right' },
+  ]}
+  rows={[
+    { variante: 'Online', preis: '59 €', ohne: '68 %', mit: '16 %' },
+    { variante: 'Print (Köder)', preis: '125 €', ohne: '–', mit: '0 %' },
+    { variante: 'Print + Online', preis: '125 €', ohne: '32 %', mit: '84 %' },
+  ]}
+  highlight={(row) => row.variante === 'Print + Online'}
+/>
+
+<CompareCard
+  items={[
+    {
+      tag: 'existiert real',
+      title: 'Decoy-Effekt',
+      subtitle: 'asymmetrische Dominanz',
+      accent: 'accent',
+      points: [
+        'minderwertiger **Köder** wird angeboten, aber kaum gewählt',
+        'Economist: Print-only (125 €) → 0 % Wahl',
+        'Anteil Print+Online steigt dennoch von **32 % auf 84 %**',
+        'Mangosaft: Köder C macht B attraktiver',
+      ],
+    },
+    {
+      tag: 'existiert nicht',
+      title: 'Phantom-Lockvogel-Effekt',
+      subtitle: 'Köder gar nicht verfügbar',
+      accent: 'purple',
+      points: [
+        'attraktives Angebot C ist „gerade **nicht lieferbar**"',
+        'Nachfrage verschiebt sich zum nächstbesten verfügbaren Produkt B',
+        'Unterschied zum Decoy: der Köder **existiert gar nicht**',
+      ],
+    },
+  ]}
+/>
+
+<SourceNote>Behavioral Finance · Kapitel 3 · Heuristiken und kognitive Verzerrungen · Folien 49–130 (Skript-PDF Folien 1–82). Quellen u. a.: Beck (2014), Kahneman (2012), Barber/Odean (2000), Dawes (1988), Ariely/Loewenstein/Prelec (2003), Bargh/Chen/Burrows (1996), Bateson/Nettle/Roberts (2006), Thaler (1999), Svenson (1981).</SourceNote>
+
+</section>

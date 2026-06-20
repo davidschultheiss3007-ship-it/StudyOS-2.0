@@ -1,0 +1,303 @@
+.exam-area,
+.exam-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.exam-area__header,
+.exam-viewer__topbar,
+.exam-card__top,
+.exam-section__header,
+.exam-task__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.exam-area__title,
+.exam-section__title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.exam-area__subtitle,
+.exam-section__description,
+.exam-viewer__description {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--space-1);
+}
+
+.exam-area__grid,
+.exam-viewer__sections,
+.exam-section__tasks {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.exam-area__empty {
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.exam-card,
+.exam-viewer__header,
+.exam-instructions,
+.exam-section,
+.exam-task {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.exam-card,
+.exam-task {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+.exam-card__title-row,
+.exam-viewer__title-row,
+.exam-task__badges,
+.exam-card__meta,
+.exam-card__topics,
+.exam-viewer__meta,
+.exam-viewer__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.exam-card__title,
+.exam-task__title,
+.exam-viewer__title {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.exam-card__title,
+.exam-task__title {
+  font-size: var(--font-size-base);
+}
+
+.exam-viewer__title {
+  font-size: var(--font-size-xl);
+}
+
+.exam-card__description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--space-2);
+}
+
+.exam-card__meta-item,
+.exam-viewer__meta span {
+  align-items: center;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  display: inline-flex;
+  font-size: var(--font-size-xs);
+  gap: var(--space-1);
+  padding: 3px 10px;
+}
+
+.exam-card__topic {
+  background: var(--color-accent-subtle);
+  border: 1px solid rgba(79, 126, 247, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+  padding: 3px 10px;
+}
+
+.exam-viewer__topbar {
+  align-items: center;
+}
+
+.exam-viewer__header {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: var(--space-6);
+}
+
+.exam-instructions,
+.exam-section {
+  padding: var(--space-5);
+}
+
+.exam-instructions__title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+}
+
+.exam-instructions ul,
+.exam-task__grading ul {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.exam-instructions li,
+.exam-task__grading li {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  padding-left: var(--space-4);
+  position: relative;
+}
+
+.exam-instructions li::before,
+.exam-task__grading li::before {
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+  content: '';
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 0.78em;
+  width: 6px;
+}
+
+.exam-solution-toggle {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  padding: 3px;
+}
+
+.exam-solution-toggle__button {
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-3);
+}
+
+.exam-solution-toggle__button--active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.exam-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.exam-task__title-group {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.exam-task__eyebrow {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.exam-task__prompt,
+.exam-task__solution-body {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.exam-task__prompt p,
+.exam-task__solution-body p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+}
+
+.exam-task__source {
+  border-top: 1px solid var(--color-border-subtle);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  padding-top: var(--space-3);
+}
+
+.exam-task__solution-button {
+  align-self: flex-start;
+}
+
+.exam-task__solution {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  border-left: 4px solid var(--color-success);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+
+.exam-task__solution-title,
+.exam-task__grading-title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.exam-task__grading {
+  display: grid;
+  gap: var(--space-2);
+}
+
+@media (max-width: 760px) {
+  .exam-area__header,
+  .exam-card__top,
+  .exam-viewer__topbar,
+  .exam-section__header,
+  .exam-task__header,
+  .exam-viewer__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exam-viewer__actions {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .exam-solution-toggle {
+    width: 100%;
+  }
+
+  .exam-solution-toggle__button {
+    flex: 1;
+  }
+}
+
+@media print {
+  .exam-viewer__topbar,
+  .exam-task__solution-button {
+    display: none;
+  }
+
+  .exam-card,
+  .exam-viewer__header,
+  .exam-instructions,
+  .exam-section,
+  .exam-task,
+  .exam-task__solution {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,749 @@
+<section id="informationseffizienz">
+
+## Traditionelle Kapitalmarkttheorie: Informationseffizienz
+
+<DefinitionBox term="Informationseffizienz (Fama)" source="Behavioral Finance · Folie 3">
+"The market price at any time instantly reflects all available information in the market." — Der Marktpreis spiegelt also jederzeit unmittelbar alle verfügbaren Informationen wider.
+</DefinitionBox>
+
+### Drei Formen der Informationseffizienz
+
+<Columns count={3}>
+  <Card title="Schwache Form" tone="accent">
+    - enthält: **vergangene Informationen**
+    - d.h. historische Kursverläufe sind bereits eingepreist
+  </Card>
+  <Card title="Halb-strenge Form" tone="purple">
+    - enthält: **öffentlich zugängliche Informationen**
+    - alle publizierten Daten sind eingepreist
+  </Card>
+  <Card title="Strenge Form" tone="teal">
+    - enthält: **öffentlich zugängliche und private Informationen**
+    - selbst Insiderwissen ist bereits im Kurs
+  </Card>
+</Columns>
+
+<Callout type="info" title="Schlussfolgerung bei effizienten Maerkten (Folie 3)">
+Bei effizienten Märkten gilt:
+- keine risikoadjustierten Überrenditen erzielbar
+- Prognosen sind "überflüssig"
+- jedes Risiko hat seinen richtigen Preis
+- Psychologie spielt keine Rolle
+</Callout>
+
+### Argumentation zugunsten der Informationseffizienz
+
+<Columns count={3}>
+  <Card title="Annahme 1 · Rationalität" tone="neutral">
+    - alle Investoren sind **rational**
+    - kommen daher zur **gleichen Interpretation** neuer Informationen
+  </Card>
+  <Card title="Annahme 2 · unabhängige Abweichungen" tone="neutral">
+    - bei Interpretationsabweichungen heben sich diese auf
+    - gleich viele **Optimisten wie Pessimisten**
+  </Card>
+  <Card title="Annahme 3 · Arbitrage" tone="neutral">
+    - Profis nutzen jede <Exam>Arbitrage-Möglichkeit</Exam>
+    - dadurch kehrt der Preis zum effizienten Niveau zurück
+  </Card>
+</Columns>
+
+### Grossman/Stiglitz (1980): Informationsparadoxon
+
+<Diagram
+  title="Informationsparadoxon als Logikkreislauf"
+  source="Behavioral Finance · Folie 5"
+  chart={`flowchart LR
+  A[Informationsbeschaffung kostet] --> B[ohne Ertrag sucht niemand Information]
+  B --> C[sucht niemand, lohnt sich Suche wieder]
+  C --> D[Gleichgewicht liegt zwischen den Extremen]
+  D -.-> A`}
+/>
+
+<Columns count={2}>
+  <Card title="Robert Shillers Kritik (Folie 5)" tone="warning">
+    - "Aus der Feststellung, dass Aktienpreise nicht vorhersagbar sind, die Schlussfolgerung zu ziehen, dass diese fundamental richtig sind, war einer der größten Fehler in der Geschichte des ökonomischen Denkens."
+  </Card>
+  <Card title="Kernaussage" tone="purple">
+    - vollkommene Informationseffizienz ist <Exam>logisch unmöglich</Exam>
+    - Informationsbeschaffung verursacht Kosten und muss einen Ertrag erbringen
+    - das Gleichgewicht liegt **zwischen** den beiden Extremen
+  </Card>
+</Columns>
+
+</section>
+
+<section id="traditional-vs-behavioral">
+
+## Traditional Finance vs. Behavioral Finance
+
+<CompareCard
+  items={[
+    {
+      tag: 'TF',
+      title: 'Traditional Finance',
+      subtitle: 'effiziente Märkte, homo oeconomicus',
+      accent: 'accent',
+      points: [
+        '**Mehrrendite ist das Ergebnis eines höheren Risikos.**',
+        'Wertpapierrenditen lassen sich nicht prognostizieren.',
+        'Märkte sind effizient.',
+        'Jeder Investor ist ein homo oeconomicus: rational und nutzenoptimierend.',
+      ],
+    },
+    {
+      tag: 'BF',
+      title: 'Behavioral Finance',
+      subtitle: 'beschränkt rationale Investoren',
+      accent: 'purple',
+      points: [
+        '**Höhere Renditen lassen sich auch ohne höheres Risiko erzielen.**',
+        'Wertpapierrenditen lassen sich zum Teil prognostizieren.',
+        'Märkte sind teilweise falsch bewertet.',
+        'Kapitalmarktpreise werden durch beschränkt rationale Investoren beeinflusst.',
+      ],
+    },
+  ]}
+/>
+
+### Emotionen und Aktienkurse (Ashton 2003)
+
+<Columns count={2}>
+  <Card title="Befund: nationaler Sporterfolg bewegt Kurse" tone="orange">
+    - Aktienkurse steigen in dem Land stärker, dessen Fußballmannschaft in einem großen Turnier **gewonnen** hat.
+    - Bei besserer Stimmung werden Investoren <Exam>risikobereiter</Exam> — ein Beleg gegen rein rationale Märkte.
+  </Card>
+  <Card title="Studiensteckbrief" tone="neutral" compact>
+    - **Quelle:** Ashton (2003)
+    - **Index:** FTSE 100
+    - **Zeitraum:** 6.1.1984 - 3.7.2002
+    - **unbedingte tägliche Indexrendite:** 0,03511 %
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Ashton (2003): mittlere Tagesrendite des FTSE 100 nach Spielausgang"
+  columns={[
+    { key: 'gruppe', label: 'Spielgruppe' },
+    { key: 'games', label: 'Spiele', align: 'right' },
+    { key: 'win', label: 'Ø Rendite nach Sieg', align: 'right' },
+    { key: 'draw', label: 'Ø Rendite nach Remis', align: 'right' },
+    { key: 'loss', label: 'Ø Rendite nach Niederlage', align: 'right' },
+  ]}
+  rows={[
+    { gruppe: 'Alle Länderspiele', games: '210', win: '+0,1705 % (102)', draw: '−0,000481 % (70)', loss: '−0,1289 % (38)' },
+    { gruppe: 'Turnier-Endrunden + Quali', games: '99', win: '+0,3085 % (49)', draw: '−0,1843 % (33)', loss: '−0,1863 % (17)' },
+    { gruppe: 'Turnier-Endrundenspiele', games: '35', win: '+0,2698 % (12)', draw: '−0,2129 % (11)', loss: '−0,4150 % (12)' },
+  ]}
+/>
+
+### Nicht-Informationen und Aktienkurse (Folie 8)
+
+<Columns count={3}>
+  <Card title="Crash Oktober 1987" tone="negative">
+    - **22,6 %** Rückgang
+    - ohne relevante neue Nachrichten
+  </Card>
+  <Card title="50 größte Tagesbewegungen" tone="warning">
+    - am US-Aktienmarkt
+    - überwiegend an Tagen **ohne** signifikant neue Nachrichten
+  </Card>
+  <Card title="Indexaufnahme" tone="accent">
+    - signifikant positive Preisreaktion
+    - Beispiel: AOL **+18 %** am Tag der S&P-Aufnahme
+  </Card>
+</Columns>
+
+<Callout type="examfocus" title="Widerspruch zur Informationseffizienz">
+Große Kursbewegungen treten auch ohne neue fundamentale Informationen auf — ein direkter Widerspruch zur reinen Informationseffizienz.
+</Callout>
+
+</section>
+
+<section id="kapitalmarktanomalien">
+
+## Anomalien an Finanzmärkten
+
+<Callout type="info" title="Einheitliches Muster (Folien 9-16)">
+Jede Anomalie folgt demselben Schema: ein Phänomen am Kapitalmarkt plus eine **mögliche verhaltensökonomische Erklärung**.
+</Callout>
+
+<DataTable
+  caption="Kapitalmarktanomalien und ihre verhaltensökonomische Erklärung"
+  columns={[
+    { key: 'anomalie', label: 'Anomalie' },
+    { key: 'beschreibung', label: 'Beschreibung' },
+    { key: 'erklaerung', label: 'Mögliche Erklärung' },
+  ]}
+  rows={[
+    { anomalie: 'Kalendereffekte (Januar-Effekt)', beschreibung: 'In den ersten zwei Januar-Wochen Überrenditen bei kleinen Unternehmen', erklaerung: 'Mentale Kontenführung (Verlustrealisierung am Jahresende, Rückkauf im Januar)' },
+    { anomalie: 'Chartanalyse', beschreibung: 'Interpretation aufgrund historischer Kursverläufe', erklaerung: 'Repräsentativität (Muster sind nur zufällig entstanden)' },
+    { anomalie: 'Home Bias', beschreibung: 'verstärkte Investition in Wertpapiere des eigenen Landes', erklaerung: 'Verfügbarkeitsheuristik (mehr Infos über das Heimatland)' },
+    { anomalie: 'Überoptimismus', beschreibung: 'Überschätzung der eigenen Fähigkeit, an der Börse Gewinn zu machen', erklaerung: '(auf der Folie keine angegeben)' },
+    { anomalie: 'Investmenttrends', beschreibung: 'Investition in gerade modische Produkte', erklaerung: 'Verfügbarkeitsheuristik (mediale Präsenz)' },
+    { anomalie: 'Ranglisten', beschreibung: 'jahrelanger Erfolg als Indiz für überlegene Fähigkeiten', erklaerung: 'Repräsentativitätsheuristik' },
+    { anomalie: 'Einstandspreise/Kursziele', beschreibung: 'funktionieren häufig als Anker', erklaerung: 'Prospect Theory und Confirmation Bias' },
+  ]}
+/>
+
+### Dispositionseffekt
+
+<Columns count={2}>
+  <Card title="Dispositionseffekt (Folie 10)" tone="purple" exam>
+    - Neigung, Anteile abzustoßen, deren Wert **gestiegen** ist, und solche zu halten, deren Wert **gesunken** ist.
+    - Anleger glaubt, ein Minus "auf dem Papier" sei nicht real und bleibe schmerzfrei, solange nicht verkauft wird.
+    - In der Praxis: Gewinne viel zu **früh**, Verluste viel zu **spät** realisiert.
+    - Mögliche Erklärung: <Exam>Prospect Theory — Verlustaversion</Exam>.
+  </Card>
+  <Card title="Goldene Börsenregel (Folie 10)" tone="positive">
+    - "Gewinne sinnvoll laufen lassen und Verluste klug begrenzen"
+    - der Dispositionseffekt verstößt **genau dagegen**
+  </Card>
+</Columns>
+
+### Über-/Unterreaktionen und Equity-Premium-Puzzle
+
+<Columns count={2}>
+  <Card title="Über-/Unterreaktionen" tone="accent">
+    - Marktwerte reagieren **stärker** auf Nachrichten, als es die Fundamentaldaten rechtfertigen.
+    - Erklärungen: Verfügbarkeitsheuristik, Überoptimismus durch steigende Kurse, Ankereffekte, Confirmation Bias.
+    - Bei Überreaktion sind Papiere mit guten Nachrichten zu teuer (umgekehrt bei schlechten).
+    - **Folge:** Gewinner (Verlierer) der Vergangenheit werden Verlierer (Gewinner) der Zukunft.
+  </Card>
+  <Card title="Equity-Premium-Puzzle" tone="teal">
+    - Aktien haben gegenüber Anleihen einen Risikoaufschlag, der **größer** ist, als es ihr Risiko rechtfertigt.
+    - daher müsste eigentlich mehr in Aktien investiert werden.
+    - Mögliche Erklärung: mentale Kontenführung (Aufteilung in Jahreshorizonte lässt Aktien risikoreicher erscheinen).
+  </Card>
+</Columns>
+
+### Kapitalmarkt vs. Supermarkt (Folien 15-16)
+
+<CompareCard
+  items={[
+    {
+      tag: 'Supermarkt',
+      title: 'Verhalten im Supermarkt',
+      subtitle: 'rational antizyklisch',
+      accent: 'positive',
+      points: [
+        'Lieblings-Steaks sind 30 % günstiger als üblich',
+        'Reaktion: Sie **kaufen** (gutes Preis-Leistungs-Verhältnis)',
+        'niedrigerer Preis = Kaufanreiz',
+      ],
+    },
+    {
+      tag: 'Kapitalmarkt',
+      title: 'Verhalten am Kapitalmarkt',
+      subtitle: 'prozyklisch / herdengetrieben',
+      accent: 'negative',
+      points: [
+        'Markt ist um 30 % gesunken',
+        'Reaktion: Sie **verkaufen** (statt zu kaufen) — aus Angst',
+        'bei steigenden Kursen wollen Sie mehr kaufen',
+        'typischer Anleger handelt **zyklisch**, ohne aufs Preis-Leistungs-Verhältnis zu schauen',
+      ],
+    },
+  ]}
+/>
+
+</section>
+
+<section id="winner-loser-effekt">
+
+## Winner-Loser-Effekt
+
+<Callout type="info" title="Leitfrage der Anomalie-Effekte (Folie 17)">
+"Welche Wertpapiere performen besser als andere?" — fünf empirische Effekte: Winner-Loser, Value, Risikoprämie, Size, Momentum.
+</Callout>
+
+<KpiGrid
+  columns={4}
+  items={[
+    { value: '10,84 %', label: 'Winner-Loser (Chopra et al. 1992)', accent: 'accent' },
+    { value: '19,99 %', label: 'Value (Fama/French 1992)', accent: 'accent' },
+    { value: '16,37 %', label: 'Momentum (Rouwenhorst 1998)', accent: 'accent' },
+    { value: '0,63 % p.m.', label: 'Size/SMB (Fama/French 1992)', accent: 'accent' },
+  ]}
+/>
+
+### Studienaufbau De Bondt/Thaler (1985)
+
+<Card title='De Bondt/Thaler (1985): "Does the stock market overreact?"' tone="neutral" exam>
+- <Exam>DIE Studie, mit der die Behavioral Finance angefangen hat.</Exam>
+- testet, ob der Aktienmarkt systematisch **überreagiert** und sich daraus eine handelbare Strategie ableiten lässt.
+</Card>
+
+<DataTable
+  caption="Studienaufbau De Bondt/Thaler (1985)"
+  columns={[
+    { key: 'p', label: 'Parameter' },
+    { key: 'w', label: 'Wert' },
+  ]}
+  rows={[
+    { p: 'Zeitraum', w: '1923 - 1982' },
+    { p: 'Aktienuniversum', w: 'alle Aktien der NYSE' },
+    { p: 'Loser-Portfolio', w: '35 Aktien mit der schlechtesten Performance der vergangenen 3 Jahre' },
+    { p: 'Winner-Portfolio', w: '35 Aktien mit der besten Performance der vergangenen 3 Jahre' },
+  ]}
+/>
+
+### Ergebnis: kumulierte Überrenditen (CAR)
+
+<DataChart
+  type="line"
+  title="Kumulierte durchschnittliche Überrenditen (CAR) nach Portfoliobildung"
+  source="Behavioral Finance · Folie 19 (Verlauf schematisch nach De Bondt/Thaler; Achsenwerte im Render nicht zuverlässig ablesbar)"
+  xLabel="Monate nach Portfoliobildung"
+  yLabel="CAR (schematisch)"
+  xKey="m"
+  series={[
+    { key: 'loser', name: 'Loser-Portfolio (steigt)', color: 'var(--color-module-green)' },
+    { key: 'winner', name: 'Winner-Portfolio (fällt)', color: 'var(--color-module-orange)' },
+  ]}
+  data={[
+    { m: '0', loser: 0, winner: 0 },
+    { m: '6', loser: 6, winner: -2 },
+    { m: '12', loser: 12, winner: -4 },
+    { m: '18', loser: 17, winner: -5 },
+    { m: '24', loser: 20, winner: -5 },
+    { m: '30', loser: 24, winner: -6 },
+    { m: '36', loser: 28, winner: -7 },
+  ]}
+/>
+
+<Callout type="merksatz" title="Merksatz Winner-Loser (Folien 19/21)">
+Vergangene Verlierer sind zukünftige Gewinner! Vergangene Gewinner sind zukünftige Verlierer!
+</Callout>
+
+### Empirie: Winner/Loser-Strategie (Chopra/Lakonishok/Ritter 1992)
+
+<Columns count={2}>
+  <Card title="Strategie und Befund" tone="accent" exam>
+    - **Strategie:** kaufe Aktien mit über die letzten 5 Jahre schlechter Performance (Loser).
+    - Quelle: Chopra, Lakonishok, Ritter (1992); Zeitraum 1930-1981, NYSE, jährlich 20 Quantilportfolios.
+    - Entscheidend: Die höhere Loser-Rendite geht **nicht** mit höherem Beta einher.
+  </Card>
+  <Card title="Kennzahl" tone="purple" compact>
+    <KpiGrid
+      columns={1}
+      items={[
+        { value: '10,84 %', label: 'risikoadj. Renditedifferenz Extreme', accent: 'accent' },
+      ]}
+    />
+  </Card>
+</Columns>
+
+<DataChart
+  type="line"
+  title="Jährliche Rendite und Beta über 20 Quantilportfolios (Loser → Winner)"
+  source="Behavioral Finance · Folie 20 (gespiegelter MD-Text nicht übernommen; Punktwerte visuell abgelesen)"
+  xLabel="Quantilportfolio (1 = Loser ... 20 = Winner)"
+  yLabel="Jährliche Rendite"
+  xKey="q"
+  series={[
+    { key: 'rendite', name: 'Jährliche Rendite (%)', color: 'var(--color-module-blue)' },
+    { key: 'beta', name: 'Beta', color: 'var(--color-module-purple)' },
+  ]}
+  data={[
+    { q: '1', rendite: 29, beta: 1.25 },
+    { q: '4', rendite: 24, beta: 1.15 },
+    { q: '8', rendite: 20, beta: 1.05 },
+    { q: '12', rendite: 17, beta: 1.0 },
+    { q: '16', rendite: 15, beta: 0.95 },
+    { q: '20', rendite: 13, beta: 0.9 },
+  ]}
+/>
+
+<Card title="Psychologische Erklärungen (Folie 21)" tone="purple">
+- Überreaktionen
+- Repräsentativitätsheuristik
+- Anwendung von Daumenregeln
+- … alternativ auch durch steuerinduzierte Transaktionen begründbar
+</Card>
+
+</section>
+
+<section id="value-effekt">
+
+## Value-Effekt
+
+<DefinitionBox term="Book-to-Market-Ratio (B/M)" source="Behavioral Finance · Folie 22 · Fama/French (1992)">
+Verhältnis von **Buchwert** (vergangenheitsorientiert) zum **Marktwert** (bewertet Zukunftsaussichten) des Eigenkapitals. Es gliedert Aktien in Value und Growth.
+</DefinitionBox>
+
+<CompareCard
+  items={[
+    {
+      tag: 'B/M hoch',
+      title: 'Value-Aktie',
+      subtitle: 'hohes Buchwert/Marktwert-Verhältnis',
+      accent: 'teal',
+      points: [
+        '**geringe** Wachstumsaussichten eingepreist',
+        '"günstige" Aktie',
+        'empirisch: zukünftige **Gewinner**',
+      ],
+    },
+    {
+      tag: 'B/M niedrig',
+      title: 'Growth-Aktie',
+      subtitle: 'niedriges Buchwert/Marktwert-Verhältnis',
+      accent: 'orange',
+      points: [
+        '**hohe** Wachstumsaussichten eingepreist',
+        '"teure" Aktie, notiert weit über Buchwert',
+        'empirisch: zukünftige **Verlierer**',
+      ],
+    },
+  ]}
+/>
+
+### Empirie: Kurs-zu-Buchwert-Strategie (Fama/French 1992)
+
+<Columns count={2}>
+  <Card title="Strategie und Befund" tone="accent" exam>
+    - **Strategie:** kaufe Aktien mit einem **niedrigen** Kurs-Buchwert-Verhältnis (Value).
+    - Quelle: Fama/French (1992); Zeitraum 1963-1990, NYSE/AMEX/Nasdaq, jährlich 12 Quantilportfolios.
+    - noch **stärker** als der Winner-Loser-Effekt.
+  </Card>
+  <Card title="Kennzahl" tone="purple" compact>
+    <KpiGrid
+      columns={1}
+      items={[
+        { value: '19,99 %', label: 'risikoadj. Renditedifferenz Extreme', accent: 'accent' },
+      ]}
+    />
+  </Card>
+</Columns>
+
+<DataChart
+  type="line"
+  title="Jährliche Rendite und Beta über 12 Quantilportfolios (Value → Growth)"
+  source="Behavioral Finance · Folie 23 (gespiegelter MD-Text nicht übernommen; Punktwerte visuell abgelesen)"
+  xLabel="zunehmendes Kurs-Buchwert-Verhältnis (1 = Value ... 12 = Growth)"
+  yLabel="Jährliche Rendite"
+  xKey="q"
+  series={[
+    { key: 'rendite', name: 'Jährliche Rendite (%)', color: 'var(--color-module-blue)' },
+    { key: 'beta', name: 'Beta', color: 'var(--color-module-purple)' },
+  ]}
+  data={[
+    { q: '1', rendite: 25, beta: 1.28 },
+    { q: '3', rendite: 20, beta: 1.26 },
+    { q: '6', rendite: 15, beta: 1.30 },
+    { q: '9', rendite: 9, beta: 1.34 },
+    { q: '12', rendite: 4, beta: 1.38 },
+  ]}
+/>
+
+<Callout type="merksatz" title="Merksatz Value (Folie 24)">
+Aktien mit hoher B/M-Ratio sind zukünftige Gewinner! Aktien mit niedriger B/M-Ratio sind zukünftige Verlierer!
+</Callout>
+
+### Drei Erklärungen für den Book-to-Market-Effekt
+
+<Columns count={3}>
+  <Card title="1 · Zufall" tone="neutral">
+    - viele Researcher durchsuchen dasselbe Datenmaterial (Data-Mining)
+    - "Affe Jodie": nach 5 Zufallsrunden bleibt statistisch ein "perfekter Prognostiker"
+    - **ABER:** andere Stichproben (international) zeigen vergleichbare Ergebnisse (Fama/French 1998)
+    - Bewertung: eher **nein**
+  </Card>
+  <Card title="2 · Risiko" tone="neutral">
+    - Theorie: jede Überrendite = Ergebnis eines Risikofaktors (CAPM-Beta)
+    - Hypothese: hohes Beta ⇒ hohes B/M
+    - Empirie zeigt genau das Gegenteil
+    - Bewertung: eher **nein**
+  </Card>
+  <Card title="3 · Fehlbewertung" tone="purple">
+    - Wachstumsraten sind **mean reverting**
+    - Anleger schreiben Extreme zu weit in die Zukunft fort
+    - Value zu billig, Growth zu teuer bewertet
+    - Bewertung: **wahrscheinlichste Erklärung**
+  </Card>
+</Columns>
+
+<Callout type="examfocus" title="Risiko-Hypothese wird empirisch widerlegt (Folie 28)">
+Höheres CAPM-Beta korreliert empirisch mit **niedrigem** Book-to-Market — also dem Gegenteil der Risiko-Hypothese. "Die Empirie zeigt genau das Gegenteil!"
+</Callout>
+
+### Mean Reversion als Kern der Fehlbewertung
+
+<Diagram
+  title="Mean Reversion des zukünftigen Wachstums (Folie 32)"
+  source="Behavioral Finance · Folie 32"
+  chart={`flowchart LR
+  G["Growth-Aktien:<br/>hohes vergangenes<br/>Wachstum"] --> M["zukünftiges Wachstum<br/>ist MEAN REVERTING<br/>wird durchschnittlich"]
+  V["Value-Aktien:<br/>niedriges vergangenes<br/>Wachstum"] --> M
+  M --> H["Mean Reversion wird bei<br/>Gewinnprognosen oft zu<br/>wenig berücksichtigt"]`}
+/>
+
+<Callout type="merksatz" title="Zusammenfassung Value (Folie 34, Stotz et al. 2006)">
+Value-Aktien erzielen langfristig eine höhere Rendite als Growth-Aktien. Selbst Fondsmanager extrapolieren vergangene Entwicklungen zu weit in die Zukunft (Repräsentativität, Overconfidence) — zukünftiges Wachstum gleicht sich schneller an, als es die Aktienkurse widerspiegeln.
+</Callout>
+
+</section>
+
+<section id="risikopraemie">
+
+## Risikoprämie als Prognose- und Performance-Treiber
+
+<Columns count={2}>
+  <Card title="Faire Risikoprämie (Folie 35)" tone="accent">
+    - **fairer** Aktienpreis = Barwert aller zukünftigen Dividenden
+    - abgezinst mit risikoadäquatem Diskontierungszins
+    - Diskontierungszins = sicherer Zins + **"faire" Risikoprämie**
+    - Rechnung vorwärts: vom Zins zum Preis
+  </Card>
+  <Card title="Implizite Risikoprämie (Folie 36)" tone="purple">
+    - Suche nach dem Diskontierungszins, der den **beobachteten Marktpreis** ergibt
+    - Diskontierungszins = sicherer Zins + **implizite Risikoprämie**
+    - Reverse-Engineering: vom Marktpreis zum Zins
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="Dividendenbarwertmodell (Folie 37)"
+  expr="P = \sum_{t=1}^{\infty} \frac{D_t}{\left(1 + r_f + \pi_{\text{impl}}\right)^{t}}"
+  legend={[
+    { sym: 'P', desc: 'Preis der Aktie' },
+    { sym: 'D_t', desc: 'Dividende in Periode t' },
+    { sym: 'r_f', desc: 'sicherer Zins' },
+    { sym: '\\pi_{\\text{impl}}', desc: 'implizite Risikoprämie' },
+  ]}
+/>
+
+<Card title="Drei Modellphasen zur Anwendung (Folie 37)" tone="neutral">
+- **1. Phase (1-3):** konkrete Dividendenprognose (z.B. IBES-Schätzung)
+- **2. Phase (4-10):** Übergang zu einer "durchschnittlichen Dividende"
+- **3. Phase (über 10):** historische Wachstumsmodelle oder Wiederverkaufsannahme mit historisch durchschnittlicher B/M-Ratio (ca. 0,66)
+</Card>
+
+### Beispiel BMW (Folie 38, FIFAM)
+
+<Columns count={2}>
+  <Card title="Ergebnis des BMW-Beispiels" tone="purple" exam>
+    - Inputs: Buchwerte, Gewinne, EK-Rendite, Ausschüttungsquote, Börsenkurs.
+    - daraus wird die implizite Risikoprämie per Dividendenbarwertmodell **zurückgerechnet**.
+    - (übrige Tabellenzahlen im Render nicht verlässlich lesbar)
+  </Card>
+  <Card title="Kennzahl" tone="neutral" compact>
+    <KpiGrid
+      columns={1}
+      items={[
+        { value: '10,65 %', label: 'eingepreiste implizite Risikoprämie', accent: 'accent' },
+      ]}
+    />
+  </Card>
+</Columns>
+
+### Risikoprämie als Performance-Treiber (Folie 39)
+
+<Card title="Wirkung der impliziten Risikoprämie" tone="teal">
+- Höhe der Risikoprämie zeigt die zukünftige **Überrendite** an (bei sonst unveränderten Parametern).
+- Veränderungen wirken empfindlich wie Zinsänderungen: **Verringerung positiv**, **Erhöhung negativ**.
+- Aktien mit hoher impliziter Risikoprämie, die sich später normalisiert ⇒ **doppelte** Rendite-Chance.
+</Card>
+
+<Callout type="examfocus" title="Kernaussage (Folie 39)">
+Sowohl die Höhe der Risikoprämie als auch Prognosen über die Risikoprämie sind für die Anlageentscheidung zentral.
+</Callout>
+
+### Antizyklische Anlagestrategie (Folie 40)
+
+<DataChart
+  type="line"
+  title="Implizite Risikoprämie schwingt um den langfristigen Mittelwert"
+  source="Behavioral Finance · Folie 40 (schematische Schwingungskurve)"
+  xLabel="Zeit"
+  yLabel="Risikoprämie"
+  xKey="t"
+  series={[
+    { key: 'rp', name: 'Implizite Risikoprämie', color: 'var(--color-module-blue)' },
+    { key: 'mittel', name: 'Langfristig angemessene Risikoprämie', color: 'var(--color-module-purple)' },
+  ]}
+  data={[
+    { t: '1', rp: 6, mittel: 5 },
+    { t: '2', rp: 8, mittel: 5 },
+    { t: '3', rp: 5, mittel: 5 },
+    { t: '4', rp: 2, mittel: 5 },
+    { t: '5', rp: 5, mittel: 5 },
+    { t: '6', rp: 8, mittel: 5 },
+    { t: '7', rp: 5, mittel: 5 },
+    { t: '8', rp: 2, mittel: 5 },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Hohe Risikoprämie → Übergewichtung" tone="positive">
+    - geringes Kontrollgefühl, Angst herrscht
+    - antizyklisch: **kaufen / übergewichten**
+  </Card>
+  <Card title="Niedrige Risikoprämie → Untergewichtung" tone="negative">
+    - Kompetenz- und Kontrollgefühl, Euphorie
+    - antizyklisch: **verkaufen / untergewichten**
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Schlussfolgerung (Folie 40)">
+"Antizyklisches Handeln" — in Erwartung der Rückkehr der Risikoprämie zu ihrem Mittelwert.
+</Callout>
+
+</section>
+
+<section id="size-momentum">
+
+## Size-Effekt und Momentum-Effekt
+
+### Size-Effekt (SMB, Fama/French 1992)
+
+<Columns count={2}>
+  <Card title="Size-Effekt / Small Minus Big (Folie 41)" tone="accent" exam>
+    - kleine Unternehmen (Small Caps) erzielen historisch **höhere** Durchschnittsrenditen als große.
+    - Renditedifferenz "Small minus Large" wird oft <Exam>SMB</Exam> genannt.
+    - Quelle: Fama/French (1992); übrige Matrixwerte im Render nicht verlässlich lesbar.
+  </Card>
+  <Card title="Kennzahl SMB" tone="purple" compact>
+    <KpiGrid
+      columns={2}
+      items={[
+        { value: '0,63 %', label: 'p.m.', accent: 'accent' },
+        { value: '7,56 %', label: 'p.a.', accent: 'accent' },
+      ]}
+    />
+  </Card>
+</Columns>
+
+### Momentum-Effekt (Rouwenhorst 1998)
+
+<Columns count={2}>
+  <Card title="Strategie und Befund" tone="accent" exam>
+    - **Strategie:** kaufe Aktien mit der besten Performance der letzten 6 Monate und halte sie 6 Monate.
+    - Quelle: Rouwenhorst (1998); Zeitraum 1978-1995, 2190 Aktien aus 12 europäischen Ländern, monatlich 10 Quantilportfolios.
+    - Anders als beim Winner-Loser-Effekt gilt hier: <Exam>Winner bleiben Winner</Exam> (kurzfristiges Momentum).
+  </Card>
+  <Card title="Kennzahl" tone="purple" compact>
+    <KpiGrid
+      columns={1}
+      items={[
+        { value: '16,37 %', label: 'Renditedifferenz Extreme', accent: 'accent' },
+      ]}
+    />
+  </Card>
+</Columns>
+
+<DataChart
+  type="line"
+  title="Jährliche Rendite über 10 Quantilportfolios (Loser → Winner)"
+  source="Behavioral Finance · Folie 42 (gespiegelter MD-Text nicht übernommen; Verlauf schematisch)"
+  xLabel="zunehmende vergangene 6-Monats-Performance"
+  yLabel="Jährliche Rendite"
+  xKey="q"
+  series={[
+    { key: 'rendite', name: 'Jährliche Rendite (%)', color: 'var(--color-module-blue)' },
+    { key: 'beta', name: 'Beta', color: 'var(--color-module-purple)' },
+  ]}
+  data={[
+    { q: '0-10%', rendite: 6, beta: 1.0 },
+    { q: '30-40%', rendite: 12, beta: 1.0 },
+    { q: '50-60%', rendite: 16, beta: 1.0 },
+    { q: '70-80%', rendite: 22, beta: 1.0 },
+    { q: '90-100%', rendite: 28, beta: 1.0 },
+  ]}
+/>
+
+### Momentum-Laufzeiten (Folie 43)
+
+<DataTable
+  caption="Renditedifferenz Winner − Loser je Beobachtungs- und Haltedauer (in Monaten)"
+  columns={[
+    { key: 'beob', label: 'Beobachtung ↓ / Haltedauer →' },
+    { key: 'h3', label: '3', align: 'right' },
+    { key: 'h6', label: '6', align: 'right' },
+    { key: 'h9', label: '9', align: 'right' },
+    { key: 'h12', label: '12', align: 'right' },
+  ]}
+  rows={[
+    { beob: '3', h3: '8,73 %', h6: '11,09 %', h9: '10,30 %', h12: '10,30 %' },
+    { beob: '6', h3: '14,44 %', h6: '14,84 %', h9: '14,30 %', h12: '11,48 %' },
+    { beob: '9', h3: '15,94 %', h6: '16,63 %', h9: '13,62 %', h12: '10,30 %' },
+    { beob: '12', h3: '17,46 %', h6: '14,71 %', h9: '11,22 %', h12: '7,96 %' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Trendkern dauert ca. ein Jahr (Folie 43)">
+Momentum funktioniert über verschiedene Beobachtungs-/Haltedauern, ist aber zeitlich begrenzt: "Der stabile Kern eines Trends dauert typischerweise ein gutes Jahr."
+</Callout>
+
+</section>
+
+<section id="kurstrend-muster">
+
+## Idealtypisches Muster eines Kurstrends
+
+<Callout type="info" title="Vier Phasen (Folien 44-47)">
+Dieselbe Ist-/Fair-Value-Kurve durchläuft vier Phasen. Grün markiert die Unterreaktionslücke (tatsächlicher Kurs unter Fair Value), rot die Übertreibung (tatsächlicher Kurs über Fair Value).
+</Callout>
+
+<Timeline
+  events={[
+    {
+      label: '1',
+      title: 'Phase 1 · Unterreaktion auf eine Information',
+      text: 'Unternehmen gibt positive Information bekannt. Wegen Verankerung reagieren Analysten/Investoren zu gering (Unterreaktion); Markterwartungen hinken hinterher; Risikoprämie im Wesentlichen unverändert. Tatsächlicher Kurs bleibt unter dem fundamental gerechtfertigten (grüne Lücke).',
+    },
+    {
+      label: '2',
+      title: 'Phase 2 · Positive Überraschungen (Trendbasis)',
+      text: 'Wegen nachhinkender Prognosen kommt es zu positiven Gewinnüberraschungen; die Information hat sich herumgesprochen, der Kurs ist gerechtfertigt. Ist-Kurs holt den Fair Value ein (grüne Lücke schließt sich); die Aktie hat ein positives Image.',
+    },
+    {
+      label: '3',
+      title: 'Phase 3 · Psychologische Trendverselbständigung',
+      text: 'Positives Image und guter Kursverlauf bringen mehr Aufmerksamkeit (Verfügbarkeit, Kontrolle). Repräsentativität und Gruppeneffekte erzeugen zusätzliche Nachfrage, der Kurs steigt über den Fair Value (rote Übertreibungsfläche); da Gewinnerwartungen unverändert, sinkt die Risikoprämie.',
+    },
+    {
+      label: '4',
+      title: 'Phase 4 · Übertreibung wird offenkundig',
+      text: 'Meldungen über zu hohe Bewertung mehren sich, Kurssteigerungen lassen nach, der Trend bricht ab; die Risikoprämie ist sehr klein geworden. Maximale rote Übertreibungsfläche.',
+    },
+  ]}
+/>
+
+<DataChart
+  type="area"
+  title="Idealtypischer Kurstrend: tatsächlicher vs. fundamental gerechtfertigter Kurs"
+  source="Behavioral Finance · Folien 44-47 (schematischer Verlauf über die vier Phasen)"
+  xLabel="Zeit (Phase 1 → 4)"
+  yLabel="Kurs (schematisch)"
+  xKey="t"
+  series={[
+    { key: 'fair', name: 'Fundamental gerechtfertigter Kursverlauf', color: 'var(--color-module-orange)' },
+    { key: 'ist', name: 'Tatsächlicher Kursverlauf', color: 'var(--color-module-blue)' },
+  ]}
+  data={[
+    { t: 'P1', fair: 60, ist: 40 },
+    { t: 'P1/2', fair: 60, ist: 52 },
+    { t: 'P2', fair: 60, ist: 60 },
+    { t: 'P3', fair: 60, ist: 78 },
+    { t: 'P4', fair: 60, ist: 92 },
+    { t: 'Ende', fair: 60, ist: 90 },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Grüne Fläche = Unterreaktion (Phasen 1-2)" tone="positive">
+    - tatsächlicher Kurs **unter** dem Fair Value
+    - der noch nicht eingepreiste Wert (Lücke) schließt sich
+  </Card>
+  <Card title="Rote Fläche = Übertreibung (Phasen 3-4)" tone="negative">
+    - tatsächlicher Kurs **über** dem Fair Value
+    - psychologisch getriebene Überbewertung, Risikoprämie sinkt
+  </Card>
+</Columns>
+
+<SourceNote>Behavioral Finance · Kapitel 9 · Kapitalanlage und Kapitalmarktanomalien · Folien 294-340 (De Bondt/Thaler 1985; Chopra/Lakonishok/Ritter 1992; Fama/French 1992, 1998; Chan et al. 2003; Stotz et al. 2006; Rouwenhorst 1998; Ashton 2003; FIFAM)</SourceNote>
+
+</section>

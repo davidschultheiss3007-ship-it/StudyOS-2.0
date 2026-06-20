@@ -1,0 +1,739 @@
+<section id="investmentphilosophien">
+
+## Investmentphilosophien: aktiv, passiv, tilted
+
+### Überblick: drei Ausprägungen
+
+<Columns count={2}>
+  <Card title="Differenzierung (Folie 3)" tone="neutral">
+    <Diagram
+      title="Investmentphilosophien"
+      source="Asset Management · Folie 3"
+      chart={`flowchart TD
+  IP[Investmentphilosophien]
+  A[Aktiv]
+  P[Passiv]
+  T[Tilted = Mischform]
+  IP --> A
+  IP --> P
+  A --> T
+  P --> T`}
+    />
+  </Card>
+  <Card title="Die drei Pole im Überblick" tone="accent">
+    - **Aktiv** und **passiv** bilden die Pole
+    - **Tilted** ist die **Mischform**
+    - tilted weicht ausgehend vom **passiven** Management gezielt nach **Risikofaktoren** ab
+  </Card>
+</Columns>
+
+### Aktives vs. passives Management
+
+<Columns count={2}>
+  <Card title="Aktives Management" tone="accent" exam>
+    - Annahme: <Exam>nicht-effiziente Märkte</Exam>
+    - bewusste **Rendite-/Risikodifferenz** zur **Benchmark**
+    - Anpassung des Portfolios an die **Erwartung des Managers**
+    - Ausnutzung von Marktineffizienzen durch **Prognosen**
+    - Ziel: positive, risikoadjustierte Überschussrendite ggü. Benchmark = <Exam>Alpha</Exam>
+  </Card>
+  <Card title="Passives Management (bspw. ETFs)" tone="teal" exam>
+    - Annahme: <Exam>Kapitalmärkte sind effizient</Exam>
+    - **Indextracking**
+    - **erwartungsunabhängige** Anlagestrategie
+    - keine Ressourcenbindung in Research, weitgehende Vermeidung von Transaktionskosten
+    - = **kostenminimales Asset Management**
+  </Card>
+</Columns>
+
+<Columns count={2}>
+  <Card title="Prognosearten im aktiven Management" tone="purple">
+    - **Technisch/quantitativ:** Charttechnik bzw. Zeitreihenanalysen
+    - **Fundamental/qualitativ:** Schätzung des inneren Werts eines Assets als Barwert der zukünftig erwarteten Cash Flows
+  </Card>
+  <Card title="Aktive Strategien: relative vs. absolute Return" tone="orange">
+    - **Relative Return:** gemessen an einer Benchmark
+    - **Absolute Return:** agiert losgelöst von einer Benchmark, z.B. **Hedge Fonds**
+    - Idee: positive Rendite weitgehend unabhängig von der allgemeinen Marktentwicklung
+  </Card>
+</Columns>
+
+### Tilted Management als Core-Satellite-Strategie
+
+<Columns count={3}>
+  <Card title="Tilted Management" tone="purple">
+    - Mischform; ausgehend vom **passiven** Management
+    - Abweichung nach ausgewählten **Risikofaktoren** von der passiven Strategie
+  </Card>
+  <Card title="Core-Satellite-Logik" tone="accent">
+    - **Core:** fixe Anlage, <Exam>passiv</Exam>
+    - **Satellites:** aktive Beimischung
+    - Beimischung: Small Caps, Branchen, Emerging Markets, Themen (Infrastruktur)
+  </Card>
+  <Card title="Core-Satellite-Struktur (Folie 5)" tone="neutral">
+    <Diagram
+      title="Core-Satellite"
+      source="Asset Management · Folie 5"
+      chart={`flowchart TD
+  CORE[Core: fixe Anlage, passiv]
+  S1[Small Caps]
+  S2[Branchen]
+  S3[Emerging Markets]
+  S4[Themen: Infrastruktur]
+  CORE --- S1
+  CORE --- S2
+  CORE --- S3
+  CORE --- S4`}
+    />
+  </Card>
+</Columns>
+
+</section>
+
+<section id="rolle-und-einsatz-von-indizes">
+
+## Rolle der Benchmark und Einsatzbereiche von Indizes
+
+### Die Benchmark im aktiven vs. passiven Management
+
+<CompareCard
+  items={[
+    {
+      tag: 'Passiv',
+      title: 'Benchmark im passiven Management',
+      subtitle: 'die Benchmark IST das Ziel',
+      accent: 'teal',
+      points: [
+        'Replikation der (Strategischen) **Asset Allocation**',
+        '**Zielportfolio**',
+      ],
+    },
+    {
+      tag: 'Aktiv',
+      title: 'Benchmark im aktiven Management',
+      subtitle: 'die Benchmark soll geschlagen werden',
+      accent: 'accent',
+      points: [
+        'Basis für die Bildung **aktiver Renditeerwartungen**',
+        'zu **„schlagendes" Portfolio** durch Über- oder Untergewichtungen der Portfoliokomponenten',
+      ],
+    },
+  ]}
+/>
+
+### Vier Einsatzbereiche von Indizes nach Akteur (Folie 6)
+
+<DataTable
+  caption="Einsatzbereiche von Indizes nach Funktion und Akteur"
+  columns={[
+    { key: 'bereich', label: 'Einsatzbereich' },
+    { key: 'funktion', label: 'Funktion des Index' },
+    { key: 'akteur', label: 'Akteur' },
+  ]}
+  rows={[
+    { bereich: 'Aktives Management', funktion: 'Benchmarking', akteur: 'Asset Manager' },
+    { bereich: 'Passives Management', funktion: 'ETF', akteur: 'Investmentbanken / Börsen' },
+    { bereich: 'Derivate', funktion: 'Basiswert', akteur: 'Investmentbanken / Börsen' },
+    { bereich: 'Monitoring', funktion: 'Information', akteur: 'Medien' },
+  ]}
+/>
+
+### Indizes über den gesamten Verwaltungsprozess (Folie 9)
+
+<Columns count={2}>
+  <Card title="Einsatz entlang des Prozesses" tone="accent">
+    - Indizes werden über den **gesamten Vermögensverwaltungsprozess** hinweg eingesetzt
+    - Asset-Allocation / Szenario-Rechnungen
+    - Handel / Front Office
+    - Abwicklung & Buchhaltung
+    - Treasury / Risk-Management
+    - internes Reporting / Controlling
+    - Investoren-Reporting
+  </Card>
+  <Card title="Prozess als Kreislauf" tone="neutral">
+    <Diagram
+      title="Prozess der Vermögensverwaltung"
+      source="Asset Management · Folie 9"
+      chart={`flowchart TD
+  A[Asset-Allocation / Szenario-Rechnungen] --> B[Handel / Front Office]
+  B --> C[Abwicklung & Buchhaltung]
+  C --> D[Treasury / Risk-Management]
+  D --> E[Internes Reporting / Controlling]
+  E --> F[Investoren-Reporting]
+  F --> A`}
+    />
+  </Card>
+</Columns>
+
+</section>
+
+<section id="definition-und-funktionen-index">
+
+## Definition, Anforderungen und Funktionen eines Index
+
+### Was ist ein Index?
+
+<DefinitionBox term="Index" source="Asset Management · Folie 8">
+Zusammenfassung einer **ausgewählten Gruppe von Wertpapieren** (zumeist Aktien), die an einer Börse notiert sind — eine gezielte Zusammenstellung nach bestimmten Kriterien, das **„Musterportfolio"** eines Landes oder einer Region.
+</DefinitionBox>
+
+### Anforderungen und Funktionen
+
+<Columns count={2}>
+  <Card title="Anforderungen an Indizes (Investierbarkeit)" tone="purple" exam>
+    - <Exam>Nachbildbarkeit</Exam>
+    - <Exam>Liquidität</Exam> der enthaltenen Titel
+    - <Exam>Transparenz</Exam> bei Auswahl und Gewichtung
+  </Card>
+  <Card title="Funktionen von Indizes" tone="accent">
+    - Abbildung der Marktentwicklung als **„Börsenbarometer"** (Benchmarkfunktion)
+    - **Vergleichsmaßstab** für die Performance-Messung
+    - Analyse der **Einflussfaktoren** auf Renditen
+    - **Anlage- und Handelsfunktion**
+  </Card>
+</Columns>
+
+</section>
+
+<section id="vielzahl-der-indizes">
+
+## Die Vielzahl der Indizes
+
+### Markt in Zahlen (Folie 10)
+
+<KpiGrid
+  items={[
+    { value: '> 3 Mio.', label: 'Finanzmarkt-Indizes weltweit', accent: 'accent' },
+    { value: '14', label: 'Mitglieder der Index Industry Association', accent: 'default' },
+    { value: '98 %', label: 'geschätzte Marktabdeckung der IIA', accent: 'positive' },
+    { value: '+96 %', label: 'relatives Wachstum ESG-Indizes (ggü. 2021)', accent: 'warning' },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Index Industry Association (Folie 10)" tone="accent">
+    - Dachverband großer Indexprovider, **14 Mitglieder**
+    - repräsentiert (geschätzt) **98 %** des globalen Marktes für derartige Dienste
+    - Provider u.a.: Bloomberg, FTSE Russell, ICE, Morningstar, MSCI, NASDAQ OMX, S&P Dow Jones, STOXX
+  </Card>
+  <Card title="Ergebnisse der 6. Umfrage (Nov. 2022)" tone="teal">
+    - größtes relatives Wachstum bei **ESG-Indizes (+96 %)** ggü. 2021
+    - Höchststand: **3,7 Mio.** Indices in 2018
+    - mittlerweile: Konsolidierung auf **rund 3 Mio.**
+  </Card>
+</Columns>
+
+### Warum so viele Indizes? (Folie 12)
+
+<Columns count={2}>
+  <Card title="Digitalisierung" tone="purple">
+    - zunehmende Verfügbarkeit von **Rechenkapazitäten**
+    - ermöglicht die Berechnung neuer Indizes **innerhalb kürzester Zeit**
+  </Card>
+  <Card title="Kombination verschiedener Ausprägungen" tone="orange">
+    - **Auswahl** innerhalb des Universums (z.B. europ. Aktien)
+    - **Gewichtung** (gleichgewichtet, Marktkapitalisierung, …)
+    - **Währungen** (mind. EUR, USD, JPY, GBP)
+    - mit/ohne **Währungssicherung**
+    - mit/ohne Berücksichtigung von **Dividenden bzw. Steuern**
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Folge: Kombinatorische Explosion">
+- aus einem einzelnen **Hauptindex** ergibt sich eine **Vielzahl von Kombinationen**
+- die Zahl der Indizes wächst **exponentiell**
+- übersteigt inzwischen die Zahl der **gehandelten Aktien** („more Benchmarks/ETFs than Stocks", Folie 11)
+</Callout>
+
+<SourceNote>Folie 11 (Bernstein Analysis, Wurgler 2011, FT, ERI Scientific Beta, Worldbank) — Originalgrafik liegt nur als visuell abgelesene Schätzung vor; daher hier nicht als exaktes Diagramm rekonstruiert.</SourceNote>
+
+</section>
+
+<section id="differenzierung-von-indizes">
+
+## Differenzierung von Indizes
+
+<Callout type="examfocus" title="Drei Differenzierungskriterien (Folie 13)">
+1. **Anzahl Indexmitglieder:** Auswahlindex vs. Benchmarkindex · 2. **Gewichtung:** preis- vs. kapitalisierungsgewichtet · 3. **Berechnung:** Performance-Index vs. Kursindex.
+</Callout>
+
+### 1 · Anzahl: Auswahl- vs. Benchmarkindex
+
+<CompareCard
+  items={[
+    {
+      tag: 'Auswahl',
+      title: 'Auswahlindex',
+      subtitle: 'Anzahl der Werte ist begrenzt',
+      accent: 'accent',
+      points: [
+        'Anzahl der Werte im Index ist **begrenzt**',
+        'Ziel: hoher Grad an **Handelbarkeit**',
+        'Auswahlverfahren hat besondere Bedeutung',
+        'Kriterien: Marktkapitalisierung des **Free Floats** und **Orderbuchumsatz**',
+      ],
+    },
+    {
+      tag: 'Benchmark',
+      title: 'Benchmarkindex',
+      subtitle: 'Anzahl der Mitglieder nicht begrenzt',
+      accent: 'purple',
+      points: [
+        'Anzahl der Indexmitglieder ist **nicht begrenzt**',
+        'misst auf **breiter Basis** die Performance eines Marktes, Segments oder Teilsegments',
+      ],
+    },
+  ]}
+/>
+
+### 2 · Gewichtung: preis- vs. kapitalisierungsgewichtet
+
+<CompareCard
+  items={[
+    {
+      tag: 'Preis',
+      title: 'Preisgewichteter Index',
+      subtitle: 'je 1 Aktie pro Titel',
+      accent: 'accent',
+      points: [
+        'Annahme: jeder Anleger kauft **genau eine Aktie** je Titel',
+        'Folge: **Übergewichtung** von Werten mit hohem Kursniveau',
+        'US-Markt: Handelsbandbreiten, gut gelaufene Werte machen **Splits** → **Downward Bias**',
+      ],
+    },
+    {
+      tag: 'Kapital',
+      title: 'Kapitalisierungsgewichteter Index',
+      subtitle: 'Gewichtung nach Marktkapitalisierung',
+      accent: 'teal',
+      points: [
+        'Annahme: Investition nach **Marktkapitalisierung**',
+        'Folge: **Market Cap Bias**',
+      ],
+    },
+  ]}
+/>
+
+<Card title="Beispiel: MSCI World (kapitalisierungsgewichtet, Folie 15)" tone="neutral">
+  - weltweit breit aufgestelltes Benchmark-Portfolio, **keine** Emerging Markets
+  - **Kapitalisierungsgewichtung** → Folge: **Dominanz von US-Emittenten**
+  - dominierende Branchen: **Informationstechnologie, Gesundheit, Finanzwesen**
+</Card>
+
+<DataChart
+  type="bar"
+  title="MSCI World — Country Weights 2018 vs. 2026 (Folie 16)"
+  source="MSCI (2026)"
+  xKey="land"
+  series={[
+    { key: 'y2018', name: '2018', color: 'var(--color-module-purple)' },
+    { key: 'y2026', name: '2026', color: 'var(--color-module-blue)' },
+  ]}
+  data={[
+    { land: 'United States', y2018: 59.21, y2026: 71.91 },
+    { land: 'Japan', y2018: 8.95, y2026: 5.68 },
+    { land: 'United Kingdom', y2018: 6.63, y2026: 3.68 },
+    { land: 'Canada', y2018: null, y2026: 3.49 },
+    { land: 'France', y2018: 3.97, y2026: 2.48 },
+    { land: 'Germany', y2018: 3.66, y2026: null },
+    { land: 'Other', y2018: 17.59, y2026: 12.75 },
+  ]}
+/>
+
+<Callout type="info" title="Market Cap Bias im Zeitvergleich">
+- US-Anteil steigt von **59,21 % (2018)** auf **71,91 % (2026)**
+- Information Technology wächst von ca. 16,8 % auf **27,61 %** und überholt Financials als größten Sektor
+- Folge: sichtbare **Konzentration** durch den Market Cap Bias
+</Callout>
+
+<DataTable
+  caption="MSCI World — Top-10-Constituents 2026 (Index Wt. %, Folie 15)"
+  columns={[
+    { key: 'name', label: 'Titel' },
+    { key: 'wt', label: 'Index Wt. (%)', align: 'right' },
+    { key: 'sector', label: 'Sector' },
+  ]}
+  rows={[
+    { name: 'NVIDIA', wt: '5,57', sector: 'Info Tech' },
+    { name: 'APPLE', wt: '4,58', sector: 'Info Tech' },
+    { name: 'MICROSOFT CORP', wt: '3,31', sector: 'Info Tech' },
+    { name: 'AMAZON.COM', wt: '2,93', sector: 'Cons Discr' },
+    { name: 'ALPHABET A', wt: '2,57', sector: 'Comm Srvcs' },
+    { name: 'BROADCOM', wt: '2,16', sector: 'Info Tech' },
+    { name: 'ALPHABET C', wt: '2,13', sector: 'Comm Srvcs' },
+    { name: 'META PLATFORMS A', wt: '1,53', sector: 'Comm Srvcs' },
+    { name: 'TESLA', wt: '1,24', sector: 'Cons Discr' },
+    { name: 'JPMORGAN CHASE & CO', wt: '0,98', sector: 'Financials' },
+    { name: 'Total', wt: '26,99', sector: '—' },
+  ]}
+/>
+
+<SourceNote>MSCI (2026), https://www.msci.com/documents/10199/255599/msci-world-index.pdf, abgerufen am 17.05.2026. Sektorwerte 2018 teils visuell abgelesen.</SourceNote>
+
+### 3 · Berechnung: Kurs- vs. Performanceindex
+
+<CompareCard
+  items={[
+    {
+      tag: 'Performance',
+      title: 'Performance-Index',
+      subtitle: 'Synonym: Total Return Index · Bsp.: DAX',
+      accent: 'positive',
+      points: [
+        'fiktive Erfassung von **Dividenden-/Bezugsrechtszahlungen**',
+        'Folge: **Reinvestition** der laufenden Erträge',
+        'Beispiel: **DAX**',
+      ],
+    },
+    {
+      tag: 'Kurs',
+      title: 'Kursindex',
+      subtitle: 'Bsp.: Dow Jones Industrial Average',
+      accent: 'warning',
+      points: [
+        '**keine** Wiederanlage laufender Erträge',
+        'mit zunehmendem Anlagehorizont steigende **Opportunitätskosten** durch entgangene Dividenden',
+        'Beispiel: **Dow Jones Industrial Average (DJIA)**',
+      ],
+    },
+  ]}
+/>
+
+<DataTable
+  caption="Typen von Indizes: Gewichtung × Dividendenbehandlung (Folie 20)"
+  columns={[
+    { key: 'div', label: 'Dividendenbehandlung' },
+    { key: 'preis', label: 'Preisgewichtet' },
+    { key: 'kap', label: 'Kapitalisierungsgewichtet' },
+    { key: 'ff', label: 'Free-Float-gewichtet' },
+    { key: 'gleich', label: 'Gleichgewichtet' },
+  ]}
+  rows={[
+    { div: 'Keine Berücksichtigung von Dividenden (Kursindex)', preis: 'DJIA; Nikkei', kap: 'S&P 500; Nasdaq Composite; MSCI World; Hang Seng; Euro Stoxx 50; Scale 30', ff: 'SMI; FTSE 100; DAX', gleich: 'Scale All Share' },
+    { div: 'Mit Berücksichtigung von Dividenden (Performanceindex)', preis: '—', kap: 'Scale 30', ff: 'MSCI Total Return; Swiss Performance Index; DAX', gleich: 'Scale All Share' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Derselbe Index in zwei Varianten">
+- bekannte Indizes wie **DAX** und **Scale 30** erscheinen **sowohl** als **Kurs-** als **auch** als **Performanceindex**
+- entscheidend ist die **Berechnungsmethode**, <Exam>nicht der Name</Exam>
+</Callout>
+
+<DataTable
+  caption="Anzahl der Aktien in führenden Aktienindizes (Folie 21)"
+  columns={[
+    { key: 'markt', label: 'Aktienmarkt' },
+    { key: 'index', label: 'Index' },
+    { key: 'anzahl', label: 'Anzahl der Aktien', align: 'right' },
+  ]}
+  rows={[
+    { markt: 'New York SE', index: 'DJIA, S&P 500, NYSE Comp.', anzahl: '30, 500, ca. 1.900' },
+    { markt: 'NASDAQ', index: 'NASDAQ Composite', anzahl: 'ca. 2.500' },
+    { markt: 'London', index: 'Financial Times', anzahl: '100' },
+    { markt: 'Paris', index: 'CAC 40', anzahl: '40' },
+    { markt: 'Frankfurt', index: 'DAX', anzahl: '40' },
+    { markt: 'Zürich', index: 'SMI', anzahl: '20' },
+    { markt: 'Mailand', index: 'FTSE MIB', anzahl: '40' },
+    { markt: 'Tokio', index: 'TOPIX100', anzahl: '100' },
+    { markt: 'Toronto', index: 'S&P/TSX 60', anzahl: '60' },
+    { markt: 'Singapur', index: 'Straits Times Index', anzahl: '30' },
+    { markt: 'Hong Kong', index: 'Hang Seng', anzahl: '50' },
+  ]}
+/>
+
+</section>
+
+<section id="index-berechnung-uebung">
+
+## Indexberechnung: preis- vs. kapitalisierungsgewichtet
+
+<Card title="Aufgabe (Folie 17)" tone="orange">
+Für den Index aus den Aktien A, B, C und D zu berechnen:
+- **a)** der **preisgewichtete** Index(wert)
+- **b)** der **kapitalisierungsgewichtete** Index(wert)
+- jeweils die **Renditen für den Monat Dezember**
+- *(folientreu: die Folie schreibt durchgängig „arithmethisch")*
+</Card>
+
+<DataTable
+  caption="Ausgangsdaten Aktien A–D (30.11. → 31.12.)"
+  columns={[
+    { key: 'aktie', label: 'Aktie' },
+    { key: 'k1', label: 'Kurs 30.11.', align: 'right' },
+    { key: 'n1', label: 'Anzahl', align: 'right' },
+    { key: 'mw1', label: 'Marktwert 30.11.', align: 'right' },
+    { key: 'k2', label: 'Kurs 31.12.', align: 'right' },
+    { key: 'mw2', label: 'Marktwert 31.12.', align: 'right' },
+  ]}
+  rows={[
+    { aktie: 'A', k1: '30', n1: '1.000', mw1: '30.000', k2: '36', mw2: '36.000' },
+    { aktie: 'B', k1: '10', n1: '3.000', mw1: '30.000', k2: '12', mw2: '36.000' },
+    { aktie: 'C', k1: '20', n1: '1.000', mw1: '20.000', k2: '25', mw2: '25.000' },
+    { aktie: 'D', k1: '60', n1: '500', mw1: '30.000', k2: '58', mw2: '29.000' },
+    { aktie: 'Total', k1: '—', n1: '—', mw1: '110.000', k2: '—', mw2: '126.000' },
+  ]}
+/>
+
+### Lösung (Folie 18)
+
+<Columns count={2}>
+  <Card title="a) Preisgewichtet (arithmethisch)" tone="accent">
+    - Indexstand 30.11. = **30**
+    - Indexstand 31.12. = **32,75**
+    - Rendite Preisgew. = **9,2 %**
+  </Card>
+  <Card title="b) Kapitalisierungsgewichtet" tone="teal">
+    - Marktwert 30.11. = **110.000**
+    - Marktwert 31.12. = **126.000**
+    - Rendite Kap.gew. = **14,5 %**
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="Preisgewichteter Indexstand (arithmethisch)"
+  expr="I_{30.11.} = \frac{30+10+20+60}{4} = 30 \qquad I_{31.12.} = \frac{36+12+25+58}{4} = 32{,}75"
+/>
+
+<Formula
+  display
+  title="Rendite preisgewichtet"
+  expr="r_{\text{Preis}} = \frac{32{,}75 - 30}{30} = 9{,}2\,\%"
+/>
+
+<Formula
+  display
+  title="Rendite kapitalisierungsgewichtet"
+  expr="r_{\text{Kap}} = \frac{126.000 - 110.000}{110.000} = 14{,}5\,\%"
+/>
+
+<Callout type="examfocus" title="Die Gewichtungsmethode verändert das Ergebnis">
+- Titel **D** (hoher Kurs, fallend) wirkt im **Preisindex** stark, im **Kapitalisierungsindex** schwächer
+- Folge: preisgewichteter Index nur <Exam>+9,2 %</Exam>, kapitalisierungsgewichteter <Exam>+14,5 %</Exam>
+</Callout>
+
+</section>
+
+<section id="passive-vehikel-und-etfs">
+
+## Passive Vehikel und ETFs
+
+### Drei Vehikel im Vergleich (Folie 22)
+
+<DataTable
+  caption="Indexfonds vs. Indexzertifikate vs. ETFs (Folie 22)"
+  columns={[
+    { key: 'merkmal', label: 'Merkmal' },
+    { key: 'fonds', label: 'Indexfonds' },
+    { key: 'zert', label: 'Indexzertifikate' },
+    { key: 'etf', label: 'ETFs' },
+  ]}
+  rows={[
+    { merkmal: 'Rechtsstatus', fonds: 'Offener Investmentfonds', zert: 'Schuldverschreibung', etf: 'Offener Investmentfonds' },
+    { merkmal: 'Risiko durch Insolvenz des Emittenten', fonds: 'Sondervermögen', zert: 'Totalverlustrisiko', etf: 'Sondervermögen' },
+    { merkmal: 'Handel', fonds: 'über KVG', zert: 'börsengehandelt', etf: 'börsengehandelt' },
+    { merkmal: 'Laufzeit', fonds: 'unbegrenzt', zert: 'be- und unbegrenzt', etf: 'unbegrenzt' },
+    { merkmal: 'Kursfeststellung', fonds: 'einmal täglich', zert: 'laufend', etf: 'laufend' },
+    { merkmal: 'An- und Verkaufskosten', fonds: '2–5 %', zert: 'Spread, Courage', etf: 'Spread, Courtage' },
+    { merkmal: 'Gebühren', fonds: '0,2 % bis 2 %', zert: 'keine', etf: '0,00 % bis 0,7 %' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Zertifikate sind kein Sondervermögen">
+- Indexfonds und ETFs = insolvenzgeschütztes <Exam>Sondervermögen</Exam>
+- **Indexzertifikate** = **Schuldverschreibungen** mit <Exam>Totalverlustrisiko</Exam> bei Emittenteninsolvenz
+- *(folientreu: „Courage" in der Zertifikate-Spalte, gemeint ist „Courtage")*
+</Callout>
+
+### ETF = börsengehandelt + Index + Fonds (Folie 23)
+
+<Columns count={3}>
+  <Card title="börsengehandelt" tone="accent">
+    - jederzeit handelbar
+    - permanent ein aktueller Kurs, im Prinzip wie eine Aktie
+  </Card>
+  <Card title="Index" tone="purple">
+    - Marktbarometer
+    - bildet nur einen Index nach (**kein** aktives Management)
+  </Card>
+  <Card title="Fonds" tone="teal">
+    - **Sondervermögen**
+    - keine Ausgabeaufschläge, sehr geringe Verwaltungskosten
+  </Card>
+</Columns>
+
+### Wachstum des passiven Marktes (Folie 24)
+
+<KpiGrid
+  items={[
+    { value: '1.209', label: 'ETFs weltweit 2007', accent: 'default' },
+    { value: '11.627', label: 'ETFs weltweit 2024', accent: 'accent' },
+    { value: '224.862', label: 'Peak AuM DE-ETF 2021 (Mio. €)', accent: 'positive' },
+    { value: '190.692', label: 'AuM DE-ETF 2022 (Mio. €)', accent: 'warning' },
+  ]}
+/>
+
+<DataChart
+  type="bar"
+  title="Anzahl der weltweit verwalteten ETFs 2007–2024 (Folie 24)"
+  source="Statista, abgerufen 17.05.26"
+  xKey="year"
+  xLabel="Jahr"
+  yLabel="Anzahl ETFs"
+  series={[{ key: 'value', name: 'Anzahl ETFs', color: 'var(--color-module-blue)' }]}
+  data={[
+    { year: 2007, value: 1209 }, { year: 2008, value: 1633 }, { year: 2009, value: 1986 },
+    { year: 2010, value: 2513 }, { year: 2011, value: 3057 }, { year: 2012, value: 3370 },
+    { year: 2013, value: 3635 }, { year: 2014, value: 4016 }, { year: 2015, value: 4486 },
+    { year: 2016, value: 4862 }, { year: 2017, value: 5309 }, { year: 2018, value: 6519 },
+    { year: 2019, value: 6968 }, { year: 2020, value: 7424 }, { year: 2021, value: 8561 },
+    { year: 2022, value: 9543 }, { year: 2023, value: 10321 }, { year: 2024, value: 11627 },
+  ]}
+/>
+
+<DataChart
+  type="bar"
+  title="Verwaltetes Vermögen der deutschen ETF-Branche 2006–2022 (Mio. €, Folie 24)"
+  source="Statista, abgerufen 17.05.26"
+  xKey="year"
+  xLabel="Jahr"
+  yLabel="Mio. €"
+  series={[{ key: 'value', name: 'Verwaltetes Vermögen (Mio. €)', color: 'var(--color-module-teal)' }]}
+  data={[
+    { year: 2006, value: 17627 }, { year: 2007, value: 19862 }, { year: 2008, value: 35939 },
+    { year: 2009, value: 54490 }, { year: 2010, value: 68215 }, { year: 2011, value: 66562 },
+    { year: 2012, value: 74245 }, { year: 2013, value: 83620 }, { year: 2014, value: 84111 },
+    { year: 2015, value: 107137 }, { year: 2016, value: 109786 }, { year: 2017, value: 134285 },
+    { year: 2018, value: 125044 }, { year: 2019, value: 152112 }, { year: 2020, value: 168922 },
+    { year: 2021, value: 224862 }, { year: 2022, value: 190692 },
+  ]}
+/>
+
+<Callout type="merksatz" title="Trend zum passiven Investieren">
+- Zahl der ETFs weltweit: rund **1.200 → über 11.600**
+- in deutschen ETFs verwaltetes Vermögen: massiv gewachsen
+- an der Wall Street inzwischen <Exam>mehr ETFs als einzeln gelistete Aktien</Exam> (Folie 25)
+</Callout>
+
+<SourceNote>Folie 25: Financial Times / Morningstar (Sept. 2025) — Liniendiagramm liegt nur als visuell abgelesene Schätzung vor und ist daher nicht als exaktes Diagramm rekonstruiert.</SourceNote>
+
+</section>
+
+<section id="aktiv-vs-passiv-evidenz">
+
+## Aktiv vs. passiv: Vor-/Nachteile und Evidenz
+
+### Vor- und Nachteile gegenübergestellt
+
+<CompareCard
+  items={[
+    {
+      tag: 'Aktiv',
+      title: 'Aktives Management',
+      subtitle: 'Chancen, aber teuer',
+      accent: 'accent',
+      points: [
+        '**+** Chance auf überdurchschnittliche Renditen',
+        '**+** erhöhte Flexibilität (Verwaltung, Umschichtung)',
+        '**+** in Baisse-Phasen antizyklische Anlagepolitik möglich',
+        '**−** hoher Prognoseaufwand',
+        '**−** hohe laufende Kosten',
+        '**−** erhöhtes Abweichungsrisiko',
+      ],
+    },
+    {
+      tag: 'Passiv',
+      title: 'Passives Management',
+      subtitle: 'günstig, aber ohne Outperformance-Ziel',
+      accent: 'teal',
+      points: [
+        '**+** niedrigere Kosten',
+        '**+** hohe Transparenz',
+        '**+** geringeres Abweichungsrisiko',
+        '**−** Outperformance nicht beabsichtigt',
+        '**−** prozyklisches Investment',
+        '**−** Performance hängt von der Güte des Benchmark/Index ab',
+      ],
+    },
+  ]}
+/>
+
+### Empirische Erfolgsaussichten des aktiven Managements
+
+<DataChart
+  type="bar"
+  title="Active Funds' Success Rate by Category (in %, Folie 27)"
+  source="Morningstar · European Active-Passive Barometer, Okt. 2018 (Daten 30.06.2018); Werte visuell abgelesen"
+  xKey="kat"
+  yLabel="in %"
+  series={[
+    { key: 'y1', name: '1 Jahr', color: 'var(--color-module-blue)' },
+    { key: 'y3', name: '3 Jahre', color: 'var(--color-module-teal)' },
+    { key: 'y5', name: '5 Jahre', color: 'var(--color-module-purple)' },
+    { key: 'y10', name: '10 Jahre', color: 'var(--color-module-orange)' },
+  ]}
+  data={[
+    { kat: 'Europe LC Blend', y1: 28, y3: 23, y5: 20, y10: 16 },
+    { kat: 'US LC Blend', y1: 23, y3: 17, y5: 16, y10: 12 },
+    { kat: 'Japan LC', y1: 41, y3: 39, y5: 27, y10: 18 },
+    { kat: 'Global LC Blend', y1: 22, y3: 18, y5: 13, y10: 12 },
+    { kat: 'EUR Corporate Bond', y1: 57, y3: 53, y5: 44, y10: 44 },
+    { kat: 'USD Corporate Bond', y1: 27, y3: 33, y5: 26, y10: 35 },
+  ]}
+/>
+
+<Callout type="examfocus" title="Nur eine Minderheit schlägt die Benchmark">
+- über fast alle Kategorien schlägt nur eine <Exam>Minderheit</Exam> aktiver Fonds ihre Benchmark
+- bei Aktien-Kategorien sinkt die Erfolgsquote mit **längerem Horizont**
+- empirisches Argument für **passives Management**
+- Ausreißer: **EUR Corporate Bond** (bis 57 % auf 1 Jahr)
+</Callout>
+
+<DataTable
+  caption="Three Decades of Index Superiority — Twice (Folie 28, Bogle 2016)"
+  columns={[
+    { key: 'metric', label: 'Kennzahl' },
+    { key: 'eq4575', label: '1945–1975 · Ø Equity Fund', align: 'right' },
+    { key: 'sp4575', label: '1945–1975 · S&P 500', align: 'right' },
+    { key: 'eq8515', label: '1985–2015 · Ø Large Cap Fund', align: 'right' },
+    { key: 'sp8515', label: '1985–2015 · S&P 500', align: 'right' },
+  ]}
+  rows={[
+    { metric: 'Annualized Return', eq4575: '9,7 %', sp4575: '11,3 %', eq8515: '9,6 %', sp8515: '11,2 %' },
+    { metric: 'Index Advantage', eq4575: '—', sp4575: '1,6 %', eq8515: '—', sp8515: '1,6 %' },
+    { metric: 'Cumulative Return', eq4575: '1.539 %', sp4575: '2.402 %', eq8515: '1.548 %', sp8515: '2.494 %' },
+    { metric: 'Index Advantage (kum.)', eq4575: '—', sp4575: '863 %', eq8515: '—', sp8515: '946 %' },
+    { metric: 'Standard Deviation', eq4575: '16,4 %', sp4575: '18,6 %', eq8515: '16,8 %', sp8515: '17,3 %' },
+    { metric: 'Sharpe Ratio', eq4575: '0,38', sp4575: '0,42', eq8515: '0,39', sp8515: '0,48' },
+    { metric: 'R²', eq4575: '0,96', sp4575: '1,00', eq8515: '0,99', sp8515: '1,00' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Vanguard: The zero-sum game (Folie 29)">
+- **vor Kosten:** aktives Management ist ein <Exam>Nullsummenspiel</Exam>
+- **nach Fondskosten:** mediane Fondsrendite verschiebt sich **unter** die Benchmark
+- Folge: im Mittel **verfehlen** mehr Fonds die Benchmark, als sie schlagen
+</Callout>
+
+### Tracking-Error (Folie 30)
+
+<DefinitionBox term="Tracking-Error" source="Asset Management · Folie 30">
+Maß für die <Exam>Qualität der Nachbildung</Exam> der Benchmark bzw. das Risiko, deren Rendite zu verfehlen. Mathematisch: <Exam>Volatilität der Differenz</Exam> zwischen der Rendite des Portfolios und der Rendite der Benchmark (bzw. des Alphas).
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Ursachen des Tracking-Errors bei Indexfonds" tone="purple">
+    - **Transaktionskosten** im Portfolio, aber nicht in der Benchmark
+    - exakte Indexnachbildung aus Kostengründen nicht empfehlenswert
+    - bei sehr großen Indizes (MSCI World, Barclays Global Agg) **nicht praktikabel**
+    - **Re-Investment** von Kapitalausschüttungen nicht nach Indexregeln möglich
+    - **Steuerzahlungspflicht** des Anlegers (Net Dividend Reinvested vs. Total Return)
+  </Card>
+  <Card title="Regulatorische Grenze" tone="warning">
+    - Gewicht eines Einzelwerts ist im Fondsportfolio auf <Exam>10 Prozent</Exam> beschränkt
+  </Card>
+</Columns>
+
+<SourceNote>Asset Management · Kapitel 8 · Indizes / Aktives vs. Passives Management · Folien 259–288</SourceNote>
+
+</section>

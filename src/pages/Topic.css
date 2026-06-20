@@ -1,0 +1,100 @@
+.topic-page {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  /* Top padding clears the fixed hamburger + "Inhalt" buttons (top: space-4,
+     height: 42px → bottom ≈ 58px) so the breadcrumb sits below them, as in 2.1. */
+  padding: var(--space-16) clamp(var(--space-8), 6vw, var(--space-20)) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.topic-page__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.topic-page__title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.topic-page__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.topic-page__title-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+.topic-page__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.topic-page__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.topic-page__content {
+  width: 100%;
+  min-width: 0;
+}
+
+.topic-page__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-16) var(--space-8);
+  color: var(--color-text-secondary);
+  text-align: center;
+  background: var(--color-bg-card);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.topic-page__placeholder-title {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.topic-page__placeholder-hint {
+  max-width: 680px;
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 720px) {
+  .topic-page {
+    padding: var(--space-16) var(--space-5) var(--space-5);
+  }
+
+  .topic-page__title-row {
+    flex-direction: column;
+  }
+
+  .topic-page__title-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

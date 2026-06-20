@@ -1,0 +1,590 @@
+<section id="zeitpraeferenz-des-geldes">
+
+## Zeitpräferenz des Geldes
+
+<Card title="Einstiegsbeispiel · Abendessen" tone="accent">
+- Ausgangslage: Sie haben EUR 100 und würden gerne zu einem Abendessen gehen.
+- Vorschlag: Sie überlassen jemandem EUR 100 und erhalten in einem Jahr EUR 110 zurück.
+- Ihr Verzicht auf das Abendessen heute wird also mit **EUR 10,00** (= 10 %) entlohnt.
+- Frage: **Ist das Angebot fair?** — Lohnt sich heutiger Konsumverzicht gegen eine spätere Mehrzahlung?
+</Card>
+
+<Formula
+  display
+  title="Heutiger Konsumverzicht entlohnt mit i = 10 %"
+  expr="\underbrace{100\,\text{EUR}}_{\text{heute } (K_0)} \cdot (1 + 0{,}10) = \underbrace{110\,\text{EUR}}_{\text{in 1 Jahr } (K_1)} \;\Longrightarrow\; \text{Entlohnung} = 10\,\text{EUR} = 10\,\%"
+  legend={[
+    { sym: 'K_0', desc: 'Barwert / Betrag heute (100 EUR)' },
+    { sym: 'K_1', desc: 'Rückzahlung nach einem Jahr (110 EUR)' },
+    { sym: 'i', desc: 'Zinssatz als Entlohnung des Konsumverzichts (10 %)' },
+  ]}
+/>
+
+### Zahlungsbereitschaft über steigende Zeithorizonte
+
+Vier aufeinander aufbauende Fragen halten den versprochenen Betrag konstant bei 500 €. Nur die Frist (und beim letzten Schritt der Schuldner) ändert sich — so wird die intuitive Diskontierung über einen wachsenden Zeithorizont erfahrbar.
+
+<Timeline
+  events={[
+    {
+      label: '1h',
+      title: 'Frage 1 · in 1 Stunde',
+      text: '„Wie viel würden Sie jetzt für eine sichere Zahlung von 500 € in einer Stunde bezahlen?“ — sehr kurzer Horizont: Barwert nahezu identisch mit 500 €.',
+    },
+    {
+      label: '1M',
+      title: 'Frage 2 · in 1 Monat',
+      text: '„… für 500 € in einem Monat?“ — längere Frist als Frage 1.',
+    },
+    {
+      label: '1J',
+      title: 'Frage 3 · in 1 Jahr',
+      text: '„… für 500 € in einem Jahr?“ — weiter steigender Zeithorizont.',
+    },
+    {
+      label: '!',
+      title: 'Frage 4 · von einem Fremden in 1 Jahr',
+      text: '„… wenn ein Fremder in einem Jahr 500 € verspricht?“ — gleicher Horizont wie Frage 3, aber zusätzliches Vertrauens- bzw. Ausfallrisiko.',
+    },
+  ]}
+/>
+
+<Callout type="info" title="Aufbau der Fragenreihe">
+Die vier Fragen bauen aufeinander auf und illustrieren die intuitive Diskontierung über zunehmende Zeithorizonte. Der Schein-Wert (500 €) bleibt gleich, nur Frist bzw. Schuldner ändern sich — Überleitung zu den Gründen für die Existenz eines Zinssatzes.
+</Callout>
+
+### Sechs Gründe für die Existenz eines Zinssatzes
+
+<Columns count={3}>
+  <Card title="Unsicherheit" tone="accent" compact>
+    - Unsicherheit über eigenes Leben und zukünftige Ereignisse verlangt nach Entschädigung
+  </Card>
+  <Card title="Kompensation für Risiko" tone="accent" compact>
+    - am Finanzmarkt = **Risikoprämie**
+    - Ausfall-, Kredit- oder Default-Risiko (Schuldner erfüllt nicht / wird insolvent)
+  </Card>
+  <Card title="Opportunitätskosten" tone="accent" compact>
+    - Entschädigung für entgangenen Nutzen der nächstbesten Alternative
+    - <Exam>Gegenwartspräferenz</Exam> als Basiskonzept der Ökonomie
+  </Card>
+  <Card title="Inflation" tone="teal" compact>
+    - Kaufkraftverlust des Geldes verlangt nach **Inflationsausgleich**
+  </Card>
+  <Card title="Ungeduld" tone="teal" compact>
+    - „Lieber heute als morgen“
+    - kann zur Reduktion des Gesamtnutzens führen
+  </Card>
+  <Card title="Multiple Persönlichkeiten" tone="purple" compact>
+    - „heutiges Ich“ vs. „späteres Selbst = Unbekannter“
+    - Konsum zugunsten des heutigen Ich, dem das spätere Selbst wenig am Herzen liegt
+  </Card>
+</Columns>
+
+<Callout type="examfocus" title="Prüfungsklassiker">
+Die <Exam>sechs Gründe</Exam> für die Existenz eines Zinssatzes (Beck 2014) sollten frei genannt werden können: Unsicherheit, Risikokompensation, Opportunitätskosten, Inflation, Ungeduld, multiple Persönlichkeiten.
+</Callout>
+
+<SourceNote>Vgl. Beck (2014), S. 205 f. · Folien 167–173</SourceNote>
+
+</section>
+
+<section id="diskontierung-finanzmathematik">
+
+## Diskontierung (Wiederholung Finanzmathematik)
+
+<Card title="Variablen" tone="neutral" compact>
+- **K_n** = Kapital nach n Perioden · **K_0** = Barwert / Anfangskapital
+- **i** = Zinssatz · **n** = Periodenzahl · **e** = Eulersche Zahl
+</Card>
+
+<Columns count={2}>
+  <Card title="Diskret" tone="accent" compact>
+    - Auf- und Abzinsung mit **Zinseszins**
+    - Faktor: (1 + i) hoch n
+    - periodenweise Verzinsung
+  </Card>
+  <Card title="Stetig" tone="teal" compact>
+    - Auf- und Abzinsung über die **e-Funktion**
+    - kontinuierliche (zeitstetige) Verzinsung
+    - Grenzfall unendlich vieler Perioden
+  </Card>
+</Columns>
+
+### Auf- und Abzinsung gegenübergestellt
+
+<Columns count={2}>
+  <Card title="Aufzinsung (Barwert → Endwert)" tone="accent" compact>
+    <Formula
+      display
+      title="Diskret"
+      expr="K_n = K_0 \cdot (1 + i)^{n}"
+    />
+    <Formula
+      display
+      title="Stetig"
+      expr="K_n = K_0 \cdot e^{\,n}"
+    />
+  </Card>
+  <Card title="Abzinsung (Endwert → Barwert)" tone="teal" compact>
+    <Formula
+      display
+      title="Diskret"
+      expr="K_0 = \frac{K_n}{(1 + i)^{n}}"
+    />
+    <Formula
+      display
+      title="Stetig"
+      expr="K_0 = \frac{K_n}{e^{\,n}}"
+    />
+  </Card>
+</Columns>
+
+<Callout type="info" title="Funktion dieser Folie">
+Wiederholung der finanzmathematischen Grundformeln für Auf- und Abzinsung (diskret und stetig). Sie bilden die Basis der Diskontierung in den folgenden verhaltensökonomischen Modellen.
+</Callout>
+
+</section>
+
+<section id="du-modell">
+
+## Erwartungsnutzentheorie: das Discounted-Utility-Modell
+
+<DefinitionBox term="Discounted-Utility-Modell (DU-Modell)" source="Folie 174">
+In der traditionellen Ökonomie wird der zukünftige Nutzen einer Entscheidung durch **exponentielles Diskontieren** berechnet. Menschen planen ihren Konsum über alle künftigen Perioden und gewichten künftige Konsumzahlungen mit einem individuellen Diskontsatz, der zukünftigem Konsum ein **geringeres Gewicht** verleiht als heutigem.
+</DefinitionBox>
+
+<Formula
+  display
+  title="DU-Modell · Gesamtnutzen als Summe abgezinster Periodennutzen"
+  expr="U(c_0, c_1, \dots, c_n) = \sum_{n=0}^{T} \left(\frac{1}{1 + i}\right)^{n} \cdot U(c_n)"
+  legend={[
+    { sym: 'U(c_n)', desc: 'Nutzen des Konsums in Periode n' },
+    { sym: 'i', desc: 'individueller (konstanter) Diskontsatz' },
+    { sym: 'n', desc: 'Periode (0 bis T)' },
+  ]}
+/>
+
+### Grundidee · hypothetisches Konsumprofil über vier Jahre
+
+<Card title="Annahmen" tone="accent" compact>
+- Menschen verlangen Zinsen (Beispiel: **i = 10 %**)
+- sie möchten ihren **Gesamtlebensnutzen** maximieren (intertemporale Nutzenfunktion u = (c_0, c_1, c_2))
+</Card>
+
+<DataTable
+  caption="Hypothetisches Konsumprofil über vier Jahre (Folie 175)"
+  columns={[
+    { key: 'periode', label: 'Periode' },
+    { key: 'n0', label: 'n=0', align: 'right' },
+    { key: 'n1', label: 'n=1', align: 'right' },
+    { key: 'n2', label: 'n=2', align: 'right' },
+    { key: 'n3', label: 'n=3', align: 'right' },
+  ]}
+  rows={[
+    { periode: 'Zahlung', n0: '100', n1: '100', n2: '110', n3: '120' },
+  ]}
+/>
+
+<Formula
+  display
+  title="Eingesetzte Beispielrechnung (i = 10 %)"
+  expr="U = \left(\tfrac{1}{1{,}1}\right)^{0}\!\cdot 100 + \left(\tfrac{1}{1{,}1}\right)^{1}\!\cdot 100 + \left(\tfrac{1}{1{,}1}\right)^{2}\!\cdot 110 + \left(\tfrac{1}{1{,}1}\right)^{3}\!\cdot 120 = 371{,}97"
+/>
+
+<Callout type="merksatz" title="Ergebnis">
+Der Barwert des Gesamtnutzens beträgt rund <Exam>371,97</Exam> (Beispiel mit i = 10 %). Das DU-Modell summiert die mit konstantem exponentiellem Diskontfaktor abgezinsten Periodennutzen.
+</Callout>
+
+### Probleme des DU-Modells
+
+<Columns count={3}>
+  <Card title="Weitere Alternativen" tone="negative" compact>
+    - weitere (Konsum-)Alternativen werden **nicht berücksichtigt**
+  </Card>
+  <Card title="Unabhängigkeit von Nutzen & Konsum" tone="negative" compact>
+    - wie wollen Menschen Nutzen über die Zeit verteilen (gleichmäßig, zunehmend …)?
+    - welchen Einfluss hat Konsum heute auf die Konsumentscheidung morgen?
+  </Card>
+  <Card title="Konstante Nutzenfunktion" tone="negative" compact>
+    - bleibt die Nutzenfunktion über den gesamten Zeitraum stabil?
+  </Card>
+  <Card title="Konstanter Diskontfaktor" tone="warning" compact>
+    - zu unterschiedlichen Zeitpunkten konsumierte Güter werden evtl. mit **unterschiedlichen** Diskontfaktoren diskontiert
+  </Card>
+  <Card title="Zeitinkonsistenz" tone="warning" compact>
+    - Unabhängigkeit des Nutzens vom Zeitpunkt des Konsums?
+  </Card>
+  <Card title="Positive Zeitpräferenzen" tone="warning" compact>
+    - in der Regel wollen Menschen **mehr** für einen Verzicht
+  </Card>
+</Columns>
+
+<Callout type="pitfall" title="Kritik am DU-Modell">
+Die Kernannahmen — Unabhängigkeit, konstante Nutzenfunktion, konstanter Diskontfaktor — werden empirisch verletzt, insbesondere durch <Exam>Zeitinkonsistenz</Exam>.
+</Callout>
+
+</section>
+
+<section id="zeitinkonsistenz">
+
+## Zeitinkonsistenz und exponentielle Diskontierung
+
+<DefinitionBox term="Zeitinkonsistenz" source="Folie 177">
+Eine Entscheidung zwischen zwei Optionen **sollte sich nicht ändern**, wenn man beide Optionen um die gleiche Zeitspanne verschiebt. Tut sie es doch, liegt Zeitinkonsistenz vor — eine Verletzung der intertemporalen Nutzenmaximierung (u. a. durch Selbstkontrollprobleme) und des DU-Ansatzes.
+</DefinitionBox>
+
+<Card title="Beispiel der Präferenz-Verschiebung" tone="accent">
+- Wer heute lieber **13 Monate auf EUR 1.100** wartet statt 12 Monate auf EUR 1.000, …
+- … der sollte nach Ablauf der 12 Monate auch **EUR 1.100 in einem Monat** den EUR 1.000 sofort vorziehen.
+- Also wenn: 1.100 in 13 Monaten **gleichwertig** zu 1.000 in 12 Monaten, dann muss auch 1.100 in 1 Monat gleichwertig zu **1.000 sofort** sein.
+</Card>
+
+### Optionsvergleich (Folie 178)
+
+<Columns count={2}>
+  <Card title="Frage A" tone="purple" compact>
+    - Option 1: **EUR 1.000 in einem Jahr**
+    - Option 2: **EUR 1.100 in zwei Jahren**
+    - bei persönlichem Zinssatz i = 10 % wird „normal“ (exponentiell) abgezinst
+  </Card>
+  <Card title="Frage B" tone="purple" compact>
+    - Option 3: **EUR 1.000 in zwei Jahren**
+    - Option 4: **EUR 1.100 in drei Jahren**
+    - Menschen haben evtl. unterschiedliche Zinssätze für unterschiedliche Zeiträume
+  </Card>
+</Columns>
+
+<CompareCard
+  items={[
+    {
+      tag: 'hoher Zinssatz',
+      title: 'Niedriger Diskontfaktor',
+      subtitle: 'hohe Gegenwartspräferenz',
+      accent: 'negative',
+      points: ['Zukunft wird stark abgewertet', 'man greift zur früheren Alternative'],
+    },
+    {
+      tag: 'niedriger Zinssatz',
+      title: 'Höherer Diskontfaktor',
+      subtitle: 'niedrigere Gegenwartspräferenz',
+      accent: 'positive',
+      points: ['je länger der Verzicht, desto geringer die geforderte Verzinsung', 'höhere Wartebereitschaft'],
+    },
+  ]}
+/>
+
+### Zeitkonsistentes Verhalten bei exponentiellem Diskontieren
+
+<DataTable
+  caption="Barwerte bei i = 0,1 · Diskontfaktor (1/(1+i)) (Folie 179)"
+  columns={[
+    { key: 'zeile', label: 'i = 0,1' },
+    { key: 'df', label: 'Diskontfaktor', align: 'right' },
+    { key: 'o1', label: 'Sit.1 · 1000€ in 1 J.', align: 'right' },
+    { key: 'o2', label: 'Sit.1 · 1100€ in 2 J.', align: 'right' },
+    { key: 'o3', label: 'Sit.2 · 1000€ in 2 J.', align: 'right' },
+    { key: 'o4', label: 'Sit.2 · 1100€ in 3 J.', align: 'right' },
+  ]}
+  rows={[
+    { zeile: 'Gegenwartswert', df: '', o1: '909,09', o2: '909,09', o3: '826,45', o4: '826,45' },
+    { zeile: 'Ein Jahr (n=1)', df: '0,90909', o1: '1000', o2: '–', o3: '–', o4: '–' },
+    { zeile: 'Zwei Jahre (n=2)', df: '0,82644', o1: '–', o2: '1100', o3: '1000', o4: '–' },
+    { zeile: 'Drei Jahre (n=3)', df: '0,75131', o1: '–', o2: '–', o3: '–', o4: '1100' },
+  ]}
+  highlight={(row) => row.zeile === 'Gegenwartswert'}
+/>
+
+<Callout type="examfocus" title="Zeitkonsistentes Verhalten">
+Bei exponentiellem Diskontieren bleiben die Gegenwartswerte beider Optionen je Situation **gleich** (Sit. 1: 909,09 = 909,09; Sit. 2: 826,45 = 826,45). Die Präferenz bleibt bei zeitlicher Verschiebung also stabil — das DU-Modell ist <Exam>zeitkonsistent</Exam>.
+</Callout>
+
+</section>
+
+<section id="hyperbolisches-diskontieren">
+
+## Hyperbolisches Diskontieren und Präferenzumkehr
+
+<DefinitionBox term="Hyperbolisches Diskontieren" source="Folie 180">
+Konzept der Verhaltensökonomik, das **Zeitinkonsistenzen** abbildet: Die Gegenwartspräferenz ist umso größer, je näher das Ereignis rückt (Ungeduld). Anders gesagt: Je näher wir an die Gegenwart rücken, desto höher der Diskontierungssatz.
+</DefinitionBox>
+
+<Columns count={3}>
+  <Card title="Gute Vorsätze" tone="warning" compact>
+    - langfristige Gesundheitsvorteile werden gegen kurzfristige Belohnungen eingetauscht
+  </Card>
+  <Card title="Sparvorhaben" tone="warning" compact>
+    - kurzfristiger Konsum statt Alterssicherung
+  </Card>
+  <Card title="Klausurvorbereitung" tone="warning" compact>
+    - Freizeit gegen die langfristigen Vorteile guter Vorbereitung getauscht
+  </Card>
+</Columns>
+
+### Anpassung des Diskontierungszinssatzes
+
+<Formula
+  display
+  title="Hyperbolische Barwertformel · Nenner (1 + i·n) statt (1+i)^n"
+  expr="U(c_0, c_1, \dots, c_n) = \sum_{n=0}^{T} \left(\frac{1}{1 + i \cdot n}\right) \cdot U(c_n)"
+  legend={[
+    { sym: 'i \\cdot n', desc: 'Zinssatz multipliziert mit dem Jahr der Zahlung' },
+    { sym: 'n', desc: 'Zahl der Jahre bis zum Ereignis' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Wirkung des Faktors i·n">
+Der Diskontierungszinssatz wird mit dem **Jahr** der jeweiligen Zinszahlung multipliziert und hängt so vom Zeitpunkt ab. Je weiter ein Ereignis in der Zukunft liegt, desto größer die Zahl der Jahre n im Nenner — und desto **kleiner** der gesamte Diskontierungsfaktor. Ergebnis: für ferne Ereignisse wird mehr Geduld aufgebracht.
+</Callout>
+
+### Beispiel · Präferenzumkehr
+
+<Columns count={2}>
+  <Card title="Situation 1 · nahe" tone="accent" compact>
+    - Option 1: **EUR 1.000 in einem Jahr**
+    - Option 2: **EUR 1.060 in zwei Jahren**
+    - bei i = 10 % entscheidet man sich für **Option 1** (sofort)
+  </Card>
+  <Card title="Situation 2 · fern" tone="teal" compact>
+    - Option 3: **EUR 1.000 in neun Jahren**
+    - Option 4: **EUR 1.060 in zehn Jahren**
+    - hier kehrt sich die Präferenz um → **Option 4** (warten)
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Hyperbolische Berechnung bei i = 0,1 · Diskontfaktor (1/(1+i·n)) (Folie 184)"
+  columns={[
+    { key: 'zeile', label: 'i = 0,1' },
+    { key: 'df', label: 'Diskontfaktor', align: 'right' },
+    { key: 'o1', label: 'Sit.1 · 1000€ in 1 J.', align: 'right' },
+    { key: 'o2', label: 'Sit.1 · 1060€ in 2 J.', align: 'right' },
+    { key: 'o3', label: 'Sit.2 · 1000€ in 9 J.', align: 'right' },
+    { key: 'o4', label: 'Sit.2 · 1060€ in 10 J.', align: 'right' },
+  ]}
+  rows={[
+    { zeile: 'Gegenwartswert', df: '', o1: '909,09 ◀', o2: '883,33', o3: '526,32', o4: '530 ◀' },
+    { zeile: 'Ein Jahr (n=1)', df: '0,9091', o1: '1000', o2: '–', o3: '–', o4: '–' },
+    { zeile: 'Zwei Jahre (n=2)', df: '0,8333', o1: '–', o2: '1060', o3: '–', o4: '–' },
+    { zeile: 'Neun Jahre (n=9)', df: '0,5263', o1: '–', o2: '–', o3: '1000', o4: '–' },
+    { zeile: 'Zehn Jahre (n=10)', df: '0,5', o1: '–', o2: '–', o3: '–', o4: '1060' },
+  ]}
+  highlight={(row) => row.zeile === 'Gegenwartswert'}
+/>
+
+<Callout type="examfocus" title="Präferenzumkehr">
+- Situation 1: Option 1 (**909,09**) <Exam>vor</Exam> Option 2 (883,33) → man wählt sofort.
+- Situation 2: Option 4 (**530**) <Exam>vor</Exam> Option 3 (526,32) → man wartet.
+- Die Rangfolge kehrt sich allein durch zeitliche Verschiebung um (◀ = auf der Folie orange umkreist).
+</Callout>
+
+</section>
+
+<section id="selbstkontrolle-aehnlichkeit">
+
+## Selbstkontrolle und Ähnlichkeit (Marshmallow, Rubinstein)
+
+### Thaler (1981) · sinkende implizite Zinssätze
+
+<DataTable
+  caption="Geforderte Kompensation für Verzicht auf 15 $ heute (Folie 181)"
+  columns={[
+    { key: 'dauer', label: 'Verzichtsdauer' },
+    { key: 'komp', label: 'geforderte Kompensation', align: 'right' },
+    { key: 'zins', label: 'implizite Verzinsung', align: 'right' },
+  ]}
+  rows={[
+    { dauer: '1 Monat', komp: '20 $', zins: 'ca. 400 % p.a.' },
+    { dauer: '1 Jahr', komp: '50 $', zins: 'ca. 233 % p.a.' },
+    { dauer: '10 Jahre', komp: '100 $', zins: 'ca. 21 % p.a.' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Befund Thaler (1981)">
+Mit zunehmender Wartezeit **sinkt** der geforderte implizite Jahreszins — ein empirischer Beleg für <Exam>hyperbolisches Diskontieren</Exam>.
+</Callout>
+
+### Marshmallow-Test · Selbstbeherrschung bei Kindern
+
+<Columns count={2}>
+  <Card title="Versuchsaufbau" tone="purple" compact>
+    - klassischer Test der Fähigkeit von Kindern, auf eine Belohnung zu **warten**
+    - Kind werden Brezel und Marshmallow gezeigt; es nennt die bevorzugte Leckerei
+    - Betreuer verlässt den Raum
+  </Card>
+  <Card title="Belohnungsregel" tone="purple" compact>
+    - **wartet** das Kind auf die Rückkehr → bevorzugte Leckerei
+    - **läutet** es vorher die Glocke → Betreuer kommt sofort, nur die nicht bevorzugte Leckerei
+  </Card>
+</Columns>
+
+<Columns count={2}>
+  <Card title="Einflussfaktoren auf die Geduld" tone="neutral" compact>
+    - Geduld **stieg** durch Ablenkung (Spielzeug)
+    - Geduld **sank** durch Zeigen der Objekte
+  </Card>
+  <Card title="Befund" tone="positive" compact>
+    - Fähigkeit zu warten korreliert eng mit <Exam>Sozialkompetenz und akademischen Fähigkeiten</Exam>
+  </Card>
+</Columns>
+
+### Rubinstein (2003) · Diskontierung aufgrund von Ähnlichkeiten
+
+<CompareCard
+  items={[
+    {
+      tag: 'Situation 1',
+      title: 'Lieferung in 60 Tagen',
+      subtitle: '960 $ bei Auslieferung',
+      accent: 'negative',
+      points: [
+        'Auslieferung um **1 Tag** verschieben gegen **2 $**?',
+        'mehrheitlich **abgelehnt** — Differenz zu gering, Ähnlichkeit zu hoch',
+      ],
+    },
+    {
+      tag: 'Situation 2',
+      title: 'Lieferung morgen',
+      subtitle: '1.080 $ bei Auslieferung',
+      accent: 'positive',
+      points: [
+        'Auslieferung um **60 Tage** verschieben gegen **120 $** Nachlass?',
+        'mehrheitlich **angenommen**',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="merksatz" title="Ähnlichkeitsansatz">
+Entscheidungen hängen davon ab, ob Beträge und/oder Zeitpunkte als **„ähnlich“** wahrgenommen werden — nicht allein vom Diskontfaktor.
+</Callout>
+
+### Experiment (durchgeführt 2002)
+
+<DataTable
+  caption="Wahl zwischen Alternative A und B (Folie 187)"
+  columns={[
+    { key: 'frage', label: '' },
+    { key: 'a', label: 'Alternative A' },
+    { key: 'b', label: 'Alternative B' },
+  ]}
+  rows={[
+    { frage: '1. Wahl zwischen:', a: '467 $ am 17. Juni 2004', b: '607,07 $ am 17. Juni 2005' },
+    { frage: '2. Wahl zwischen:', a: '467 $ am 16. Juni 2004', b: '467,39 $ am 17. Juni 2004' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Widerspruch zum hyperbolischen Diskontieren">
+- Bei Frage 1 warten **mehr** Menschen als bei Frage 2.
+- D. h.: in drei Jahren nicht bereit, einen Tag für 39 Cent zu warten — in zwei Jahren aber bereit, für unter 39 Cent/Tag ein ganzes Jahr zu warten.
+- <Exam>Geduldig auf kurze, ungeduldig auf lange Frist</Exam> — genau umgekehrt zum hyperbolischen Diskontieren.
+</Callout>
+
+</section>
+
+<section id="weitere-zeitanomalien">
+
+## Weitere Zeitanomalien
+
+### Vorzeicheneffekt
+
+<Columns count={2}>
+  <Card title="Befund · Gewinne vs. Verluste (Thaler 1981)" tone="accent" compact>
+    - viele Studien: Menschen diskontieren <Exam>Gewinne stärker als Verluste</Exam>
+    - Gewinne werden mit **höherem** Zinssatz abgezinst
+  </Card>
+  <Card title="Verhaltenslogik" tone="neutral" compact>
+    - Gewinne lieber **sofort** vereinnahmen
+    - Verluste lieber **aufschieben**
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Vorzeicheneffekt · impliziter Zinssatz bei Verschiebung um 1 Jahr (Folie 188)"
+  columns={[
+    { key: 'vorgang', label: 'Vorgang' },
+    { key: 'heute', label: 'heute', align: 'right' },
+    { key: 'jahr', label: 'nach 1 Jahr', align: 'right' },
+    { key: 'zins', label: 'impliziter Zinssatz', align: 'right' },
+  ]}
+  rows={[
+    { vorgang: 'Gewinn (Lotto)', heute: '15 $', jahr: '60 $', zins: '300 %' },
+    { vorgang: 'Verlust / Strafe', heute: '15 $', jahr: '20 $', zins: '33 %' },
+    { vorgang: 'Verlust / Strafe', heute: '100 $', jahr: '118 $', zins: '18 %' },
+  ]}
+  highlight={(row) => row.vorgang === 'Gewinn (Lotto)'}
+/>
+
+### Größeneffekt („magnitude effect“)
+
+<Columns count={2}>
+  <Card title="Befund · kleine vs. große Beträge (Thaler 1981)" tone="accent" compact>
+    - Menschen diskontieren <Exam>kleine Beträge stärker als große</Exam>
+  </Card>
+  <Card title="Folge für den Zinssatz" tone="neutral" compact>
+    - mit steigenden Beträgen **sinkt** der als Ausgleich geforderte Zinssatz
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Größeneffekt · geforderte Auszahlung nach 1 Jahr (Folie 189)"
+  columns={[
+    { key: 'heute', label: 'Gewinn heute', align: 'right' },
+    { key: 'jahr', label: 'nach 1 Jahr gefordert', align: 'right' },
+    { key: 'zins', label: 'impliziter Zinssatz', align: 'right' },
+  ]}
+  rows={[
+    { heute: '15 $', jahr: '60 $', zins: '300 %' },
+    { heute: '250 $', jahr: '350 $', zins: '40 %' },
+    { heute: '3000 $', jahr: '4000 $', zins: '33 %' },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Absolute Wahrnehmung" tone="teal" compact>
+    - Menschen nutzen nicht nur relative, sondern auch absolute Wahrnehmung
+    - der Unterschied zwischen 100 und 150 erscheint größer als der zwischen 10 und 15 (obwohl relativ identisch)
+  </Card>
+  <Card title="Mental Accounting" tone="teal" compact>
+    - kleine Beträge → mentales Konto „Laufende Posten“, sofort konsumiert
+    - größere Beträge → mentales **Sparkonto** (höherer Zins für Konsumverzicht)
+  </Card>
+</Columns>
+
+### Vorliebe für steigende Konsumprofile
+
+<DataChart
+  type="bar"
+  title="Lohnprofile über drei Jahre — gleiche Gesamtsumme (270), unterschiedliche Reihenfolge"
+  source="Behavioral Finance · Folie 190"
+  xLabel="Jahr"
+  yLabel="Lohn"
+  xKey="jahr"
+  data={[
+    { jahr: 'Jahr 1', fallend: 100, steigend: 80 },
+    { jahr: 'Jahr 2', fallend: 90, steigend: 90 },
+    { jahr: 'Jahr 3', fallend: 80, steigend: 100 },
+  ]}
+  series={[
+    { key: 'fallend', name: 'fallendes Profil (100, 90, 80)' },
+    { key: 'steigend', name: 'steigendes Profil (80, 90, 100)' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Vorliebe für steigende Reihen">
+Trotz gleicher Gesamtsumme bevorzugen Probanden das **steigende** Profil (80, 90, 100) — ein Widerspruch zur reinen DU-Logik.
+</Callout>
+
+<Columns count={2}>
+  <Card title="Verlustaversion & Gewöhnung" tone="purple" compact>
+    - sinkender Lohn wird als **Verlust** erlebt
+    - Nutzen des Konsums hängt vom bisherigen Konsum ab (Gewöhnung an das Konsumniveau)
+  </Card>
+  <Card title="Antizipation & Zwangssparen" tone="purple" compact>
+    - **Antizipationsnutzen:** man hat etwas, auf das man sich freut
+    - geringer Lohn am Anfang wirkt wie **Zwangssparen**
+  </Card>
+</Columns>
+
+<SourceNote>Behavioral Finance · Kapitel 5 · Zeit in der Ökonomie · Folien 165–190</SourceNote>
+
+</section>

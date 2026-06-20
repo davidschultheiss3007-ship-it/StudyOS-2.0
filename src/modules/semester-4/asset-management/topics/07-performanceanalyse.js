@@ -1,0 +1,38 @@
+export const meta = {
+  id: 'performanceanalyse',
+  title: 'Kapitel 7 · Performanceanalyse',
+  source: 'Asset Management · Kapitel 7 · Performanceanalyse · Folien 231–258',
+  estimatedMinutes: 65,
+  sections: [
+    { id: 'einordnung-ziele', title: 'Einordnung, Definition und Ziele' },
+    { id: 'performancekennzahlen-systematik', title: 'Systematik der Performancekennzahlen' },
+    { id: 'mwr-vs-twr', title: 'Geldgewichtete vs. zeitgewichtete Rendite (MWR vs. TWR)' },
+    { id: 'sharpe-ratio', title: 'Sharpe-Ratio' },
+    { id: 'treynor-ratio', title: 'Treynor-Ratio' },
+    { id: 'jensen-alpha', title: 'Jensen-Alpha' },
+  ],
+  keyTakeaways: [
+    'Die Performanceanalyse ist eine der drei Säulen des Finanzcontrollings (neben Risikoanalyse und Reporting) und misst Rendite, Risiko und risikoadjustierte Rendite eines (institutionellen) Investors.',
+    'Die geldgewichtete Rendite (MWR) ist der interne Zinsfuß des Zahlungsstroms und enthält zwei Effekte (Investor-Timing + Marktgeschehen); die zeitgewichtete Rendite (TWR) ist die geometrische Durchschnittsrendite und misst nur das Marktgeschehen.',
+    'Im Beispiel ergibt dieselbe Anlage TWR = 0 % (Marktgeschehen neutral) aber MWR = −32,06 % — der Unterschied entsteht allein durch das ungünstig getimte Nachschießen von 300 €.',
+    'Die Sharpe-Ratio misst die Überschussrendite (μ_P − r_f) je Einheit Gesamtrisiko σ_P; die Treynor-Ratio dieselbe Überschussrendite je Einheit systematischen Risikos β_P; das Jensen-Alpha die absolute Über-/Unterrendite gegenüber der CAPM-erwarteten Rendite.',
+    'Sharpe- und Treynor-Ranking können sich widersprechen (Beispiel: SR_A > SR_BM > SR_B, aber TR_B > TR_A > TR_BM) — Ursache ist eine unterschiedliche Diversifikation und damit ein unterschiedlich hohes unsystematisches Risiko.',
+    'Das Jensen-Alpha erlaubt — anders als Sharpe und Treynor — kein einwandfreies Ranking, weil es eine absolute Renditedifferenz ohne Bezug zum eingegangenen Risiko ist.',
+    'Bei nicht-normalverteilten Renditen wird der Risikonenner der Sharpe-Ratio um Schiefe-Korrektur (min(0, S)) und Fat-Tail-Korrektur (max(0, W − 3)) erweitert.',
+  ],
+  examFocus: [
+    'MWR vs. TWR am Beispiel rechnen: TWR = √((1 + r₁)(1 + r₂)) − 1 = √(2 · 0,5) − 1 = 0 %; MWR = interner Zinsfuß der Barwertgleichung −100 − 300/(1+r) + 250/(1+r)² = 0 → −32,06 %.',
+    'Sharpe-Ratio SR_P = (μ_P − r_f) / σ_P berechnen und das Ranking begründen (Beispiel Spremann: B 0,91 vor BM 0,86 vor A 0,71 trotz höchster Rendite von A).',
+    'Treynor-Ratio TR_p = (μ_p − r_f) / β_p berechnen (Beispiel: TR_A = 0,0117, TR_B = 0,0131, TR_BM = 0,01) und die Widersprüchlichkeit zum Sharpe-Ranking über die Diversifikation erklären.',
+    'Jensen-Alpha α_P = (r_P − r_f) − (r_BM − r_f) · β_P berechnen (Beispiel: α_A = 0,22 %, α_B = 0,31 %) und als vertikalen Abstand zur SML/CAPM-Linie deuten.',
+    'Risikomaß je Kennzahl zuordnen: Sharpe = Gesamtrisiko (σ), Treynor = systematisches Risiko (β), Jensen = Renditedifferenz zur betaadjustierten Benchmark.',
+    'Eignung der Maße kennen: Sharpe für die gesamte Vermögensanlage, Treynor für diversifizierte Teilportfolios mit ex-ante Benchmark, Jensen als absolutes Out-/Underperformance-Maß gegenüber Benchmark.',
+  ],
+  pitfalls: [
+    'MWR und TWR verwechseln: MWR enthält das Investor-Timing (geeignet z. B. für Versicherungen), TWR misst nur das Marktgeschehen (GIPS-Standard, geeignet für PM-Vergleich). MWR < TWR bedeutet ungünstiges Timing.',
+    'Die Sharpe-Ratio unkritisch vergleichen: aussagekräftig nur bei normalverteilten Renditen, μ_P > r_f und gleichem regionalem Exposure; je diversifizierter das Portfolio, desto höher die Sharpe-Ratio.',
+    'Die Kritik am Beta (Marktportfolio-Auswahl) übersehen: Sie betrifft auch die Treynor-Ratio, die zudem das unsystematische Risiko nicht berücksichtigt.',
+    'Das Jensen-Alpha zum Ranking heranziehen: Es vergleicht nur Renditen ohne Bezug zum dafür eingegangenen Risiko und unterscheidet nicht zwischen großem variablem und kleinem stabilem Alpha.',
+    'Original-Tippfehler der Folien übernehmen: Folie 9 beschriftet die MWR irrtümlich mit „TWR“, Folie 16 die Benchmark-Sharpe-Formel mit „SR_A“ statt „SR_BM“, Folie 19 „Sharpe-Ratio“ statt Treynor sowie „σ_p“ statt β_p.',
+  ],
+};

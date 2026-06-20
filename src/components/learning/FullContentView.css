@@ -1,0 +1,1004 @@
+.full-content-view {
+  width: 100%;
+}
+
+.full-content-view__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+  min-width: 0;
+}
+
+.full-content-view__sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Each MDX `<section>` renders as a delineated subtopic "board" — a tinted
+   surface that the inner content cards visibly sit ON. Applies to every topic
+   via the shared MDX renderer. */
+.full-content-view__sections > section {
+  position: relative;
+  background:
+    radial-gradient(120% 90% at 0% 0%, var(--color-accent-subtle), transparent 60%),
+    var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  /* Clear the fixed top button band (≈58px) when jumped to from SectionNav. */
+  scroll-margin-top: calc(var(--space-16) + var(--space-2));
+}
+
+@media (max-width: 600px) {
+  .full-content-view__sections > section {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+/* Inner spacing rhythm between blocks within a section */
+.full-content-view__sections > section > * + * {
+  margin-top: var(--space-4);
+}
+
+/* Bare blocks that sit DIRECTLY on the board (a top-level list or paragraph
+   not wrapped in a palette component) get their own white card surface so each
+   block reads as separate and delineated instead of floating on the board.
+   Palette components bring their own surface and are unaffected. */
+.full-content-view__sections > section > ul,
+.full-content-view__sections > section > ol:not(.lc-timeline),
+.full-content-view__sections > section > p:not(.lc-source) {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Section title (`##` → h3) becomes a card header with an accent bar */
+.full-content-view__sections > section > h3:first-child {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.full-content-view__sections > section > h3:first-child::before {
+  content: '';
+  flex-shrink: 0;
+  width: 4px;
+  align-self: stretch;
+  min-height: 1.25em;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+}
+
+/* Sub-headings (`###`/`####` → h4/h5) act as in-section block separators. */
+.full-content-view__sections > section h4,
+.full-content-view__sections > section h5 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+/* `###` (→ h4) is a labelled rule that visibly divides a section into named
+   sub-blocks. The accent tick + trailing hairline read as a clear separator. */
+.full-content-view__sections > section h4 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  letter-spacing: -0.01em;
+}
+.full-content-view__sections > section h4::before {
+  content: '';
+  flex-shrink: 0;
+  width: var(--space-3);
+  height: 3px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+}
+.full-content-view__sections > section h4::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-border), transparent);
+}
+.full-content-view__sections > section h5 {
+  margin-top: var(--space-2);
+}
+
+/* Lists inside learning sections use a hanging-indent bullet rather than the
+   global flex bullet. Flex on the <li> turns each inline run (text, <strong>)
+   into a separate flex item, which shatters the inline flow and scatters bold
+   words. Block + absolute dot keeps text flowing normally. */
+.full-content-view__sections ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.full-content-view__sections ul > li {
+  display: block;
+  position: relative;
+  padding-left: 1.1em;
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+.full-content-view__sections ul > li + li {
+  margin-top: var(--space-2);
+}
+.full-content-view__sections ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+}
+/* Nested lists indent and lighten */
+.full-content-view__sections ul ul {
+  margin-top: var(--space-2);
+  padding-left: 0.25em;
+}
+.full-content-view__sections ul ul > li::before {
+  background: var(--color-text-muted);
+}
+
+/* --- Content card (<Card>) — an elevated block that sits on the board --- */
+.lc-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--lc-tone, var(--color-border-strong));
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+.lc-card--compact {
+  padding: var(--space-4);
+}
+
+.lc-card__title {
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--lc-tone, var(--color-text-primary));
+}
+
+.lc-card__body {
+  min-width: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+.lc-card__body > * + * {
+  margin-top: var(--space-2);
+}
+
+/* Bullet lists inside a Card read as divided "ledger" rows rather than a flat
+   run of bullets — each fact sits on its own line with a hairline divider, so
+   the content INSIDE the block is visibly separated, not just the block. */
+.full-content-view__sections .lc-card__body ul {
+  gap: 0;
+}
+.full-content-view__sections .lc-card__body ul > li {
+  padding: var(--space-2) 0 var(--space-2) 1.1em;
+}
+.full-content-view__sections .lc-card__body ul > li + li {
+  margin-top: 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+.full-content-view__sections .lc-card__body ul > li::before {
+  top: calc(var(--space-2) + 0.62em);
+}
+/* Tone the card bullet to match the card's accent. */
+.full-content-view__sections .lc-card__body ul > li::before {
+  background: var(--lc-tone, var(--color-accent));
+}
+/* Nested lists keep tight spacing (no divider clutter). */
+.full-content-view__sections .lc-card__body ul ul > li {
+  padding-top: var(--space-1);
+  padding-bottom: 0;
+}
+.full-content-view__sections .lc-card__body ul ul > li + li {
+  border-top: 0;
+}
+
+/* --- Exam-relevance markers --- */
+/* Inline highlight (<Exam>) — like a text marker, draws the eye when skimming */
+.full-content-view__sections .lc-exam {
+  background: linear-gradient(transparent 58%, var(--learning-purple-surface) 58%);
+  color: inherit;
+  font-weight: var(--font-weight-semibold);
+  padding: 0 0.1em;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Whole-card exam flag (<Card exam>) — accent frame + corner badge */
+.lc-card--exam {
+  border-color: var(--learning-purple-border);
+  background:
+    linear-gradient(0deg, var(--learning-purple-surface), var(--learning-purple-surface)),
+    var(--color-bg-card);
+}
+.lc-card__exam-badge {
+  align-self: flex-start;
+  margin-bottom: var(--space-2);
+  padding: 2px var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  color: var(--learning-purple-text);
+  background: var(--learning-purple-surface);
+  border: 1px solid var(--learning-purple-border);
+  border-radius: var(--radius-full);
+}
+
+/* --- Responsive column layout (<Columns>) --- */
+.lc-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+.lc-columns > * {
+  margin: 0;
+}
+@media (min-width: 640px) {
+  .lc-columns[data-cols='2'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lc-columns[data-cols='3'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1000px) {
+  .lc-columns[data-cols='3'] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Diagrams must never clip their labels */
+.full-content-view__sections svg[id^='mmd-'] {
+  max-width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.full-content-view__takeaways {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.full-content-view__takeaways-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.full-content-view__takeaways ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.full-content-view__takeaways li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+.full-content-view__takeaways li::before {
+  content: '→';
+  color: var(--color-accent);
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* =====================================================================
+   Learning palette components (.lc-*)
+
+   These are styled with real CSS here because Tailwind utilities are NOT
+   compiled in this build (no @tailwindcss/vite plugin, no @import). Every
+   value is a design token, so light/dark theming is automatic. Selectors
+   are scoped under `.full-content-view__sections` so they win against the
+   generic `.topic-content`/`.topic-prose` element rules in ContentSection.css.
+===================================================================== */
+
+/* Shared: palette blocks sit on the section board with consistent rhythm. The
+   section's `> * + *` rule already spaces them; reset stray element margins. */
+.full-content-view__sections .lc-def,
+.full-content-view__sections .lc-callout,
+.full-content-view__sections .lc-compare,
+.full-content-view__sections .lc-kpi,
+.full-content-view__sections .lc-formula,
+.full-content-view__sections .lc-table,
+.full-content-view__sections .lc-spectrum,
+.full-content-view__sections .lc-frame {
+  min-width: 0;
+}
+
+/* --- DefinitionBox (.lc-def) — a bordered "term + meaning" card --------- */
+.full-content-view__sections .lc-def {
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+.full-content-view__sections .lc-def__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+.full-content-view__sections .lc-def__icon {
+  display: inline-grid;
+  place-items: center;
+  color: var(--color-accent);
+}
+.full-content-view__sections .lc-def__term {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+.full-content-view__sections .lc-def__body {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+.full-content-view__sections .lc-def__body > * + * {
+  margin-top: var(--space-2);
+}
+.full-content-view__sections .lc-def__body strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+.full-content-view__sections .lc-def__source {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xs);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* --- Callout (.lc-callout) — tinted, bordered emphasis box -------------- */
+.full-content-view__sections .lc-callout {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--lc-cl-border, var(--color-border));
+  border-radius: var(--radius-lg);
+  background: var(--lc-cl-surface, var(--color-bg-card));
+}
+.full-content-view__sections .lc-callout__icon {
+  flex-shrink: 0;
+  margin-top: 0.1em;
+  color: var(--lc-cl-text, var(--color-accent));
+}
+.full-content-view__sections .lc-callout__icon svg {
+  display: block;
+}
+.full-content-view__sections .lc-callout__body {
+  min-width: 0;
+}
+.full-content-view__sections .lc-callout__title {
+  margin: 0 0 var(--space-1);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--lc-cl-text, var(--color-accent));
+}
+.full-content-view__sections .lc-callout__content {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-primary);
+}
+.full-content-view__sections .lc-callout__content > * + * {
+  margin-top: var(--space-2);
+}
+.full-content-view__sections .lc-callout__content strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+/* Callout bullet lists become divided rows, matching the in-card treatment. */
+.full-content-view__sections .lc-callout__content ul > li::before {
+  background: var(--lc-cl-text, var(--color-accent));
+}
+.full-content-view__sections .lc-callout__content ul > li + li {
+  margin-top: 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.full-content-view__sections .lc-callout--accent {
+  --lc-cl-border: var(--learning-accent-border);
+  --lc-cl-surface: var(--learning-accent-surface);
+  --lc-cl-text: var(--color-accent);
+}
+.full-content-view__sections .lc-callout--purple {
+  --lc-cl-border: var(--learning-purple-border);
+  --lc-cl-surface: var(--learning-purple-surface);
+  --lc-cl-text: var(--learning-purple-text);
+}
+.full-content-view__sections .lc-callout--warning {
+  --lc-cl-border: var(--learning-warning-border);
+  --lc-cl-surface: var(--learning-warning-surface);
+  --lc-cl-text: var(--learning-warning-text);
+}
+.full-content-view__sections .lc-callout--info {
+  --lc-cl-border: var(--learning-info-border);
+  --lc-cl-surface: var(--learning-info-surface);
+  --lc-cl-text: var(--color-info);
+}
+.full-content-view__sections .lc-callout--success {
+  --lc-cl-border: var(--learning-success-border);
+  --lc-cl-surface: var(--learning-success-surface);
+  --lc-cl-text: var(--learning-success-text);
+}
+
+/* --- CompareCard (.lc-compare) — 2–3 side-by-side contrast cards -------- */
+.full-content-view__sections .lc-compare {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+@media (min-width: 640px) {
+  .full-content-view__sections .lc-compare[data-cols='2'],
+  .full-content-view__sections .lc-compare[data-cols='3'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1000px) {
+  .full-content-view__sections .lc-compare[data-cols='3'] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.full-content-view__sections .lc-compare__card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+.full-content-view__sections .lc-compare__head {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 2px solid var(--lc-tone, var(--color-border-strong));
+}
+.full-content-view__sections .lc-compare__tag {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--lc-tone, var(--color-text-muted));
+}
+.full-content-view__sections .lc-compare__title {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+.full-content-view__sections .lc-compare__subtitle {
+  margin: var(--space-1) 0 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-normal);
+}
+.full-content-view__sections .lc-compare__subtitle strong {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-semibold);
+}
+/* Points are divided ledger rows so each contrast item reads as separated. */
+.full-content-view__sections .lc-compare__points {
+  display: block;
+  flex: 1;
+  margin: 0;
+  padding: 0 var(--space-4);
+  list-style: none;
+}
+.full-content-view__sections .lc-compare__points > li {
+  position: relative;
+  padding: var(--space-3) 0 var(--space-3) 1.1em;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+.full-content-view__sections .lc-compare__points > li + li {
+  border-top: 1px solid var(--color-border-subtle);
+}
+.full-content-view__sections .lc-compare__points > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(var(--space-3) + 0.5em);
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--lc-tone, var(--color-accent));
+}
+.full-content-view__sections .lc-compare__points > li strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* --- KpiGrid (.lc-kpi) — bordered metric tiles ------------------------- */
+.full-content-view__sections .lc-kpi {
+  display: grid;
+  gap: var(--space-3);
+}
+.full-content-view__sections .lc-kpi__tile {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+.full-content-view__sections .lc-kpi__value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  font-variant-numeric: tabular-nums;
+}
+.full-content-view__sections .lc-kpi__label {
+  margin-top: var(--space-1);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-muted);
+}
+
+/* --- Formula (.lc-formula) — titled KaTeX card + variable legend ------- */
+.full-content-view__sections .lc-formula {
+  margin: 0;
+  border: 1px solid var(--learning-accent-border);
+  border-radius: var(--radius-lg);
+  background: var(--learning-panel-bg);
+  overflow: hidden;
+}
+.full-content-view__sections .lc-formula__title {
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--learning-accent-border);
+  background: var(--learning-accent-surface);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+.full-content-view__sections .lc-formula__body {
+  padding: var(--space-5) var(--space-4);
+  overflow-x: auto;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+.full-content-view__sections .lc-formula__legend {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-1) var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+@media (min-width: 640px) {
+  .full-content-view__sections .lc-formula__legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.full-content-view__sections .lc-formula__legend-row {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-1) 0;
+}
+.full-content-view__sections .lc-formula__legend-row dt {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+}
+.full-content-view__sections .lc-formula__legend-row dd {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* --- DataTable (.lc-table) — captioned table with highlight rows ------- */
+.full-content-view__sections .lc-table {
+  margin: 0;
+}
+.full-content-view__sections .lc-table__caption {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+.full-content-view__sections .lc-table__scroll {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+}
+.full-content-view__sections .lc-table__table {
+  width: 100%;
+  /* Neutralise the global `.topic-content table` rule (min-width:680px,
+     table-layout:fixed) which would otherwise force every data table wide. */
+  min-width: 0;
+  table-layout: auto;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+.full-content-view__sections .lc-table__table th {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  text-align: left;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+.full-content-view__sections .lc-table__table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border-subtle);
+  vertical-align: top;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.full-content-view__sections .lc-table__table tr:last-child td {
+  border-bottom: 0;
+}
+.full-content-view__sections .lc-table__cell--right {
+  text-align: right;
+}
+/* Extra `.lc-table__table` qualifier raises specificity above the global
+   `.topic-content tr:nth-child(even) td` zebra rule so highlights always win. */
+.full-content-view__sections .lc-table__table .lc-table__row--hot td {
+  background: var(--color-accent-subtle);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* --- SpectrumAxis (.lc-spectrum) — labelled gradient scale ------------- */
+.full-content-view__sections .lc-spectrum {
+  margin: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+}
+.full-content-view__sections .lc-spectrum__caption {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+.full-content-view__sections .lc-spectrum__track-wrap {
+  position: relative;
+  margin: 0 var(--space-2);
+  padding: var(--space-8) 0 var(--space-12);
+}
+.full-content-view__sections .lc-spectrum__track {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--color-success), var(--color-warning), var(--color-error));
+}
+.full-content-view__sections .lc-spectrum__marker {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.full-content-view__sections .lc-spectrum__label {
+  margin-bottom: var(--space-4);
+  padding: 0.1rem var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+.full-content-view__sections .lc-spectrum__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-bg-card);
+  background: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+.full-content-view__sections .lc-spectrum__sub {
+  position: absolute;
+  bottom: 0;
+  width: 8rem;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.6875rem;
+  line-height: var(--line-height-tight);
+  color: var(--color-text-muted);
+}
+.full-content-view__sections .lc-spectrum__bounds {
+  position: absolute;
+  inset: auto 0 var(--space-5);
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* --- Timeline (.lc-timeline) — vertical numbered sequence -------------- */
+.full-content-view__sections .lc-timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.full-content-view__sections .lc-timeline__item {
+  display: flex;
+  gap: var(--space-4);
+}
+.full-content-view__sections .lc-timeline__item::before {
+  display: none;
+}
+.full-content-view__sections .lc-timeline__rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.full-content-view__sections .lc-timeline__marker {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+.full-content-view__sections .lc-timeline__line {
+  flex: 1;
+  width: 1px;
+  margin: var(--space-1) 0;
+  background: var(--color-border);
+}
+.full-content-view__sections .lc-timeline__content {
+  padding-bottom: var(--space-6);
+}
+.full-content-view__sections .lc-timeline__item:last-child .lc-timeline__content {
+  padding-bottom: 0;
+}
+.full-content-view__sections .lc-timeline__title {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+.full-content-view__sections .lc-timeline__text {
+  margin: var(--space-1) 0 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* --- DecisionTree (.lc-tree) — nested branch structure ----------------- */
+.full-content-view__sections .lc-tree {
+  margin: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+}
+.full-content-view__sections .lc-tree__list,
+.full-content-view__sections .lc-tree__children {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.full-content-view__sections .lc-tree__children {
+  margin-top: var(--space-2);
+  margin-left: var(--space-3);
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--color-border);
+}
+.full-content-view__sections .lc-tree__node::before {
+  display: none;
+}
+.full-content-view__sections .lc-tree__row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+.full-content-view__sections .lc-tree__arrow {
+  flex-shrink: 0;
+  margin-top: 0.15em;
+  color: var(--color-text-muted);
+}
+.full-content-view__sections .lc-tree__copy {
+  min-width: 0;
+}
+.full-content-view__sections .lc-tree__label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+.full-content-view__sections .lc-tree__detail {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* --- SourceNote (.lc-source) — section-closing citation ---------------- */
+.full-content-view__sections .lc-source {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* --- VisualFrame (.lc-frame) — chrome for lazy charts/diagrams --------- */
+.full-content-view__sections .lc-frame {
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+  overflow: hidden;
+}
+.full-content-view__sections .lc-frame__title {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+.full-content-view__sections .lc-frame__body {
+  padding: var(--space-4);
+}
+.full-content-view__sections .lc-frame__source {
+  padding: var(--space-2) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+.full-content-view__sections .lc-frame__skeleton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  animation: lc-pulse 1.6s ease-in-out infinite;
+}
+@keyframes lc-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .full-content-view__sections .lc-frame__skeleton {
+    animation: none;
+  }
+}
+
+/* --- TagList (.lc-tags) — chip set for flat enumerations --------------- */
+.full-content-view__sections .lc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+.full-content-view__sections .lc-tags__label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+.full-content-view__sections .lc-tags__set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.full-content-view__sections .lc-tags__chip {
+  padding: 0.28rem var(--space-3);
+  border: 1px solid color-mix(in srgb, var(--lc-tone, var(--color-border-strong)) 35%, var(--color-border));
+  border-radius: var(--radius-full);
+  background: var(--color-bg-card);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-secondary);
+}
+/* These chips are not bullets — suppress the inherited list marker. */
+.full-content-view__sections .lc-tags__chip::before {
+  display: none;
+}
+
+/* --- FactGrid (.lc-facts) — label/value register tiles ----------------- */
+.full-content-view__sections .lc-facts {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+.full-content-view__sections .lc-facts__tile {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+}
+.full-content-view__sections .lc-facts__label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+}
+.full-content-view__sections .lc-facts__value {
+  margin: var(--space-1) 0 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+}
+.full-content-view__sections .lc-facts__value strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* --- Inline markers usable inside palette text ------------------------- */
+/* `katex-inline` already styled by KaTeX CSS; ensure it doesn't inherit the
+   block body centering. */
+.full-content-view__sections .katex-inline {
+  white-space: nowrap;
+}
+
+/* =====================================================================
+   Mobile refinements for palette components
+===================================================================== */
+@media (max-width: 600px) {
+  .full-content-view__sections .lc-def,
+  .full-content-view__sections .lc-tree,
+  .full-content-view__sections .lc-spectrum {
+    padding: var(--space-4);
+  }
+  .full-content-view__sections .lc-formula__body {
+    padding: var(--space-4) var(--space-3);
+  }
+}

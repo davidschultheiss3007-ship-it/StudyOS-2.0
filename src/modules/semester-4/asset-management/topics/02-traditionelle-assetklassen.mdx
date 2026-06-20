@@ -1,0 +1,600 @@
+<section id="assetklassen-systematisierung">
+
+## Assetklassen: Definition und Systematisierung
+
+<DefinitionBox term="Assetklassen" source="Asset Management · Folie 20">
+Anlagen und Anlageinstrumente mit **vergleichbaren Eigenschaften**, die auf Veränderungen von **Fundamentalfaktoren** einer Wirtschaft **ähnlich reagieren**.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Fundamentalfaktoren" tone="accent">
+    - Wirtschaftswachstum
+    - Inflation
+    - technischer Fortschritt
+    - Infrastruktur
+    - Arbeit
+    - Ressourcen
+  </Card>
+  <Card title="Standardisiert vs. nicht standardisiert" tone="purple">
+    - **Standardisiert:** höhere Liquidität, geringe Transaktionskosten
+    - **Nicht standardisiert:** nicht austauschbare Einzelstücke, kein regelmäßiger Handel, meist keine laufenden Erträge
+  </Card>
+</Columns>
+
+<Callout type="info" title="Idealtypische Risiko-Rendite-Rangfolge">
+Stark vereinfachte Darstellung: **höheres Risiko = höhere erwartete Rendite**. Die Assetklassen ordnen sich entlang einer steigenden Geraden.
+</Callout>
+
+<DataChart
+  type="scatter"
+  title="Idealtypisches Risiko-Rendite-Diagramm"
+  source="Asset Management · Folie 20 (idealtypische, stark vereinfachte Darstellung)"
+  xLabel="Risiko"
+  yLabel="Rendite"
+  xDomain={[0, 9]}
+  yDomain={[0, 9]}
+  series={[{
+    key: 'r', name: 'Assetklassen', color: 'var(--color-module-blue)', line: true,
+    data: [
+      { x: 1, y: 1, name: 'Kurzfr. Bundesanleihen' },
+      { x: 2, y: 2, name: 'Spareinlagen' },
+      { x: 3, y: 3, name: 'Langfr. Bundesanleihen' },
+      { x: 4, y: 4, name: 'Rentenfonds' },
+      { x: 5, y: 5, name: 'Aktienfonds' },
+      { x: 6, y: 6, name: 'Aktien' },
+      { x: 7, y: 7, name: 'Optionen' },
+      { x: 8, y: 8, name: 'Futures' },
+    ],
+  }]}
+  xKey="x"
+  yKey="y"
+/>
+
+<Callout type="merksatz" title="Rangfolge nach steigendem Risiko">
+Kurzfr. Bundesanleihen < Spareinlagen < Langfr. Bundesanleihen < Rentenfonds < Aktienfonds < Aktien < Optionen < Futures.
+</Callout>
+
+<DataTable
+  caption="Systematisierung der Assetklassen (Folie 21)"
+  columns={[
+    { key: 'trad', label: 'Traditionelle (standardisierte) Assetklassen' },
+    { key: 'alt', label: 'Alternative (nicht standardisierte) Assetklassen' },
+  ]}
+  rows={[
+    { trad: 'Aktien', alt: 'Immobilien' },
+    { trad: 'Anleihen', alt: 'Hedge Fonds' },
+    { trad: 'Geldmarktinstrumente', alt: 'Private Equity, Venture Capital' },
+    { trad: 'Währungen', alt: 'Rohstoffe' },
+    { trad: 'entsprechende Derivate und Fonds', alt: 'Volatilität' },
+    { trad: 'etc.', alt: 'Sammlerstücke (Oldtimer, Kunst, Briefmarken, Uhren), entsprechende Fonds, etc.' },
+  ]}
+/>
+
+</section>
+
+<section id="kapitalgesellschaften">
+
+## Kapitalgesellschaften: AG und KGaA
+
+<DefinitionBox term="Aktiengesellschaft (AG)" source="Asset Management · Folie 23 · AktG">
+Kapitalgesellschaft, deren **Grundkapital in Aktien zerlegt** ist. Haftung **nur mit dem Gesellschaftsvermögen** (keine persönliche Haftung). Geregelt durch das AktG.
+</DefinitionBox>
+
+<KpiGrid
+  items={[
+    { value: '50.000 €', label: 'Mindestnennbetrag Grundkapital', accent: 'accent' },
+    { value: '25 %', label: 'davon mindestens einzuzahlen', accent: 'warning' },
+    { value: '1 €', label: 'Mindestnennwert je Aktie', accent: 'positive' },
+    { value: '1', label: 'Einpersonengründung möglich', accent: 'default' },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Organe der AG" tone="accent">
+    - Vorstand
+    - Aufsichtsrat
+    - Aktionär
+    - Hauptversammlung
+  </Card>
+  <Card title="Vorteile der AG" tone="positive">
+    - organisierter Markt für Beteiligungsfinanzierungen (**Börse**)
+    - hohe **Fungibilität** der Anteile
+    - klare Trennung von **Management und Eigentum** möglich
+  </Card>
+</Columns>
+
+<CompareCard
+  items={[
+    {
+      tag: 'AG',
+      title: 'Aktiengesellschaft',
+      subtitle: 'Leitung durch Vorstand',
+      accent: 'accent',
+      points: [
+        'Grundkapital in Aktien zerlegt',
+        'Leitung durch den Vorstand',
+        'Haftung nur mit Gesellschaftsvermögen',
+        'Mindestnennbetrag Grundkapital 50.000 €',
+      ],
+    },
+    {
+      tag: 'KGaA',
+      title: 'Kommanditgesellschaft auf Aktien',
+      subtitle: 'Statt Vorstand: persönlich haftende Komplementäre',
+      accent: 'purple',
+      points: [
+        'AG mit persönlich haftenden Gesellschaftern (Komplementären) statt Vorstand',
+        'Komplementäre: Personengesellschaftsrecht (§ 278 Abs. 2 AktG), geschäftsführungs-/vertretungsbefugt',
+        'Ausschluss einzelner Komplementäre von Geschäftsführung/Vertretung möglich',
+        'Kommanditaktionäre: Rechte wie AG-Aktionär, bringen das Grundkapital auf, keine weitere Haftung',
+        'Organe: Komplementäre, Kommanditisten, Aufsichtsrat, Hauptversammlung',
+      ],
+    },
+  ]}
+/>
+
+<Card title="KGaA an der Frankfurter Börse (Beispiele, Folie 25)" tone="neutral">
+  <TagList
+    tone="neutral"
+    items={[
+      'Borussia Dortmund GmbH & Co. KGaA', 'CTS Eventim AG & Co. KGaA', 'CEWE Stiftung & Co. KGaA',
+      'Drägerwerk AG & Co. KGaA', 'EUROKAI GmbH & Co. KGaA', 'Fresenius Medical Care AG & Co. KGaA',
+      'Fresenius SE & Co. KGaA', 'Henkel AG & Co. KGaA', 'Heliad Equity Partners GmbH & Co. KGaA',
+      'Hella KGaA', 'Merck KGaA', 'Merkur Bank KGaA', 'Sedlmayr KGaA', 'STO SE & Co. KGaA',
+    ]}
+  />
+</Card>
+
+</section>
+
+<section id="organe-und-se">
+
+## Organe der AG und die Europäische AG (SE)
+
+<Diagram
+  title="Zusammenspiel der Organe der Aktiengesellschaft"
+  source="Asset Management · Folie 27"
+  chart={`flowchart TD
+  AN[Arbeitnehmer]
+  AK[Aktionaere]
+  HV[Hauptversammlung]
+  AR[Aufsichtsrat]
+  VS[Vorstand]
+  AN -->|waehlt ab 500 Beschaeftigte| AR
+  AK -->|bilden| HV
+  HV -->|waehlt und entlastet| AR
+  AR -->|bestellt, kontrolliert, entlastet| VS
+  HV -->|entlastet| VS`}
+/>
+
+<Columns count={3}>
+  <Card title="Hauptversammlung" tone="accent">
+    - Verwendung des Bilanzgewinns
+    - Bestellung des Abschlussprüfers
+    - Satzungsänderungen
+    - Kapitalerhöhungen/-herabsetzungen
+    - Auflösung der Gesellschaft
+    - Bestellung des Aufsichtsrates
+    - Entlastung von Vorstand und Aufsichtsrat
+  </Card>
+  <Card title="Aufsichtsrat" tone="purple">
+    - überwachendes Organ
+    - **mind. 3, höchstens 21** Mitglieder
+    - abhängig von der Höhe des Grundkapitals
+  </Card>
+  <Card title="Vorstand" tone="teal">
+    - verantwortlich für die laufende Geschäftsführung
+    - **mind. 2** bei Grundkapital > **3 Mio. €**
+  </Card>
+</Columns>
+
+<DefinitionBox term="Europäische Aktiengesellschaft (Societas Europaea, SE)" source="Asset Management · Folie 28">
+Auch **Europa-AG**: Rechtsform für Aktiengesellschaften in der EU und im Europäischen Wirtschaftsraum. Seit **2004** nach weitgehend einheitlichen Rechtsprinzipien. Geeignet für Konzerne in **mind. zwei** EU-Mitgliedsstaaten. Mindestkapital <Exam>120.000 €</Exam> (AG: <Exam>50.000 €</Exam>).
+</DefinitionBox>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Dualistisch',
+      title: 'Dualistisches System',
+      accent: 'accent',
+      points: [
+        'getrennte Organe: Vorstand und Aufsichtsrat',
+      ],
+    },
+    {
+      tag: 'Monistisch',
+      title: 'Monistisches System',
+      accent: 'purple',
+      points: [
+        'ein Verwaltungsrat bestimmt Executive Board Member für die Führung',
+        'dann müssen Non-Executive Board Member die Mehrheit haben',
+        'alternativ: externe geschäftsführende Direktoren',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="tip" title="Vorteile der SE">
+Erleichterung von **Sitzverlegungen und Fusionen** in der EU; keine Behinderung durch unterschiedliches nationales Recht.
+</Callout>
+
+</section>
+
+<section id="aktien-gattungen">
+
+## Aktie und ihre Gattungen
+
+<DefinitionBox term="Aktie" source="Asset Management · Folie 29">
+**Anteilsrecht an Aktiengesellschaften** — der Aktionär wird Teilhaber an einem beschränkt haftenden Unternehmen. Bei Investment in **nicht-börsennotierte** Unternehmen spricht man von **„Private Equity“**.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Ziel des Aktionärs" tone="accent">
+    - Partizipation am Unternehmenserfolg
+    - an der Wertentwicklung
+    - an Kapitalaufstockungen
+    - am Liquidationserlös
+  </Card>
+  <Card title="Ziel des Emittenten" tone="purple">
+    - Unternehmensfinanzierung mit **unbegrenzter Laufzeit**
+    - hohe **Fungibilität** ggü. anderen EK-Finanzierungsformen
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Drei Unterscheidungsmerkmale">
+Nennbetragsaktien vs. Stückaktien · Inhaberaktien vs. Namensaktien · Stammaktien vs. Vorzugsaktien.
+</Callout>
+
+### 1 · Stimmrecht: Stamm vs. Vorzug
+
+<CompareCard
+  items={[
+    {
+      tag: 'Stamm',
+      title: 'Stammaktien (St.)',
+      subtitle: 'Voting / Common Shares',
+      accent: 'accent',
+      points: [
+        'Aktie **mit Stimmrecht**',
+      ],
+    },
+    {
+      tag: 'Vorzug',
+      title: 'Vorzugsaktien (Vz.)',
+      subtitle: 'meist mit Abschlag zur Stammaktie',
+      accent: 'purple',
+      points: [
+        'Aktie **ohne Stimmrecht**',
+        'Ausgleich: Vorzugsbehandlung (höhere Dividende oder bessere Rangstelle bei Liquidation)',
+        'maximal **50% des Grundkapitals**',
+        'Dividende grundsätzlich **kumulativ** (Ausfall ist nachzuzahlen)',
+        'Sonderstimmrecht nach **zwei Jahren** Dividendenausfall',
+      ],
+    },
+  ]}
+/>
+
+### 2 · Übertragbarkeit: Inhaber vs. Namen vs. vinkuliert
+
+<CompareCard
+  items={[
+    {
+      tag: 'Inhaber',
+      title: 'Inhaberaktien',
+      accent: 'accent',
+      points: [
+        'Rechte/Pflichten eng mit der Aktienurkunde verbunden',
+        'Übertragung der Urkunde = Übertragung aller Rechte/Pflichten',
+        'hohe Fungibilität (formlos durch Einigung und Übergabe)',
+        'Aktionäre dem Unternehmen nicht namentlich bekannt',
+      ],
+    },
+    {
+      tag: 'Namen',
+      title: 'Namensaktien',
+      accent: 'purple',
+      points: [
+        'Inhaber muss im Aktienregister eingetragen sein, um Rechte geltend zu machen',
+        'Übermittlung der erforderlichen Angaben durch Banken',
+      ],
+    },
+    {
+      tag: 'Vinkuliert',
+      title: 'Vinkulierte Namensaktien',
+      accent: 'warning',
+      points: [
+        'Übertragung erfordert Zustimmung der Emittentin',
+        'weitere Einschränkung der Fungibilität',
+        'z.B. Rüstungs- und Luftfahrtindustrie',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="info" title="Übernahmeschutz">
+Namens- und vinkulierte Namensaktien bieten einen besonderen **Übernahmeschutz**. Das „Heranpirschen“ bleibt nicht geheim.
+</Callout>
+
+### 3 · Kapitalbezug: Nennwert vs. Stück
+
+<CompareCard
+  items={[
+    {
+      tag: 'Nennwert',
+      title: 'Nennwert-/Nennbetragsaktien',
+      accent: 'accent',
+      points: [
+        'fester Nennwert = Anteil am Grundkapital',
+        'mind. 1,00 € oder ein Vielfaches (Gegenbeispiel: Schweiz)',
+        'Verbot der Unterpari-Emission bei Kapitalerhöhungen',
+      ],
+    },
+    {
+      tag: 'Stück',
+      title: 'Stückaktien',
+      accent: 'purple',
+      points: [
+        'nennwertlos, gleicher Anteil am Grundkapital',
+        'anteiliger Betrag je Aktie darf 1 € nicht unterschreiten (sonst nichtig)',
+        'in Deutschland erst seit 1998 zugelassen',
+        'häufig Zusatz „o. N.“ (ohne Nennwert)',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="pitfall" title="Gegenseitiger Ausschluss">
+Ein Unternehmen kann **nicht beide** Aktiengattungen ausgeben — entweder **Nennwertaktien oder Stückaktien**.
+</Callout>
+
+</section>
+
+<section id="anleihen-grundlagen">
+
+## Anleihen: Definition und Grundtypen
+
+<DefinitionBox term="Anleihe" source="Asset Management · Folie 36">
+Als Wertpapier **verbrieftes Forderungsrecht**. Der Käufer wird **Gläubiger**, der Emittent **Schuldner** mit **unbedingter Zinszahlungs- und Tilgungspflicht** zu fest definierten Zeitpunkten. Emittent unabhängig von der Rechtsform.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Synonyme" tone="accent">
+    <TagList
+      tone="accent"
+      items={['Renten(papiere)', 'Schuldverschreibungen', 'Obligationen', 'Bonds']}
+    />
+  </Card>
+  <Card title="Unterscheidung" tone="purple">
+    - börsennotierte **Inhaberschuldverschreibungen** (Normalfall)
+    - nicht-börsennotierte **Namensschuldverschreibungen** (Registered Bond, Namenspfandbriefe, Kommunalobligationen, Landesbodenbriefe)
+    - Verkauf ohne Zustimmung des Gläubigers möglich
+    - umfangreiche Dokumentation (Anleihebedingungen, evtl. Wertpapierprospekt)
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Grundtypen der Anleihe nach Verzinsung"
+  columns={[
+    { key: 'typ', label: 'Typ' },
+    { key: 'merkmal', label: 'Verzinsung / Merkmal' },
+    { key: 'lz', label: 'Laufzeit' },
+  ]}
+  rows={[
+    { typ: 'Festverzinslich (Straight / Plain Vanilla Bond)', merkmal: 'fixer Nominalzins über die gesamte Laufzeit; jährlich nachschüssig; endfällige Tilgung', lz: '1–30 Jahre' },
+    { typ: 'Variabel verzinslich (Floater / FRN)', merkmal: 'meist EURIBOR + Credit-Spread; Adjustierung alle 3/6 Monate', lz: '5–7 Jahre' },
+    { typ: 'Nullkupon (Zero Bond)', merkmal: 'kein laufender Kupon; Ertrag aus Differenz Ausgabe-/Rückzahlungsbetrag (Disagio)', lz: '10–30 Jahre' },
+  ]}
+/>
+
+<Columns count={3}>
+  <Card title="Festverzinslich" tone="accent">
+    - fixer Nominalzins, in % des Nominalwertes
+    - Zinstermine: jährlich, halbjährlich oder vierteljährlich
+    - aber: Stufenzinsanleihen mit **Step-Up-** / **Step-Down-Covenant**
+  </Card>
+  <Card title="Floater (FRN)" tone="purple">
+    - Verzinsung von externer Referenzgröße abhängig
+    - Credit-Spread abhängig von Ausfallwahrscheinlichkeit und Recovery Rate
+    - limitiertes Kursrisiko; Cap Floater begrenzt Risiko des Emittenten
+    - Varianten: Floor, Collared (Mini-Max), Reverse, Inflation-Linked
+  </Card>
+  <Card title="Nullkupon (Zero Bond)" tone="teal">
+    - Thesaurierung der Zinsen, Ausschüttung zum Fälligkeitstag
+    - Ausgabe mit Disagio (Normalfall) oder Zuwachsanleihe
+    - Vorteil Gläubiger: kein Wiederanlagerisiko
+    - hohes Kurspotenzial bei rückläufigen Zinsen
+  </Card>
+</Columns>
+
+<Callout type="info" title="Marktbeispiel (Folie 38, Stichtag 22.03.2026)">
+comdirect-Screenshot zur **BMW Finance N.V. EO-MTN 2023(33)** (ISIN XS2698773913): Kurs **101,861 %** (über pari), Nominalzins **4,125 %**, **Rendite p.a. 3,826 %**. Konsistent mit dem Pari-Zusammenhang: **Kurs > pari → ytm < Nominalzins**. Reale Beispielwerte, keine Prüfungsformelwerte.
+</Callout>
+
+</section>
+
+<section id="effektivverzinsung">
+
+## Effektivverzinsung und Renditeberechnung
+
+<DefinitionBox term="Effektivverzinsung / yield-to-maturity (ytm)" source="Asset Management · Folie 41">
+Zins, bei dem der **Barwert der Zahlungsströme** eines Bonds **gleich dem aktuellen Kurs plus Stückzinsen** ist. Die **Nominalverzinsung** bezieht die Zinszahlung dagegen nur auf den Nominalbetrag.
+</DefinitionBox>
+
+<Formula
+  title="Praktikerformel (statische Effektivverzinsung, Näherung)"
+  expr="r_{\text{eff}} = \frac{\; r_{\text{nom}} + \dfrac{100 - K}{\text{RLZ}}\;}{K} \cdot 100"
+  legend={[
+    { sym: 'r_{\\text{nom}}', desc: 'Nominalzins' },
+    { sym: 'K', desc: 'Kaufkurs (in % des Nominals)' },
+    { sym: '\\text{RLZ}', desc: 'Restlaufzeit' },
+  ]}
+/>
+
+<Formula
+  title="Praktikerformel unter Berücksichtigung von Stückzinsen"
+  expr="r_{\text{eff}} = \frac{\; r_{\text{nom}} + \dfrac{100 - K}{\text{RLZ}}\;}{K + \text{St}} \cdot 100"
+  legend={[
+    { sym: '\\text{St}', desc: 'Stückzinsen (in % des Nominals)' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Zusammenhang Kurs ↔ ytm (laut Skript)">
+- **Kurs = pari** → ytm = Nominalzins
+- **Kurs unter pari** → ytm **größer** als Nominalzins
+- **Kurs über pari** → ytm **kleiner** als Nominalzins
+</Callout>
+
+<Callout type="examfocus" title="Erwartete vs. versprochene Verzinsung">
+Die ytm-Berechnung unterstellt vertragsgemäße Rückzahlung. Da Kredite einem **Ausfallrisiko** unterliegen, ist die **versprochene** Rendite nicht gleich der **erwarteten** Rendite — das Ausfallrisiko muss in die ytm einbezogen werden.
+</Callout>
+
+<Card title="Beispiel: einjährige Anleihe, Kupon 7%, Kurs 90%, PD 20%, Recovery 60% (Folie 43)" tone="orange">
+Annahmen: einjährige Anleihe · Kupon 7% · Handelskurs 90% · Ausfallwahrscheinlichkeit 20% · Recovery 60% des versprochenen Betrags.
+</Card>
+
+<Formula
+  title="Versprochene Verzinsung"
+  expr="\text{ytm}_{\text{prom}} = \frac{7 + 100}{90} - 1 = 18{,}9\,\%"
+/>
+
+<Formula
+  title="ytm im Default"
+  expr="\text{ytm}_{\text{Def}} = \frac{(7 + 100)\cdot 0{,}6}{90} - 1 = -28{,}7\,\%"
+/>
+
+<Formula
+  title="Erwartete ytm"
+  expr="\text{ytm}_{\text{erw}} = 18{,}9\,\% \cdot 0{,}8 + (-28{,}7\,\%) \cdot 0{,}2 = 9{,}4\,\%"
+/>
+
+<KpiGrid
+  items={[
+    { value: '18,9 %', label: 'versprochene ytm', accent: 'positive' },
+    { value: '−28,7 %', label: 'ytm im Default', accent: 'negative' },
+    { value: '9,4 %', label: 'erwartete ytm', accent: 'warning' },
+  ]}
+/>
+
+</section>
+
+<section id="weitere-anleihen">
+
+## Weitere Anleiheformen, Risiken und Rating
+
+<DefinitionBox term="Schuldschein(darlehen)" source="Asset Management · Folie 44">
+Verzinsliches Wertpapier, das **nicht an der Börse** gehandelt wird; **Banken** treten als Arrangeur auf. Ausreichung nur an **bonitätsstarke Unternehmen**. Kapitalgeber v.a. Versicherer, Bundesländer, Kommunen, Sozialversicherungsträger und Bundesanstalt für Arbeit.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Schuldschein — Unternehmenssicht" tone="positive">
+    - **+** keine Besicherung
+    - **+** keine Dokumentationspflichten (Prospekt, IR)
+    - **+** kein externes Rating nötig (aber bankinternes)
+    - **−** ca. 0,5% höhere Nominalverzinsung ggü. Anleihe
+  </Card>
+  <Card title="Schuldschein — Investorensicht" tone="warning">
+    - **+** keine tägliche Börsenkursfeststellung → kein Abschreibungsrisiko
+    - **−** erschwerter vorzeitiger Verkauf
+  </Card>
+</Columns>
+
+<Columns count={3}>
+  <Card title="Tilgungsanleihen" tone="accent">
+    - Tilgung **stetig über die Laufzeit** statt in einem Betrag
+  </Card>
+  <Card title="Annuitätenanleihen" tone="purple">
+    - Tilgung über die gesamte Laufzeit
+    - steigender Tilgungsanteil am **konstanten Jahresbetrag**
+  </Card>
+  <Card title="Verlosungsanleihen" tone="teal">
+    - **Auslosung** von Tranchen zu regelmäßigen Terminen, die dann zurückgezahlt werden
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Acht Risikoarten von Anleihen (Folie 46)"
+  columns={[
+    { key: 'risiko', label: 'Risikoart' },
+    { key: 'beschreibung', label: 'Beschreibung' },
+  ]}
+  rows={[
+    { risiko: 'Bonitäts-/Ausfallrisiko', beschreibung: 'Kursverluste nach Rating-Veränderung des Emittenten oder aus Insolvenz' },
+    { risiko: 'Zinsänderungsrisiko', beschreibung: 'Kursverluste nach Veränderungen des allgemeinen Zinsniveaus' },
+    { risiko: 'Liquiditätsrisiko', beschreibung: 'Kursverluste durch Kauf- oder Verkaufsorders' },
+    { risiko: 'Sicherungsrisiko', beschreibung: 'Wertverluste der Sicherheiten' },
+    { risiko: 'Wiederanlagerisiko', beschreibung: 'vereinnahmte Kupons nur zu niedrigeren Zinsen wiederanlegbar' },
+    { risiko: 'Währungsrisiko', beschreibung: 'Risiko einer Euro-Aufwertung bei Fremdwährungsanleihen' },
+    { risiko: 'Kündigungsrisiko', beschreibung: 'Emittent übt sein vereinbartes Kündigungsrecht aus' },
+    { risiko: 'Auslosungsrisiko', beschreibung: 'Anleihe wird ausgelost und früher zurückgezahlt (führt zu Wiederanlagerisiko)' },
+  ]}
+/>
+
+<DataTable
+  caption="Ratingklassen Moody’s / S&P (vgl. Bösch S. 191)"
+  columns={[
+    { key: 'einschaetzung', label: 'Einschätzung des Ausfallrisikos' },
+    { key: 'moodys', label: 'Moody’s' },
+    { key: 'sp', label: 'S & P' },
+    { key: 'grade', label: 'Gruppe' },
+  ]}
+  rows={[
+    { einschaetzung: 'Beste Qualität, geringes Ausfallrisiko', moodys: 'Aaa', sp: 'AAA', grade: 'Investment' },
+    { einschaetzung: 'Hohe Qualität, etwas größeres Ausfallrisiko als Spitzenklasse', moodys: 'Aa1 / Aa2 / Aa3', sp: 'AA+ / AA / AA−', grade: 'Investment' },
+    { einschaetzung: 'Gute Qualität, viele gute Investmentattribute', moodys: 'A1 / A2 / A3', sp: 'A+ / A / A−', grade: 'Investment' },
+    { einschaetzung: 'Mittlere Qualität, aber mangelnder Schutz', moodys: 'Baa1 / Baa2 / Baa3', sp: 'BBB+ / BBB / BBB−', grade: 'Investment' },
+    { einschaetzung: 'Spekulative Anlage, nur mäßige Deckung', moodys: 'Ba1 / Ba2 / Ba3', sp: 'BB+ / BB / BB−', grade: 'Spekulativ' },
+    { einschaetzung: 'Sehr spekulativ, fehlende Charakteristika', moodys: 'B1 / B2 / B3', sp: 'B+ / B / B−', grade: 'Spekulativ' },
+    { einschaetzung: 'Niedrigste Qualität, in Zahlungsverzug oder Gefahr', moodys: 'Caa / Ca / C', sp: 'CCC / CC / C', grade: 'Spekulativ' },
+    { einschaetzung: 'Ausfall (Default)', moodys: 'D', sp: 'D', grade: 'Spekulativ' },
+  ]}
+  highlight={(row) => row.grade === 'Spekulativ'}
+/>
+
+<Callout type="merksatz" title="Investment Grade vs. Spekulativ">
+Bis **Baa3 / BBB−** = Investmentqualität; ab **Ba1 / BB+** abwärts = spekulative Anlage bis zum **Default (D)**.
+</Callout>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Wandel',
+      title: 'Wandelanleihe',
+      subtitle: 'Convertible Bonds',
+      accent: 'accent',
+      points: [
+        'Umtauschrecht der Anleihe in Aktien des Emittenten (nur börsennotierte AGs)',
+        'nach Wandlung geht die Obligation **unter** — keine Zins-/Tilgungspflicht mehr',
+        'Gläubiger wird Aktionär → hybrid aus Naked Bond + Call',
+        'Laufzeit 3–7 Jahre',
+      ],
+    },
+    {
+      tag: 'Option',
+      title: 'Optionsanleihe',
+      accent: 'purple',
+      points: [
+        'Anleihe mit zusätzlichem Bezugsrecht auf Aktien',
+        'Anleger erhält Verzinsung, Rückzahlung des Nominals UND Aktien zum festgelegten Preis',
+        'nach Ausübung: Gläubiger **und** Aktionär (Anleihe bleibt bestehen)',
+        'Voraussetzung: HV-Beschluss über bedingte Kapitalerhöhung',
+      ],
+    },
+    {
+      tag: 'Hybrid',
+      title: 'Hybridanleihe',
+      subtitle: 'Perpetual Bonds',
+      accent: 'warning',
+      points: [
+        'Mischfinanzierung zwischen Eigen- und Fremdkapital',
+        'bilanziell Eigenkapital (ohne Mitsprache), steuerlich Fremdkapital',
+        'Laufzeit > 99 Jahre, unbesichert/nachrangig → hoher Zins',
+        'Kündigungsrecht nur für Emittenten; Zinsaussetzung verpflichtend/optional möglich',
+      ],
+    },
+  ]}
+/>
+
+<SourceNote>Asset Management · Kapitel 2 · Traditionelle Assetklassen · Folien 18–50</SourceNote>
+
+</section>

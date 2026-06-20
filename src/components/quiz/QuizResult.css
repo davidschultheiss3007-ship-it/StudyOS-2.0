@@ -1,0 +1,47 @@
+.quiz-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-10);
+  text-align: center;
+}
+
+.quiz-result__score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-12);
+}
+
+.quiz-result__pct {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.quiz-result__fraction {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.quiz-result__score--excellent .quiz-result__pct { color: var(--color-success); }
+.quiz-result__score--good .quiz-result__pct { color: var(--color-accent); }
+.quiz-result__score--ok .quiz-result__pct { color: var(--color-warning); }
+.quiz-result__score--retry .quiz-result__pct { color: var(--color-error); }
+
+.quiz-result__label {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+}
+
+.quiz-result__actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}

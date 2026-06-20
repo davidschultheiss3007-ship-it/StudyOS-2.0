@@ -1,0 +1,664 @@
+<section id="allais-paradoxon">
+
+## Das Allais-Paradoxon
+
+<Callout type="info" title="Worum es geht">
+Das Allais-Paradoxon konfrontiert Menschen mit zwei Entscheidungsproblemen. Rational (nach Erwartungswert) wäre jeweils eine klare Alternative – tatsächlich entscheiden viele Menschen aber widersprüchlich. Diese Anomalie motiviert die Prospect Theory.
+</Callout>
+
+### 1 · Entscheidungsproblem I (A oder B)
+
+<DataTable
+  caption="Entscheidungsproblem I – Auszahlungen je Zustand (Kahneman/Tversky 1979, S. 265)"
+  columns={[
+    { key: 'alt', label: 'Alternative' },
+    { key: 'z1', label: 'Zustand 1 (33 %)', align: 'right' },
+    { key: 'z2', label: 'Zustand 2 (66 %)', align: 'right' },
+    { key: 'z3', label: 'Zustand 3 (1 %)', align: 'right' },
+  ]}
+  rows={[
+    { alt: 'Alternative A', z1: '2.500 €', z2: '2.400 €', z3: '0 €' },
+    { alt: 'Alternative B', z1: '2.400 €', z2: '2.400 €', z3: '2.400 €' },
+  ]}
+/>
+
+<Formula
+  display
+  title="Erwartungswerte Problem I"
+  expr="E(A) = 0{,}33 \cdot 2.500 + 0{,}66 \cdot 2.400 + 0{,}01 \cdot 0 = 2.409\,\text{€} \qquad E(B) = 2.400\,\text{€}"
+/>
+
+<Callout type="merksatz" title="Rational: A">
+E(A) = 2.409 € <Exam>größer</Exam> E(B) = 2.400 € → der Erwartungswert spricht für **A**.
+</Callout>
+
+### 2 · Entscheidungsproblem II (C oder D)
+
+<DataTable
+  caption="Entscheidungsproblem II – Auszahlungen je Zustand (Kahneman/Tversky 1979, S. 265)"
+  columns={[
+    { key: 'alt', label: 'Alternative' },
+    { key: 'z1', label: 'Zustand 1 (33 %)', align: 'right' },
+    { key: 'z2', label: 'Zustand 2 (66 %)', align: 'right' },
+    { key: 'z3', label: 'Zustand 3 (1 %)', align: 'right' },
+  ]}
+  rows={[
+    { alt: 'Alternative C', z1: '2.500 €', z2: '0 €', z3: '0 €' },
+    { alt: 'Alternative D', z1: '2.400 €', z2: '0 €', z3: '2.400 €' },
+  ]}
+/>
+
+<Formula
+  display
+  title="Erwartungswerte Problem II"
+  expr="E(C) = 0{,}33 \cdot 2.500 = 825\,\text{€} \qquad E(D) = 0{,}34 \cdot 2.400 = 816\,\text{€}"
+/>
+
+<Callout type="merksatz" title="Rational: C">
+E(C) = 825 € <Exam>größer</Exam> E(D) = 816 € (D zahlt 2.400 € in Zustand 1 und 3 = 34 %) → der Erwartungswert spricht für **C**.
+</Callout>
+
+### 3 · Darstellung in Erwartungsnutzen – die Anomalie
+
+<Card title="Tatsächliche Präferenzen verletzen die Erwartungsnutzentheorie" tone="negative" exam>
+- Präferenz **B vor A** (Problem I): 0,33·u(2.500) + 0,66·u(2.400) <Exam>kleiner</Exam> u(2.400)
+- Präferenz **C vor D** (Problem II): 0,33·u(2.500) <Exam>größer</Exam> 0,34·u(2.400)
+- Folgerung aus Problem I: 0,33·u(2.500) <Exam>kleiner</Exam> 0,34·u(2.400)
+- Die beiden Ungleichungen **widersprechen** sich → **Anomalie**
+</Card>
+
+<Callout type="examfocus" title="Kernaussage">
+- tatsächlich präferieren viele Menschen **B** (Problem I) und **C** (Problem II)
+- rational wäre dagegen **A** (Problem I) bzw. **C** (Problem II)
+- aus Problem I folgt eine Ungleichung, die der aus Problem II <Exam>widerspricht</Exam>
+- diese Anomalie ist der **Ausgangspunkt der Prospect Theory**
+</Callout>
+
+</section>
+
+<section id="prospect-theory-grundlagen">
+
+## Prospect Theory: Grundlagen und Abgrenzung
+
+<Columns count={2}>
+  <Card title="Begründer" tone="accent">
+    - **Daniel Kahneman** (1934)
+    - **Amos Tversky** (1937–1996)
+    - Wegweisender Artikel *„Prospect Theory: An Analysis of Decision under Risk"* (1979), erschienen in *Econometrica*
+    - 1979 erstellt, 1992 weiterentwickelt
+  </Card>
+  <Card title="Was die Prospect Theory beschreibt" tone="purple">
+    - wie Menschen zwischen probabilistischen Alternativen mit Risiko bei **bekannten** Wahrscheinlichkeiten wählen
+    - Entscheidungen auf Grundlage des **potenziellen Werts** von Verlusten und Gewinnen, bewertet mit Heuristiken
+    - das Modell ist <Exam>**deskriptiv**</Exam> (reale statt optimaler Entscheidungen)
+  </Card>
+</Columns>
+
+### Abgrenzung zur Erwartungsnutzentheorie
+
+<CompareCard
+  items={[
+    {
+      tag: 'EU-Theorie',
+      title: 'Erwartungsnutzentheorie',
+      subtitle: 'normativ',
+      accent: 'neutral',
+      points: [
+        'beschreibt optimale (rationale) Entscheidungen',
+        'eine Phase des Entscheidungsprozesses',
+        'rationale Erfassung von Wahrscheinlichkeiten',
+      ],
+    },
+    {
+      tag: 'Prospect Theory',
+      title: 'Prospect Theory („Erwartenstheorie")',
+      subtitle: 'deskriptiv',
+      accent: 'purple',
+      points: [
+        'Entscheidungen werden durch **Wahrnehmungsverzerrungen (Biases)** beeinflusst',
+        '**zwei Phasen** des Entscheidungsprozesses',
+        'erklärt Entscheidungen, die der EU-Theorie und der rationalen Erfassung von Wahrscheinlichkeiten widersprechen',
+      ],
+    },
+  ]}
+/>
+
+### Darstellung der Prospekte
+
+<DefinitionBox term="Prospekt" source="Behavioral Finance · Folie 199">
+Ergebnis einer riskanten Entscheidung mit der dazugehörigen Eintrittswahrscheinlichkeit. Ein Prospekt mit zwei Ergebnissen **x** und **y**, die mit den Wahrscheinlichkeiten **p** und **q** eintreten, wird durch den Ausdruck **(x; p / y; q)** beschrieben.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Status quo bei p + q kleiner 1" tone="teal">
+    - ist p + q kleiner 1, bleibt der **Status quo** mit Wahrscheinlichkeit 1 − p − q erhalten
+  </Card>
+  <Card title="Beispiel" tone="accent">
+    - Prospekt **(100; 0,5 / −50; 0,25)**
+    - mit Wahrscheinlichkeit **25 %** bleibt der Status quo erhalten (1 − 0,5 − 0,25)
+  </Card>
+</Columns>
+
+</section>
+
+<section id="phasen-editing-evaluation">
+
+## Editing- und Evaluierungsphase
+
+<Diagram
+  title="Die zwei Phasen der Entscheidungsfindung"
+  source="Behavioral Finance · Folie 200, 206"
+  chart={`flowchart LR
+  A[Vorliegende Alternativen] --> E[Phase 1: Editing - Aufbereitung]
+  E --> V[Phase 2: Evaluation - Bewertung]
+  V --> R[Subjektiver Prospektwert V]
+  E -. Operationen .-> EO["Kombination / Vereinfachung /<br/>Segregation / Streichung /<br/>Kodierung"]
+  V -. zwei Funktionen .-> VF["Wertfunktion v und<br/>Gewichtungsfunktion pi"]`}
+/>
+
+### Phase 1 · Editing (Aufbereitungsphase)
+
+<Card title="Editing-Operationen" tone="accent" exam>
+- **Vereinfachung:** z. B. durch Auf- oder Abrunden
+- **Kombination:** Addition der Wahrscheinlichkeiten identischer Ergebnisse
+- **Segregation:** Trennung sicherer und unsicherer Konsequenzen
+- **Kodierung:** Festlegung eines **Referenzpunkts** (z. B. Einstiegskurs bei WP-Kauf)
+- **Cancellation:** sehr unwahrscheinliche Folgen werden ignoriert; identische Bestandteile beim Vergleich zweier Alternativen bleiben unberücksichtigt
+</Card>
+
+<Callout type="pitfall" title="Schon das Editing kann irrational machen">
+- bereits aus der **Editing-Phase** können Entscheidungen entstehen, die im <Exam>Widerspruch zur Erwartungsnutzentheorie</Exam> stehen
+</Callout>
+
+### Beispiele für Editing-Operationen
+
+<Columns count={2}>
+  <Card title="Simplifikation (Folie 202)" tone="teal">
+    - linke Lotterie **(101 €; 0,49 / 0 €; 0,51)** wird verworfen
+    - rechte Lotterie **(100 €; 0,50 / 0 €; 0,50)** bleibt
+    - Runden krummer Beträge (101 → 100)
+    - Vernachlässigung kleiner Unterschiede (49 % → 50 %)
+  </Card>
+  <Card title="Kombination – Versuchsanordnung (Folie 204/205)" tone="orange">
+    - zwei objektiv **identische** Entscheidungssituationen
+    - in Situation 2 wurden Farben mit gleichen Ergebnissen zusammengefasst
+    - Ergebnis: **100 %** wählen B (Situation 1), **58 %** wählen C (Situation 2)
+    - die Dominanz von D wird durch die Kombination „verschleiert"
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Editing Phase – Kombination: Auszahlungen je Farbe (Folie 204)"
+  columns={[
+    { key: 'zeile', label: '' },
+    { key: 'weiss', label: 'Weiß', align: 'right' },
+    { key: 'rot', label: 'Rot', align: 'right' },
+    { key: 'gruen', label: 'Grün', align: 'right' },
+    { key: 'blau', label: 'Blau', align: 'right' },
+    { key: 'gelb', label: 'Gelb', align: 'right' },
+  ]}
+  rows={[
+    { zeile: 'Wahrscheinlichkeit', weiss: '90 %', rot: '6 %', gruen: '1 %', blau: '1 %', gelb: '2 %' },
+    { zeile: 'Auszahlung A', weiss: '0', rot: '45', gruen: '30', blau: '−15', gelb: '−15' },
+    { zeile: 'Auszahlung B', weiss: '0', rot: '45', gruen: '45', blau: '−10', gelb: '−15' },
+  ]}
+/>
+
+### Phase 2 · Evaluation (Bewertung)
+
+<DefinitionBox term="Wert eines Prospekts V" source="Behavioral Finance · Folie 207">
+Die durch Editing aufbereiteten Prospekte werden über **zwei Funktionen** bewertet: die subjektive **Wertfunktion v** und die **Gewichtungsfunktion π**. Der Wert eines Ergebnisses hängt von einem **Referenzpunkt** und der relativen Veränderung gegenüber diesem Punkt ab.
+</DefinitionBox>
+
+<Formula
+  display
+  title="Bewertungsfunktion"
+  expr="V(x;p \,/\, y;q) = \pi(p)\cdot v(x) + \pi(q)\cdot v(y) \qquad\qquad V(x,p) = v(x)\cdot \pi(p)"
+  legend={[
+    { sym: 'v(\\cdot)', desc: 'Wert der Ergebnisse x bzw. y (value function), Abweichung vom Referenzpunkt' },
+    { sym: '\\pi(\\cdot)', desc: 'Gewicht der Wahrscheinlichkeiten p bzw. q (weighting function)' },
+    { sym: 'p,\\,q', desc: 'objektive Wahrscheinlichkeiten' },
+  ]}
+/>
+
+<Callout type="examfocus" title="π ist keine Wahrscheinlichkeit">
+- π ist <Exam>keine Maßzahl für die Wahrscheinlichkeit</Exam>
+- sondern Ausdruck der **subjektiven Einschätzung** des Entscheiders bezüglich dieser Wahrscheinlichkeit
+</Callout>
+
+<Columns count={2}>
+  <Card title="Beispiel Münzwurf (Folie 208)" tone="purple">
+    - bei „Kopf" erhält man 1 €, bei „Zahl" zahlt man 1 € – je Wahrscheinlichkeit 0,50
+    - **V(1; 0,5 / −1; 0,5) = π(0,5)·v(1) + π(0,5)·v(−1)**
+    - v ordnet den Eurobeträgen den **subjektiven Nutzen** zu (Wert der Abweichung, nicht des absoluten Vermögens)
+  </Card>
+  <Card title="Warum die faire Wette abgelehnt wird" tone="negative">
+    - der Gesamtnutzen muss **nicht null** sein
+    - wer den Verlust eines Euro höher gewichtet als den Gewinn, empfindet die faire Wette als **unattraktiv**
+    - Grund: <Exam>Verlustaversion</Exam>
+  </Card>
+</Columns>
+
+</section>
+
+<section id="wertfunktion">
+
+## Die Wertfunktion
+
+### Reflexionseffekt – Befunde bei positiven und negativen Prospekten
+
+<DataTable
+  caption="Präferenzen bei positiven und negativen Prospekten – Antworthäufigkeit in % (Kahneman/Tversky 1979, S. 265ff.)"
+  columns={[
+    { key: 'fall', label: 'Fall' },
+    { key: 'posA', label: 'A (positiv)', align: 'right' },
+    { key: 'posB', label: 'B (positiv)', align: 'right' },
+    { key: 'negC', label: 'C (negativ)', align: 'right' },
+    { key: 'negD', label: 'D (negativ)', align: 'right' },
+  ]}
+  rows={[
+    { fall: 'Fall 1 · Prospekt', posA: '(4.000; 0,8)', posB: '(3.000)', negC: '(−4.000; 0,8)', negD: '(−3.000)' },
+    { fall: 'Fall 1 · Anteil', posA: '20 %', posB: '80 %', negC: '92 %', negD: '8 %' },
+    { fall: 'Fall 2 · Prospekt', posA: '(3.000; 0,9)', posB: '(6.000; 0,45)', negC: '(−3.000; 0,9)', negD: '(−6.000; 0,45)' },
+    { fall: 'Fall 2 · Anteil', posA: '86 %', posB: '14 %', negC: '8 %', negD: '92 %' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Reflexionseffekt">
+- die Spiegelung von Gewinnen zu Verlusten **kehrt das Risikoverhalten um**
+- <Exam>bei positiven Prospekten dominiert Risikoaversion, bei negativen Prospekten Risikofreude</Exam>
+- widerspricht der klassischen ökonomischen Theorie
+- auch durch reines **Framing** objektiv identischer Ergebnisse beobachtbar (vgl. „Asian Disease Problem")
+</Callout>
+
+### Form und Eigenschaften der S-Kurve
+
+<DataChart
+  type="line"
+  title="S-förmige Wertfunktion v(x) (idealtypischer, stilisierter Verlauf)"
+  source="Behavioral Finance · Folie 210"
+  xLabel="Verluste ← Referenzpunkt → Gewinne"
+  yLabel="Nutzen v(x)"
+  xKey="x"
+  data={[
+    { x: '−4', v: -3.6 },
+    { x: '−3', v: -3.2 },
+    { x: '−2', v: -2.6 },
+    { x: '−1', v: -1.7 },
+    { x: '0', v: 0 },
+    { x: '1', v: 0.85 },
+    { x: '2', v: 1.3 },
+    { x: '3', v: 1.6 },
+    { x: '4', v: 1.8 },
+  ]}
+  series={[{ key: 'v', name: 'Wertfunktion v(x)' }]}
+/>
+
+<Columns count={3}>
+  <Card title="Gewinnbereich" tone="positive">
+    - **konkaver** Verlauf → risikoscheu
+    - Freude über zusätzlichen Gewinn wird geringer
+  </Card>
+  <Card title="Verlustbereich" tone="negative">
+    - **konvexer** Verlauf → risikofreudig
+    - Leid über zusätzlichen Verlust wird geringer
+  </Card>
+  <Card title="Verlustaversion" tone="purple" exam>
+    - Verlauf für Verluste **steiler** als für Gewinne
+    - Verluste werden ca. **doppelt so stark** bewertet wie gleich hohe Gewinne
+  </Card>
+</Columns>
+
+### Prinzip abnehmender Empfindlichkeit (Folie 211)
+
+<Columns count={2}>
+  <Card title="Konkavität (Gewinne)" tone="positive">
+    - Unterschied zwischen **100 / 200 €** Gewinn wird stärker wahrgenommen
+    - als Unterschied zwischen **1.100 / 1.200 €** Gewinn
+  </Card>
+  <Card title="Konvexität (Verluste)" tone="negative">
+    - Verlust von **200 € statt 100 €** ist schmerzhaft
+    - Verlust von **20.100 € statt 20.000 €** von geringer Bedeutung
+    - Kurve steiler, weil Menschen Verlusten höheres Gewicht beimessen (Verlustaversion)
+  </Card>
+</Columns>
+
+<Card title="Zentrale kognitive Merkmale der Prospect Theory (Folie 212)" tone="accent">
+- Beurteilung in Bezug auf einen **neutralen Referenzpunkt** („Anpassungsniveau")
+- **Prinzip abnehmender Empfindlichkeit**
+- **Verlustaversion**
+- diese Merkmale sind vielen automatischen Wahrnehmungs-, Urteils- und emotionalen Prozessen gemeinsam
+</Card>
+
+</section>
+
+<section id="framing-mental-accounting">
+
+## Framing und Mental Accounting
+
+### Framing-Effekte (Folie 213)
+
+<Columns count={2}>
+  <Card title="Weitere Beispiele" tone="accent">
+    - **Geldillusion:** Reduktion des Nominaleinkommens als Verlust, nominaler Anstieg als Gewinn – selbst wenn das Realeinkommen sinkt
+    - **Steuerliche Differenzierung:** Steuernachlass für kinderreiche Familien oder Steuererhöhung für Kinderlose?
+    - **Kreditkartenindustrie:** Barnachlass statt Aufpreis für Kreditkartenzahlung
+  </Card>
+  <Card title="Erklärungsansätze" tone="purple">
+    - Menschen sind **risikoavers bei Gewinnen**, **risikofreudig im Verlustfall**
+    - negative Informationen werden stärker beachtet als positive
+    - in transparenten Situationen verhalten sich Menschen gemäß der Erwartungsnutzentheorie
+  </Card>
+</Columns>
+
+### Status-quo-Bias und Besitztumseffekt
+
+<Columns count={2}>
+  <Card title="Status-quo-Bias (Folie 214)" tone="teal">
+    - **Prospect-Theory-Ansatz:** Verlustaversion – Aufgabe des Status quo wird als **Verlust** empfunden und höher bewertet als der potentielle Gewinn einer Alternative
+    - **Alternative Erklärungen:** Bindung an bisherige Entscheidung; **Regret Aversion** (Angst vor Reue); aktive Handlungen werden stärker bereut als Nichts-Tun
+    - Bsp.: Aktionär A verkaufte Facebook-Aktie früh vs. Aktionär B hatte nur über den Kauf nachgedacht
+  </Card>
+  <Card title="Besitztumseffekt / Endowment Effect (Folie 215)" tone="orange">
+    - geforderter **Verkaufspreis** liegt meist über dem **Kaufpreis**
+    - Verkauf eines Gutes wird als **Verlust**, Kauf als **Gewinn** bewertet
+    - die steilere Verlustkurve erzeugt eine **Bewertungsasymmetrie**
+    - stark verwandt mit dem Status-quo-Bias (kein Rebalancing, kein Tarifwechsel, Amtsbonus bei Wahlen)
+  </Card>
+</Columns>
+
+### Mental Accounting (Folie 216)
+
+<DefinitionBox term="Mental Accounting" source="Behavioral Finance · Folie 216">
+**Isoliertes Bewerten** jedes einzelnen Engagements: jede Position (z. B. „Aktie 1" bis „Aktie 7") wird auf einer **eigenen Wertfunktion** mit dem **Einstandspreis als Referenzpunkt** bewertet.
+</DefinitionBox>
+
+<Callout type="merksatz" title="Folge und Gegenmittel">
+- **Folge:** Vernachlässigung von <Exam>Diversifikationsvorteilen</Exam>
+- **Gegenmittel:** bewusste ganzheitliche Betrachtung (**Aggregation**)
+</Callout>
+
+### Hedonic Framing (Folien 217–219)
+
+<DefinitionBox term="Hedonic Framing" source="Behavioral Finance · Folie 217">
+Konstruktion von mentalen Konten so, dass die **Gesamtzufriedenheit maximiert** wird. Erfolgt durch **Integration** (Konten zusammenfassen) oder **Segregation** (Konten trennen).
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Kodierungsregeln" tone="accent" exam>
+    - **Gewinne** werden eher **getrennt** (segregiert)
+    - **Verluste** werden **integriert**
+    - kleine Verluste werden mit größeren Gewinnen **integriert**
+    - kleine Gewinne werden von großen Verlusten **getrennt**
+  </Card>
+  <Card title="Begründung über die Wertfunktion" tone="purple">
+    - **v(Gewinn1) + v(Gewinn2) größer v(Gewinn1 + Gewinn2)** → Gewinne segregieren (konkave Kurve)
+    - **v(Verlust1) + v(Verlust2) kleiner v(Verlust1 + Verlust2)** → Verluste integrieren (konvexe Kurve)
+    - so wird die wahrgenommene Gesamtzufriedenheit optimiert
+  </Card>
+</Columns>
+
+### Anwendungsbeispiel Autokauf (Folie 220)
+
+<DataTable
+  caption="Hedonic Framing beim Autokauf – Gesamtpreis in allen Varianten identisch (Beträge in €)"
+  columns={[
+    { key: 'posten', label: 'Posten' },
+    { key: 'v1', label: 'Preisentb., Rabatt-Bündel.', align: 'right' },
+    { key: 'v2', label: 'Preisbünd., Rabattbünd.', align: 'right' },
+    { key: 'v3', label: 'Preisentb., Rabattentb.', align: 'right' },
+    { key: 'v4', label: 'Preisbünd., Rabattentb.', align: 'right' },
+  ]}
+  rows={[
+    { posten: 'Grundmodell', v1: '30.000', v2: '', v3: '30.000', v4: '' },
+    { posten: 'Rabatt', v1: '', v2: '', v3: '−1.500', v4: '−1.500' },
+    { posten: 'Klimaanlage', v1: '3.000', v2: '', v3: '3.000', v4: '' },
+    { posten: 'Rabatt', v1: '', v2: '', v3: '−150', v4: '−150' },
+    { posten: 'Radio', v1: '2.000', v2: '', v3: '2.000', v4: '' },
+    { posten: 'Rabatt', v1: '', v2: '', v3: '−100', v4: '−100' },
+    { posten: 'Total', v1: '', v2: '35.000', v3: '', v4: '35.000' },
+    { posten: 'Rabatt', v1: '−1.750', v2: '−1.750', v3: '', v4: '' },
+    { posten: 'Gesamtpreis', v1: '33.250', v2: '33.250', v3: '33.250', v4: '33.250' },
+  ]}
+  highlight={(row) => row.posten === 'Gesamtpreis'}
+/>
+
+<Callout type="examfocus" title="Pointe">
+- alle vier Varianten ergeben denselben <Exam>Gesamtpreis (33.250 €)</Exam>
+- je nach Bündelung/Entbündelung von Preis und Rabatt werden sie aber **subjektiv unterschiedlich** wahrgenommen
+</Callout>
+
+</section>
+
+<section id="sunk-cost-und-dispositionseffekt">
+
+## Sunk-Cost-Effekt und Dispositionseffekt
+
+### Sunk-Cost-Effekt (Folie 221)
+
+<Columns count={2}>
+  <Card title="Beispiel 1 · Telefon-Warteschleife" tone="accent">
+    - wie lange bleibt man in der kostenpflichtigen Hotline?
+    - ein Anrufer wartet fünf, dann zehn Minuten und ringt ständig mit sich, ob er auflegen sollte
+  </Card>
+  <Card title="Beispiel 2 · Gefallene XY-AG-Aktie" tone="accent">
+    - ein Anleger hat Aktien gekauft, deren Wert inzwischen gefallen ist
+    - die Aussichten sind nicht gut – wie entscheidet er sich?
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Fazit">
+- in beiden Fällen tendieren Menschen zur **Fortführung des Engagements**, um es noch zum Erfolg zu zwingen
+- bereits getätigte, **nicht mehr rückholbare** Einsätze (Zeit, Geld) bewegen Menschen zur Fortführung
+- Resultat: <Exam>Fortführung verlustträchtiger Engagements</Exam>
+</Callout>
+
+### Begründung durch relative Bewertung (Folie 222)
+
+<KpiGrid
+  items={[
+    { value: '−1.000 / 1.500', label: 'Verlustprojekt (v-Achse / Fläche)', accent: 'negative' },
+    { value: '1.600', label: 'Neues Projekt', accent: 'accent' },
+    { value: '1.000 / 1.700', label: 'Gewinnprojekt', accent: 'positive' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Abnehmende Sensitivität stützt Verlustprojekte">
+- im **konvexen Verlustbereich** (abnehmende Sensitivität) wirkt ein weiterer Einsatz in ein laufendes Verlustprojekt subjektiv kaum schmerzhafter
+- das erklärt, warum **Verlustprojekte fortgeführt** statt abgebrochen werden
+</Callout>
+
+### Dispositionseffekt – Sunk-Cost-Falle an der Börse (Folie 223)
+
+<DataChart
+  type="line"
+  title="Dispositionseffekt auf der Wertfunktion (stilisiert, Bezugspunkt = Einstandspreis 125 €)"
+  source="Behavioral Finance · Folie 223"
+  xLabel="Relativer Verlust ← Bezugspunkt → Relativer Gewinn"
+  yLabel="Nutzen v"
+  xKey="x"
+  data={[
+    { x: '−4', v: -3.6 },
+    { x: '−3', v: -3.2 },
+    { x: '−2', v: -2.6 },
+    { x: '−1', v: -1.7 },
+    { x: '0', v: 0 },
+    { x: '1', v: 0.85 },
+    { x: '2', v: 1.3 },
+    { x: '3', v: 1.6 },
+    { x: '4', v: 1.8 },
+  ]}
+  series={[{ key: 'v', name: 'Wertfunktion v' }]}
+/>
+
+<Columns count={2}>
+  <Card title="Position nach Gewinn" tone="positive">
+    - oben rechts (flacher, konkaver Bereich)
+    - Risikoaversion → **Gewinne werden zu schnell realisiert**
+  </Card>
+  <Card title="Position nach Verlust" tone="negative">
+    - unten links (steiler, konvexer Bereich)
+    - Risikofreude → **Verluste werden ausgesessen**
+  </Card>
+</Columns>
+
+<Callout type="examfocus" title="Dispositionseffekt">
+Anleger realisieren **Gewinne zu früh** und **sitzen Verluste aus** – beides relativ zum Einstandspreis als Bezugspunkt.
+</Callout>
+
+### Die Lage des Bezugspunktes (Folie 224)
+
+<Card title="Wo liegen Bezugspunkte normalerweise? → Neutraler Charakter („Norm“)" tone="teal">
+- **Status quo** (z. B. aktuelle Vermögenssituation)
+- **Pläne oder Erwartungen** (z. B. Branchendurchschnitt)
+- ein **naheliegender Vergleichsmaßstab** (z. B. Einkommen des Schwagers)
+- **latente Bezugspunkte** (z. B. aus historischer Wertentwicklung)
+</Card>
+
+</section>
+
+<section id="gewichtungsfunktion">
+
+## Die Gewichtungsfunktion
+
+### Befunde: Optionsvergleiche (Folien 225–226)
+
+<CompareCard
+  items={[
+    {
+      tag: 'A vs. B',
+      title: 'Hohe Wahrscheinlichkeiten',
+      subtitle: 'Mehrheit wählt B',
+      accent: 'accent',
+      points: [
+        'Option A: 45 % Chance auf 6.000 € (alt. 6.000.000 €)',
+        'Option B: 90 % Chance auf 3.000 € (alt. 3.000.000 €)',
+        'Ergebnis: die meisten wählen **B** → Risikoscheu im Gewinnbereich',
+        '„Lieber den Spatz in der Hand als die Taube auf dem Dach"',
+      ],
+    },
+    {
+      tag: 'C vs. D',
+      title: 'Sehr geringe Wahrscheinlichkeiten',
+      subtitle: '73 % wählen C',
+      accent: 'purple',
+      points: [
+        'Option C: 1 % Chance auf 6.000 € (alt. 6.000.000 €)',
+        'Option D: 2 % Chance auf 3.000 € (alt. 3.000.000 €)',
+        'Ergebnis: **73 %** wählen C → Risikofreude bei kleinen Chancen',
+        'Anlass für die Einführung der Gewichtungsfunktion',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="info" title="Gemeinsamkeit beider Optionspaare">
+- in beiden Fällen ist die Chance auf 6.000 € genau **halb so groß** wie die auf 3.000 €
+- bei sehr geringen Chancen erscheint die **riskante Wahl attraktiver**
+- die Vorstellung, 6.000 € gewinnen zu können, lässt die geringe Chance verblassen
+</Callout>
+
+### Über- und Unterbewertung von Wahrscheinlichkeiten (Folie 227)
+
+<Formula
+  display
+  title="Verzerrung objektiver Wahrscheinlichkeiten"
+  expr="\pi(p) > p \;\;\text{(Überbewertung)} \qquad\qquad \pi(p) < p \;\;\text{(Unterbewertung)}"
+/>
+
+<Columns count={2}>
+  <Card title="Überbewertung" tone="warning" exam>
+    - objektiv **unwahrscheinliche** Ereignisse werden überbewertet
+    - dann gilt: **π(p) größer p**
+  </Card>
+  <Card title="Unterbewertung" tone="teal" exam>
+    - Ereignisse mit objektiv **mittlerer oder hoher** Eintrittswahrscheinlichkeit werden unterbewertet
+    - dann gilt: **π(p) kleiner p**
+  </Card>
+</Columns>
+
+### Gestalt der Gewichtungsfunktion (Folien 229, 230, 231)
+
+<DataChart
+  type="line"
+  title="Empfundene π(p) über objektive Wahrscheinlichkeit p (stilisiert) – Gewinnwahrscheinlichkeiten"
+  source="Behavioral Finance · Folie 230"
+  xLabel="objektive Wahrscheinlichkeit p"
+  yLabel="empfundene Wahrscheinlichkeit π(p)"
+  xKey="p"
+  data={[
+    { p: '0%', pi: 0, neutral: 0 },
+    { p: '10%', pi: 18, neutral: 10 },
+    { p: '20%', pi: 26, neutral: 20 },
+    { p: '40%', pi: 38, neutral: 40 },
+    { p: '60%', pi: 53, neutral: 60 },
+    { p: '80%', pi: 70, neutral: 80 },
+    { p: '90%', pi: 80, neutral: 90 },
+    { p: '100%', pi: 100, neutral: 100 },
+  ]}
+  series={[
+    { key: 'pi', name: 'π(p) empfunden' },
+    { key: 'neutral', name: 'risikoneutral (Diagonale)' },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Eigenschaften (Folie 229)" tone="accent">
+    - in den **Endbereichen sehr steil** → hohe Sensibilität bei Wahrscheinlichkeitsänderungen
+    - Bsp.: mehr Geld, um ein Risiko von 0,001 % auf 0 % zu senken, als von 0,20 % auf 0,15 % (objektiv größere Abnahme)
+    - bei sehr hohen Wahrscheinlichkeiten sehr steil: **Sicherheitseffekt (certainty effect)** – 1.000 € mit 99 % vs. mit Sicherheit
+  </Card>
+  <Card title="Wichtige Merkmale (Folie 231)" tone="purple" exam>
+    - zwei natürliche Bezugspunkte: **0 % und 100 %**
+    - Gewinn- und Verlustwahrscheinlichkeiten werden **unterschiedlich** bewertet
+    - **Certainty-Effekt** und **Überbewertung geringer Wahrscheinlichkeiten**
+  </Card>
+</Columns>
+
+### Anwendung: kleine Versicherungen (Folie 232)
+
+<KpiGrid
+  items={[
+    { value: '40 €', label: 'Jahresprämie', accent: 'warning' },
+    { value: '600 €', label: 'Wert des Fahrrads', accent: 'accent' },
+    { value: '5 %', label: 'Diebstahlwahrscheinlichkeit', accent: 'negative' },
+  ]}
+/>
+
+<Formula
+  display
+  title="Erwartungswert (objektiv) vs. subjektive Bewertung"
+  expr="\underbrace{0{,}05\cdot(-600) + 0{,}95\cdot 0 = -30\,\text{€}}_{\text{keine Versicherung}} \;>\; \underbrace{-40\,\text{€}}_{\text{Versicherung}} \qquad \text{aber}\qquad \pi(0{,}05)\cdot v(-600) + \pi(0{,}95)\cdot v(0) \;<\; v(-40)"
+/>
+
+<Callout type="examfocus" title="Versicherung im Erwartungswert teurer, aber subjektiv attraktiv">
+- im Erwartungswert ist die Versicherung **teurer** (−40 € vs. −30 €)
+- dennoch subjektiv **attraktiv** wegen der <Exam>Überbewertung der kleinen Diebstahlwahrscheinlichkeit</Exam>
+- denn: π(0,05) deutlich **größer** 0,05 und π(0,95) deutlich **kleiner** 0,95
+</Callout>
+
+### Zusammenfassung der Bewertungsfunktionen (Folien 233–235)
+
+<Columns count={2}>
+  <Card title="Wertfunktion" tone="positive">
+    - **konkav** im Gewinn-, **konvex** im Verlustbereich → abnehmende Sensitivität
+    - **steiler** im Verlustbereich → Verlustaversion (Verluste ca. doppelt so stark bewertet)
+    - stellt **relative** Gewinne/Verluste zu einem Referenzpunkt dar
+  </Card>
+  <Card title="Gewichtungsfunktion" tone="orange">
+    - bei Beachtung objektiver Wahrscheinlichkeiten bestimmt allein die **Wertfunktion** das Risikoverhalten
+    - werden **geringe** Wahrscheinlichkeiten überschätzt → höhere Risikobereitschaft
+    - werden **mittlere/hohe** Wahrscheinlichkeiten unterschätzt → geringere Risikobereitschaft
+  </Card>
+</Columns>
+
+<Card title="Hürden für rationale Entscheidungen recht hoch (Folie 235)" tone="accent" exam>
+- Marktteilnehmer bewerten Ergebnisse anhand eines **Referenzpunktes**
+- sie sind bestrebt, **relative Verluste** zu diesem Referenzpunkt zu vermeiden
+- sie **ändern ihre Risikoeinstellung**, sobald sie mit Verlusten konfrontiert werden
+- sie **überschätzen** die Wahrscheinlichkeit höchst unwahrscheinlicher Ereignisse
+</Card>
+
+<SourceNote>Behavioral Finance · Kapitel 6 · Prospect Theory und ihre Konsequenzen · Folien 191–235 · vgl. Kahneman/Tversky (1979); Daxhammer/Facsar (2017)</SourceNote>
+
+</section>

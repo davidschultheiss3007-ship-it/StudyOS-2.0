@@ -1,0 +1,36 @@
+export const meta = {
+  id: 'einfuehrung',
+  title: 'Kapitel 1 · Einführung in das Asset Management',
+  source: 'Asset Management · Kapitel 1 · Einführung · Folien 1–17',
+  estimatedMinutes: 45,
+  sections: [
+    { id: 'was-ist-asset-management', title: 'Was ist Asset Management?' },
+    { id: 'einordnung-modulziele', title: 'Einordnung, Modulziele und Spielregeln' },
+    { id: 'formen-des-asset-management', title: 'Formen des Asset Management' },
+    { id: 'anbieter-und-anleger', title: 'Anbieter und institutionelle Anleger' },
+    { id: 'beteiligte-parteien', title: 'Beteiligte Parteien im Fondsgeschäft' },
+    { id: 'aufsicht-und-verwahrung', title: 'Aufsicht, KVG und Verwahrung' },
+  ],
+  keyTakeaways: [
+    'Asset Management ist die systematische, professionelle Kapitalanlage mit dem Ziel, risikoeffiziente Portefeuilles zu bilden.',
+    'Das „Magische Viereck“ der Kapitalanlage spannt die Zielkonflikte aus Rendite, Risiko, Liquidität und Steuern auf.',
+    'Erträge der Asset Manager hängen von Assets under Management (AuM), Performance und Anlagestil ab.',
+    'Klassisches Asset Management ist individuell, aber teuer und wenig gestreut; fondsgestütztes Asset Management ist breit gestreut und schon bei kleinem Vermögen möglich, dafür weniger individuell.',
+    'Im Fondsgeschäft kontrolliert die BaFin Finanzdienstleister und KVG und überwacht die Depotbank; die KVG beschäftigt den Fondsmanager, der das von der Depotbank verwahrte Sondervermögen verwaltet.',
+    'Das Sondervermögen ist vom Vermögen der KVG getrennt und dadurch vor deren Gläubigern geschützt.',
+  ],
+  examFocus: [
+    'Definition Asset Management und seine Synonyme (Portfolio-, Wertpapier-, Fonds-, Investment Management, Vermögensverwaltung) sicher wiedergeben.',
+    'Die vier Ecken des Magischen Vierecks (Rendite, Risiko, Liquidität, Steuern) nennen können.',
+    'Klassisches vs. fondsgestütztes Asset Management mit je Vor- und Nachteilen gegenüberstellen.',
+    'Charakteristika institutioneller Anleger (juristische Person, hohe Volumina, fremde Mittel, KAGG/WpHG/KWG, Gruppenentscheidung) aufzählen.',
+    'Die Aufsichts-, Auftrags- und Verwahrbeziehungen zwischen BaFin, Finanzdienstleister, KVG, Fondsmanager, Depotbank und Sondervermögen korrekt zuordnen.',
+    'Die zwei Modelle des Finanzdienstleisters (klassische Anlageberatung mit Einzelzustimmung vs. Finanzportfolioverwaltung per Generalvollmacht) unterscheiden.',
+  ],
+  pitfalls: [
+    'Spezial- und Publikums-Sondervermögen verwechseln: Spezial-Sondervermögen basiert auf Vereinbarungen mit institutionellen Anlegern, Publikums-Sondervermögen umfasst alle übrigen.',
+    'Die Aufsichtsbeziehung der BaFin zur Depotbank ist „überwacht“ (nicht „kontrolliert“ wie bei Finanzdienstleister und KVG).',
+    'Sowohl Finanzdienstleister als auch KVG beauftragen die Depotbank — die Richtung dieser Beziehung nicht umkehren.',
+    'Die Spaltenüberschrift „SWS“ auf der Spielregeln-Folie (Werte 52/88) so übernehmen, wie sie steht, und nicht in Semesterwochenstunden umdeuten.',
+  ],
+};

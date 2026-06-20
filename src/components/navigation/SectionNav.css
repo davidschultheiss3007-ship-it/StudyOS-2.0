@@ -1,0 +1,216 @@
+/* =====================================================================
+   SectionNav — collapsible sub-topic navigation
+
+   Mirrors the main Sidebar overlay: a fixed trigger opens a left slide-in
+   panel with a dimming backdrop. Collapsed by default so topic content gets
+   the full page width. The trigger sits to the right of the global hamburger
+   (AppLayout: fixed, top/left = space-4, 42px wide).
+===================================================================== */
+
+.section-nav__trigger {
+  position: fixed;
+  top: var(--space-4);
+  left: calc(var(--space-4) + 42px + var(--space-2));
+  z-index: var(--z-sticky);
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-4);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast),
+              border-color var(--transition-fast),
+              color var(--transition-fast);
+}
+
+.section-nav__trigger:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-border-strong);
+}
+
+.section-nav__trigger:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.section-nav__trigger-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-muted);
+}
+
+.section-nav__trigger-label {
+  line-height: 1;
+}
+
+/* --- Backdrop (shares the AppLayout backdrop look) --------------------- */
+.section-nav__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal-backdrop);
+  background: var(--color-backdrop);
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+  transition: opacity var(--transition-base);
+}
+
+.section-nav__backdrop--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- Slide-in panel ---------------------------------------------------- */
+.section-nav__panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: var(--z-modal);
+  width: min(320px, calc(100vw - var(--space-12)));
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-sidebar);
+  border-right: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(-100%);
+  transition: transform var(--transition-base);
+  overflow-y: auto;
+}
+
+.section-nav__panel--open {
+  transform: translateX(0);
+}
+
+.section-nav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-4) var(--space-4);
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.section-nav__title {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+}
+
+.section-nav__close {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.section-nav__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
+}
+
+.section-nav__close:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.section-nav__nav {
+  flex: 1;
+  padding: var(--space-3);
+  overflow-y: auto;
+}
+
+.section-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-nav__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  width: 100%;
+  text-align: left;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.section-nav__item:hover {
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+}
+
+.section-nav__item:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
+
+.section-nav__item--active,
+.section-nav__item--active:hover {
+  background: var(--color-accent-subtle);
+  color: var(--color-accent-hover);
+  font-weight: var(--font-weight-semibold);
+}
+
+.section-nav__item-index {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+.section-nav__item--active .section-nav__item-index {
+  color: var(--color-accent);
+}
+
+.section-nav__item-label {
+  min-width: 0;
+}
+
+/* Match the hamburger's shifted position at the AppLayout mobile breakpoint. */
+@media (max-width: 900px) {
+  .section-nav__trigger {
+    top: var(--space-3);
+    left: calc(var(--space-3) + 42px + var(--space-2));
+  }
+}
+
+@media (max-width: 720px) {
+  .section-nav__trigger-label {
+    display: none;
+  }
+
+  .section-nav__trigger {
+    width: 42px;
+    padding: 0;
+    justify-content: center;
+  }
+}

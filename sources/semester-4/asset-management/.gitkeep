@@ -1,0 +1,38 @@
+
+Arbeite im Repo:
+  C:\Users\david\OneDrive\Dokumente\New project\StudyOS-2.0\StudyOS-2.0
+
+  Bitte beachte AGENTS.md und die lokalen Skills:
+  - .agents/skills/studyos-pdf-topic-builder/SKILL.md
+  - .agents/skills/exam-content-builder/SKILL.md
+  - .agents/skills/topic-quality-upgrader/SKILL.md
+
+  Aufgabe:
+  Baue aus folgendem PDF ein vollständiges StudyOS-React-Topic für Asset Management:
+
+  PDF:
+  sources/semester-4/asset-management/[PDF-DATEINAME]
+
+  Ziel-Datei:
+  src/modules/semester-4/asset-management/topics/[DATEINAME].jsx
+
+  Workflow:
+  1. Verwende zuerst studyos-pdf-topic-builder, um das PDF quellentreu in ein StudyOS-kompatibles topic-Objekt umzubauen.
+  2. Verwende parallel bzw. direkt anschließend exam-content-builder, um keyTakeaways, examFocus, pitfalls und klausurnahe Lernlogik aus derselben PDF-Quelle zu ergänzen.
+  3. Verwende danach topic-quality-upgrader, um Struktur, Lesbarkeit, Tabellen, Callouts und Prüfungsorientierung zu verbessern.
+  4. Nutze ausschließlich das PDF als fachliche Quelle. Keine externen Quellen, keine erfundenen Zahlen, Formeln oder Beispiele.
+  5. Halte dich an das bestehende Topic-Format aus:
+     src/modules/semester-4/asset-management/topics/01-traditionelle-assetklassen.jsx
+  6. Ändere nur die Ziel-Topic-Datei. Ändere NICHT:
+     - module.js
+     - topics/index.js
+     - questions.js
+     - moduleRegistry.js
+     - globale Styles
+  7. Am Ende ausführen:
+     npm.cmd run build
+  8. Berichte:
+     - neu angelegte/geänderte Datei
+     - Quellenbereich
+     - Build-Status
+     - offene Risiken

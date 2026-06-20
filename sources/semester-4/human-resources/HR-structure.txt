@@ -1,0 +1,20 @@
+Hier ist die Übersicht der Quellen in der von dir gewünschten numerischen Reihenfolge von 1 bis 10, ergänzt um die zentralen Themen, die in den jeweiligen Dokumenten behandelt werden:
+HR1: Bietet den Einstieg in das Human Resource Management, definiert die Themenfelder und erläutert die Kriterien zur Leistungsbewertung (Klausur und Präsentation)
+.
+HR2: Behandelt die Grundlagen der Unternehmens- und Führungsethik sowie Strategien zur Führung unterschiedlicher Generationen im Betrieb
+.
+HR3: Fokussiert sich auf die Unternehmensstrategie und -umwelt, die Säulen der Personalpolitik sowie spezifische Merkmale der Baby-Boomer-Generation
+.
+HR4: Umfasst die operative Personalplanung, die Methoden der Bedarfsbestimmung, die Funktionsmatrix für Karrieremodelle und die Erstellung von Stellenbeschreibungen
+.
+HR5: Erläutert die Personalbeschaffung als reziproken Prozess, unterscheidet interne und externe Beschaffungswege und führt in das Personalmarketing ein
+.
+HR6: (Zu dieser Quelle liegen in den bereitgestellten Textauszügen keine spezifischen Inhalte vor).
+HR7: Gibt eine Übersicht über die verschiedenen Verfahren der Personalauswahl (z. B. Assessment Center) und definiert Kriterien für Anforderungsmerkmale
+.
+HR8: Konzentriert sich auf die Personaladministration (Stammdateien, Meldeaufgaben), das deutsche Sozialversicherungssystem und die Datenschutzregeln der DSGVO
+.
+HR9: Behandelt das Personalcontrolling (KPIs), den Prozess der Personalintegration (Onboarding) sowie die methodische Laufbahnplanung unter Anwendung des 70/20/10-Lernmodells
+.
+HR10: Schließt mit klassischen Formen der Arbeitsorganisation (Job Rotation, Qualitätszirkel) und Instrumenten der Personalbeurteilung, insbesondere dem 360-Grad-Feedback, ab
+.

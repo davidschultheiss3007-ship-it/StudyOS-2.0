@@ -1,0 +1,607 @@
+<section id="personalstatistik-grundlagen">
+
+## Personalstatistik: Grundlagen und Struktur
+
+<DefinitionBox term="Personalstatistik" source="Human Resources · HR9 · Folie 1">
+Teil des **operativen Personalcontrollings**: arbeitet im Wesentlichen mit **Kennzahlen**. Kennzahlen werden erst durch den <Exam>Vergleich mit Bezugswerten</Exam> aussagefähig.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Bezugswerte (machen Kennzahlen aussagefähig)" tone="accent">
+    - Vorjahres- oder Vormonatswerte
+    - Planungswerte (Ziel- und Soll-Werte)
+    - Branchendurchschnittswerte
+  </Card>
+  <Card title="Funktion der Personalstatistik" tone="purple">
+    - **primär internes** Informationsinstrument
+    - Adressaten: Personalleitung, Unternehmensleitung, Vorgesetzte, Betriebsrat, Belegschaft
+    - **auch extern** — teils gesetzliche Verpflichtung zur Weitergabe an außerbetriebliche Stellen
+  </Card>
+</Columns>
+
+### Externe Empfänger und Auskunftsbereiche
+
+<Columns count={2}>
+  <Card title="Externe Empfänger personalstatistischer Daten" tone="teal">
+    - **Statistische Ämter** (Verdienst- und Beschäftigungsstrukturen)
+    - **Sozialversicherungsträger** (Unfall-, Kranken-, Rentenversicherungsbeiträge)
+    - **Arbeitsämter** (Ein-/Entlassungen, offene Stellen, Ausbildungsplätze, Schwerbehinderte, Jahresmeldung)
+    - **Kammern, Verbände, Gewerkschaften** und sonstige Interessenten (auch Aufsichtsorgane, Presse)
+  </Card>
+  <Card title="Fünf Auskunftsbereiche der betrieblichen Personalstatistik" tone="orange" exam>
+    - Personalstruktur
+    - Personalbewegungen
+    - Arbeits- und Ausfallzeiten
+    - Personalaufwand
+    - Sozialleistungen
+  </Card>
+</Columns>
+
+### Merkmale der Personalstrukturstatistik
+
+<Callout type="info" title="Zweck">
+Die Personalstrukturstatistik veranschaulicht die **Zusammensetzung der Belegschaft** und kann nach folgenden Merkmalen durchgeführt werden.
+</Callout>
+
+<DataTable
+  caption="Gliederungsmerkmale der Personalstruktur (Folie 3)"
+  columns={[
+    { key: 'merkmal', label: 'Merkmal' },
+    { key: 'beispiel', label: 'Ausprägungen / Beispiele' },
+  ]}
+  rows={[
+    { merkmal: 'Arbeitnehmerart', beispiel: 'Auszubildende, Praktikanten, Arbeiter, Angestellte, leitende Angestellte' },
+    { merkmal: 'Art des Vertragsverhältnisses', beispiel: 'unbefristet/befristet, Vollzeit/Teilzeit, Tarif/außertariflich' },
+    { merkmal: 'Qualifikationen', beispiel: 'Schulabschluss, Berufsausbildung, Studium, Zusatzausbildungen' },
+    { merkmal: 'Berufs- und Funktionskategorien', beispiel: 'Assistenz, Ingenieur, Filialleiter, Disponent' },
+    { merkmal: 'Persönliche Merkmale', beispiel: 'Dauer der Betriebszugehörigkeit, Alter, Familienstand, Geschlecht' },
+    { merkmal: 'Aufbauorganisatorische Merkmale', beispiel: 'Standort, Bereiche, Abteilungen' },
+    { merkmal: 'Verantwortungsstufe', beispiel: 'Führungsebene, Fachlaufbahnebene, Projektlaufbahnebene' },
+  ]}
+/>
+
+</section>
+
+<section id="personalkennzahlen">
+
+## Kennzahlen der Personalstatistik
+
+### 1 · Strukturquoten
+
+<Formula
+  display
+  title="Allgemeine Strukturquote"
+  expr="\text{Quote}(i) = \frac{\text{durchschn. Anzahl der Gruppe }(i)\text{ p.a.} \times 100}{\text{durchschnittlicher Personalbestand p.a.}}"
+/>
+
+<Columns count={3}>
+  <Card title="Angestellten-/Arbeiterquote" tone="accent">
+    - Zähler: durchschn. Anzahl der Angestellten / Arbeiter p.a. × 100
+    - Nenner: durchschnittlicher Personalbestand p.a.
+  </Card>
+  <Card title="Führungskräftequote" tone="purple">
+    - Zähler: durchschn. Anzahl der Führungskräfte p.a. × 100
+    - Nenner: durchschnittlicher Personalbestand p.a.
+  </Card>
+  <Card title="Teilzeitquote" tone="teal">
+    - Zähler: durchschn. Anzahl der TZ-Beschäftigten p.a. × 100
+    - Nenner: durchschn. Anzahl <Exam>**aller**</Exam> Beschäftigten p.a.
+  </Card>
+</Columns>
+
+### 2 · Personalbewegungen
+
+<Callout type="info" title="Personalbewegungsstatistik">
+Zeigt **Zu- und Abgänge** im Personal auf — unterschieden in außerbetriebliche Abgänge und außerbetriebliche Zugänge.
+</Callout>
+
+<Columns count={2}>
+  <Card title="Abgänge setzen sich zusammen aus" tone="warning">
+    - „Natürlicher Fluktuation": Abgänge infolge **Pensionierung, Tod**
+    - **Kündigungen** bzw. einvernehmliche Trennungsvereinbarungen
+  </Card>
+  <Card title="Bezug der Bewegungsquoten" tone="neutral">
+    - jeweils bezogen auf die **durchschnittliche Anzahl der Arbeitnehmer** der Periode
+    - Fluktuationsquote → Abgänge; Neueinstellungsquote → Zugänge
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="Fluktuationsquote gesamt (außerbetriebliche Abgänge)"
+  expr="\text{Fluktuationsquote} = \frac{\text{Anzahl aller Abgänge p.a.} \times 100}{\text{durchschnittliche Anzahl der Arbeitnehmer p.a.}}"
+/>
+
+<Formula
+  display
+  title="Neueinstellungsquote (außerbetriebliche Zugänge)"
+  expr="\text{Neueinstellungsquote} = \frac{\text{Anzahl aller Zugänge der Periode}(i) \times 100}{\text{durchschnittliche Anzahl der Arbeitnehmer der Periode}(i)}"
+/>
+
+### 3 · Arbeits- und Ausfallzeiten
+
+<Callout type="info" title="Warum die effektive Arbeitszeit?">
+Im Unternehmen besteht oft eine starke **Diskrepanz** zwischen vertraglicher und tatsächlich geleisteter Arbeitszeit. Mehrarbeit erhöht, Ausfallzeiten vermindern sie — die effektive Arbeitszeit ist Grundlage der **Personalbedarfsplanung**.
+</Callout>
+
+<Columns count={2}>
+  <Card title="Ableitung Soll-Arbeitszeit" tone="accent">
+    - Vertraglich vereinbarte Arbeitszeit
+    - **−** Feiertage (Wochentage)
+    - **−** allgemeine bezahlte und/oder unbezahlte Freistellung
+    - **= Soll-Arbeitszeit**
+  </Card>
+  <Card title="Ableitung Ist-Arbeitszeit" tone="teal">
+    - Soll-Arbeitszeit
+    - **−** Ausfallzeiten (bezahlte und unbezahlte)
+    - **+** Effektive Mehrarbeitszeiten
+    - **= Ist-Arbeitszeit**
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="Quote der effektiven Arbeitszeit"
+  expr="\text{Quote der effektiven Arbeitszeit} = \frac{\text{Ist-Arbeitszeit (Tage/Std.)}}{\text{Soll-Arbeitszeit (Tage/Std.)}}"
+/>
+
+<Columns count={2}>
+  <Card title="Ausfallzeiten (mindern die tatsächliche Arbeitszeit)" tone="neutral">
+    - Bezahlte gesetzliche Feiertage
+    - Urlaub
+    - Sonderurlaub und Zusatzurlaub (z. B. für Schwerbehinderte)
+    - Bildungsurlaub, Fortbildungsmaßnahmen
+    - Krankheit, Kuren und Heilverfahren
+    - Mutterschutz und Elternzeit
+  </Card>
+  <Card title="Ausfallzeiten (Fortsetzung)" tone="neutral">
+    - Unpünktlichkeiten
+    - Technische Betriebsstörungen
+    - Streik, Aussperrung
+    - Wehrübungen
+    - Arbeitsbefreiungen nach Gesetz, Verordnung oder Tarif (Arztbesuche, Gerichtsladungen, Krankheit des Kindes, Pflegefälle)
+  </Card>
+</Columns>
+
+### 4 · Personalkosten
+
+<Columns count={2}>
+  <Card title="Bestandteile der Personalkosten" tone="neutral">
+    - **Entgelte:** Löhne, Gehälter, Zulagen, Prämien, Erfolgs- und Kapitalbeteiligungen
+    - **Personalzusatzkosten:** gesetzliche Sozialleistungen
+    - **Freiwillige Leistungen:** z. B. Bildungskosten, Kantine, Beihilfen
+  </Card>
+  <Card title="Auswertungsdimensionen" tone="accent">
+    - nach **Kostenarten**
+    - nach **Mitarbeitergruppen**
+    - nach **Kostenträgern** (organisatorische Einheiten)
+    - nach **Regionen**
+  </Card>
+</Columns>
+
+<Callout type="examfocus" title="Kennzahlen zur Personalkostenstruktur">
+Vier Strukturkennzahlen analysieren die Zusammensetzung der Personalkosten.
+</Callout>
+
+<Formula display title="Anteil der Personalkosten an den Gesamtkosten" expr="\frac{\text{Personalkosten} \times 100}{\text{Gesamtkosten (lt. GuV)}}" />
+
+<Columns count={3}>
+  <Card title="Entgelt-Anteil" tone="accent">
+    - Entgelt (Löhne und Gehälter) / Personalkosten gesamt
+  </Card>
+  <Card title="Zusatzkosten-Anteil" tone="purple">
+    - Personalzusatzkosten / Personalkosten gesamt
+  </Card>
+  <Card title="Anteil freiwilliger Leistungen" tone="teal">
+    - Freiwillige Leistungen / Personalkosten gesamt
+  </Card>
+</Columns>
+
+<Columns count={2}>
+  <Card title="Personalkosten je Bezugsgröße" tone="orange">
+    - Personalkosten / Umsatz
+    - Personalkosten / Produktion
+    - Personalkosten / Gewinn
+  </Card>
+  <Card title="Aussageziel der Bezugsgrößen" tone="neutral">
+    - Entwicklung der Personalkosten **pro Kopf** (Mitarbeitergruppen, Einheiten, Regionen)
+    - Entwicklung der Personalkosten **pro Leistungseinheit** (Produkte, Einheiten, Regionen)
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Steuerungsziele (Folie 10)">
+- Die **Steigerungsrate des Umsatzes** darf nicht durch die Steigerungsrate der Personalkosten übertroffen werden.
+- Die **Zunahme des Personalbestandes** darf nicht über der Steigerungsrate des Umsatzes liegen.
+</Callout>
+
+</section>
+
+<section id="hr-kpis">
+
+## Reporting und moderne HR-KPIs
+
+### Reporting in der Praxis
+
+<Callout type="info" title="Reporting-Beispiel (Folie 11)">
+Anschauungsbeispiel eines **Personalkennzahlen-Reportings** im monatsbezogenen Tabellenraster (Berichtsjahr 2022). Es illustriert die Bezugswert-Logik (Vergleich mit Soll-/Plan-/Vorjahreswerten) in der Praxis. Die konkreten Zellwerte und Zeilenbeschriftungen sind aus der Render-Grafik **nicht verlässlich lesbar** und werden daher nicht als Fakten angegeben. Quelle: business-wissen.de.
+</Callout>
+
+### Top-15 HR-KPIs 2025
+
+<DataTable
+  caption="Top-15 HR-KPIs 2025 — Teil 1 (Folie 12)"
+  columns={[
+    { key: 'nr', label: 'Nr.', align: 'right' },
+    { key: 'kpi', label: 'Kennzahl' },
+    { key: 'def', label: 'Definition' },
+  ]}
+  rows={[
+    { nr: '1', kpi: 'Mitarbeiterbindung', def: 'Anteil der Mitarbeiter, die im Unternehmen bleiben.' },
+    { nr: '2', kpi: 'Mitarbeiterzufriedenheit', def: 'Grad der Zufriedenheit mit dem Arbeitsplatz.' },
+    { nr: '3', kpi: 'Besetzungsdauer', def: 'Zeitspanne vom Start des Bewerbungsprozesses bis zur Einstellung.' },
+    { nr: '4', kpi: 'Rekrutierungskosten', def: 'Gesamtkosten für die Besetzung einer offenen Stelle.' },
+    { nr: '5', kpi: 'Fehlzeitenquote', def: 'Anteil der krankheits- oder sonstig bedingten Abwesenheiten.' },
+    { nr: '6', kpi: 'Fluktuationsrate', def: 'Anteil der Mitarbeitenden, die das Unternehmen verlassen.' },
+    { nr: '7', kpi: 'Mitarbeiterproduktivität', def: 'Output oder Umsatz pro Mitarbeiter.' },
+  ]}
+/>
+
+<DataTable
+  caption="Top-15 HR-KPIs 2025 — Teil 2 (Folie 13)"
+  columns={[
+    { key: 'nr', label: 'Nr.', align: 'right' },
+    { key: 'kpi', label: 'Kennzahl' },
+    { key: 'def', label: 'Definition' },
+  ]}
+  rows={[
+    { nr: '8', kpi: 'Verwaltung von Sozialleistungen', def: 'Effizienz und Qualität bei der Organisation von Zusatzleistungen.' },
+    { nr: '9', kpi: 'Überstunden', def: 'Gesamtzahl der geleisteten Überstunden pro Zeitraum.' },
+    { nr: '10', kpi: 'Mitarbeiterengagement', def: 'Grad der emotionalen Bindung und Motivation.' },
+    { nr: '11', kpi: 'Mitarbeiter-Net-Promoter-Score', def: 'Wie wahrscheinlich Mitarbeitende den Arbeitgeber weiterempfehlen.' },
+    { nr: '12', kpi: '90-Tage-Ausfallquote', def: 'Anteil der Neueinstellungen, die in den ersten 90 Tagen wieder gehen.' },
+    { nr: '13', kpi: 'Schulungskosten pro Mitarbeiter', def: 'Durchschnittliche Weiterbildungsausgaben je Mitarbeiter.' },
+    { nr: '14', kpi: 'Diversitätskennzahlen', def: 'Anteil verschiedener Gruppen (Geschlecht, Alter, Herkunft) in der Belegschaft.' },
+    { nr: '15', kpi: 'Arbeitsunfälle', def: 'Anzahl der gemeldeten Arbeitsunfälle pro Zeitraum.' },
+  ]}
+/>
+
+<SourceNote>Der Folientitel auf Folie 13 nennt „Top 16", obwohl die Liste mit Punkt 15 endet (Original-Folientext so beibehalten).</SourceNote>
+
+</section>
+
+<section id="onboarding">
+
+## Personalintegration und Onboarding
+
+<Diagram
+  title="Phasenfolge des Onboardings (Folien 14–19)"
+  source="Human Resources · HR9 · Folien 14–19"
+  chart={`flowchart LR
+  A[1 Vorbereitung] --> B[2 Begruessung]
+  B --> C[3 Information]
+  C --> D[4 Vorstellung]
+  D --> E[5 Orientierung]
+  E --> F[6 Einweisung und Training]`}
+/>
+
+### Die sechs Onboarding-Phasen im Detail
+
+<Columns count={2}>
+  <Card title="1 · Vorbereitung" tone="accent">
+    - Arbeitsbeginn und Zeit für Einarbeitung vormerken
+    - Arbeitsplatz vorbereiten
+    - Arbeits- und Bewerbungsunterlagen prüfen
+    - Kollegen, Mitarbeitende, Führungskräfte und Belegschaftsvertretung unterrichten
+    - Einarbeitungsplan erstellen
+    - Soziale Integration an einen **Paten** übertragen
+    - evtl. Hilfe bei der Wohnungssuche
+  </Card>
+  <Card title="2 · Begrüßung" tone="purple">
+    - Gespräch über den Terminplan für den ersten Tag
+    - Hilfe für persönliche Probleme durch die Arbeitsaufnahme anbieten
+    - fehlende Mitarbeiterdaten aufnehmen
+    - unter Umständen ärztliche Eignungsuntersuchung
+    - Schlüssel, Ausweise und Ähnliches aushändigen
+  </Card>
+</Columns>
+
+<Card title="3 · Information" tone="teal">
+- Einarbeitungsplan
+- **Unternehmen:** Betriebsbesichtigung, Entwicklung, Ziele, Vertriebs- und Fertigungsprogramm
+- **Organisation:** hierarchischer Aufbau, Zuständigkeiten, Abläufe, betriebliche Einrichtungen
+- **Stelle:** Stellenbeschreibung, Aufgaben, Verantwortung, Bedeutung, Schnittstellen
+- Arbeitszeiten, Pausen, Urlaubsregelung und Entgeltzahlungstermin
+- Sicherheitsvorschriften und Sicherheitsbeauftragte; Unfall- und Gesundheitsgefahren und deren Vermeidung
+- Verhalten bei Unfall und Krankheit, Betriebsärztin/-arzt
+- Datenschutzvorschriften und Datenschutzbeauftragte; betriebliches Vorschlagswesen
+</Card>
+
+<Columns count={3}>
+  <Card title="4 · Vorstellung" tone="accent">
+    - Führungskräfte
+    - Belegschaftsvertretung
+    - Pate
+    - Team
+    - Kolleginnen / Kollegen
+    - andere Beschäftigte
+  </Card>
+  <Card title="5 · Orientierung" tone="purple">
+    - Arbeitsplatz
+    - betriebliche Umgebung: Umkleide-, Sanitär-, Sanitätsräume, schwarzes Brett, Kantine
+    - soziale Integration
+    - offizielle und inoffizielle Spielregeln
+  </Card>
+  <Card title="6 · Einweisung und Training" tone="teal">
+    - Arbeitsunterlagen, -abläufe, Befugnisse, Verantwortung erläutern
+    - Personalentwicklung
+    - Arbeitsausführung und -ergebnisse prüfen und besprechen, Hilfestellung geben
+    - Rückmeldung an das Personalwesen über Erfahrungen
+  </Card>
+</Columns>
+
+<Callout type="pitfall" title="Probleme des Onboardings (Folie 20)">
+- **Zeitmangel**
+- fehlender **Abgleich** zwischen Anforderungen und Kompetenzen
+- fehlende **systematische Entwicklung**
+- fehlende **Feedbacks**
+</Callout>
+
+</section>
+
+<section id="laufbahnplanung">
+
+## Laufbahnplanung und Entwicklung
+
+<KpiGrid
+  items={[
+    { value: '70 %', label: 'verlassen das Unternehmen wegen fehlender Entwicklungsperspektiven', accent: 'positive' },
+    { value: '2×', label: 'höhere Bindungsrate bei strukturierten Laufbahnmodellen', accent: 'accent' },
+    { value: '40 %', label: 'Produktivitätssteigerung bei gezielter individueller Entwicklungsplanung', accent: 'warning' },
+  ]}
+/>
+
+### Vier Phasen der Laufbahnplanung
+
+<Columns count={2}>
+  <Card title="Phase 1 · Diagnose & Verstehen" tone="purple">
+    - Ist-Zustand, Bedürfnisse und Stakeholder klären
+  </Card>
+  <Card title="Phase 2 · Orientierung & Modell" tone="teal">
+    - Laufbahnpfade und Kriterien entwickeln
+  </Card>
+  <Card title="Phase 3 · Individuelle Planung" tone="orange">
+    - Ziele, Maßnahmen und Entwicklungspläne
+  </Card>
+  <Card title="Phase 4 · Umsetzung & Verankerung" tone="negative">
+    - Gespräche, Befähigung und Review
+  </Card>
+</Columns>
+
+<Callout type="info" title="Iterativer Prozess">
+Jede Phase baut auf der vorherigen auf — der Prozess ist **iterativ** und wird an das Unternehmen angepasst.
+</Callout>
+
+### Drei gleichwertige Karrierepfade
+
+<DataTable
+  caption="Karrierepfade mit je vier Stufen (Folie 23)"
+  columns={[
+    { key: 'stufe', label: 'Stufe', align: 'right' },
+    { key: 'fach', label: 'Fachliche Laufbahn' },
+    { key: 'fuehrung', label: 'Führungslaufbahn' },
+    { key: 'projekt', label: 'Projekt- & laterale Laufbahn' },
+  ]}
+  rows={[
+    { stufe: '1', fach: 'Expert:in', fuehrung: 'Teamlead', projekt: 'Projektmitarbeit' },
+    { stufe: '2', fach: 'Senior Expert:in', fuehrung: 'Abteilungsleitung', projekt: 'Projektleitung' },
+    { stufe: '3', fach: 'Principal', fuehrung: 'Bereichsleitung', projekt: 'Programmleitung' },
+    { stufe: '4', fach: 'Fellow / Architect', fuehrung: 'Geschäftsführung', projekt: 'Portfolio-Verantw.' },
+  ]}
+/>
+
+<Columns count={3}>
+  <Card title="Fachliche Laufbahn — Fokus" tone="teal">
+    - Tiefe Expertise, Wissenstransfer und fachliche Autorität
+  </Card>
+  <Card title="Führungslaufbahn — Fokus" tone="purple">
+    - Personalverantwortung, Strategie und Organisationsentwicklung
+  </Card>
+  <Card title="Projekt- & laterale Laufbahn — Fokus" tone="orange">
+    - Querschnittsthemen, Change und bereichsübergreifende Wirkung
+  </Card>
+</Columns>
+
+<Callout type="examfocus" title="Karriere ohne Führung">
+Karriere ist nicht nur über die **Führungslaufbahn** möglich — die drei Pfade sind <Exam>gleichwertig</Exam>.
+</Callout>
+
+### 70/20/10-Lernmodell
+
+<Columns count={3}>
+  <Card title="70 % · Lernen durch Erfahrung" tone="purple">
+    - herausfordernde Projekte & neue Aufgaben
+    - Führung übernehmen (auch ohne Titel)
+    - Fehler machen und reflektieren
+    - Jobrotation und Stellvertretungen
+  </Card>
+  <Card title="20 % · Lernen durch andere" tone="teal">
+    - Feedback von Führungskräften
+    - Mentoring und Coaching
+    - Peer-Lernen und Communities
+    - Vorbilder beobachten und Fragen stellen
+  </Card>
+  <Card title="10 % · Formale Bildung" tone="orange">
+    - Seminare und Workshops
+    - E-Learning und Zertifikate
+    - Fachkonferenzen
+    - strukturiertes Onboarding
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Schlüsselfokus">
+Den **70-%-Anteil** bewusst gestalten — die richtigen Aufgaben zur richtigen Zeit vergeben.
+</Callout>
+
+### Individueller Entwicklungsplan
+
+<Columns count={2}>
+  <Card title="Prozess-Schritte (Folien 25/26)" tone="accent">
+    - **1 Stärken-Profil erstellen** — was kann die Person besonders gut? Welche Talente sind ungenutzt?
+    - **2 Entwicklungsfelder klären** — was fehlt für den nächsten Schritt? Was motiviert langfristig?
+    - **3 Ziele definieren** — kurzfristig (6 Mon.) / mittelfristig (1–2 J.) / langfristig (3–5 J.)
+    - **4 Maßnahmen planen** — 70/20/10: Projekte, Mentoring, Weiterbildung — konkret & terminiert
+    - **5 Verantwortung klären** — wer tut was bis wann?
+  </Card>
+  <Card title="Verantwortlichkeiten" tone="neutral">
+    - **Mitarbeitende:r:** eignet sich Wissen aktiv an; kommuniziert Entwicklungswünsche; zeigt Initiative
+    - **Führungskraft:** gibt regelmäßig Feedback; schafft Entwicklungsmöglichkeiten; coacht und fördert
+    - **HR / Beratung:** stellt Strukturen & Tools bereit; moderiert den Prozess; misst Wirkung & Erfolg
+  </Card>
+</Columns>
+
+<Callout type="info" title="Einschätzungsbogen zur Standortbestimmung (Folie 27)">
+Zwei Kompetenzdimensionen, je über fünf Aussagen auf einer 5er-Skala bewertet (1 = trifft nie zu bis 5 = trifft immer zu).
+</Callout>
+
+<Columns count={2}>
+  <Card title="Entwicklung & Lernen" tone="accent" compact>
+    _Selbstreflexion · Wachstum · Feedback annehmen_
+
+    - reflektiert das eigene Verhalten und zieht Konsequenzen
+    - ist offen für Feedback und nimmt es ohne Abwehr an
+    - fördert die Weiterentwicklung der Mitarbeitenden aktiv
+    - zeigt echte Neugierde und Lernbereitschaft
+    - hinterfragt gewohnte Vorgehensweisen und verändert sie
+  </Card>
+  <Card title="Strategie & Weitblick" tone="positive" compact>
+    _Gesamtbild · Innovation · Zukunft gestalten_
+
+    - denkt über den eigenen Verantwortungsbereich hinaus
+    - verbindet operative Entscheidungen mit strategischen Zielen
+    - erkennt Chancen und Trends frühzeitig
+    - gestaltet Veränderungen aktiv mit, statt sie abzuwarten
+    - bringt neue Ideen ein und fördert Innovationskultur
+  </Card>
+</Columns>
+
+</section>
+
+<section id="personaleinsatz-arbeitsgestaltung">
+
+## Personaleinsatz, Arbeitsgestaltung und Arbeitsschutz
+
+<DefinitionBox term="Personaleinsatz" source="Human Resources · HR9 · Folie 28">
+Funktionsbereich des HR-Managements: Zuordnung der betrieblichen Arbeitspersonen zu den zu erfüllenden Aufgaben in <Exam>inhaltlicher, quantitativer, organisatorischer, zeitlicher und örtlicher Hinsicht</Exam> — eignungsgerecht sowie **human und effizient**. Hier betrachtet unter dem Aspekt der **Arbeitsgestaltung**.
+</DefinitionBox>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Person',
+      title: 'Pol „Person"',
+      subtitle: 'Personalauswahl und -entwicklung',
+      accent: 'purple',
+      points: [
+        'Maßnahme: **Adaption des Qualifikationsprofiles**',
+      ],
+    },
+    {
+      tag: 'Stelle',
+      title: 'Pol „Stelle"',
+      subtitle: 'Personaleinsatz im engeren Sinne',
+      accent: 'teal',
+      points: [
+        'Maßnahme: **Arbeitsgestaltung und -organisation**',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="merksatz" title="Personaleinsatz im weiteren Sinne (Folie 29)">
+**Wechselseitige Adaption** von Person und Arbeitsplatz im Hinblick auf möglichst optimale **Effizienz und Humanität**.
+</Callout>
+
+### Fünf Ansatzpunkte der Arbeitsplatzgestaltung
+
+<DataTable
+  caption="Ansatzpunkte der Arbeitsplatzgestaltung (Folie 30)"
+  columns={[
+    { key: 'punkt', label: 'Ansatzpunkt' },
+    { key: 'beispiel', label: 'Beispiele' },
+  ]}
+  rows={[
+    { punkt: 'Arbeitsinhalt', beispiel: 'Art und Menge der Arbeit (z. B. körperliche, geistige Arbeit)' },
+    { punkt: 'Arbeitssicherheit', beispiel: 'Arbeitsrisiken und ihre Abwendung' },
+    { punkt: 'Organisation', beispiel: 'Einzel- oder Teamarbeit, Grad der Unabhängigkeit' },
+    { punkt: 'Arbeitszeit', beispiel: 'Tages-/Nachtarbeit, Schichtarbeit, flexible oder starre Zeiten' },
+    { punkt: 'Arbeitsort', beispiel: 'Büro, Montagehalle, Lager, stationär/mobil, Verkehrsanbindung' },
+  ]}
+/>
+
+### Menschengerechte Arbeitsplatzgestaltung
+
+<Callout type="info" title="Definition (Folie 31)">
+**Anpassung der Arbeitsbedingungen an die physischen und psychischen Bedürfnisse der Beschäftigten**, um Gesundheit, Motivation und Leistung zu fördern.
+</Callout>
+
+<Columns count={2}>
+  <Card title="Ziele" tone="positive">
+    - Erhalt der Arbeitsfähigkeit
+    - Vermeidung gesundheitlicher Schäden (Fehlhaltungen, Lärm, Stress)
+    - Erhöhung von Motivation, Zufriedenheit und Produktivität
+    - Reduktion von Fehlzeiten und Fluktuation
+  </Card>
+  <Card title="Grundprinzipien (Ergonomie / Arbeitswissenschaft)" tone="accent">
+    - **Physiologisch:** ergonomische Möbel, angepasste Beleuchtung
+    - **Psychologisch:** Aufgabenvielfalt, Handlungsspielraum, Feedback
+    - **Sicherheitsorientiert:** Vermeidung von Gefahrenquellen
+    - **Sozial:** Kommunikations- und Pausenräume
+  </Card>
+</Columns>
+
+### Arbeitsinhalte
+
+<Columns count={2}>
+  <Card title="Dimensionen (Gegensatzpaare)" tone="purple">
+    - geistige und/oder körperliche Arbeit
+    - manuelle und/oder maschinelle Arbeit
+    - einfache und/oder komplexe Aufgaben
+    - neue Aufgaben und/oder Routineaufgaben
+    - Monotonie versus Vielfalt und Abwechslung
+    - Teilprozesse oder Ganzheitlichkeit
+    - Vorgaben oder Handlungsspielräume
+  </Card>
+  <Card title="Ziel & Kriterien" tone="teal">
+    - **Ziel:** physische und psychische Belastungen so gering wie möglich halten
+    - **Kriterien:** Ausführbarkeit · Erträglichkeit · Zumutbarkeit · Zufriedenheit · Persönlichkeitsförderlichkeit
+  </Card>
+</Columns>
+
+### Arbeitsschutz
+
+<DefinitionBox term="Arbeitsschutz" source="Human Resources · HR9 · Folie 33">
+**Analyse von Risiken** für die geistige und körperliche Gesundheit des Menschen am Arbeitsplatz und ihre **effektive Abwendung**.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Ergonomische Arbeitsplatzgestaltung" tone="accent">
+    - Arbeits(schutz)kleidung
+    - Arbeitsplatz
+    - Arbeitswerkzeuge und Maschinen
+    - Schutzausrüstung (Beispiele): Schutzbrille; Schutzanzug; Augen-, Kopf- und Lärmschutzhelm
+  </Card>
+  <Card title="Vorschriften und Kontrollen" tone="warning">
+    - Kontrolle durch das **Gewerbeaufsichtsamt**
+    - z. B. EU-Bildschirmrichtlinie <Exam>90/270/EWG</Exam> (Mindestvorschriften für Arbeit an Bildschirmgeräten)
+    - Sicherheitsbeschilderung: blau = Gebot, rot = Verbot, gelb = Warnung, grün = Rettung, orange/Raute = Gefahrstoff (GHS)
+    - **Flucht- und Rettungswegeplan** als vorgeschriebenes Instrument
+  </Card>
+</Columns>
+
+<Callout type="pitfall" title="Nicht sicher lesbare Detailwerte">
+Die Maß- und Winkelangaben der Ergonomie-Skizze (Folie 33) sowie die Zellwerte der Reporting-Tabelle (Folie 11) sind im Skript-Render **nicht verlässlich lesbar** und werden daher nicht als gesicherte Werte angegeben.
+</Callout>
+
+<SourceNote>Human Resources · HR9 · Personalcontrolling, Onboarding und Laufbahnplanung · Folien 1–36. Folie 26 ist eine inhaltsgleiche Wiederholung von Folie 25.</SourceNote>
+
+</section>

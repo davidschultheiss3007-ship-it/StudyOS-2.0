@@ -1,0 +1,42 @@
+export const meta = {
+  id: 'fintechs-im-asset-management',
+  title: 'Kapitel 9 · FinTechs im Asset Management / Robo Advisors',
+  source:
+    'Asset Management · Kapitel 9 · FinTechs im Asset Management / Robo Advisors · Folien 289–305',
+  estimatedMinutes: 50,
+  sections: [
+    { id: 'fintech-definition', title: 'FinTech: Definition und Investitionen' },
+    { id: 'klassifikation', title: 'Klassifikation von FinTechs' },
+    { id: 'komplexitaet-defizite', title: 'Komplexität und Defizite des traditionellen AM' },
+    { id: 'robo-charakteristika', title: 'Robo Advisors: Charakteristika und Markt' },
+    { id: 'robo-prozess', title: 'Der Robo-Advisory-Prozess' },
+    { id: 'angebote-generationen', title: 'Angebotstypen und Entwicklungspfad' },
+  ],
+  keyTakeaways: [
+    'FinTech setzt sich aus „Financial Services" und „Technology" zusammen; der moderne FinTech-Begriff ist eine Folge der Finanzkrise 2008.',
+    'Robo-Advice ist innerhalb der FinTech-Landschaft dem Segment Vermögensverwaltung zugeordnet und bildet den Fokus des Kapitels.',
+    'Robo Advisory wird als Antwort auf die Komplexität (intensiv vs. extensiv) und die Defizite des traditionellen Asset Managements eingeführt.',
+    'Robo Advisors automatisieren das Asset-/Wealth-Management zu relativ geringen Gebühren (USA 0,15–0,67 %, Europa Ø ca. 0,8 % der AuM p. a.) bei sehr hohen Wachstumsraten.',
+    'Der Robo-Advisory-Prozess gliedert sich in drei Schritte: 1) Investor Screening & Onboarding, 2) Investmentstrategie-Implementierung, 3) Monitoring & Rebalancing.',
+    'Robo-Advisors bilden ETF-Portfolios nach Portfoliotheorie und reduzieren das ETF-Universum über eine mehrstufige Ausschlusskaskade auf ca. 3–6 % investierbarer ETFs.',
+    'Der Markt ist konzentriert (Vanguard dominiert das verwaltete Vermögen 2021), und das in Deutschland verwaltete Vermögen wächst von 0,76 auf prognostizierte ca. 32 Mrd. Euro.',
+    'Die digitale Vermögensanlage entwickelt sich über vier Generationen; aktuell dominiert die zweite Generation (z. B. Scalable Capital, LIQID).',
+  ],
+  examFocus: [
+    'FinTech-Definition (Financial Services + Technology) und die historische Einordnung (Fedwire 1918, Aufkommen mit der Finanzkrise 2008).',
+    'Intensive vs. extensive Komplexität im Asset Management sicher abgrenzen können.',
+    'Die fünf Defizite des traditionellen Asset Managements aufzählen und Robo Advisory als Lösung einordnen.',
+    'Charakteristika von Robo Advisors inklusive Gebührenniveau (USA 0,15–0,67 %, Europa Ø ca. 0,8 %) und Trend zu hybriden Lösungen.',
+    'Die drei Prozessschritte des Robo-Advisory mit den Pro-/Con-Argumenten beim Onboarding (Response Bias) wiedergeben.',
+    'Sechsstufige ETF-Filterkaskade mit Endwert ca. 3–6 % der ETFs aus Stufe (1).',
+    'Einfache Angebote (§ 34f GewO) vs. aufwendigere lizenzierte Angebote unterscheiden; Rebalancing als wichtigstes Unterscheidungskriterium.',
+    'Die vier Generationen der digitalen Vermögensanlage entlang Leistungsumfang und Individualisierungsgrad einordnen.',
+  ],
+  pitfalls: [
+    'Robo Advice (einzelne/einmalige Anlageempfehlung) nicht mit der fortlaufenden Finanzportfolioverwaltung (Rebalancing) verwechseln.',
+    'Intensive Komplexität hängt auch von makroökonomischen Größen ab, extensive Komplexität nicht — diese Rahmenbedingungen sind für alle Marktteilnehmer identisch.',
+    'Beim Onboarding gehören die Con-Punkte zum Aspekt „Advisor" und führen über das Multiple-Choice-Format zum Response Bias — nicht den Pro-Punkten des Fragebogens zuordnen.',
+    'Die Prognosewerte ab 2022 (mit *) im deutschen AuM-Diagramm nicht als realisierte Werte lesen; das Wachstum flacht in den Prognosejahren ab.',
+    'Die Anbieterlogos der Weltkarte (Folie 9) sind im Detail nicht zuverlässig lesbar — keine erfundene vollständige Anbieterliste annehmen.',
+  ],
+};

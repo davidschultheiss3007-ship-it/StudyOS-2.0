@@ -1,0 +1,630 @@
+<section id="erwartungsstrukturen">
+
+## Erwartungsstrukturen: Sicherheit, Ungewissheit, Risiko
+
+<DecisionTree
+  root={{
+    label: 'Mögliche Erwartungsstrukturen',
+    detail: 'Klassifikation von Entscheidungssituationen nach dem Informationsstand',
+    children: [
+      { label: 'Sicherheit', detail: 'Eintritt eines bestimmten Zustandes bekannt' },
+      {
+        label: 'Unsicherheit (Risiko i.w.S.)',
+        detail: 'mehrwertige Erwartungen über die Umweltzustände',
+        children: [
+          { label: 'Ungewissheit', detail: 'nur Kenntnis der möglichen Zustände — keine Eintrittswahrscheinlichkeiten' },
+          { label: 'Risiko i.e.S.', detail: 'Zustände UND ihre Eintrittswahrscheinlichkeiten bekannt' },
+        ],
+      },
+    ],
+  }}
+/>
+
+<Columns count={3}>
+  <Card title="Unsicherheit (Risiko i.w.S.)" tone="accent">
+    - mehrwertige Erwartungen über die Umweltzustände
+    - „Risiko" beruht auf zwei Komponenten:
+    - **Unsicherheit** über die künftige Entwicklung (Konsequenzen)
+    - **Inflexibilität** von Entscheidungen
+  </Card>
+  <Card title="Ungewissheit" tone="purple">
+    - nur Info über die **Zahl** der möglichen Umweltzustände
+    - **keine** Info über deren Eintrittswahrscheinlichkeiten
+    - rationale Entscheidung wird unmöglich
+    - → <Exam>Einsatz von Heuristiken</Exam>
+  </Card>
+  <Card title="Risiko i.e.S." tone="teal">
+    - alle möglichen Umweltzustände bekannt
+    - dazu **objektive oder subjektive** Wahrscheinlichkeiten
+    - → <Exam>stochastische Modelle / Entscheidungstheorie</Exam>
+  </Card>
+</Columns>
+
+### Modellierung über den Zustandsraum Z
+
+<Formula
+  display
+  title="Zustandsraum einer unsicheren Welt"
+  expr="Z = (z_1,\, z_2,\, \dots,\, z_n)"
+  legend={[{ sym: 'z_j', desc: 'j-ter möglicher Umweltzustand' }]}
+/>
+
+<DataTable
+  caption="Informationsbezug: vollkommene vs. unvollkommene Information"
+  columns={[
+    { key: 'info', label: 'Informationsstand' },
+    { key: 'situation', label: 'Entscheidungssituation' },
+    { key: 'konsequenz', label: 'Konsequenzen' },
+    { key: 'wkt', label: 'Eintrittswahrscheinlichkeiten' },
+  ]}
+  rows={[
+    { info: 'Vollkommene Information', situation: 'Entscheidungen bei sicheren Erwartungen', konsequenz: 'vollständig bekannt', wkt: '—' },
+    { info: 'Unvollkommene Information', situation: 'Entscheidungen unter Risiko', konsequenz: 'unbestimmt', wkt: 'bekannt' },
+    { info: 'Unvollkommene Information', situation: 'Entscheidungen bei unsicheren Erwartungen', konsequenz: 'unbestimmt', wkt: 'unbekannt' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Abgrenzung Risiko vs. Ungewissheit">
+- **Sicherheit:** Eintritt eines bestimmten Zustandes ist bekannt.
+- **Risiko:** Kenntnis der möglichen Zustände UND ihrer Eintrittswahrscheinlichkeiten.
+- **Ungewissheit:** nur Kenntnis der möglichen Zustände, nicht der Wahrscheinlichkeiten.
+</Callout>
+
+</section>
+
+<section id="entscheidungsmodell">
+
+## Entscheidungsprozesse, Modell und Ergebnismatrix
+
+<DataTable
+  caption="Entscheidungsprozesse nach vier Ebenen (Folie 7)"
+  columns={[
+    { key: 'merkmal', label: 'Merkmal' },
+    { key: 'routiniert', label: 'Routiniert' },
+    { key: 'stereotyp', label: 'Stereotyp' },
+    { key: 'reflektiert', label: 'Reflektiert' },
+    { key: 'konstruktiv', label: 'Konstruktiv' },
+  ]}
+  rows={[
+    { merkmal: 'Beispiel', routiniert: 'Autofahren', stereotyp: 'Fließbandarbeit', reflektiert: 'Prüfung', konstruktiv: 'Artikel verfassen' },
+    { merkmal: 'Bewusstsein', routiniert: 'Nein', stereotyp: 'Gering', reflektiert: 'Hoch', konstruktiv: 'Hoch' },
+    { merkmal: 'Anforderung an Aufmerksamkeit', routiniert: 'Sehr gering', stereotyp: 'Gering', reflektiert: 'Hoch', konstruktiv: 'Sehr hoch' },
+    { merkmal: 'Generierung neuer Informationen', routiniert: 'Nein', stereotyp: 'Nein', reflektiert: 'Ja', konstruktiv: 'Ja' },
+    { merkmal: 'Zeitdauer', routiniert: 'Schnell', stereotyp: 'Schnell', reflektiert: 'Schnell–lange', konstruktiv: 'Schnell–lange' },
+    { merkmal: 'Vorstrukturiertheit', routiniert: 'Sehr hoch', stereotyp: 'Hoch', reflektiert: 'Hoch–mittel', konstruktiv: 'Gering' },
+  ]}
+/>
+
+### Grundmodell einer Entscheidung (mit Rückkopplung)
+
+<Diagram
+  title="Modellierung von Entscheidungen (Folie 8)"
+  height={320}
+  chart={`flowchart TD
+  R["Entscheidungsregeln<br/>(Kriterien)"] --> E["ENTSCHEIDUNG"]
+  H["Handlungs-<br/>alternativen"] --> E
+  I["Informationen für den<br/>Zustandsraum"] --> E
+  E --> K["Ergebnis (Konsequenz)"]
+  K -. Feedback-Schleife .-> I`}
+/>
+
+<Columns count={3}>
+  <Card title="Inputs der Entscheidung" tone="accent">
+    - **Entscheidungsregeln** (Kriterien)
+    - **Handlungsalternativen**
+    - **Zustandsinformationen** (Informationen für den Zustandsraum)
+  </Card>
+  <Card title="Output" tone="teal">
+    - aus den Inputs entsteht die **Entscheidung**
+    - die Entscheidung führt zu einem **Ergebnis (Konsequenz)**
+  </Card>
+  <Card title="Rückkopplung" tone="purple">
+    - das Ergebnis fließt als **neue Information** zurück
+    - es speist den **Zustandsraum** erneut (Feedback-Schleife)
+  </Card>
+</Columns>
+
+### Allgemeine Ergebnismatrix
+
+<DataTable
+  caption="Ergebnismatrix: Zeilen = Handlungsalternativen aᵢ, Spalten = Umweltzustände zⱼ (Folie 9)"
+  columns={[
+    { key: 'alt', label: 'Alternative' },
+    { key: 'z1', label: 'Zustand 1', align: 'right' },
+    { key: 'z2', label: 'Zustand 2', align: 'right' },
+    { key: 'z3', label: 'Zustand 3', align: 'right' },
+    { key: 'z4', label: 'Zustand 4', align: 'right' },
+  ]}
+  rows={[
+    { alt: 'a₁', z1: 'X₁₁', z2: 'X₁₂', z3: 'X₁₃', z4: 'X₁₄' },
+    { alt: 'a₂', z1: 'X₂₁', z2: 'X₂₂', z3: 'X₂₃', z4: 'X₂₄' },
+    { alt: 'a₃', z1: 'X₃₁', z2: 'X₃₂', z3: 'X₃₃', z4: 'X₃₄' },
+  ]}
+/>
+
+<DefinitionBox term="Ergebniseintrag Xᵢⱼ" source="Behavioral Finance · Folie 9">
+**Xᵢⱼ** = Ergebnis (Konsequenz) der Handlungsalternative **aᵢ** bei Eintreten des Zustands **zⱼ**. Jede Zelle der Matrix verknüpft also eine Alternative mit einem Umweltzustand.
+</DefinitionBox>
+
+</section>
+
+<section id="entscheidungsregeln-ungewissheit">
+
+## Entscheidungsregeln bei Ungewissheit
+
+<Callout type="info" title="Gemeinsame Ausgangsmatrix (Folie 10)">
+Alle folgenden Regeln arbeiten auf **derselben** Beispiel-Ergebnismatrix. Leitfrage: *Nach welcher Entscheidungsregel ist welche Alternative auszuwählen?* — je nach Grundeinstellung fällt die Wahl unterschiedlich aus.
+</Callout>
+
+<DataTable
+  caption="Beispiel-Ergebnismatrix (sechs Alternativen, vier Zustände) — Spaltenmaxima: z₁=11, z₂=9, z₃=21, z₄=17"
+  columns={[
+    { key: 'alt', label: 'Alternative' },
+    { key: 'z1', label: 'z₁', align: 'right' },
+    { key: 'z2', label: 'z₂', align: 'right' },
+    { key: 'z3', label: 'z₃', align: 'right' },
+    { key: 'z4', label: 'z₄', align: 'right' },
+  ]}
+  rows={[
+    { alt: 'a₁', z1: '5', z2: '7', z3: '20', z4: '13' },
+    { alt: 'a₂', z1: '9', z2: '1', z3: '21', z4: '16' },
+    { alt: 'a₃', z1: '10', z2: '7', z3: '11', z4: '5' },
+    { alt: 'a₄', z1: '3', z2: '9', z3: '18', z4: '4' },
+    { alt: 'a₅', z1: '6', z2: '7', z3: '12', z4: '15' },
+    { alt: 'a₆', z1: '11', z2: '2', z3: '8', z4: '17' },
+  ]}
+/>
+
+### Optimistisch vs. pessimistisch: Maximax und Maximin
+
+<Columns count={2}>
+  <Card title="Maximax-Regel" tone="positive">
+    - bewerte jede Zeile mit ihrem **besten** Ergebnis
+    - wähle die Alternative mit dem höchsten Zeilenmaximum
+    - extrem **optimistische** Grundeinstellung
+    - Spaltenwerte: 20 · **21** · 11 · 18 · 15 · 17
+    - **Gewinner: a₂ (21)** · Ordnung: a₂ > a₁ > a₄ > a₆ > a₅ > a₃
+  </Card>
+  <Card title="Maximin-Regel (Wald-Regel)" tone="negative">
+    - bewerte jede Zeile mit ihrem **schlechtesten** Ergebnis
+    - wähle die Alternative mit dem höchsten Zeilenminimum
+    - extrem **pessimistische** Grundeinstellung
+    - Spaltenwerte: 5 · 1 · 5 · 3 · **6** · 2
+    - **Gewinner: a₅ (6)** · Ordnung: a₅ > a₁ ~ a₃ > a₄ > a₆ > a₂
+  </Card>
+</Columns>
+
+### Kompromiss und Durchschnitt: Hurwicz und Laplace
+
+<Columns count={2}>
+  <Card title="Hurwicz-Kriterium" tone="accent">
+    - gewichtete Summe aus bestem und schlechtestem Ergebnis
+    - Optimismusparameter im Beispiel **0,3** (Rest 0,7)
+    - Bsp. a₁: 0,3·20 + 0,7·5 = 6 + 3,5 = **9,5**
+    - Spaltenwerte: **9,5** · 7,0 · 6,8 · 7,5 · 8,7 · 6,5
+    - **Gewinner: a₁ (9,5)** · Ordnung: a₁ > a₅ > a₄ > a₂ > a₃ > a₆
+  </Card>
+  <Card title="Laplace-Regel" tone="teal">
+    - Durchschnitt (arithmetisches Mittel) je Zeile
+    - **Prinzip des unzureichenden Grundes** (alle Zustände gleich gewichtet, 1/Z)
+    - überführt Ungewissheit in eine Risikosituation
+    - Spaltenwerte: 11,25 · **11,75** · 8,25 · 8,50 · 10,00 · 9,50
+    - **Gewinner: a₂ (11,75)** · Ordnung: a₂ > a₁ > a₅ > a₆ > a₄ > a₃
+  </Card>
+</Columns>
+
+### Transformation und Bedauern: Krelle und Savage-Niehans
+
+<Card title="Krelle-Regel" tone="orange" exam>
+- jede Zelle wird mit einer **Unsicherheitspräferenzfunktion** transformiert — im Beispiel die **Wurzelfunktion** (Exponent 0,5)
+- Spalte „Krelle" = Summe der transformierten Werte
+- <Exam>Achtung Lesefehler: „50,5" / „70,5" stehen für 5^0,5 bzw. 7^0,5 (Wurzel), nicht für Dezimalzahlen</Exam>
+- Spaltenwerte: **12,96** · 12,58 · 11,36 · 10,97 · 12,43 · 11,68
+- **Gewinner: a₁ (12,96)** · Ordnung: a₁ > a₂ > a₅ > a₆ > a₃ > a₄
+</Card>
+
+<Card title="Savage-Niehans-Regel (Minimax-Regret)" tone="purple" exam>
+- **Bedauernsmatrix:** jede Zelle = Wert − bestes Ergebnis der Spalte (Resultat ≤ 0)
+- rechte Spalte = der größte (negativste) Schaden je Zeile
+- gewählt wird der **geringste maximale Schaden**
+- Bsp. a₁: 5−11 = −6 · 7−9 = −2 · 20−21 = −1 · 13−17 = −4 ⇒ max. Schaden **−6**
+- Schäden je Zeile: **−6** · −8 · −12 · −13 · −9 · −13
+- **Gewinner: a₁ (−6)** · Ordnung: a₁ > a₂ > a₅ > a₃ > <Exam>a₄ ~ a₆</Exam>
+</Card>
+
+<DataTable
+  caption="Empfohlene Alternative je Entscheidungsregel (Übersicht Folien 11–16)"
+  columns={[
+    { key: 'regel', label: 'Entscheidungsregel' },
+    { key: 'logik', label: 'Bewertung je Zeile' },
+    { key: 'gewinner', label: 'Gewinner' },
+  ]}
+  rows={[
+    { regel: 'Maximax', logik: 'höchstes Zeilenmaximum (optimistisch)', gewinner: 'a₂ (21)' },
+    { regel: 'Maximin (Wald)', logik: 'höchstes Zeilenminimum (pessimistisch)', gewinner: 'a₅ (6)' },
+    { regel: 'Hurwicz', logik: '0,3·max + 0,7·min', gewinner: 'a₁ (9,5)' },
+    { regel: 'Laplace', logik: 'arithmetisches Mittel der Zeile', gewinner: 'a₂ (11,75)' },
+    { regel: 'Krelle', logik: 'Summe der Wurzel-transformierten Werte', gewinner: 'a₁ (12,96)' },
+    { regel: 'Savage-Niehans', logik: 'geringster maximaler Schaden (Regret)', gewinner: 'a₁ (−6)' },
+  ]}
+/>
+
+</section>
+
+<section id="entscheidung-unter-risiko">
+
+## Entscheidung unter Risiko: Erwartungswert und Bayes-Regel
+
+### Übergang von Ungewissheit zu Risiko
+
+<Columns count={2}>
+  <Card title="Was sich ändert" tone="accent">
+    - den Umweltzuständen werden nun **Eintrittswahrscheinlichkeiten** zugeordnet
+    - die Wahrscheinlichkeiten sind **objektiv oder subjektiv**
+    - damit wird die <Exam>Erwartungswertberechnung</Exam> möglich
+  </Card>
+  <Card title="Folge für die Entscheidung" tone="teal">
+    - Ungewissheit wird zu **Risiko i.e.S.**
+    - stochastische Modelle statt reiner Heuristiken
+    - Grundlage für Bayes-Regel und μσ-Regel
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Wahrscheinlichkeitsmatrix (3 Zustände, 2 Alternativen) — Folie 17"
+  columns={[
+    { key: 'alt', label: 'Alternative' },
+    { key: 'z1', label: 'Zustand 1 · p₁ = 30 %', align: 'right' },
+    { key: 'z2', label: 'Zustand 2 · p₂ = 50 %', align: 'right' },
+    { key: 'z3', label: 'Zustand 3 · p₃ = 20 %', align: 'right' },
+  ]}
+  rows={[
+    { alt: 'a₁', z1: '10', z2: '12', z3: '22' },
+    { alt: 'a₂', z1: '8', z2: '14', z3: '18' },
+  ]}
+/>
+
+### Statistik-Wiederholung: Erwartungswert und Standardabweichung
+
+<Columns count={2}>
+  <Formula
+    display
+    title="Erwartungswert (μ)"
+    expr="E(R) = \mu = \sum_{i=1}^{n} r_i \cdot p_i"
+    legend={[
+      { sym: 'r_i', desc: 'mögliche Rendite im Zustand i' },
+      { sym: 'p_i', desc: 'Eintrittswahrscheinlichkeit des Zustands i' },
+    ]}
+  />
+  <Formula
+    display
+    title="Standardabweichung (σ) als Risikomaß"
+    expr="\sigma = \sqrt{\sum_{i=1}^{n} (r_i - \mu)^2 \cdot p_i}"
+    legend={[
+      { sym: 'r_i - \\mu', desc: 'Abweichung der möglichen Rendite vom Erwartungswert' },
+    ]}
+  />
+</Columns>
+
+<Callout type="merksatz" title="Was der Erwartungswert NICHT leistet">
+Der Erwartungswert verdichtet die wahrscheinlichkeitsgewichteten Renditen zu **einem** Mittelwert — er sagt **nichts über die Streuung** (das Risiko) aus. Erst die Standardabweichung ergänzt die Dispersionsinformation.
+</Callout>
+
+### Bayes-Regel (μ-Prinzip)
+
+<Formula
+  display
+  title="Bayes-Regel: erwarteter Wert je Alternative"
+  expr="\mu = E(a_i) = \sum_{j} z_{ij} \cdot p_j \quad\Rightarrow\quad \text{wähle } \max_i \mu"
+/>
+
+<DataTable
+  caption="Bayes-Matrix mit ausgeschriebener μ-Rechnung (Folie 20) — gewählt: höchstes μ"
+  columns={[
+    { key: 'alt', label: 'Alternative' },
+    { key: 'z1', label: 'z₁ · 30 %', align: 'right' },
+    { key: 'z2', label: 'z₂ · 50 %', align: 'right' },
+    { key: 'z3', label: 'z₃ · 20 %', align: 'right' },
+    { key: 'mu', label: 'μ (Erwartungswert)' },
+  ]}
+  rows={[
+    { alt: 'a₁', z1: '10', z2: '12', z3: '22', mu: '0,3·10 + 0,5·12 + 0,2·22 = 13,4' },
+    { alt: 'a₂', z1: '8', z2: '14', z3: '18', mu: '0,3·8 + 0,5·14 + 0,2·18 = 13,0' },
+  ]}
+  highlight={(row) => row.alt === 'a₁'}
+/>
+
+<Columns count={2}>
+  <Card title="Vorteile der Bayes-Regel" tone="positive">
+    - Vorteil der **Einfachheit**
+    - gute Ergebnisse bei **häufig** anfallenden Entscheidungen
+    - Gesetz der großen Zahl → Annäherung an den Erwartungswert
+  </Card>
+  <Card title="Kritik an der Bayes-Regel" tone="warning">
+    - berücksichtigt die **Streuung der Ergebnisse nicht**
+    - passt daher <Exam>nur für risikoneutrale Entscheider</Exam>
+  </Card>
+</Columns>
+
+</section>
+
+<section id="mu-sigma-regel">
+
+## μσ-Regel und Markowitz-Effizienz
+
+<DefinitionBox term="μσ-Regel (Erwartungswert-Varianz-Regel)" source="Behavioral Finance · Folie 22">
+Erweiterung des Erwartungswerts um die **Streuung (σ)**. Der Entscheider drückt seine Risikopräferenz über den Einbezug von σ in eine **Präferenzfunktion** aus.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Risikoscheu" tone="negative">
+    - Streuung wird **negativ** bewertet
+    - bei gleichem μ ist die Alternative mit **niedrigerer** σ vorteilhafter
+  </Card>
+  <Card title="Risikofreudig" tone="positive">
+    - Streuung wird **positiv** bewertet
+    - höhere Varianz wird in Kauf genommen / gesucht
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="Beispiel-Präferenzfunktion (risikoavers)"
+  expr="\alpha = \mu - 2\,\sigma"
+/>
+
+<Callout type="info" title="Hinweis zum Faktor 2">
+Der Faktor 2 ist im Briefing als **visuell abgeleitet** markiert (in der Quelle nicht zweifelsfrei lesbar). Die Form „μ minus Vielfaches von σ" ist gesichert; der konkrete Koeffizient sollte gegen das Original geprüft werden.
+</Callout>
+
+### Markowitz-Effizienz im μ-σ-Diagramm
+
+<Callout type="merksatz" title="Drei Effizienzfälle (kein dominierendes Portfolio)">
+Effizient ist eine Kombination, zu der es kein anderes Portfolio gibt, das
+- bei **gleichem** Erwartungswert ein **geringeres** Risiko,
+- bei **gleichem** Risiko einen **höheren** Erwartungswert,
+- oder **beides zugleich** (höherer Erwartungswert UND geringeres Risiko) bietet.
+</Callout>
+
+<DataChart
+  type="scatter"
+  title="μ-σ-Streudiagramm der fünf Alternativen (Folie 23)"
+  source="Behavioral Finance · Folie 23"
+  xLabel="Standardabweichung σ"
+  yLabel="Erwartungswert μ"
+  xKey="sigma"
+  yKey="mu"
+  data={[
+    { name: 'A1', sigma: 0.09, mu: 0.07 },
+    { name: 'A2', sigma: 0.08, mu: 0.12 },
+    { name: 'A3', sigma: 0.09, mu: 0.12 },
+    { name: 'A4', sigma: 0.10, mu: 0.15 },
+    { name: 'A5', sigma: 0.15, mu: 0.13 },
+  ]}
+  series={[{ key: 'mu', name: 'Alternative (μ über σ)' }]}
+/>
+
+<DataTable
+  caption="Datenbasis des Effizienzdiagramms — fünf Alternativen"
+  columns={[
+    { key: 'kennzahl', label: 'Kennzahl' },
+    { key: 'a1', label: 'A1', align: 'right' },
+    { key: 'a2', label: 'A2', align: 'right' },
+    { key: 'a3', label: 'A3', align: 'right' },
+    { key: 'a4', label: 'A4', align: 'right' },
+    { key: 'a5', label: 'A5', align: 'right' },
+  ]}
+  rows={[
+    { kennzahl: 'Erwartungswert μ', a1: '0,07', a2: '0,12', a3: '0,12', a4: '0,15', a5: '0,13' },
+    { kennzahl: 'Standardabweichung σ', a1: '0,09', a2: '0,08', a3: '0,09', a4: '0,10', a5: '0,15' },
+  ]}
+/>
+
+</section>
+
+<section id="bernoulli-erwartungsnutzen">
+
+## Bernoulli-Prinzip und Erwartungsnutzen
+
+<DefinitionBox term="Bernoulli-Prinzip" source="Behavioral Finance · Folie 24">
+Entscheidungsgrundsatz, der die **subjektive Risikoeinstellung** des Entscheiders berücksichtigt. Über individuelle **(Risiko-)Nutzenfunktionen u** wird jedem Zielwert ein Nutzen zugeordnet; die Risikonutzenfunktion gibt an, wie viele zusätzliche Nutzeneinheiten nötig sind, um eine zusätzliche Risikoeinheit zu kompensieren.
+</DefinitionBox>
+
+<Formula
+  display
+  title="Präferenz nach dem Bernoulli-Prinzip"
+  expr="a \succeq b \;\Leftrightarrow\; E[u(X_a)] \geq E[u(X_b)]"
+/>
+
+### Beispiel: sichere vs. spekulative Anlage
+
+<DecisionTree
+  root={{
+    label: 'Startvermögen 100.000 €',
+    detail: 'Risikonutzenfunktion u(z) = ln(z), z in Tsd. €',
+    children: [
+      {
+        label: 'a₁ = sichere Anlage',
+        detail: 'p = 1 → 110.000 € · E[u(Z₁)] = 1·ln(110) = 4,70',
+      },
+      {
+        label: 'a₂ = spekulative Anlage',
+        detail: 'E[u(Z₂)] = 0,5·ln(140) + 0,5·ln(80) = 4,66',
+        children: [
+          { label: 'p = 0,5 → 140.000 €' },
+          { label: '1 − p = 0,5 → 80.000 €' },
+        ],
+      },
+    ],
+  }}
+/>
+
+<Callout type="examfocus" title="Gleicher Erwartungswert, anderer Erwartungsnutzen">
+Beide Anlagen haben denselben Erwartungswert (110.000 €). Wegen der **konkaven** Nutzenfunktion (ln) liefert die sichere Anlage den höheren Erwartungsnutzen (4,70 vs. 4,66): <Exam>a₁ ≻ a₂</Exam> — die sichere Anlage wird gewählt (Risikoaversion).
+</Callout>
+
+### Sicherheitsäquivalent und Risikoprämie
+
+<Columns count={2}>
+  <Card title="Sicherheitsäquivalent s" tone="accent">
+    - fiktives **sicheres** Ergebnis mit demselben Nutzen wie die riskante Handlung
+    - Indifferenz zwischen sicherem s und zufälligem X
+  </Card>
+  <Card title="Risikoprämie π" tone="purple">
+    - Differenz zwischen erwartetem Ergebnis und Sicherheitsäquivalent
+    - der vom Erwartungswert vorgenommene **Abschlag**, der gerade Indifferenz herstellt
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="Sicherheitsäquivalent und Risikoprämie"
+  expr="u(s) = E(u(X)) \;\Leftrightarrow\; s = u^{-1}\!\big(E(u(X))\big) \qquad\qquad \pi = E(X) - s"
+/>
+
+<DataTable
+  caption="Lotterie-Beispiel (Folie 27): 50 % → 100 €, 50 % → 0 €; Entscheider indifferent bei s = 40 €"
+  columns={[
+    { key: 'schritt', label: 'Schritt' },
+    { key: 'rechnung', label: 'Rechnung' },
+    { key: 'ergebnis', label: 'Ergebnis', align: 'right' },
+  ]}
+  rows={[
+    { schritt: 'Erwartungswert', rechnung: '0,5·100 + 0,5·0', ergebnis: '50' },
+    { schritt: 'Sicherheitsäquivalent', rechnung: 'Indifferenz des Entscheiders', ergebnis: 's = 40' },
+    { schritt: 'Risikoprämie', rechnung: 'π = Erwartungswert − s = 50 − 40', ergebnis: 'π = 10' },
+  ]}
+  highlight={(row) => row.schritt === 'Risikoprämie'}
+/>
+
+<Callout type="merksatz" title="Risikoeinstellung aus der Risikoprämie ablesen">
+- **π größer als 0** → Entscheider verhält sich **risikoscheu**
+- **π = 0** → **risikoneutral**
+- **π kleiner als 0** → **risikofreudig**
+</Callout>
+
+### Expected-Utility-Modell und Erwartungsnutzenhypothese
+
+<Columns count={2}>
+  <Card title="Das EU-Modell" tone="accent">
+    - Standardmodell der Konsumentenentscheidung unter Risiko
+    - basiert auf der **Theorie des erwarteten Nutzens** (Expected Utility)
+    - Menschen wägen Nutzen oberhalb gegen Unnutzen unterhalb der Nutzenfunktion ab
+    - **abnehmender Grenznutzen** → die Unterseite (Verlust) wiegt mehr
+  </Card>
+  <Card title="Risikoaversion" tone="warning">
+    - Menschen **bezahlen**, um Risiko zu vermeiden (Versicherung)
+    - verlangen **Ausgleich** für Risikoübernahme
+    - akzeptieren nicht automatisch jede Wette mit positivem Erwartungswert
+  </Card>
+</Columns>
+
+### Beispiel: Münzwette (Folien 30–31)
+
+<Columns count={2}>
+  <Card title="Die Wette" tone="neutral">
+    - Kopf → Sie **zahlen** 100 €
+    - Zahl → Sie **erhalten** 120 €
+    - Erwartungswert: 0,5·(−100) + 0,5·120 = **+10 €**
+  </Card>
+  <Card title="Beobachtung" tone="warning">
+    - trotz positivem Erwartungswert wird die Wette oft **abgelehnt**
+    - <Exam>ein positiver Erwartungswert allein genügt nicht</Exam>
+    - Ursache: Risikoaversion / abnehmender Grenznutzen
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="Erwartungsnutzenhypothese (von Neumann / Morgenstern)"
+  expr="E\big(u(X,g)\big) = \sum_{i=1}^{n} g_i \cdot u(X_i) \;\rightarrow\; \max"
+  legend={[
+    { sym: 'g_i', desc: 'Eintrittswahrscheinlichkeit des Zustands i' },
+    { sym: 'u(X_i)', desc: 'Nutzen der Auszahlung im Zustand i' },
+  ]}
+/>
+
+<Formula
+  display
+  title="Risikoprämie in der Erwartungsnutzenhypothese"
+  expr="\pi = \sum_{i=1}^{n} g_i \cdot X_i - u^{-1}\!\left(\sum_{i=1}^{n} g_i \cdot u(X_i)\right)"
+/>
+
+</section>
+
+<section id="risikoeinstellungen">
+
+## Nutzenfunktion und Risikoeinstellungen
+
+<DefinitionBox term="Nutzenfunktion im Zweizustandsfall" source="Behavioral Finance · Folie 33">
+Zwei mögliche Auszahlungen X₁ und X₂ mit den Wahrscheinlichkeiten g₁ und g₂. Bei **konkaver** Nutzenfunktion liegt der Erwartungsnutzen (rote Sehne bei μ_X) **unterhalb** des Nutzens des Erwartungswerts u(μ_X) — daraus ergeben sich Sicherheitsäquivalent und positive Risikoprämie.
+</DefinitionBox>
+
+<Formula
+  display
+  title="Erwartungswert, Erwartungsnutzen, Sicherheitsäquivalent, Risikoprämie (Zweizustandsfall)"
+  expr="\begin{aligned} \mu &= g_1 X_1 + g_2 X_2 \\ E(u(X,g)) &= g_1\,u(X_1) + g_2\,u(X_2) \\ s &= u^{-1}\!\big(g_1 u(X_1) + g_2 u(X_2)\big) \\ \pi &= \mu - s \end{aligned}"
+/>
+
+### Die drei Risikoeinstellungen
+
+<CompareCard
+  items={[
+    {
+      tag: 'konkav',
+      title: 'Risikoaversion',
+      subtitle: 'rote Sehne **unterhalb** der Nutzenkurve',
+      accent: 'negative',
+      points: [
+        'Erwartungswert **größer als** Sicherheitsäquivalent s',
+        'Risikoprämie **π größer als 0**',
+        'abnehmender Grenznutzen',
+      ],
+    },
+    {
+      tag: 'linear',
+      title: 'Risikoneutralität',
+      subtitle: 'rote Sehne **auf** der Nutzengeraden',
+      accent: 'neutral',
+      points: [
+        'Erwartungswert **gleich** Sicherheitsäquivalent s',
+        'Risikoprämie **π = 0**',
+        'konstanter Grenznutzen',
+      ],
+    },
+    {
+      tag: 'konvex',
+      title: 'Risikofreude',
+      subtitle: 'rote Sehne **oberhalb** der Nutzenkurve',
+      accent: 'positive',
+      points: [
+        'Erwartungswert **kleiner als** Sicherheitsäquivalent s',
+        'Risikoprämie **π kleiner als 0**',
+        'zunehmender Grenznutzen',
+      ],
+    },
+  ]}
+/>
+
+<DataTable
+  caption="Risikoeinstellung aus Nutzenfunktion und Risikoprämie (Folie 34)"
+  columns={[
+    { key: 'merkmal', label: 'Merkmal' },
+    { key: 'aversion', label: 'Risikoaversion' },
+    { key: 'neutral', label: 'Risikoneutralität' },
+    { key: 'freude', label: 'Risikofreude' },
+  ]}
+  rows={[
+    { merkmal: 'Nutzenfunktion', aversion: 'konkav', neutral: 'linear', freude: 'konvex' },
+    { merkmal: 'Erwartungswert vs. s', aversion: 'größer als s', neutral: 'gleich s', freude: 'kleiner als s' },
+    { merkmal: 'Risikoprämie π', aversion: 'π größer als 0', neutral: 'π = 0', freude: 'π kleiner als 0' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Kern: Krümmung bestimmt die Risikoeinstellung">
+Die **Krümmung der Nutzenfunktion** entscheidet über die Risikoeinstellung, ablesbar an der Lage der roten Sehne relativ zur Kurve: <Exam>konkav = risikoavers, linear = neutral, konvex = risikofreudig</Exam>.
+</Callout>
+
+<SourceNote>Behavioral Finance · Kapitel 4 · Entscheidungen unter Unsicherheit · Folien 131–164</SourceNote>
+
+</section>

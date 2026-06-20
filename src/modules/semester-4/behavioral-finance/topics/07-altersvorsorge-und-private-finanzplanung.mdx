@@ -1,0 +1,714 @@
+<section id="grundlagen-und-lebenszyklus">
+
+## Grundlagen, Lebenszyklus-Hypothese und Entscheidungen
+
+<Callout type="merksatz" title="Warum gerade die Altersvorsorge?">
+Verhaltensökonomische Forschung ist für die Altersvorsorge von <Exam>besonderer Bedeutung</Exam> — sie ist ein besonders anfälliges Feld für Verzerrungen.
+</Callout>
+
+### Warum die Altersvorsorge anfällig ist
+
+<Columns count={2}>
+  <Card title="Verzerrungen sind generell wichtig" tone="accent">
+    - menschliche Entscheidungsfindung ist **anfällig für Verzerrungen** (siehe frühere Vorlesungen)
+  </Card>
+  <Card title="Was die Altersvorsorge besonders macht" tone="purple">
+    - außergewöhnlich **langer Anlagehorizont**
+    - **begrenzte Lernmöglichkeiten**
+    - Menschen mit geringen oder **fehlenden Kenntnissen** über Finanzmärkte
+    - Spar- und Anlageentscheidungen
+  </Card>
+</Columns>
+
+### Lebenszyklus-Hypothese: Modell vs. Empirie
+
+<CompareCard
+  items={[
+    {
+      tag: 'Modell',
+      title: 'Kernaussagen des neoklassischen Modells',
+      subtitle: 'so sollte es sein',
+      accent: 'accent',
+      points: [
+        '**Buckelförmiges Alterssparprofil** — angesammeltes Vermögen wird nach dem Ruhestand verbraucht',
+        'Form der **Konsumprofile** unabhängig von der Form der **Einkommensprofile** (bei konstantem Konsumniveau)',
+      ],
+    },
+    {
+      tag: 'Empirie',
+      title: 'Empirische Belege',
+      subtitle: 'so ist es tatsächlich',
+      accent: 'negative',
+      points: [
+        '„Ältere" Haushalte weisen **positive Sparquoten** auf — **kein** Abbau der Ersparnisse im Ruhestand',
+        'Das Konsumprofil wird **stark vom Einkommensprofil** beeinflusst',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="examfocus" title="Argumente gegen das neoklassische Modell">
+Die empirischen Befunde (positive Sparquoten im Alter, Kopplung von Konsum an Einkommen) <Exam>widersprechen</Exam> den Vorhersagen der neoklassischen Lebenszyklus-Hypothese.
+</Callout>
+
+### Die Altersvorsorge bringt drei Entscheidungen mit sich
+
+<Columns count={3}>
+  <Card title="I · Soll man einem Sparplan beitreten?" tone="accent">
+    - steuerliche Vergünstigungen
+    - Arbeitgeberzuschüsse …
+  </Card>
+  <Card title="II · Wie hoch soll der Beitrag sein?" tone="purple">
+    - Sparquote festlegen, um den **Konsum über den Lebenszyklus zu glätten**
+    - Anlage-, Langlebigkeits-, Ertrags-, Gesundheitsrisiko …
+  </Card>
+  <Card title="III · Wie soll man investieren?" tone="teal">
+    - sinkende Renditen an den Aktienmärkten, erhöhte Volatilität
+    - Renditeerwartungen beeinflussen wiederum die **Sparquoten**!
+  </Card>
+</Columns>
+
+</section>
+
+<section id="beitritt-hindernisse">
+
+## Teil I · Beitritt: Trägheit und Komplexität
+
+<Callout type="info" title="Leitfrage I — Sollte man einem Sparplan beitreten?">
+Beitragsorientierte Vorsorgepläne (**DC**) sind ein attraktives Sparinstrument. Man würde erwarten, dass sich jeder anmeldet — doch es gibt verhaltensbedingte Hürden.
+</Callout>
+
+<Columns count={2}>
+  <Card title="Argumente für den Beitritt (DC-Pläne)" tone="positive">
+    - **Übertragbarkeit / Flexibilität**
+    - **Steuervorteile**
+    - **Arbeitgeberzuschuss**
+  </Card>
+  <Card title="Warum sich trotzdem nicht jeder anmeldet" tone="negative">
+    - Menschen sind sehr **ungeduldig**
+    - teils **Liquiditätsengpässe**
+  </Card>
+</Columns>
+
+### Ein „free lunch" aus Großbritannien
+
+<Columns count={2}>
+  <Card title="Die rhetorische Frage" tone="neutral">
+    - Wie viel Prozent der berechtigten Arbeitnehmer in Großbritannien nehmen an vom Arbeitgeber finanzierten **leistungsorientierten** Pensionsplänen teil?
+    - Der Plan ist **vollständig vom Arbeitgeber finanziert** — <Exam>keine Arbeitnehmerbeiträge</Exam>
+  </Card>
+  <Card title="Die Auflösung" tone="negative" exam>
+    - Auswahloptionen: 100 % / 90 % / 80 % / 70 % / 60 % / 50 %
+    - tatsächlich: nur **51 %** nehmen teil
+    - obwohl die Teilnahme **kostenlos** ist → starker Beleg für **Status-quo-Bias**
+  </Card>
+</Columns>
+
+<SourceNote>Quellen: David Blake; DWP</SourceNote>
+
+### Hindernis Nr. 1 · Trägheit ist eine mächtige Kraft
+
+<DataChart
+  type="bar"
+  title="Zustimmungsraten zur Organspende — Opt-In vs. Opt-Out"
+  source="Behavioral Finance · Folie 245 · Johnson et al. (2003)"
+  xLabel="Land"
+  yLabel="Zustimmungsrate in %"
+  xKey="land"
+  height={340}
+  data={[
+    { land: 'Dänemark', optIn: 4 },
+    { land: 'Niederlande', optIn: 28 },
+    { land: 'Großbritannien', optIn: 17 },
+    { land: 'Deutschland', optIn: 12 },
+    { land: 'Österreich', optOut: 100 },
+    { land: 'Belgien', optOut: 98 },
+    { land: 'Frankreich', optOut: 100 },
+    { land: 'Ungarn', optOut: 100 },
+    { land: 'Polen', optOut: 100 },
+    { land: 'Portugal', optOut: 100 },
+    { land: 'Schweden', optOut: 86 },
+  ]}
+  series={[
+    { key: 'optIn', name: 'Opt-In (aktive Zustimmung nötig)', color: 'var(--color-module-blue)' },
+    { key: 'optOut', name: 'Opt-Out (Widerspruch nötig)', color: 'var(--color-module-teal)' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Der Default entscheidet">
+Opt-In-Länder: nur ~4-28 % Zustimmung · Opt-Out-Länder: ~86-100 %. <Exam>Der voreingestellte Default treibt die Zustimmungsrate</Exam>, nicht die wahre Präferenz.
+</Callout>
+
+<Card title="Default-Effekte sind extrem robust" tone="accent" exam>
+- „eines der **robustesten Ergebnisse** in der angewandten Wirtschaftsliteratur der letzten 10 Jahre"
+- belegt über viele Kontexte: **Organspenden** · Auswahl von Auto-Optionen · Kfz-Versicherungsschutz · Internet-Datenschutzeinstellungen · **Altersvorsorge**
+</Card>
+
+<SourceNote>Della Vigna (2008); Johnson und Goldstein (2003); Park et al. (2003); Johnson et al. (1993, 2003); Madrian und Shea (2001)</SourceNote>
+
+### Hindernis Nr. 2 · Choice Overload (Marmeladen-Experiment)
+
+<Columns count={2}>
+  <Card title="Begrenzte Auswahl (6 Sorten)" tone="positive">
+    - von **260** Kunden hielten nur **40 % (104)** an
+    - davon kauften fast **30 % (31)** ein Glas Marmelade
+  </Card>
+  <Card title="Umfangreiche Auswahl (24 Sorten)" tone="warning">
+    - von **242** Kunden hielten **60 % (145)** an
+    - davon kauften nur **3 % (4)** ein Glas Marmelade
+  </Card>
+</Columns>
+
+<DataChart
+  type="bar"
+  title="Stehen geblieben vs. gekauft — 6 vs. 24 Marmeladensorten"
+  source="Behavioral Finance · Folie 247 · Iyengar und Lepper (2000)"
+  xLabel="Bedingung"
+  yLabel="Anteil in %"
+  xKey="bedingung"
+  data={[
+    { bedingung: 'Begrenzt (6 Sorten)', stehen: 40, kauf: 30 },
+    { bedingung: 'Umfangreich (24 Sorten)', stehen: 60, kauf: 3 },
+  ]}
+  series={[
+    { key: 'stehen', name: 'stehen geblieben', color: 'var(--color-module-blue)' },
+    { key: 'kauf', name: 'Kauf getätigt', color: 'var(--color-module-orange)' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Attraktiv, aber lähmend">
+Große Auswahl wirkt **attraktiver** (mehr bleiben stehen: 60 % vs. 40 %), führt aber zu **Entscheidungslähmung** (deutlich weniger Käufe: 3 % vs. 30 %). Beide Effekte gehören zusammen.
+</Callout>
+
+### Komplexität und Vermeidung von Entscheidungen
+
+<DataChart
+  type="line"
+  title="Teilnahmequote sinkt mit der Zahl angebotener Fonds (Werte ca., visuell abgelesen)"
+  source="Behavioral Finance · Folie 248 · Iyengar und Kamenica (2010)"
+  xLabel="Anzahl der angebotenen Fonds"
+  yLabel="Teilnahmequote in %"
+  xKey="fonds"
+  yDomain={[50, 80]}
+  data={[
+    { fonds: '2', quote: 75 },
+    { fonds: '12', quote: 70 },
+    { fonds: '22', quote: 69 },
+    { fonds: '30', quote: 71 },
+    { fonds: '37', quote: 65 },
+    { fonds: '47', quote: 63 },
+    { fonds: '58', quote: 61 },
+  ]}
+  series={[{ key: 'quote', name: 'Teilnahmequote', color: 'var(--color-module-pink)' }]}
+/>
+
+<Callout type="info" title="Je mehr Optionen, desto seltener die Teilnahme">
+Teilnahmequote ca. 75 % bei 2 Fonds, sinkt auf ca. 61 % bei rund 58 Fonds — Komplexität führt zur **Vermeidung** der Entscheidung.
+</Callout>
+
+</section>
+
+<section id="beitritt-loesungen">
+
+## Teil I · Lösungen: Auto-Anmeldung und einfache Auswahl
+
+### Welche Lösung gegen welches Hindernis?
+
+<Columns count={2}>
+  <Card title="Gegen Trägheit (Hindernis 1)" tone="accent">
+    - Wie überwindet man **Trägheit / Status quo**?
+    - → Lösung Nr. 1 · **Automatische Anmeldung** (Opt-Out)
+  </Card>
+  <Card title="Gegen Komplexität (Hindernis 2)" tone="purple">
+    - Wie überwindet man die durch Komplexität bedingte **Entscheidungsunfähigkeit**?
+    - → Lösung Nr. 2 · **Eindeutige, einfache Auswahl**
+  </Card>
+</Columns>
+
+### Lösung Nr. 1 · Automatische Anmeldung (Opt-Out)
+
+<DataChart
+  type="bar"
+  title="Teilnahmequote vor vs. nach automatischer Anmeldung (Fall A / Fall B)"
+  source="Behavioral Finance · Folie 250 · Choi et al. (2004, 2002)"
+  xLabel="Fall"
+  yLabel="Teilnahmequote in %"
+  xKey="fall"
+  data={[
+    { fall: 'Fall A (Choi et al.)', vorher: 53, nachher: 91 },
+    { fall: 'Fall B (Choi et al.)', vorher: 53, nachher: 88 },
+  ]}
+  series={[
+    { key: 'vorher', name: 'Vor automatischer Anmeldung', color: 'var(--color-module-pink)' },
+    { key: 'nachher', name: 'Nach automatischer Anmeldung', color: 'var(--color-module-blue)' },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Madrian und Shea (2001)" tone="teal" exam>
+    - **37 %** traten dem Plan per **Opt-in** bei
+    - <Exam>**86 %**</Exam> traten im Rahmen des **Opt-out**-Verfahrens bei
+  </Card>
+  <Card title="Benartzi und Thaler (2007)" tone="teal">
+    - in 13 Unternehmen ein durchschnittlicher Anstieg von **83 % auf 95 %**
+  </Card>
+</Columns>
+
+<DataChart
+  type="line"
+  title="401(k)-Teilnahme nach Betriebszugehörigkeit (Werte ca., visuell abgelesen)"
+  source="Behavioral Finance · Folie 251 · Madrian und Shea (2001); Choi, Laibson, Madrian, Metrick (2004)"
+  xLabel="Betriebszugehörigkeit (Monate)"
+  yLabel="Anteil je teilgenommen in %"
+  xKey="monat"
+  yDomain={[0, 100]}
+  height={340}
+  data={[
+    { monat: '0', optOut: 5, mitte: 13, optIn: 2 },
+    { monat: '6', optOut: 80, mitte: 18, optIn: 12 },
+    { monat: '12', optOut: 83, mitte: 24, optIn: 22 },
+    { monat: '18', optOut: 84, mitte: 30, optIn: 30 },
+    { monat: '24', optOut: 85, mitte: 36, optIn: 38 },
+    { monat: '30', optOut: 85, mitte: 42 },
+    { monat: '36', optOut: 85, mitte: 47 },
+    { monat: '42', optOut: 85, mitte: 51 },
+    { monat: '48', optOut: 85, mitte: 54 },
+  ]}
+  series={[
+    { key: 'optOut', name: 'Opt-out (orange)', color: 'var(--color-module-orange)' },
+    { key: 'mitte', name: 'mittlere Kurve (unbeschriftet)', color: 'var(--color-module-teal)' },
+    { key: 'optIn', name: 'Opt-in (blau)', color: 'var(--color-module-blue)' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Opt-Out wirkt sofort">
+Bei automatischer Anmeldung (Opt-out) erreichen Mitarbeiter sofort eine **hohe Teilnahmequote** (~80-85 %); bei Opt-in steigt die Teilnahme nur **langsam** und auf deutlich niedrigerem Niveau.
+</Callout>
+
+### Lösung Nr. 2 · Eindeutige, einfache Auswahlmöglichkeiten
+
+<Columns count={2}>
+  <Card title="Die Schnellanmelde-Option" tone="accent">
+    - **2 %** Sparquote
+    - voreingestellte **Vermögensaufteilung**
+    - reine **„Ja"- oder „Nein"**-Entscheidung
+  </Card>
+  <Card title="Wirkung (erste 4 Monate)" tone="positive" exam>
+    - **Vorher:** 9 % Teilnahmequote
+    - **Nachher:** 34 % Teilnahmequote
+    - Quelle: Choi et al. (2005)
+  </Card>
+</Columns>
+
+### Zwischenresumee I · Sollte man einem Sparplan beitreten?
+
+<CompareCard
+  items={[
+    {
+      tag: 'Hindernisse',
+      title: 'Hindernisse',
+      accent: 'negative',
+      points: [
+        'Trägheit und Status quo',
+        'Komplexität und Vermeidung von Entscheidungen',
+      ],
+    },
+    {
+      tag: 'Lösungen',
+      title: 'Lösungen',
+      accent: 'positive',
+      points: [
+        'Automatische Anmeldung',
+        'Eindeutige (einfache) Auswahlmöglichkeiten',
+      ],
+    },
+  ]}
+/>
+
+</section>
+
+<section id="beitragshoehe-hindernisse">
+
+## Teil II · Beitragshöhe: Menüeffekte und Gegenwartspräferenz
+
+<Callout type="info" title="Leitfrage II — Wie viel soll man einzahlen?">
+USC-Mitarbeiter investieren laut eigenen Angaben <Exam>weniger als eine Stunde</Exam> in ihre Auswahl. Statt einer Optimierung verlassen sie sich auf **einfache Faustregeln**.
+</Callout>
+
+### Drei beobachtete Faustregeln
+
+<Columns count={3}>
+  <Card title="Faustregel 1" tone="accent">
+    - **Runde Zahlen**
+  </Card>
+  <Card title="Faustregel 2" tone="purple">
+    - **Maximal zulässiger** Beitrag
+  </Card>
+  <Card title="Faustregel 3" tone="teal">
+    - Beiträge bis zum **maximalen Arbeitgeberzuschuss**
+  </Card>
+</Columns>
+
+### Hindernis Nr. 3 · Menüeffekte (Verteilung der Sparraten)
+
+<DataChart
+  type="bar"
+  title="Verteilung der gewählten Sparraten 2001 vs. 2002 (Werte ca., visuell abgelesen)"
+  source="Behavioral Finance · Folie 256 · Benartzi und Thaler (2007)"
+  xLabel="Höhe der Sparrate"
+  yLabel="Anteil der Teilnehmer in %"
+  xKey="rate"
+  data={[
+    { rate: '5 %', j2001: 8, j2002: 8 },
+    { rate: '6 %', j2001: 28, j2002: 28 },
+    { rate: '10 %', j2001: 17.5, j2002: 20 },
+    { rate: '15 %', j2001: 3.7, j2002: 8.2 },
+    { rate: '16 %', j2001: 21, j2002: 5.5 },
+    { rate: '100 %', j2002: 2.5 },
+  ]}
+  series={[
+    { key: 'j2001', name: '2001', color: 'var(--color-module-teal)' },
+    { key: 'j2002', name: '2002', color: 'var(--color-module-blue)' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Klumpung an runden Werten">
+Die gewählten Sparraten klumpen an „runden"/auffälligen Werten (**5 %, 6 %, 10 %, 15 %, 16 %**) — ein <Exam>Menüeffekt</Exam>: Die angebotenen Optionen lenken die Wahl, statt einer rationalen Optimierung. (Übrige Raten meist unter 5 %.)
+</Callout>
+
+### Hindernis Nr. 3 · Menüeffekte (Matching-Effekt)
+
+<DataChart
+  type="bar"
+  title="Sparraten 1999 vs. 2001 (Matching ab 4 %) — Werte ca., visuell abgelesen"
+  source="Behavioral Finance · Folie 257 · Choi et al. (2001)"
+  xLabel="Sparrate"
+  yLabel="Anteil der Teilnehmer in %"
+  xKey="rate"
+  data={[
+    { rate: '4 %', j1999: 0.4, j2001: 3.7 },
+    { rate: '5 %', j1999: 1.8, j2001: 1.8 },
+    { rate: '10 %', j1999: 1.45, j2001: 1.65 },
+    { rate: '15 %', j1999: 1.9, j2001: 1.85 },
+  ]}
+  series={[
+    { key: 'j1999', name: '1999', color: 'var(--color-module-teal)' },
+    { key: 'j2001', name: '2001 (Matching bei 4 %)', color: 'var(--color-module-blue)' },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Matching-Effekt" tone="warning" exam>
+    - Arbeitgeber-Matching **ab 4 %** verschiebt die Sparraten massiv auf genau **4 %**
+    - blauer Balken 2001 springt auf ~3,7 % (1999 nur ~0,4 %)
+  </Card>
+  <Card title="Effekt runder Zahlen" tone="purple">
+    - zusätzliche Häufung an **5 %, 10 %, 15 %**
+    - Ankerverhalten an runden Werten
+  </Card>
+</Columns>
+
+### Hindernis Nr. 4 · Gegenwartsgerichtete Präferenzen
+
+<Diagram
+  title="Obst oder Schokolade — Entscheidung heute für nächste Woche"
+  source="Behavioral Finance · Folie 258 · Read und van Leeuwen (1998)"
+  chart={`flowchart LR
+  H[Heute waehlen] --> N[Naechste Woche essen] --> Z((Zeit))
+  N -.-> O[Obst]
+  N -.-> S[Schokolade]
+  S --> E[70 % waehlen Schokolade]`}
+/>
+
+<Callout type="pitfall" title="Sofortige Versuchung schlägt rationale Wahl">
+Obwohl der Konsum erst **nächste Woche** erfolgt, wählen **70 %** die sofort verlockende Schokolade — Illustration <Exam>gegenwartsgerichteter Präferenzen</Exam> (hyperbolische Diskontierung).
+</Callout>
+
+</section>
+
+<section id="beitragshoehe-loesungen">
+
+## Teil II · Lösungen: Auto-Erhöhung und das zukünftige Selbst
+
+### Lösung Nr. 3 · Automatische Erhöhung (SMarT)
+
+<Card title="Studiensetup — mittelständisches Fertigungsunternehmen, 1998" tone="neutral" compact>
+- alle **286** Mitarbeiter trafen sich mit einem Finanzberater, woraufhin sich drei Gruppen bildeten:
+</Card>
+
+<KpiGrid
+  items={[
+    { value: '79 (28 %)', label: 'nahmen die Empfehlung des Beraters an (Advice)', accent: 'accent' },
+    { value: '162 (57 %)', label: 'nahmen das SMarT-Programm an (Auto Increase)', accent: 'positive' },
+    { value: '45 (15 %)', label: 'lehnten das SMarT-Programm ab (Neither)', accent: 'warning' },
+  ]}
+/>
+
+<DataChart
+  type="bar"
+  title="Sparquoten nach Gruppe 1998-2002 (Werte von der Folie)"
+  source="Behavioral Finance · Folie 259 · Thaler und Benartzi (2004)"
+  xLabel="Jahr"
+  yLabel="Sparquote in %"
+  xKey="jahr"
+  height={340}
+  data={[
+    { jahr: '1998', advice: 4.4, auto: 3.5, neither: 6.6 },
+    { jahr: '1999', advice: 9.1, auto: 6.5, neither: 6.5 },
+    { jahr: '2000', advice: 8.9, auto: 9.4, neither: 6.8 },
+    { jahr: '2001', advice: 8.7, auto: 11.6, neither: 6.6 },
+    { jahr: '2002', advice: 8.8, auto: 13.6, neither: 6.2 },
+  ]}
+  series={[
+    { key: 'advice', name: 'Advice', color: 'var(--color-module-blue)' },
+    { key: 'auto', name: 'Auto Increase', color: 'var(--color-module-teal)' },
+    { key: 'neither', name: 'Neither', color: 'var(--color-module-orange)' },
+  ]}
+/>
+
+<Callout type="merksatz" title="„Save More Tomorrow“">
+Das SMarT-Programm (automatische Erhöhung) lässt die Sparquote **kontinuierlich steigen** (3,5 % → 13,6 %), deutlich stärker als einmalige Beratung (~8,7-9,1 %) — es überwindet <Exam>gegenwartsgerichtete Präferenzen</Exam>.
+</Callout>
+
+### Lösung Nr. 4 · Triff dein zukünftiges Selbst
+
+<KpiGrid
+  items={[
+    { value: '172 $', label: 'Einzahlung bei Konfrontation mit dem zukünftigen Selbst (M; SD = 214 $)', accent: 'positive' },
+    { value: '80 $', label: 'Einzahlung bei Konfrontation mit dem aktuellen Selbst (M; SD = 130 $)', accent: 'warning' },
+    { value: '> 2×', label: 'mehr als doppelt so hohe Einzahlung', accent: 'accent' },
+  ]}
+/>
+
+<Callout type="info" title="Die Zukunft greifbar machen">
+Wer mit einem realistischen, **gealterten** Bild seines Selbst (age-progressed rendering) konfrontiert wird, identifiziert sich stärker mit der eigenen Zukunft und spart mehr als doppelt so viel.
+</Callout>
+
+<SourceNote>Hershfield, H.E. et al. (2011): Increasing saving behavior through age-progressed renderings of the future self. Journal of Marketing Research, 48, S23-S37.</SourceNote>
+
+### Zwischenresumee II · Wie viel soll man einzahlen?
+
+<CompareCard
+  items={[
+    {
+      tag: 'Hindernisse',
+      title: 'Hindernisse',
+      accent: 'negative',
+      points: [
+        'Menüeffekte',
+        'Gegenwartsorientierte Präferenzen',
+      ],
+    },
+    {
+      tag: 'Lösungen',
+      title: 'Lösungen',
+      accent: 'positive',
+      points: [
+        'Intelligente Standardeinstellungen und automatische Erhöhung',
+        'Die Zukunft greifbarer machen',
+      ],
+    },
+  ]}
+/>
+
+</section>
+
+<section id="anlage-hindernisse">
+
+## Teil III · Anlage: 1/N, Menüeffekte und Trendfolge
+
+<Callout type="info" title="Leitfrage III — Wie soll man anlegen?">
+Auch hier folgen die Teilnehmer **naiven Anlagestrategien** statt einer Optimierung.
+</Callout>
+
+<Card title="Wovon die Anlagewahl beeinflusst wird" tone="purple">
+- die **Anzahl** der angebotenen Optionen
+- wie die Optionen **präsentiert** werden
+- die **Form des Arbeitgeberzuschusses**
+</Card>
+
+### Hindernis Nr. 5 · Menüeffekte und die 1/N-Regel
+
+<DataTable
+  caption="Allokation in Aktien nach Plan-Menü (Benartzi und Thaler 2001; Huberman und Jiang 2006)"
+  columns={[
+    { key: 'plan', label: 'Plan' },
+    { key: 'fixed', label: 'Anzahl festverzinsl. Fonds', align: 'right' },
+    { key: 'equity', label: 'Anzahl Aktienfonds', align: 'right' },
+    { key: 'alloc', label: 'Allokation in Aktien', align: 'right' },
+  ]}
+  rows={[
+    { plan: 'University of California', fixed: '4', equity: '1', alloc: '34 %' },
+    { plan: 'TWA', fixed: '1', equity: '5', alloc: '75 %' },
+  ]}
+  highlight={(row) => row.plan === 'TWA'}
+/>
+
+<Callout type="merksatz" title="Bedingte 1/N-Heuristik">
+Teilnehmer wählen **3 bis 4 Fonds** und verteilen ihr Geld anschließend **gleichmäßig**. Dadurch hängt die <Exam>Aktienquote allein vom Verhältnis Aktien-/Anleihefonds im Menü</Exam> ab (UC 34 % vs. TWA 75 %) — ein reiner Menüeffekt.
+</Callout>
+
+### Hindernis Nr. 5 · Menüeffekte und Komplexität
+
+<Columns count={3}>
+  <Card title="Geldmarkt ↑" tone="warning">
+    - **+4 %** Allokation im Geldmarkt
+  </Card>
+  <Card title="Geldmarkt + Anleihen ↑" tone="warning">
+    - **+5,4 %** Allokation in Geldmarkt und Anleihen
+  </Card>
+  <Card title="Aktienbestände ↓" tone="negative">
+    - **−3,1 % bis −4,6 %** Wahrscheinlichkeit, überhaupt Aktien zu halten
+  </Card>
+</Columns>
+
+<Callout type="info" title="Pro 10 hinzugefügte Fonds">
+Je mehr Fonds das Menü enthält, desto **konservativer** legen Teilnehmer an — Komplexität führt zu Entscheidungsvermeidung. (Iyengar und Kamenica 2006)
+</Callout>
+
+### Hindernis Nr. 5 · Menüeffekte und Anzahl der Zeilen
+
+<Card title="Zitat des Auswahlformulars" tone="purple">
+„… geben Sie bitte an, wie Sie Ihre Altersvorsorgebeiträge aufteilen möchten. Sie können **bis zu vier Fonds** auswählen. (Wenn Sie mehr als vier Fonds auswählen möchten, **klicken Sie bitte hier**.)"
+</Card>
+
+<DataChart
+  type="bar"
+  title="Anteil der Teilnehmer nach gewählter Fondszahl — 4 vs. 8 Formularzeilen"
+  source="Behavioral Finance · Folie 267 · Benartzi und Thaler (2007)"
+  xLabel="Anzahl gewählter Fonds"
+  yLabel="Anteil der Teilnehmer in %"
+  xKey="fonds"
+  height={340}
+  data={[
+    { fonds: '1', l4: 8, l8: 8 },
+    { fonds: '2', l4: 10, l8: 5 },
+    { fonds: '3', l4: 23, l8: 19 },
+    { fonds: '4', l4: 50, l8: 29 },
+    { fonds: '5', l4: 4, l8: 20 },
+    { fonds: '6', l4: 4, l8: 12 },
+    { fonds: '7', l4: 1, l8: 4 },
+    { fonds: '8', l4: 1, l8: 4 },
+  ]}
+  series={[
+    { key: 'l4', name: '4 lines on form', color: 'var(--color-module-orange)' },
+    { key: 'l8', name: '8 lines on form', color: 'var(--color-module-blue)' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Das Layout steuert die Wahl">
+Bei **4 Zeilen** wählen **50 %** genau 4 Fonds; bei **8 Zeilen** verschiebt sich die Verteilung zu mehr Fonds (5-8) — klarer Beleg für <Exam>Menüeffekte durch das Formularlayout</Exam>.
+</Callout>
+
+### Hindernis Nr. 5 · Menüeffekte und Unternehmensaktien
+
+<KpiGrid
+  items={[
+    { value: '26,5 %', label: 'Anteil Unternehmensaktien am typischen Planvermögen (Ende 2004)', accent: 'warning' },
+    { value: '> 50 %', label: 'mehr als jeder vierte Arbeitnehmer hielt über die Hälfte in Arbeitgeberaktien', accent: 'negative' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Klumpenrisiko">
+Wird der Arbeitgeberzuschuss in **Unternehmensaktien** gewährt, halten viele Beschäftigte gefährlich hohe Anteile am eigenen Arbeitgeber. Seitdem ist der Anteil stetig **zurückgegangen**. (Benartzi und Thaler 2007)
+</Callout>
+
+### Hindernis Nr. 6 · Trendfolge (Extrapolation)
+
+<DataChart
+  type="bar"
+  title="Aktienanteil neuer Beiträge: New vs. All participants 1992-2002"
+  source="Behavioral Finance · Folie 270 · Benartzi und Thaler (2007)"
+  xLabel="Jahr"
+  yLabel="% of new contributions in equities"
+  xKey="jahr"
+  yDomain={[50, 80]}
+  height={340}
+  data={[
+    { jahr: '1992', neu: 58, alle: 52 },
+    { jahr: '1993', neu: 61, alle: 53 },
+    { jahr: '1994', neu: 59, alle: 53 },
+    { jahr: '1995', neu: 69, alle: 55 },
+    { jahr: '1996', neu: 74, alle: 57 },
+    { jahr: '1997', neu: 74, alle: 58 },
+    { jahr: '1998', neu: 71, alle: 59 },
+    { jahr: '1999', neu: 72, alle: 63 },
+    { jahr: '2000', neu: 74, alle: 65 },
+    { jahr: '2001', neu: 70, alle: 67 },
+    { jahr: '2002', neu: 54, alle: 64 },
+  ]}
+  series={[
+    { key: 'neu', name: 'New participants', color: 'var(--color-module-pink)' },
+    { key: 'alle', name: 'All participants', color: 'var(--color-module-blue)' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Anleger extrapolieren die jüngste Marktentwicklung">
+Neue Teilnehmer richten ihre Aktienquote stark nach dem Markt aus: hohe Quoten in der Hausse, dramatischer Einbruch auf **54 % im Jahr 2002** nach dem Markteinbruch. Die Quote **aller** (träger) Teilnehmer schwankt kaum (~64 %). Karikatur: „I CAN RETIRE! / I CAN'T RETIRE!" im Takt der Börse.
+</Callout>
+
+</section>
+
+<section id="anlage-loesungen-resumee">
+
+## Teil III · Lösung: Automatisches Rebalancing
+
+### Lösung Nr. 5 · Automatische Neugewichtung von Fonds
+
+<Columns count={2}>
+  <Card title="Mitchell et al. (2009) — Datensatz" tone="neutral">
+    - eine **Viertelmillion** 401(k)-Teilnehmer
+    - aus über **250 Plänen**, in denen **Lebenszyklusfonds** eingeführt wurden
+    - **Lebenszyklus-** bzw. **Target-Maturity-Fonds** fallen in diese Kategorie
+  </Card>
+  <Card title="Was Lebenszyklusfonds leisten" tone="accent">
+    - übernehmen das **Rebalancing automatisch**
+    - passen die Allokation über die Zeit an das Zieldatum an
+  </Card>
+</Columns>
+
+### Beobachtete Effekte der Lebenszyklusfonds
+
+<Columns count={3}>
+  <Card title="Mehr Aktien" tone="positive">
+    - Teilnehmer **erhöhen** ihren Aktienanteil
+  </Card>
+  <Card title="Weniger Extreme" tone="positive">
+    - **reduzieren** extreme Vermögensallokationen
+  </Card>
+  <Card title="Weniger Idio-Risiko" tone="positive">
+    - **verringern** das nicht-systematische Risiko
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Rebalancing übernimmt die Disziplin">
+Lebenszyklus-/Target-Maturity-Fonds übernehmen das **Rebalancing automatisch** und führen empirisch zu besser diversifizierten, weniger extremen Portfolios — Lösung gegen <Exam>naive Diversifizierung und Trendfolge</Exam>.
+</Callout>
+
+### Zwischenresumee III · Wie soll man anlegen?
+
+<CompareCard
+  items={[
+    {
+      tag: 'Hindernisse',
+      title: 'Hindernisse',
+      accent: 'negative',
+      points: [
+        'Naive Diversifizierung und Menüeffekte',
+        'Trendfolge',
+      ],
+    },
+    {
+      tag: 'Lösung',
+      title: 'Lösung',
+      accent: 'positive',
+      points: [
+        'Automatisches Rebalancing der Fonds',
+      ],
+    },
+  ]}
+/>
+
+<SourceNote>Behavioral Finance · Kapitel 7 · Altersvorsorge und private Finanzplanung · Folien 236-272</SourceNote>
+
+</section>

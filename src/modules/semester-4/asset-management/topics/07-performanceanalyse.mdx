@@ -1,0 +1,621 @@
+<section id="einordnung-ziele">
+
+## Einordnung, Definition und Ziele
+
+<Diagram
+  title="Finanzcontrolling: die drei Säulen (Folie 3)"
+  source="Asset Management · Folie 233"
+  height={240}
+  chart={`flowchart TD
+  FC[Finanzcontrolling]
+  PA[Performanceanalyse]
+  RA[Risikoanalyse]
+  RE[Reporting]
+  FC --> PA
+  FC --> RA
+  FC --> RE`}
+/>
+
+<Columns count={3}>
+  <Card title="Performanceanalyse" tone="accent">
+    - Renditekontrolle und -steuerung des gesamten oder von Teilen des Portfolios inkl. **Benchmarking**
+    - intern: selbstgesteuertes PF
+    - extern: (Spezial)fonds
+  </Card>
+  <Card title="Risikoanalyse" tone="teal">
+    - Risikokontrolle und -steuerung des Gesamtportfolios
+    - Limit-, Derivate-, Einhaltungskontrollen
+    - Insurance-Strategien, Asset-Liability-Management, Stress Tests
+  </Card>
+  <Card title="Reporting" tone="purple">
+    - **intern:** Performance-, Risiko-, Bestands-, Spezialberichte
+    - **extern:** BaFin (pflichtgemäß), GDV (vereinbarungsgem.), Analysten & Presse (freiwillig)
+  </Card>
+</Columns>
+
+<DefinitionBox term="Performanceanalyse" source="Asset Management · Folie 234">
+Die Performanceanalyse ermöglicht die **Messung** und leistungsorientierte **Bewertung** des Kapitalanlageerfolges eines (institutionellen) Investors.
+</DefinitionBox>
+
+### Messung: Was? · Wer? · Warum?
+
+<Columns count={3}>
+  <Card title="Was? (Messobjekte)" tone="accent">
+    - Rendite
+    - Risiko
+    - **risikoadjustierte Rendite**
+  </Card>
+  <Card title="Wer? (Objekt / Subjekt)" tone="neutral">
+    - **Objekt:** gesamtes oder Teile des Portfolios
+    - intern = Versicherungsportfolio (Gesamtportfolio)
+    - extern = Spezial- und Publikumsfonds (Mandate)
+    - **Subjekt:** Portfoliomanager
+  </Card>
+  <Card title="Warum? (Zweck)" tone="neutral">
+    - Erfolgskontrolle
+    - Steuerung
+  </Card>
+</Columns>
+
+### Vier Funktionen der Performanceanalyse (Folie 5)
+
+<Columns count={2}>
+  <Card title="Kontrollfunktion" tone="accent">
+    - Messung des Anlageerfolges in Relation zur **Benchmark**
+  </Card>
+  <Card title="Steuerungsfunktion" tone="teal">
+    - Eingreifen in die **Asset Allocation** bei Fehlentwicklungen
+  </Card>
+  <Card title="Beurteilungs- & Anreizfunktion" tone="purple">
+    - Bewertung und leistungsgerechte **Entlohnung** des Portfoliomanagers
+  </Card>
+  <Card title="Marketingfunktion" tone="orange">
+    - Vergleich mit den **Wettbewerbern** und Kundenwerbung
+  </Card>
+</Columns>
+
+</section>
+
+<section id="performancekennzahlen-systematik">
+
+## Systematik der Performancekennzahlen
+
+<Diagram
+  title="Performancemaße: Rendite vs. risikoadjustierte Rendite (Folien 6 & 12)"
+  source="Asset Management · Folien 236 & 242"
+  height={320}
+  chart={`flowchart TD
+  PM[Performancemasse]
+  R[Rendite]
+  RAR[risikoadjustierte Rendite]
+  GW["Geldgewichtete Rendite (MWR)"]
+  ZW["Zeitgewichtete Rendite (TWR)"]
+  SR["Sharpe-Ratio<br/>Gesamtrisiko"]
+  TR["Treynor-Ratio<br/>systematisches Risiko (Beta)"]
+  JA["Jensen-Alpha<br/>vs. betaadjustierte Benchmark"]
+  PM --> R
+  PM --> RAR
+  R --> GW
+  R --> ZW
+  RAR --> SR
+  RAR --> TR
+  RAR --> JA`}
+/>
+
+### Renditekennzahlen vs. risikoadjustierte Kennzahlen
+
+<Columns count={2}>
+  <Card title="Renditekennzahlen" tone="accent">
+    - **Geldgewichtete Rendite** (money-weighted rate of return, MWR)
+    - **Zeitgewichtete Rendite** (time-weighted rate of return, TWR)
+    - betrachten **nur die Rendite** — kein Risikobezug
+  </Card>
+  <Card title="Risikoadjustierte Kennzahlen — unterschiedliches Risikomaß" tone="purple" exam>
+    - **Sharpe-Ratio:** Überrendite zum risikolosen Zinssatz gemessen am <Exam>Gesamtrisiko</Exam>
+    - **Treynor-Ratio:** Überrendite zum risikolosen Zinssatz gemessen am <Exam>systematischen Risiko (Beta)</Exam>
+    - **Jensen-Alpha:** Renditeunterschied zur <Exam>betaadjustierten Benchmark</Exam>
+  </Card>
+</Columns>
+
+### Das unterscheidende Merkmal ist das Risikomaß
+
+<Columns count={3}>
+  <Card title="Sharpe-Ratio" tone="teal">
+    - Risikomaß: <Exam>Gesamtrisiko (σ)</Exam>
+    - relativ zur **CML**
+  </Card>
+  <Card title="Treynor-Ratio" tone="orange">
+    - Risikomaß: <Exam>systematisches Risiko (β)</Exam>
+    - relativ zur **SML**
+  </Card>
+  <Card title="Jensen-Alpha" tone="purple">
+    - Risikomaß: <Exam>Renditedifferenz zur betaadjustierten Benchmark</Exam>
+    - **absolutes** Maß
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Das unterscheidende Merkmal ist das Risikomaß">
+Sharpe rechnet mit dem Gesamtrisiko (σ), Treynor mit dem systematischen Risiko (β), Jensen mit der Renditedifferenz zur betaadjustierten Benchmark.
+</Callout>
+
+</section>
+
+<section id="mwr-vs-twr">
+
+## Geldgewichtete vs. zeitgewichtete Rendite (MWR vs. TWR)
+
+<Card title="Beispiel-Setup (Folie 7)" tone="neutral">
+- **t = 0:** Investition 100 €
+- **t = 1:** Wert 200 € (nach +100 %) + Zuschuss 300 € → Bestand 500 €
+- **t = 2:** Endvermögen 250 € (nach −50 %)
+- tatsächliche absolute Performance: 250 € − 400 € = **−150 €**
+</Card>
+
+<DataChart
+  type="bar"
+  title="Vermögensentwicklung (Bestandswerte je Zeitpunkt)"
+  source="Asset Management · Folie 237"
+  xLabel="Zeitpunkt"
+  yLabel="Vermögen (€)"
+  xKey="t"
+  data={[
+    { t: 't=0', wert: 100 },
+    { t: 't=1', wert: 500 },
+    { t: 't=2', wert: 250 },
+  ]}
+  series={[{ key: 'wert', name: 'Vermögen' }]}
+/>
+
+### Zeitgewichtete Rendite (TWR) — geometrisches Mittel der Periodenrenditen
+
+<Formula
+  display
+  title="Zeitgewichtete Rendite (Folie 8)"
+  expr="r_{\text{zeitgew.}} = \sqrt{(1 + r_1)(1 + r_2)} - 1 = \sqrt{2 \cdot 0{,}5} - 1 = 0\,\%"
+  legend={[
+    { sym: 'r_1', desc: 'Periodenrendite 1 = +100 %' },
+    { sym: 'r_2', desc: 'Periodenrendite 2 = −50 %' },
+  ]}
+/>
+
+<Callout type="info" title="Aussage der TWR">
+- geometrische **Durchschnittsrendite** der Periodenrenditen
+- ergibt hier **0 %** → das Marktgeschehen ist neutral
+- unabhängig von **Höhe und Timing** der Einzahlung
+</Callout>
+
+### Geldgewichtete Rendite (MWR) — interner Zinsfuß des Zahlungsstroms
+
+<DataChart
+  type="bar"
+  title="Zahlungsströme aus Investorensicht (Vorzeichen)"
+  source="Asset Management · Folie 239"
+  xLabel="Zeitpunkt"
+  yLabel="Cashflow (€)"
+  xKey="t"
+  data={[
+    { t: 't=0', cf: -100 },
+    { t: 't=1', cf: -300 },
+    { t: 't=2', cf: 250 },
+  ]}
+  series={[{ key: 'cf', name: 'Cashflow' }]}
+/>
+
+<Formula
+  display
+  title="Barwertgleichung / interner Zinsfuß (Folie 9)"
+  expr="BW(r_g) = -100 - \frac{300}{(1 + r_g)} + \frac{250}{(1 + r_g)^{2}} = 0 \;\Rightarrow\; r_{\text{geldgew.}} = -32{,}06\,\%"
+  legend={[
+    { sym: 'r_g', desc: 'gesuchter interner Zinsfuß (= geldgewichtete Rendite)' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Original-Tippfehler auf Folie 9">
+Die Folie beschriftet die geldgewichtete Rendite irrtümlich mit „TWR“ — korrekt ist MWR (Money-Weighted Rate of Return).
+</Callout>
+
+<KpiGrid
+  items={[
+    { value: '0 %', label: 'TWR — nur Marktgeschehen', accent: 'accent' },
+    { value: '−32,06 %', label: 'MWR — inkl. Investor-Timing', accent: 'negative' },
+  ]}
+/>
+
+### Gegenüberstellung (Folie 10)
+
+<CompareCard
+  items={[
+    {
+      tag: 'MWR',
+      title: 'Geldgewichtete Rendite',
+      subtitle: 'z. B. **Versicherung als Investor**',
+      accent: 'accent',
+      points: [
+        'berücksichtigt **Zeitpunkte und Höhen** der zwischenzeitlichen Ein- und Auszahlungen des Investors',
+        '= **interner Zinsfuß** eines Zahlungsstroms (IRR)',
+        'zweckmäßig bei bewusster Beeinflussung der Kapitalzu- und -abflüsse durch den Investor',
+      ],
+    },
+    {
+      tag: 'TWR',
+      title: 'Zeitgewichtete Rendite',
+      subtitle: 'z. B. **Portfoliomanager / Fonds**',
+      accent: 'teal',
+      points: [
+        'durchschnittlicher Anlageerfolg auf Basis von **Periodenrenditen**',
+        '**geometrische** Durchschnittsrendite — für den Vergleich verschiedener Portfoliomanager',
+        'weltweit akzeptierter Standard der Performancemessung (**GIPS**)',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="examfocus" title="Fazit: der Vergleich isoliert die Timing-Qualität (Folie 11)">
+- MWR drückt **zwei Effekte in einer Kennzahl** aus: 1. das (persönliche) Timing der Zahlungen, 2. das Marktgeschehen.
+- TWR drückt hingegen **nur das Marktgeschehen** aus.
+- **MWR unter TWR** → ungünstiges Timing der In-/Outflows; **MWR über TWR** → günstiges Timing.
+</Callout>
+
+</section>
+
+<section id="sharpe-ratio">
+
+## Sharpe-Ratio
+
+<Formula
+  display
+  title="Sharpe-Ratio (William F. Sharpe, 1966 · Nobelpreis 1990)"
+  expr="SR_P = \frac{\mu_P - r_f}{\sigma_P}"
+  legend={[
+    { sym: '\\mu_P', desc: 'erzielte Portfoliorendite' },
+    { sym: 'r_f', desc: 'risikoloser Zinssatz' },
+    { sym: '\\sigma_P', desc: 'Gesamtrisiko = Volatilität / Standardabweichung des Portfolios' },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Was misst die Sharpe-Ratio?" tone="accent">
+    - **Risikoprämie** pro einer Einheit des übernommenen **Gesamtrisikos** (siehe CML)
+    - Risikoprämie = erzielte Rendite μ_P abzüglich r_f = **Überschussrendite** (Excess Return)
+    - verdichtet Rendite und Risiko zu **einer** Kennzahl
+    - alle Größen für denselben Zeitraum (z. B. annualisiert)
+  </Card>
+  <Card title="Beispiel-Datenbasis (Spremann 2003)" tone="neutral">
+    - risikoloser Einjahreszins r_f = **4 %**
+    - monatliche Kursstände und daraus abgeleitete Monatsrenditen für zwei Portfolios (A, B) und die Benchmark (BM)
+    - A schwankt am stärksten, B verläuft am ruhigsten, alle enden über dem Startwert (100)
+  </Card>
+</Columns>
+
+<DataChart
+  type="line"
+  title="Normierte Wertentwicklung (Start = 100, Werte visuell abgelesen)"
+  source="Asset Management · Folie 245 · Spremann (2003)"
+  xLabel="Monat"
+  yLabel="Wertentwicklung (€)"
+  xKey="monat"
+  data={[
+    { monat: 'D', A: 100, B: 100, BM: 100 },
+    { monat: 'J', A: 103, B: 100, BM: 103 },
+    { monat: 'F', A: 98, B: 101, BM: 99 },
+    { monat: 'M', A: 105, B: 99, BM: 103 },
+    { monat: 'A', A: 110, B: 100, BM: 108 },
+    { monat: 'M', A: 100, B: 102, BM: 99 },
+    { monat: 'J', A: 95, B: 101, BM: 94 },
+    { monat: 'J', A: 95, B: 102, BM: 98 },
+    { monat: 'A', A: 102, B: 103, BM: 100 },
+    { monat: 'S', A: 92, B: 105, BM: 99 },
+    { monat: 'O', A: 95, B: 103, BM: 108 },
+    { monat: 'N', A: 112, B: 105, BM: 116 },
+    { monat: 'D', A: 125, B: 110, BM: 120 },
+  ]}
+  series={[
+    { key: 'A', name: 'Portfolio A' },
+    { key: 'B', name: 'Portfolio B' },
+    { key: 'BM', name: 'Benchmark' },
+  ]}
+/>
+
+<Callout type="info" title="Lesehilfe zum Diagramm">
+- Linienverlauf **visuell aus der Folie abgelesen** (y-Bereich 90–130)
+- fachlich tragend sind die **berechneten Endkennzahlen** in der folgenden Tabelle
+- nicht die Zwischenwerte des Verlaufs
+</Callout>
+
+### Berechnung und Ranking (Folie 16)
+
+<DataTable
+  caption="Sharpe-Ratio-Berechnung bei r_f = 4 % — Quelle: Spremann (2003)"
+  columns={[
+    { key: 'kennzahl', label: 'Kennzahl' },
+    { key: 'a', label: 'Portfolio A', align: 'right' },
+    { key: 'b', label: 'Portfolio B', align: 'right' },
+    { key: 'bm', label: 'Benchmark', align: 'right' },
+  ]}
+  rows={[
+    { kennzahl: 'Jahresrendite r', a: '50/40 − 1 = 25 %', b: '88/80 − 1 = 10 %', bm: '192/160 − 1 = 20 %' },
+    { kennzahl: 'σ (annualisiert)', a: '8,5 % · √12 = 29,4 %', b: '1,9 % · √12 = 6,6 %', bm: '5,4 % · √12 = 18,7 %' },
+    { kennzahl: 'Sharpe-Ratio', a: '(25−4)/29,4 = 0,71', b: '(10−4)/6,6 = 0,91', bm: '(20−4)/18,7 = 0,86' },
+    { kennzahl: 'Ranking', a: '3', b: '1', bm: '2' },
+  ]}
+  highlight={(row) => row.kennzahl === 'Sharpe-Ratio'}
+/>
+
+<Callout type="examfocus" title="Ranking nach Sharpe-Ratio: B vor BM vor A">
+Portfolio **B (0,91)** ist das beste, gefolgt von der **Benchmark (0,86)** und **Portfolio A (0,71)** — trotz höchster Rendite ist A wegen seines hohen Gesamtrisikos abgeschlagen. (Hinweis: Die Benchmark-Formel ist auf der Folie irrtümlich als „SR_A“ statt „SR_BM“ beschriftet.)
+</Callout>
+
+### Bewertung (Folie 17)
+
+<Columns count={2}>
+  <Card title="Regel & Reichweite" tone="positive">
+    - je höher die Sharpe-Ratio, desto besser die Performance des PM (Ex-post)
+    - ein guter PM erreicht Renditen **über der CML**
+    - Ranking zu anderen Portfolios und zur Benchmark möglich
+    - nur sinnvoll, wenn Renditen normalverteilt sind und μ_P **größer** als r_f
+  </Card>
+  <Card title="Vorsicht & Nachteil" tone="warning">
+    - Vergleich nur aussagekräftig bei **gleichem regionalen Exposure** (Diversifikation erhöht die Sharpe-Ratio)
+    - nur für **normalverteilte** Risiken anwendbar, nicht für asymmetrische Renditen (z. B. Optionen)
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Fazit Sharpe-Ratio">
+Performancemaß für die **gesamte Vermögensanlage**.
+</Callout>
+
+### Exkurs: Anpassungen bei nicht-normalverteilten Renditen (Folie 18)
+
+- der **Risikonenner** σ_P wird um Korrekturterme erweitert, wenn die Renditen nicht normalverteilt sind
+- **negative Schiefe** vergrößert den Nenner über min(0, S); **Fat Tails** über max(0, W − 3)
+- S = Schiefe (Skewness), W = Wölbung / Kurtosis (Referenzwert 3)
+
+<Columns count={2}>
+  <Card title="bei negativer Schiefe" tone="warning">
+    <Formula
+      display
+      expr="SR_P = \frac{\mu_P - r_f}{\sigma_P - \left(\min(0,\,S)\right)^{1/3}}"
+    />
+  </Card>
+  <Card title="bei Fat Tails" tone="warning">
+    <Formula
+      display
+      expr="SR_P = \frac{\mu_P - r_f}{\sigma_P + \left(\max(0,\,W - 3)\right)^{1/4}}"
+    />
+  </Card>
+</Columns>
+
+<Formula
+  display
+  title="bei negativer Schiefe und Fat Tails"
+  expr="SR_P = \frac{\mu_P - r_f}{\sigma_P - \left(\min(0,\,S)\right)^{1/3} + \left(\max(0,\,W - 3)\right)^{1/4}}"
+  legend={[
+    { sym: 'S', desc: 'Schiefe (Skewness)' },
+    { sym: 'W', desc: 'Wölbung / Kurtosis (Referenzwert 3)' },
+  ]}
+/>
+
+</section>
+
+<section id="treynor-ratio">
+
+## Treynor-Ratio
+
+<Formula
+  display
+  title="Treynor-Ratio (Jack L. Treynor, 1965)"
+  expr="TR_p = \frac{\mu_p - r_f}{\beta_p}"
+  legend={[
+    { sym: '\\mu_p', desc: 'erzielte Portfoliorendite' },
+    { sym: 'r_f', desc: 'risikoloser Zinssatz' },
+    { sym: '\\beta_p', desc: 'systematisches Risiko = Betafaktor des Portfolios' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Original-Tippfehler auf Folie 19">
+Der Folientext schreibt „Sharpe-Ratio“, gemeint ist die **Treynor-Ratio**; das systematische Risiko ist zudem irrtümlich als „σ_p“ statt korrekt **β_p** beschriftet.
+</Callout>
+
+<Card title="Kernidee" tone="accent" exam>
+- Risikoprämie (μ_p − r_f = Überschussrendite) pro einer Einheit des übernommenen <Exam>**systematischen** Risikos</Exam>
+- statt — wie Sharpe — je Einheit Gesamtrisiko
+- verdichtet Rendite und Risiko zu einer Kennzahl
+</Card>
+
+### Datenbasis (Folie 20) — Bruns/Meyer-Bullerdiek (2013), r_f = 3 %
+
+<DataTable
+  caption="Periodenrenditen 1–10 für A, B, Index 1"
+  columns={[
+    { key: 'p', label: 'Periode' },
+    { key: 'a', label: 'A', align: 'right' },
+    { key: 'b', label: 'B', align: 'right' },
+    { key: 'i', label: 'Index 1', align: 'right' },
+  ]}
+  rows={[
+    { p: '1', a: '10,0 %', b: '9,0 %', i: '8,0 %' },
+    { p: '2', a: '8,0 %', b: '9,0 %', i: '6,1 %' },
+    { p: '3', a: '−3,0 %', b: '−9,0 %', i: '−1,0 %' },
+    { p: '4', a: '5,0 %', b: '1,0 %', i: '1,9 %' },
+    { p: '5', a: '−5,0 %', b: '2,0 %', i: '−2,0 %' },
+    { p: '6', a: '−4,0 %', b: '−8,0 %', i: '−1,0 %' },
+    { p: '7', a: '7,0 %', b: '4,0 %', i: '10,0 %' },
+    { p: '8', a: '21,0 %', b: '20,0 %', i: '15,0 %' },
+    { p: '9', a: '9,0 %', b: '8,0 %', i: '7,0 %' },
+    { p: '10', a: '−3,0 %', b: '7,0 %', i: '−4,0 %' },
+  ]}
+/>
+
+<DataTable
+  caption="Aus den Renditen ermittelte Kennzahlen"
+  columns={[
+    { key: 'kennzahl', label: 'Kennzahl' },
+    { key: 'a', label: 'A', align: 'right' },
+    { key: 'b', label: 'B', align: 'right' },
+    { key: 'i', label: 'Index 1', align: 'right' },
+  ]}
+  rows={[
+    { kennzahl: 'mittlere Rendite', a: '4,50 %', b: '4,30 %', i: '4,00 %' },
+    { kennzahl: 'Standardabweichung', a: '8,28 %', b: '8,54 %', i: '6,15 %' },
+    { kennzahl: 'Korrelationskoeffizient', a: '0,9496', b: '0,7144', i: '1,0000' },
+    { kennzahl: 'Betafaktor', a: '1,2772', b: '0,9911', i: '1,0000' },
+  ]}
+/>
+
+### Lösung (Folie 21)
+
+<Formula
+  display
+  title="Treynor-Ratio je Portfolio (r_f = 3 %)"
+  expr="\begin{aligned} TR_A &= \frac{4{,}5\,\% - 3\,\%}{1{,}2772} = 0{,}0117 \\[4pt] TR_B &= \frac{4{,}3\,\% - 3\,\%}{0{,}9911} = 0{,}0131 \\[4pt] TR_{BM} &= \frac{4{,}0\,\% - 3\,\%}{1{,}0} = 0{,}01 \end{aligned}"
+/>
+
+<KpiGrid
+  items={[
+    { value: '0,0131', label: 'TR_B (Rang 1)', accent: 'positive' },
+    { value: '0,0117', label: 'TR_A (Rang 2)', accent: 'positive' },
+    { value: '0,0100', label: 'TR_BM (Benchmark)', accent: 'neutral' },
+  ]}
+/>
+
+<Callout type="info" title="Ergebnis nach Treynor">
+- Reihenfolge: **B (0,0131)** vor **A (0,0117)** vor **Benchmark (0,01)**
+- bezogen auf das **systematische Risiko** schlagen **beide** Portfolios die Benchmark
+</Callout>
+
+### Treynor-Ratio vs. Sharpe-Ratio (Folie 22)
+
+<DataTable
+  caption="Sharpe- und Treynor-Werte mit Rangordnung — Quelle: Bruns/Meyer-Bullerdiek (2013)"
+  columns={[
+    { key: 'kennzahl', label: 'Kennzahl' },
+    { key: 'a', label: 'A', align: 'right' },
+    { key: 'b', label: 'B', align: 'right' },
+    { key: 'i', label: 'Index 1', align: 'right' },
+  ]}
+  rows={[
+    { kennzahl: 'Sharpe-Ratio', a: '18,12 % (Rang 1)', b: '15,23 % (Rang 3)', i: '16,25 % (Rang 2)' },
+    { kennzahl: 'Treynor-Ratio', a: '1,17 % (Rang 2)', b: '1,31 % (Rang 1)', i: '1,00 % (Rang 3)' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Die Rankings widersprechen sich">
+- Rangordnung Sharpe: **SR_A** über **SR_BM** über **SR_B**, aber Treynor: **TR_B** über **TR_A** über **TR_BM**.
+- Bezogen auf das **Gesamtrisiko** (Sharpe) ist A besser als B; B hat ggü. der Benchmark sogar **underperformt**.
+- Ursache: B ist **nicht so gut diversifiziert** wie A und hat ein höheres **unsystematisches** Risiko.
+</Callout>
+
+### Bewertung (Folie 23)
+
+<Columns count={2}>
+  <Card title="Bewertung" tone="neutral">
+    - **relatives** Performancemaß
+    - Benchmark zur Ermittlung des Betafaktors nötig
+    - Kritik an Beta gilt auch hier: Wahl des Marktportfolios beeinflusst β erheblich
+    - bei gut diversifiziertem Portfolio gleiches Ranking wie Sharpe
+    - erhöhter Daten-/Schätzaufwand (Jahresrendite, Volatilität PF/BM, Korrelation/Beta)
+    - **keine** Berücksichtigung des unsystematischen Risikos
+  </Card>
+  <Card title="Fazit" tone="teal">
+    - Performancemaß für **diversifizierte Teilportfolios** mit **ex-ante Benchmark**
+  </Card>
+</Columns>
+
+</section>
+
+<section id="jensen-alpha">
+
+## Jensen-Alpha
+
+<Formula
+  display
+  title="Jensen-Alpha (Michael C. Jensen, 1968)"
+  expr="\alpha_P = r_P - r_P^{\text{(CAPM)}} \quad\text{bzw.}\quad \alpha_P = \underbrace{(r_P - r_f)}_{\text{gemessene Überrendite}} - \underbrace{(r_{BM} - r_f)\cdot\beta_P}_{\text{erwartete Überrendite}}"
+  legend={[
+    { sym: 'r_P', desc: 'erzielte Portfoliorendite' },
+    { sym: 'r_{BM}', desc: 'Benchmark-Rendite' },
+    { sym: '\\beta_P', desc: 'Betafaktor des Portfolios' },
+  ]}
+/>
+
+<Card title="Was misst das Jensen-Alpha?" tone="accent" exam>
+- <Exam>**absolutes** Performancemaß</Exam> für den Renditeunterschied des Portfolios zur Benchmark unter Beachtung des Betas
+- Differenz aus erzielter Rendite r_P und CAPM-erwarteter Rendite gibt die **Leistung des Portfoliomanagers** wieder
+- Maß für den Teil der **Gesamtrendite**, der **nicht** mit der Benchmark korreliert → **Wertpapierselektionsfähigkeit** des PM
+- Regel: je höher das Jensen-Alpha, desto besser die Performance des PM
+</Card>
+
+### Schematische Darstellung (Folie 25)
+
+<Formula
+  display
+  title="Geraden- und Regressionsform"
+  expr="r_P = r_f + \alpha_P + (r_{BM} - r_f)\cdot\beta_P \qquad\qquad r_P = \hat{\alpha}_P + \hat{\beta}_P \cdot r_{BM} + \varepsilon_P"
+/>
+
+<Columns count={2}>
+  <Card title="SML-Darstellung (Rendite über β)" tone="neutral">
+    - ansteigende Wertpapierlinie ab dem y-Abschnitt ≈ r_f
+    - CAPM-Punkt r_P(CAPM) auf der Linie bei β_P
+    - **α = vertikaler Abstand** des tatsächlichen r_P zur Linie
+    - α **größer** 0 → Outperformance (Punkt über der Linie)
+    - α **kleiner** 0 → Underperformance (Punkt unter der Linie)
+  </Card>
+  <Card title="Regressionsdarstellung (r_P über r_BM)" tone="neutral">
+    - Punktwolke der beobachteten Renditepaare
+    - eingezeichnete **Regressionsgerade**
+    - **α = y-Achsenabschnitt** der Regression
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Grafische Deutung des Alphas">
+Das Jensen-Alpha ist der **vertikale Abstand** der tatsächlichen Portfoliorendite zur CAPM-/SML-Linie bzw. der **Achsenabschnitt** der Regression von r_P auf r_BM.
+</Callout>
+
+### Beispiel-Lösung (Folie 26) — r_f = 3 %, Bruns/Meyer-Bullerdiek (2013)
+
+<Formula
+  display
+  title="Jensen-Alpha je Portfolio"
+  expr="\begin{aligned} \alpha_A &= (4{,}5\,\% - 3\,\%) - (4\,\% - 3\,\%)\cdot 1{,}2772 = 0{,}22\,\% \\[4pt] \alpha_B &= (4{,}3\,\% - 3\,\%) - (4\,\% - 3\,\%)\cdot 0{,}9911 = 0{,}31\,\% \end{aligned}"
+/>
+
+<KpiGrid
+  items={[
+    { value: '0,22 %', label: 'Jensen-Alpha Portfolio A', accent: 'positive' },
+    { value: '0,31 %', label: 'Jensen-Alpha Portfolio B', accent: 'positive' },
+  ]}
+/>
+
+<Callout type="info" title="Ergebnis">
+- beide Portfolios haben ein **positives** Jensen-Alpha
+- bezogen auf das systematische Risiko schlagen beide die **CAPM-Erwartung**
+- **B** weist das höhere Alpha auf (0,31 % vs. 0,22 %)
+</Callout>
+
+### Bewertung & Fazit (Folien 27 & 28)
+
+<Columns count={2}>
+  <Card title="Bewertung" tone="neutral">
+    - **absolutes** Performancemaß (keine Relation der Überrendite zum Risiko)
+    - Benchmark zur Ermittlung des Betas und zum direkten Vergleich
+    - hohe Sensitivität zur gewählten Benchmark
+    - Ranking zu anderen Portfolios/zur Benchmark **problematisch**
+    - erhöhter Daten-/Schätzaufwand
+    - Beurteilung der Selektionsfähigkeit nur eingeschränkt
+    - keine Unterscheidung zwischen großem variablem und kleinerem stabilem Alpha
+  </Card>
+  <Card title="Ranking-Problem" tone="warning" exam>
+    - bei signifikant **positivem α** kann auf überlegene PM-Fähigkeiten geschlossen werden
+    - Vergleich verschiedener Portfolios problematisch: es werden nur **Renditen** verglichen — relevant ist aber das dafür eingegangene **Risiko**
+    - <Exam>erlaubt — anders als Sharpe & Treynor — kein einwandfreies Ranking</Exam>, da die Portfolios unterschiedliche Risiken aufweisen können
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Fazit Jensen-Alpha">
+Absolutes Maß für die **Out-/Underperformance** eines Portfolios gegenüber der Benchmark.
+</Callout>
+
+<SourceNote>Asset Management · Kapitel 7 · Performanceanalyse · Folien 231–258 · Quellen: Spremann (2003), Bruns/Meyer-Bullerdiek (2013)</SourceNote>
+
+</section>

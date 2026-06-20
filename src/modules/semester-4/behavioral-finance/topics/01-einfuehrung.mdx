@@ -1,0 +1,544 @@
+<section id="einordnung-und-organisation">
+
+## Einordnung, Modulziele und Spielregeln
+
+<DataTable
+  caption="Curriculum-Roadmap im Schwerpunkt Finance & Risk Management (Folie 2)"
+  columns={[
+    { key: 'semester', label: 'Semester' },
+    { key: 'module', label: 'Modul(e)' },
+  ]}
+  rows={[
+    { semester: '3. Semester', module: 'Finanzinstrumente und Risikomanagement' },
+    { semester: '4. Semester', module: 'Asset Management · Behavioral Finance (aktuell)' },
+    { semester: '5. Semester', module: 'Analyse von Finanzdaten und Data Science · Corporate Financial Management' },
+  ]}
+  highlight={(row) => row.semester === '4. Semester'}
+/>
+
+<Callout type="info" title="Einordnung">
+Behavioral Finance ist ein Modul des **4. Semesters** im Schwerpunkt **Finance &amp; Risk Management** und baut auf den Modulen des 3. Semesters auf.
+</Callout>
+
+<Card title="Modulziele — nach erfolgreichem Abschluss können die Studierenden …" tone="purple">
+- zwischen den **finanzwirtschaftlichen** Forschungsansätzen der **Neoklassik** und **Behavioral Finance** differenzieren
+- **Untersuchungsmethoden** der Behavioral Finance kritisch würdigen
+- **Spekulationsblasen** identifizieren, Ursachen sowie Möglichkeiten und Grenzen der Regulierung reflektieren
+- Konsequenzen der Anwendung von **Heuristiken** bei Informationswahrnehmung, -bewertung und Entscheidung diskutieren
+- Fehler bei **Altersvorsorge und privater Finanzplanung** erkennen und gegensteuern
+- Erklärungsansätze für **Kapitalmarktanomalien** erörtern
+- Effekte von Heuristiken in der **Kapitalanlage** erläutern und Lösungsansätze diskutieren
+- Auswirkungen von Verhaltensanomalien auf **Corporate-Finance-Entscheidungen** beurteilen
+</Card>
+
+### Spielregeln (Folie 4)
+
+<KpiGrid
+  items={[
+    { value: '52', label: 'SWS Präsenz', accent: 'accent' },
+    { value: '80', label: 'SWS E-Learning / Selbststudium', accent: 'default' },
+    { value: '100 %', label: 'Anteil Klausur an der Bewertung', accent: 'warning' },
+    { value: '90 min', label: 'Klausurdauer', accent: 'positive' },
+  ]}
+/>
+
+<Columns count={3}>
+  <Card title="Lehrmethoden (Spalte SWS)" tone="accent">
+    - Präsenz: **52**
+    - E-Learning/Selbststudium: **80**
+  </Card>
+  <Card title="Leistungsbewertung" tone="teal">
+    - Klausur: **100 %**
+    - *(zweite Kopfzelle auf der Folie leer — keine Überschrift „Anteil“)*
+  </Card>
+  <Card title="Klausurformat" tone="purple" exam>
+    - Dauer **90 Minuten**
+    - **Wissensfragen** beantworten
+    - **praxisbezogene** Fragen bewältigen
+    - <Exam>Multiple-Choice-Fragen</Exam> beantworten
+  </Card>
+</Columns>
+
+### Agenda des Moduls (Folie 5)
+
+<Columns count={2}>
+  <Card title="Vollagenda (10 Punkte, Folie 5)" tone="neutral">
+    1. Einführung
+    2. Das Modell der zwei Systeme nach Kahneman
+    3. Heuristiken und kognitive Verzerrungen
+    4. Entscheidungen unter Unsicherheit
+    5. Die Rolle der Zeit in der Ökonomie
+    6. Die Prospect Theory und ihre Konsequenzen
+    7. **Altersvorsorge und private Finanzplanung**
+    8. Spekulationsblasen an Finanzmärkten
+    9. Kapitalmarktanomalien
+    10. Behavioral Corporate Finance
+  </Card>
+  <Card title="Kapitelagenda (9 Punkte, Folie 10)" tone="accent">
+    1. Einführung *(aktuelles Kapitel)*
+    2. Das Modell der zwei Systeme nach Kahneman
+    3. Heuristiken und kognitive Verzerrungen
+    4. Entscheidungen unter Unsicherheit
+    5. Die Rolle der Zeit in der Ökonomie
+    6. Die Prospect Theory und ihre Konsequenzen
+    7. Spekulationsblasen an Finanzmärkten
+    8. Kapitalmarktanomalien
+    9. Behavioral Corporate Finance
+  </Card>
+</Columns>
+
+<Callout type="pitfall" title="Folienabweichung (nicht glätten)">
+Die Kapitelagenda (Folie 10) enthält nur **9 Punkte** — der Punkt **„Altersvorsorge und private Finanzplanung“** der Vollagenda (Folie 5) fehlt hier bewusst.
+</Callout>
+
+</section>
+
+<section id="verhaltensoekonomik-verortung">
+
+## Verhaltensökonomik: Verortung und Fragestellung
+
+<Columns count={2}>
+  <Card title="Ökonomie (blau)" tone="accent">
+    - Wissenschaft vom Einsatz **knapper Ressourcen** zur Produktion und Verteilung wertvoller Wirtschaftsgüter
+    - daher eine **normative Disziplin**: gibt vor, wie sich Wirtschaftssubjekte verhalten **müssen**, damit optimale Allokationen und Verteilungen entstehen
+  </Card>
+  <Card title="Psychologie (grün)" tone="positive">
+    - Wissenschaft von der Erklärung des **Erlebens und Verhaltens** des Menschen
+    - daher **deskriptiv** angelegt
+    - enthält heute geisteswissenschaftliche **wie** empirische Instrumente
+  </Card>
+</Columns>
+
+<Diagram
+  title="Verortung im Venn-Diagramm: Schnittmenge von Psychologie und Ökonomie (Folie 12)"
+  source="Behavioral Finance · Folie 12"
+  chart={`flowchart LR
+  PSY["Psychologie<br/>deskriptiv"]
+  OEK["Oekonomie<br/>normativ"]
+  WP["Wirtschaftspsychologie:<br/>psychologisch gepraegt"]
+  VOE["Verhaltensoekonomie:<br/>oekonomisch gepraegt"]
+  PSY -->|Schnittmenge oben| WP
+  OEK -->|Schnittmenge unten| VOE`}
+/>
+
+<Callout type="merksatz" title="Kernaussage der Verortung">
+Verhaltensökonomie und Wirtschaftspsychologie liegen in der **Schnittmenge** von Psychologie und Ökonomie: Die <Exam>Verhaltensökonomie ist die ökonomisch geprägte</Exam>, die <Exam>Wirtschaftspsychologie die psychologisch geprägte</Exam> Überschneidung beider Disziplinen.
+</Callout>
+
+### Worum geht es bei der Verhaltensökonomik? (Folie 13)
+
+<Columns count={2}>
+  <Card title="Vier Kernanliegen" tone="purple">
+    - **Verstehen wirtschaftlichen Verhaltens** und seiner Konsequenzen
+    - Verstehen **guter und schlechter Entscheidungen** und Hilfestellung für mehr „gute“ Entscheidungen
+    - **Anwendung** von Erkenntnissen aus Laborexperimenten, Psychologie und anderen Sozialwissenschaften in der Ökonomie
+    - **Test und Verbesserung** klassischer ökonomischer Modelle: Welche Phänomene/Anomalien lassen sich nicht erklären? Können psychologische Erkenntnisse helfen, sie zu erklären und die Modelle weiterzuentwickeln?
+  </Card>
+  <Card title="Beispielfragen wirtschaftlichen Verhaltens" tone="accent">
+    - Warum kauft jemand einen **Hot-Dog**?
+    - Warum **arbeitet** jemand? Warum **spart** jemand?
+    - Warum kauft jemand **Aktien**? Warum **spendet** jemand?
+    - Warum macht jemand eine **Aus-/Weiterbildung**?
+    - Warum hört jemand **nicht mit dem Rauchen** auf?
+    - Warum macht jemand beim **Glücksspiel** mit?
+  </Card>
+</Columns>
+
+<SourceNote>Vgl. Cartwright (2011), S. 4</SourceNote>
+
+### Definitionszitate (Folie 14)
+
+<Columns count={3}>
+  <Card title="Test des Standardmodells" tone="accent">
+    „Behavioral Economics is about **testing the standard economic model on humans**, seeing when it works and when it does not, and asking whether it can be tweaked, or given an overhaul, to better fit what we observe.“ *(Cartwright 2011, S. 4)*
+  </Card>
+  <Card title="Übertragung von Erkenntnissen" tone="teal">
+    „Behavioral Economics is about **applying insights** from laboratory experiments, psychology, and other social sciences in economics.“ *(Cartwright 2011, S. 4)*
+  </Card>
+  <Card title="Versöhnung der Menschenbilder" tone="purple">
+    „Behavioral Economics ist der Versuch, das **Menschenbild der Ökonomie mit dem Menschenbild der Psychologie** wieder zu versöhnen.“ *(Beck 2014, S. 9)*
+  </Card>
+</Columns>
+
+</section>
+
+<section id="was-ist-behavioral-finance">
+
+## Was ist Behavioral Finance? Vertreter und Vorläufer
+
+<DefinitionBox term="Behavioral Finance" source="Daxhammer/Facsar (2018) · Folie 15">
+**Verhaltenswissenschaftlich fundierte Finanzmarkttheorie.** Sie basiert auf der Erkenntnis, dass Marktteilnehmer nur zu **begrenzt rationalem** Verhalten in der Lage sind. Es kristallisiert sich ein **Homo Oeconomicus Humanus** heraus, der häufig durch **kognitive und emotionale** Aspekte beeinflusst wird.
+</DefinitionBox>
+
+<Card title="Ziele der Behavioral Finance" tone="purple" exam>
+- klären, **warum Anleger** auf Finanzmärkten immer wieder **begrenzt rationale** Entscheidungen treffen
+- beobachtbares **Anlegerverhalten** und andere Phänomene an Finanzmärkten erklären
+- bestehende Modelle an deren **Schwachstellen ergänzen**
+</Card>
+
+### Wichtige Vertreter der Verhaltensökonomik (Folie 16)
+
+<Card title="Neun zentrale Vertreter" tone="accent">
+  <TagList
+    tone="accent"
+    items={['Daniel Kahneman', 'Vernon Smith', 'Amos Tversky', 'Elinor Ostrom', 'Ernst Fehr', 'Bruno S. Frey', 'Robert Shiller', 'Richard Thaler', 'Dan Ariely']}
+  />
+</Card>
+
+<SourceNote>Bildquellen auf der Folie: Wikimedia Commons (mehrere der Genannten sind Nobelpreisträger).</SourceNote>
+
+### Vorläufer der Verhaltensökonomik (Folie 17)
+
+<Timeline
+  events={[
+    { label: '1759', title: 'Adam M. Smith — „Theory of Moral Sentiments“', text: 'Empfindungen, Gefühle und Moralität sind Aspekte menschlichen Verhaltens, die der Ökonom nicht ignorieren darf, sondern als untersuchungswürdig behandeln muss.' },
+    { label: '1918', title: 'John M. Clark — „Economics and Modern Psychology“', text: 'Der Ökonom mag versuchen, die Psychologie zu ignorieren — die Natur des Menschen zu ignorieren ist aber unmöglich. Leiht er sein Menschenbild nicht vom Psychologen, entwickelt er eine eigene, schlechte Psychologie.' },
+    { label: '1936', title: 'John M. Keynes — „Animal Spirits“', text: 'In „Allgemeine Theorie der Beschäftigung, des Zinses und des Geldes“: Menschen sind bei ihren Entscheidungen auch Trieben und Stimmungen unterworfen.' },
+  ]}
+/>
+
+<Callout type="merksatz" title="Kernaussage">
+Verhaltensökonomische Ideen sind **keine Erfindung des 20. Jahrhunderts**: Schon Smith, Keynes und Clark betonten, dass Gefühle, Triebe und Psychologie für ökonomisches Verhalten relevant sind und nicht ausgeklammert werden dürfen.
+</Callout>
+
+</section>
+
+<section id="oekonomische-grundlagen">
+
+## Ökonomische Grundbegriffe und das ökonomische Prinzip
+
+<Columns count={3}>
+  <Card title="Wirtschaft &amp; Bedürfnisse" tone="accent">
+    - **Wirtschaft:** Bereich des Handelns, der in Verfügungen über knappe Güter zur Erfüllung menschlicher Bedürfnisse besteht
+    - **Menschliche Bedürfnisse:** in der VWL als **gegeben** betrachtet
+    - **Güter:** Waren, Dienstleistungen und Rechte
+  </Card>
+  <Card title="Freie vs. knappe Güter" tone="teal">
+    - **Freie Güter:** im Verhältnis zu den Bedürfnissen so reichlich, dass jeder sie beliebig befriedigen kann
+    - **Knappe Güter:** nur beschränkt verfügbar
+    - **Wirtschaftswissenschaften:** wie geht man möglichst gut mit knappen Ressourcen um?
+  </Card>
+  <Card title="Kosten &amp; Verzicht" tone="purple">
+    - **Grundlegender Ansatzpunkt:** Welche Kosten entstehen durch welche ökonomische Aktivität?
+    - **Opportunitätskosten:** auf wie viele Einheiten eines anderen Gutes man für eine Einheit des betrachteten Gutes verzichten muss
+  </Card>
+</Columns>
+
+<Callout type="info" title="Knappheit als Ausgangspunkt">
+**Knappheit** ist der Ausgangspunkt allen Wirtschaftens; Entscheidungen lassen sich über **Opportunitätskosten** (Verzicht auf Alternativen) bewerten.
+</Callout>
+
+### Das ökonomische Prinzip des Homo Oeconomicus (Folie 19)
+
+<Diagram
+  title="Spannungsfeld Güterknappheit und das ökonomische Prinzip"
+  source="Behavioral Finance · Folie 19"
+  chart={`flowchart TD
+  UB["Unbegrenzte<br/>Beduerfnisse"]
+  BG["Begrenzte<br/>Gueter"]
+  SF{{"Spannungsfeld<br/>Gueterknappheit"}}
+  DEF["Definition des Wirtschaftens:<br/>Einsatz knapper Gueter nach<br/>dem oekonomischen Prinzip"]
+  MAX["Maximalprinzip:<br/>Input fix, Output max"]
+  MIN["Minimalprinzip:<br/>Input min, Output fix"]
+  UB --> SF
+  BG --> SF
+  SF --> DEF
+  DEF --> MAX
+  DEF --> MIN`}
+/>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Maximal',
+      title: 'Maximalprinzip',
+      subtitle: 'gegebener Input, **maximaler** Output',
+      accent: 'accent',
+      points: [
+        'Input: **fix**',
+        'Output: **maximal**',
+        'mit gegebenem Mitteleinsatz den größtmöglichen Ertrag erzielen',
+      ],
+    },
+    {
+      tag: 'Minimal',
+      title: 'Minimalprinzip',
+      subtitle: 'gegebener Output, **minimaler** Input',
+      accent: 'purple',
+      points: [
+        'Input: **minimal**',
+        'Output: **fix**',
+        'ein vorgegebenes Ziel mit dem geringstmöglichen Mitteleinsatz erreichen',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="merksatz" title="Ökonomisches Prinzip">
+Das ökonomische Prinzip löst das Spannungsfeld zwischen unbegrenzten Bedürfnissen und begrenzten Gütern: <Exam>Maximalprinzip = Input fix, Output max</Exam>; <Exam>Minimalprinzip = Input min, Output fix</Exam>.
+</Callout>
+
+</section>
+
+<section id="homo-oeconomicus">
+
+## Der Homo Oeconomicus
+
+<DefinitionBox term="Homo Oeconomicus" source="Behavioral Finance · Folie 20">
+Ein **Nutzenmaximierer**, der **rational** in Bezug auf seine eigene Zielfunktion handelt — das idealisierte Menschenbild der Neoklassik.
+</DefinitionBox>
+
+<Card title="Annahmen — der Homo Oeconomicus …" tone="accent">
+- handelt (nur) nach **eigenen Interessen und Präferenzen**
+- handelt **rational**, d. h. nach dem ökonomischen Prinzip
+- reagiert auf **Umweltbedingungen**
+- hat **feststehende Präferenzen**
+- ist **risikoavers**
+- hat **vollständige Informationen** (kann Wirkungen/Folgen seines Handelns abschätzen)
+</Card>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Rationalität I',
+      title: 'Formelle Rationalität',
+      subtitle: 'systematische Auswahl aus bekannten Alternativen',
+      accent: 'accent',
+      points: [
+        'rational, wenn der Akteur die Handlung systematisch aus den ihm **bekannten Alternativen** ausgewählt hat',
+        'Folge: **nahezu jedes** menschliche Handeln ist „rational“',
+      ],
+    },
+    {
+      tag: 'Rationalität II',
+      title: 'Substantielle Rationalität',
+      subtitle: 'Orientierung an der Nutzenmaximierung',
+      accent: 'purple',
+      points: [
+        'Handeln orientiert sich an der **Nutzenmaximierung**',
+      ],
+    },
+  ]}
+/>
+
+<Callout type="examfocus" title="Zwei Formen der Rationalität">
+Der Homo Oeconomicus kennt zwei Rationalitätsbegriffe: <Exam>formelle Rationalität</Exam> (systematische Auswahl aus bekannten Alternativen — fast jedes Handeln gilt damit als rational) und <Exam>substantielle Rationalität</Exam> (Handeln orientiert sich an der Nutzenmaximierung).
+</Callout>
+
+### Der idealtypische Homo Oeconomicus nach John Stuart Mill (Folie 21)
+
+<Columns count={2}>
+  <Card title="Drei Präferenzen nach Mill" tone="teal">
+    - ist lieber **reicher** als ärmer
+    - arbeitet lieber **weniger** als mehr
+    - konsumiert lieber **früher** als später
+  </Card>
+  <Card title="Mills Selbstkritik" tone="warning">
+    „Not that any political economist was ever so absurd as to suppose that mankind are really thus constituted, but this is the mode in which **science must necessarily proceed**.“ — das Menschenbild ist eine bewusste **wissenschaftliche Vereinfachung**, kein Abbild realer Menschen *(John Stuart Mill, 1806–1876)*.
+  </Card>
+</Columns>
+
+### Ein Beispiel: Android Data (Folie 22)
+
+<Card title="Data aus „Star Trek: The Next Generation“ als Idealbild rationaler Entscheidung" tone="neutral">
+- Maschine mit **enzyklopädischem Wissen**, verarbeitet große Informationsmengen rasant
+- gibt komplexe und zugleich **vernünftige** strategische Ratschläge
+- **unbestechlich und zuverlässig**; nicht liebenswert, aber nützlich
+- **hat keine Gefühle**, stellt sich uneingeschränkt in den Dienst der Menschen
+- gerade durch das Fehlen von Emotionen ein **Idealbild** — aber unmenschlich
+</Card>
+
+<SourceNote>Quelle: https://intl.startrek.com/database_article/data</SourceNote>
+
+### Bewertung der Modellannahme (Folie 23)
+
+<Columns count={3}>
+  <Card title="Ausgangspunkt" tone="accent">
+    Homo Oeconomicus als zentrale Annahme der (neo-)klassischen Ökonomie:
+    - uneingeschränkte Rationalität
+    - keine Fehler bei der Informationsaufnahme; keine systematischen Fehlentscheidungen
+    - unbegrenztes Eigennutzstreben
+    - unbegrenzte Willenskraft (frei von Emotionen und Selbstkontrollproblemen)
+  </Card>
+  <Card title="Vorteil" tone="positive">
+    - ermöglicht **Modellbildung** und (mathematische) **Formalisierungen**
+  </Card>
+  <Card title="Nachteile" tone="negative">
+    - **Realitätsferne**
+    - **Normativität**
+  </Card>
+</Columns>
+
+<Callout type="examfocus" title="Hier setzt die Verhaltensökonomik an">
+Die Homo-Oeconomicus-Annahme erlaubt mathematische Modellbildung (Vorteil), ist aber **realitätsfern und normativ** (Nachteile) — genau hier setzt die Verhaltensökonomik kritisch an.
+</Callout>
+
+### Grenzen der Nutzenmaximierung (Folien 24–26)
+
+<Card title="Das Trolley-Problem" tone="warning">
+- moralisches **Dilemma**: ein Wagen rollt auf gefesselte Personen zu; eine Person am Weichenhebel kann umlenken
+- reine Nutzen-/Schadensmaximierung bleibt intuitiv **unbefriedigend** → rationale Nutzenmaximierung erfasst moralische Entscheidungen nicht vollständig
+- heute praktisch relevant beim **autonomen Fahren**: Algorithmen müssen reale moralische Entscheidungen treffen
+- *(konkrete Personenzahlen sind auf der Folie nicht beschriftet)*
+</Card>
+
+#### Sind wir wirklich rationale Individuen? (Folie 26)
+
+Der Cartoon stellt zwei Risikosituationen gegenüber und entlarvt die Inkonsistenz der Risikowahrnehmung:
+
+<DataTable
+  caption="Risikowahrnehmung im Cartoon: objektive Wahrscheinlichkeit vs. irrationale Reaktion (Folie 26)"
+  columns={[
+    { key: 'situation', label: 'Situation' },
+    { key: 'wahrscheinlichkeit', label: 'Genannte Wahrscheinlichkeit' },
+    { key: 'reaktion', label: 'Irrationale Reaktion' },
+  ]}
+  rows={[
+    { situation: 'Rauchen (hohe negative Wahrscheinlichkeit)', wahrscheinlichkeit: '1 : 2 Risiko, an einer rauchbedingten Krankheit zu sterben', reaktion: '„Mir passiert das nie.“' },
+    { situation: 'Lotto (winzige positive Wahrscheinlichkeit)', wahrscheinlichkeit: 'Gewinnchance 80 Mio. : 1', reaktion: '„Das könnte mein Glückstag sein!“' },
+  ]}
+/>
+
+<Callout type="pitfall" title="Inkonsistente Risikowahrnehmung">
+Hohe **negative** Wahrscheinlichkeiten werden verdrängt, winzige **positive** überschätzt — ein klarer Widerspruch zur Annahme rein rationaler Individuen.
+</Callout>
+
+<SourceNote>Folie 24: www.zwentner.com · Folie 25: computerwoche.de (abgerufen 25.9.2021).</SourceNote>
+
+</section>
+
+<section id="emotionen-und-experimente">
+
+## Emotionen und Experimente
+
+<CompareCard
+  items={[
+    {
+      tag: 'Annahme',
+      title: 'Neoklassik: Emotionen ausblenden',
+      subtitle: 'Emotionen gelten als Störfaktor',
+      accent: 'neutral',
+      points: [
+        'keine Berücksichtigung von Emotionen',
+        'Prognosekraft ökonomischer Modelle durch Emotionen beeinträchtigt, da sie menschliches Verhalten unberechenbar machen',
+      ],
+    },
+    {
+      tag: 'Realität',
+      title: 'Emotionen wirken',
+      subtitle: 'Emotionen beeinflussen Verhalten massiv',
+      accent: 'accent',
+      points: [
+        'emotionale Reaktionen sind **schneller** als kognitive Prozesse — oft schon da, bevor bewusst nachgedacht wird',
+        'Emotionen haben das Potential, Menschen komplett zu verwandeln',
+        'Menschen **unterschätzen** systematisch die Auswirkungen von Emotionen auf Handeln, Zukunft und Vergangenheit',
+      ],
+    },
+  ]}
+/>
+
+### Die Verhaltensökonomik nutzt Experimente (Folie 28)
+
+<Columns count={2}>
+  <Card title="Zwecke ökonomischer Experimente" tone="purple">
+    - Theorien **überprüfen**
+    - Ursachen für **Theorieschwächen** finden
+    - neue **Theorien entwickeln**
+    - **Robustheit** von Institutionen vergleichen
+    - **Leistungsfähigkeit** von Institutionen vergleichen
+    - **Politikkonzepte** auf Tragfähigkeit untersuchen
+    - neue **institutionelle Designs** testen
+  </Card>
+  <Card title="Drei Experimenttypen" tone="teal" exam>
+    - <Exam>Laborexperimente</Exam>
+    - <Exam>Feldexperimente</Exam>
+    - <Exam>Natürliche Experimente</Exam>
+
+    Experimente sind das **methodische Kernwerkzeug** der Verhaltensökonomik.
+  </Card>
+</Columns>
+
+<SourceNote>Quelle: https://www.haus-der-kleinen-forscher.de/</SourceNote>
+
+### Arten von Emotionen (Folie 29)
+
+<DataTable
+  caption="Systematik der Emotionen nach situativem/zeitlichem Bezug"
+  columns={[
+    { key: 'kategorie', label: 'Emotionskategorie' },
+    { key: 'beispiele', label: 'Beispiele' },
+  ]}
+  rows={[
+    { kategorie: 'Soziale Emotionen', beispiele: 'Zorn, Hass, Schuld, Stolz, Scham' },
+    { kategorie: 'Emotionen über etwas, das hätte passieren können', beispiele: 'Bedauern, Enttäuschung, Erleichterung' },
+    { kategorie: 'Emotionen über etwas, das passieren könnte', beispiele: 'Angst, Hoffnung' },
+    { kategorie: 'Emotionen über das, was passiert', beispiele: 'Freude, Kummer' },
+    { kategorie: 'Emotionen über den Besitz anderer', beispiele: 'Neid, Eifersucht, Schadenfreude' },
+    { kategorie: 'Andere Emotionen', beispiele: 'romantische Gefühle, Zufriedenheit, Ekel' },
+  ]}
+/>
+
+### Emotionen und Entscheidungen (Folie 30)
+
+<Card title="Doppelcharakter der Emotionen" tone="orange">
+- Emotionen können dazu führen, dass Verhalten **„unökonomisch“** erscheint
+- **aber:** Emotionen können auch zu **ökonomischerem** Verhalten führen
+- rationale Entscheidungen scheitern oft an **begrenzten Problemlösungsfähigkeiten** — möglicherweise kommt gar keine Entscheidung zustande
+- Emotionen können **notwendige Entscheidungen herbeiführen**, auch zu Lasten einer (oft unerreichbaren) „First-best“-Entscheidung
+- Emotionen dienen dann als <Exam>heuristische Entscheidungsregel</Exam>
+</Card>
+
+</section>
+
+<section id="paradigmenvergleich">
+
+## Verhaltensökonomik vs. Neoklassik
+
+<Card title="Einschränkende Annahmen der Verhaltensökonomik (Folie 31)" tone="purple" exam>
+- **Begrenzte Rationalität:** Menschen machen Fehler bei Informationsaufnahme und -verarbeitung und greifen daher zu **Heuristiken** (einfache Problemlösungsmechanismen)
+- **Begrenzte Willenskraft:** Vertagung unbequemer Entscheidungen
+- **Begrenzter Eigennutz:** **Fairness** (oder andere Nutzenkonzepte) spielen eine Rolle
+</Card>
+
+<DataTable
+  caption="Modellprinzipien: Traditionelle Ökonomik vs. Behavioral Economics (in Anlehnung an H. Beck 2014, S. 11)"
+  columns={[
+    { key: 'prinzip', label: 'Modellprinzip' },
+    { key: 'trad', label: 'Traditionelle Ökonomik' },
+    { key: 'beh', label: 'Behavioral Economics' },
+  ]}
+  rows={[
+    { prinzip: 'Kalkül', trad: 'Erwartungsnutzentheorie: Nutzenmaximierung gemäß erwartetem Nutzen', beh: 'Prospect Theory: Angst vor Verlusten, abweichende Bewertung von Eintrittswahrscheinlichkeiten, Orientierung an Referenzwerten' },
+    { prinzip: 'Zeitpräferenz', trad: 'Exponentielles Diskontieren', beh: 'Hyperbolisches Diskontieren' },
+    { prinzip: 'Nutzenkonzept', trad: 'Menschen sind eigennützig', beh: 'Menschen achten auf Wohlergehen anderer; legen Wert auf Fairness' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Drei Annahmen werden ersetzt">
+Die Verhaltensökonomik ersetzt die drei Kernannahmen des Homo Oeconomicus durch realistischere: an die Stelle der **Erwartungsnutzentheorie** tritt die **Prospect Theory**, an die Stelle **exponentiellen** Diskontierens das **hyperbolische** Diskontieren und an die Stelle reinen **Eigennutzes** die **Fairness**.
+</Callout>
+
+### Entscheidungsfindung im Vergleich (Folie 32)
+
+<Diagram
+  title="Entscheidungsketten: Neoklassik vs. Verhaltensökonomik"
+  source="Behavioral Finance · Folie 32"
+  chart={`flowchart TD
+  subgraph NEO[Traditionelle Oekonomik - Neoklassik]
+    direction LR
+    OR1[Objektives Risiko] -->|Rationale Entscheider| E1[Entscheidung]
+  end
+  subgraph VOE[Verhaltensoekonomik - Behavioral Finance]
+    direction LR
+    OR2[Objektives Risiko] -->|Risikodarstellung| SR[Subjektive Risikowahrnehmung]
+    SR -->|Risikoeinstellung| E2[Entscheidung]
+  end`}
+/>
+
+<Callout type="merksatz" title="Der zentrale Unterschied">
+In der **Neoklassik** führt objektives Risiko direkt über rationale Entscheider zur Entscheidung. In der **Verhaltensökonomik** schiebt sich die <Exam>subjektive Risikowahrnehmung</Exam> dazwischen — geprägt durch **Risikodarstellung** (Framing) und individuelle **Risikoeinstellung** —, die die Entscheidung verzerrt.
+</Callout>
+
+<SourceNote>Behavioral Finance · Kapitel 1 · Einführung · Folien 1–32</SourceNote>
+
+</section>

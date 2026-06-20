@@ -1,0 +1,269 @@
+<section id="was-ist-asset-management">
+
+## Was ist Asset Management?
+
+<DefinitionBox term="Asset Management" source="Asset Management · Folie 10">
+Systematische Dienstleistung der **professionellen Kapitalanlage** mit dem Ziel, **risikoeffiziente Portefeuilles** zu bilden.
+</DefinitionBox>
+
+<Columns count={3}>
+  <Card title="Synonyme" tone="accent">
+    <TagList
+      tone="accent"
+      items={['Portfolio Management', 'Wertpapiermanagement', 'Fondsmanagement', 'Investment Management', 'Vermögensverwaltung']}
+    />
+  </Card>
+  <Card title="Ertrag hängt ab von" tone="purple">
+    - Assets under Management (AuM)
+    - Performance
+    - Anlagestil
+  </Card>
+  <Card title="Organisation & Kunden" tone="teal">
+    - Kunden: **privat** vs. **institutionell**
+    - Entscheidung oft durch **Investment-Komitee**
+    - Rollen: PM · Analysten · Händler · Backoffice
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Magisches Viereck der Kapitalanlage">
+Vier konkurrierende Ziele — <Exam>nicht gleichzeitig maximierbar</Exam>: **Rendite, Risiko, Liquidität, Steuern**.
+</Callout>
+
+<KpiGrid
+  items={[
+    { value: 'Rendite', label: 'Ertrag der Anlage', accent: 'positive' },
+    { value: 'Risiko', label: 'Schwankung / Verlustgefahr', accent: 'negative' },
+    { value: 'Liquidität', label: 'Verfügbarkeit des Kapitals', accent: 'accent' },
+    { value: 'Steuern', label: 'Steuerliche Belastung', accent: 'warning' },
+  ]}
+/>
+
+</section>
+
+<section id="einordnung-modulziele">
+
+## Einordnung, Modulziele und Spielregeln
+
+<Columns count={2}>
+  <Card title="Einordnung im Schwerpunkt" tone="accent">
+    - Schwerpunkt: **Finance & Risk Management**
+    - Lage: **4. Semester**
+    - baut auf „Finanzinstrumente und Risikomanagement" (3. Sem.) auf
+    - steht neben „Behavioral Finance"
+  </Card>
+  <Card title="Modulziele — nach Abschluss" tone="purple">
+    - Portfoliotheorie kritisch diskutieren
+    - Asset-Klassen abgrenzen & bewerten
+    - Asset Allokation optimieren (strategisch/taktisch)
+    - CAPM & Wertpapierbewertung erläutern
+    - Indexkonzepte systematisieren
+    - Performance-Kennzahlen berechnen
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Curriculum-Roadmap des Schwerpunkts Finance & Risk Management"
+  columns={[
+    { key: 'semester', label: 'Semester' },
+    { key: 'module', label: 'Modul(e)' },
+  ]}
+  rows={[
+    { semester: '3. Semester', module: 'Finanzinstrumente und Risikomanagement' },
+    { semester: '4. Semester', module: 'Asset Management (aktuell) · Behavioral Finance' },
+    { semester: '5. Semester', module: 'Analyse von Finanzdaten und Data Science · Corporate Financial Management' },
+  ]}
+  highlight={(row) => row.semester === '4. Semester'}
+/>
+
+<Callout type="examfocus" title="Spielregeln">
+- Leistungsbewertung: **100 % Klausur**, Dauer **90 Minuten**
+- Aufgabentypen: Wissensfragen · praxisbezogene Fragen · Multiple Choice
+- Umfang laut Folie (Spalte „SWS"): **52** Präsenz · **88** E-Learning/Selbststudium
+</Callout>
+
+</section>
+
+<section id="formen-des-asset-management">
+
+## Formen des Asset Management
+
+<CompareCard
+  items={[
+    {
+      tag: 'Klassisch',
+      title: 'Klassisches Asset Management',
+      subtitle: 'Verwaltung durch Bank / Vermögensverwalter',
+      accent: 'neutral',
+      points: [
+        'Verwaltung des Wertpapiervermögens (privat oder institutionell)',
+        'Selbstständige Entscheidung im Vermögensverwaltungsmandat',
+        '+ Vorteil: individuelle Anlagevorstellungen berücksichtigt',
+        '− Nachteil: hohe Kosten/Gebühren, geringe Streuung',
+      ],
+    },
+    {
+      tag: 'Fondsgestützt',
+      title: 'Fondsgestütztes Asset Management',
+      subtitle: 'Investition in Fonds statt Einzelwerte',
+      accent: 'accent',
+      points: [
+        'Investition in Fonds, nicht in einzelne Wertpapiere',
+        '+ Vorteil: breite Streuung, jederzeitige Überwachung',
+        '+ Vorteil: schon ab kleinem Vermögen möglich',
+        '− Nachteil: weniger individuelle Anlegerinteressen',
+      ],
+    },
+  ]}
+/>
+
+</section>
+
+<section id="anbieter-und-anleger">
+
+## Anbieter und institutionelle Anleger
+
+<Columns count={3}>
+  <Card title="Banken" tone="accent">
+    - Information durch Berater
+    - Entscheidung beim Anleger
+  </Card>
+  <Card title="Privatkunden-Verwaltung" tone="teal">
+    - Musterdepots
+    - Anlagerichtlinien
+    - Einzeldisposition durch Verwalter
+  </Card>
+  <Card title="Institutionelle Verwaltung" tone="purple">
+    - Spezialfonds
+    - Wertpapier-/Liquiditätsmanagement
+    - Asset Allocation, **ALM**
+  </Card>
+</Columns>
+
+<DefinitionBox term="ALM – Asset-Liability-Management">
+Abstimmung der **Fälligkeitsstruktur** aktiver und passiver Bilanzpositionen.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="Charakteristika institutioneller Anleger" tone="purple">
+    - juristische Person
+    - i.d.R. hohe Anlagebeträge und -bestände
+    - Anlage überwiegend **fremder** Mittel
+    - hohe Restriktionen: **KAGG · WpHG · KWG**
+    - Nachfrage nach professionellem Research
+    - häufig Entscheidung **in Gruppen**
+  </Card>
+  <Card title="Erscheinungsformen" tone="neutral">
+    - Kreditinstitute
+    - Versicherungen
+    - Pensionskassen
+    - Kapitalanlagegesellschaften / Investmentfonds
+    - Stiftungen
+  </Card>
+</Columns>
+
+</section>
+
+<section id="beteiligte-parteien">
+
+## Beteiligte Parteien im Fondsgeschäft
+
+<Diagram
+  title="Beziehungsdiagramm der beteiligten Parteien"
+  source="Asset Management · Folie 14"
+  chart={`flowchart TD
+  BaFin([BaFin])
+  FDL[Finanzdienstleister §32 KWG]
+  KVG[KVG · Kapitalverwaltungsgesellschaft]
+  DB[Depotbank]
+  FM[Fondsmanager]
+  SV[(Sondervermögen)]
+  IA[Investment Advisor]
+  VS[Verwahrstelle]
+  INV[Investor]
+  BaFin -->|kontrolliert| FDL
+  BaFin -->|kontrolliert| KVG
+  BaFin -->|überwacht| DB
+  FDL -->|beauftragt| DB
+  KVG -->|beauftragt| DB
+  KVG -->|beschäftigt| FM
+  FM -->|verwaltet| SV
+  DB -->|verwahrt| SV
+  IA -->|berät| FM
+  IA -->|beliefert| VS
+  INV -->|investiert| SV
+  SV -->|Anteile| INV`}
+/>
+
+<Columns count={2}>
+  <Card title="Beziehungen kompakt" tone="accent" exam>
+    - BaFin <Exam>**kontrolliert**</Exam> Finanzdienstleister & KVG
+    - BaFin <Exam>**überwacht**</Exam> Depotbank
+    - FDL **und** KVG **beauftragen** Depotbank
+    - KVG **beschäftigt** Fondsmanager → **verwaltet** Sondervermögen
+    - Depotbank **verwahrt** Sondervermögen
+    - Investor **investiert** → erhält **Anteile**
+  </Card>
+  <Card title="Zwei Modelle des Finanzdienstleisters" tone="purple">
+    - **Anlageberatung (klassisch):** Einverständnis vor **jedem** Geschäft
+    - **Finanzportfolioverwaltung:** Kunde erteilt **Generalvollmacht**; BaFin fordert höhere EK-Richtlinien
+  </Card>
+</Columns>
+
+</section>
+
+<section id="aufsicht-und-verwahrung">
+
+## Aufsicht, KVG und Verwahrung
+
+<DefinitionBox term="BaFin – Bundesanstalt für Finanzdienstleistungsaufsicht">
+Rechtsfähige Bundesanstalt (Sitz Frankfurt a. M. / Bonn), unter Aufsicht des **BMF**. Rechtsgrundlage: **KWG**. Allfinanzaufsicht über Banken, Versicherungen, Wertpapierhandel.
+</DefinitionBox>
+
+<Columns count={2}>
+  <Card title="BaFin – Aufgaben" tone="accent">
+    - Neugründungen von Banken
+    - laufende Aufsicht nach **SolvV · LiqV · MaRisk**
+    - Prüfung der Berufung von Bankvorständen
+  </Card>
+  <Card title="Pendants im Ausland" tone="neutral">
+    <FactGrid
+      columns={2}
+      items={[
+        { label: 'Österreich', value: '**FMA**' },
+        { label: 'Schweiz', value: '**FINMA**' },
+      ]}
+    />
+    - Umgehung nur durch Sitzverlegung in **Offshore-Gebiete**
+  </Card>
+</Columns>
+
+<CompareCard
+  items={[
+    {
+      tag: 'KVG',
+      title: 'Kapitalverwaltungsgesellschaft',
+      accent: 'purple',
+      points: [
+        'sammelt liquide Mittel ein, investiert nach Grundsätzen',
+        'steuert Anlagepolitik durch Käufe/Verkäufe',
+        'Spezial-Sondervermögen: Vereinbarung mit institutionellen Anlegern',
+        'Publikums-Sondervermögen: alle übrigen',
+      ],
+    },
+    {
+      tag: 'Depotbank',
+      title: 'Depotbank & Sondervermögen',
+      accent: 'accent',
+      points: [
+        'verwahrt die Anlagegelder',
+        'überwacht KVG: Rechtmäßigkeit, Anteilspreis, Collateral, Anlagegrenzen, Marktgerechtigkeit',
+        'Sondervermögen getrennt vom KVG-Vermögen → gläubigergeschützt',
+        'Wert = Σ Anteilscheine × aktueller Rücknahmepreis',
+      ],
+    },
+  ]}
+/>
+
+<SourceNote>Asset Management · Kapitel 1 · Einführung · Folien 1–17</SourceNote>
+
+</section>

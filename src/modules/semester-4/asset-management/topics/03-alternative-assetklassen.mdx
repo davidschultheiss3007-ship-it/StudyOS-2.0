@@ -1,0 +1,758 @@
+<section id="systematisierung">
+
+## Systematisierung: traditionell vs. alternativ
+
+<DefinitionBox term="Alternative (nicht standardisierte) Assetklassen" source="Asset Management · Folie 3">
+Anlageklassen, die <Exam>nicht standardisiert</Exam> sind: nicht beliebig austauschbar, **kein organisierter Handel** zu standardisierten Konditionen, meist **geringere Liquidität** und schwierigere Bewertung. Gegenpol zu den traditionellen Klassen (Aktien, Anleihen, Geldmarkt, Währungen).
+</DefinitionBox>
+
+### Zuordnung der Klassen (Folie 3)
+
+<DataTable
+  caption="Systematisierung der Assetklassen (Folie 3)"
+  columns={[
+    { key: 'trad', label: 'Traditionelle (standardisierte) Assetklassen' },
+    { key: 'alt', label: 'Alternative (nicht standardisierte) Assetklassen' },
+  ]}
+  rows={[
+    { trad: 'Aktien', alt: 'Immobilien' },
+    { trad: 'Anleihen', alt: 'Hedge Fonds' },
+    { trad: 'Geldmarktinstrumente', alt: 'Private Equity, Venture Capital' },
+    { trad: 'Währungen', alt: 'Rohstoffe' },
+    { trad: 'entsprechende Derivate', alt: 'Volatilität' },
+    { trad: 'und Fonds, etc.', alt: 'Sammlerstücke (z. B. Oldtimer, Kunst, Uhren u.a.)' },
+    { trad: '', alt: 'und entsprechende Fonds, etc.' },
+  ]}
+/>
+
+<Callout type="info" title="Verweis Rohstoffe (Folie 3)">
+Das Thema **Rohstoffe** wird auch in der Vorlesung **Corporate Financial Management** behandelt (Querverweis auf der Folie).
+</Callout>
+
+<Columns count={2}>
+  <Card title="In Kapitel 3 behandelt" tone="accent">
+    - **3.1** Hedge Funds
+    - **3.2** Immobilien
+    - **3.3** Rohstoffe
+    - **3.4** Digital Assets / Kryptowährungen
+  </Card>
+  <Card title="Warum alternative Klassen?" tone="purple">
+    - **geringe Korrelation** zu traditionellen Anlagen erwartet
+    - daraus **Diversifikationseffekte** im Portfolio
+    - dafür: geringere Liquidität, Bewertungsprobleme, höhere Komplexität
+  </Card>
+</Columns>
+
+</section>
+
+<section id="hedgefonds-grundlagen">
+
+## Hedge Funds: Merkmale und aktiver Finanzinvestor
+
+<DefinitionBox term="Hedge Funds (Absolute Return Funds)" source="Asset Management · Folie 5">
+Es gibt **keine abschließende Definition** von Hedge Funds. **Gemeinsamkeit** aller Hedge Funds: die Suche nach <Exam>absoluter Performance unabhängig vom Gesamtmarkt</Exam>.
+</DefinitionBox>
+
+### Merkmale und Investorenrolle (Folien 5, 6)
+
+<Columns count={2}>
+  <Card title="Merkmale von Hedge Funds" tone="accent" exam>
+    - Mindesteinlagen zumeist **100.000 bis 1 Mio. USD**
+    - **Sperr-, Kündigungs- und Rücknahmefristen**
+    - hohe Freiheit bei Anlagestrategien: **Short Selling**, **Leverage** (Fremdkapital), Investments in **Derivate** / strukturierte Produkte
+    - weitgehend **erfolgsabhängige Entlohnung** des Managers, meist mit <Exam>High Water Marks</Exam>
+    - Manager i.d.R. **direkt beteiligt** → Reduzierung des **Moral-Hazard-Risikos**
+    - **geringere regulatorische Anforderungen** als traditionelle Investmentfonds
+  </Card>
+  <Card title="Aktiver Finanzinvestor" tone="teal">
+    - nimmt bei **unbefriedigender Performance** Einfluss auf die Geschäftspolitik
+    - Anlagehorizont eher **taktisch** → Renditeziele mit hoher Vehemenz
+    - häufig **Koalitionsbildung** mit weiteren Finanzinvestoren
+    - traditionelle Investoren: Einfluss v.a. über **Corporate Governance**
+  </Card>
+</Columns>
+
+### Anteilseigneraktivismus und seine Folgen (Folie 6)
+
+<Columns count={2}>
+  <Card title="Formen des Anteilseigneraktivismus" tone="purple">
+    - strategische Neuausrichtungen (z. B. Verkauf unrentabler Bereiche)
+    - Vermeidung unnötiger Kapitalbindung → **Dividendenerhöhungen, Aktienrückkäufe, höherer Verschuldungsgrad**
+    - Drängen auf Abberufung von Vorstand / Aufsichtsrat
+  </Card>
+  <Card title="Folgen" tone="orange">
+    - Hedge-Fund-Manager nehmen oft eine wichtige **Überwachungsfunktion** des Managements wahr
+    - tragen zum **Abbau von Informationsasymmetrien** bei
+  </Card>
+</Columns>
+
+<Callout type="merksatz" title="Kerncharakter">
+Hedge Funds sind weniger eine Anlageklasse als ein **Strategiebündel**: Renditeziel ist die **absolute Performance**, erreicht durch hohe Strategiefreiheit, Hebel und erfolgsabhängige Vergütung bei geringer Regulierung.
+</Callout>
+
+</section>
+
+<section id="hedgefonds-strategien">
+
+## Hedge-Funds-Strategien, Markt und Renditeeigenschaften
+
+<Callout type="info" title="Keine einheitliche Klassifizierung (Folie 7)">
+Es existiert **keine einheitliche Klassifizierung** von Hedgefonds-Strategien. In Literatur und Praxis hat sich jedoch mehrheitlich die folgende **Dreigliederung** durchgesetzt.
+</Callout>
+
+<Diagram
+  title="Hedgefonds-Strategien (nicht abschließend, Folie 7)"
+  source="Grüner / Gutknecht (2022), S. 218 (i. A. an Bessler et al., 2005)"
+  chart={`flowchart TD
+  HF[Hedgefonds-Strategien]
+  HF --> D[Directional]
+  HF --> E[Event Driven]
+  HF --> R[Relative Value]
+  D --> D1[Long Short Equity]
+  D --> D2[Global Macro]
+  D --> D3[Managed Futures / CTA]
+  E --> E1[Merger Arbitrage]
+  E --> E2[Distressed Assets]
+  R --> R1[Equity Market Neutral]
+  R --> R2[Fixed Income Arbitrage]
+  R --> R3[Convertible Arbitrage]`}
+/>
+
+### Die drei Hauptstrategiegruppen (Folien 8, 10)
+
+<Columns count={3}>
+  <Card title="1 · Marktneutral (Relative Value)" tone="accent">
+    - Ausnutzung von **Fehlbewertungen** einzelner Wertpapiere
+    - Marktrisiken (Beta/Duration) weitgehend **eliminiert**
+    - Beispiel **Equity-Market-Neutral:** fremdfinanzierte Long-Short-Position; gleich große Long- und Short-Positionen schalten das Marktrisiko aus
+  </Card>
+  <Card title="2 · Ereignisorientiert (Event Driven)" tone="purple">
+    - schnelles, gewinnbringendes Ausnutzen **angekündigter/erwarteter Ereignisse**
+    - Ausnutzung von Fehleinschätzungen / Unsicherheiten
+    - Beispiele: **Merger Arbitrage**, **Distressed Securities**
+  </Card>
+  <Card title="3 · Opportunistisch / Direktional" tone="teal">
+    - Positionen je nach **Markteinschätzung** auf-/abgebaut
+    - **Long-Short Equity:** Netto-Long-Position (anders als Market Neutral)
+    - **Global Macro:** Wetten auf Makrothemen, meist stark gehebelt
+  </Card>
+</Columns>
+
+<Card title="Wachstumstreiber Hedge Funds (Folie 10)" tone="orange">
+- **steigende Korrelationen** zwischen „klassischen Assetklassen"
+- **geringe Renditen** „klassischer Assetklassen"
+- **Derivatisierung** an den Kapitalmärkten
+</Card>
+
+### Beispiel Merger Arbitrage: Event Study (Folie 9)
+
+<Columns count={2}>
+  <Card title="Strategie & Messkonzept" tone="neutral">
+    - **Long** im Target, **Short** im übernehmenden Unternehmen
+    - **Event Studies** messen abnormale Renditen in M&A-Transaktionen
+    - Schritte: Ereignis definieren → „normale" Rendite (i.d.R. **CAPM**) → realisierte Rendite → **abnormale Rendite = realisiert − erwartet**
+  </Card>
+  <Card title="Empirie (CAR)" tone="orange" exam>
+    - Bradley et al. (1988): Target <Exam>+28 %</Exam>, Bieter +2 %
+    - Sirower (1998): Target <Exam>+30,1 %</Exam>, Bieter −2,6 %
+    - → **Targets** erzielen die deutlich positiven abnormalen Renditen
+  </Card>
+</Columns>
+
+<DataChart
+  type="line"
+  title="Event Study: kumulierte abnormale Rendite (CAR) um den Ankündigungstag"
+  source="Asset Management · Folie 9 · Asquith (1983); Verlauf qualitativ/visuell, ca.-Werte"
+  height={300}
+  xKey="day"
+  xLabel="Tage relativ zum Press Day (0)"
+  yLabel="CAR (%)"
+  series={[
+    { key: 'target', name: 'Targets', color: 'var(--color-module-teal)' },
+    { key: 'acquirer', name: 'Acquirer', color: 'var(--color-module-orange)' },
+  ]}
+  data={[
+    { day: -60, target: 0, acquirer: 0 },
+    { day: -40, target: 1, acquirer: 0 },
+    { day: -20, target: 3, acquirer: 1 },
+    { day: -5, target: 9, acquirer: 3 },
+    { day: 0, target: 16, acquirer: 2 },
+    { day: 20, target: 17, acquirer: 1 },
+    { day: 40, target: 17, acquirer: 1 },
+    { day: 60, target: 16, acquirer: 2 },
+  ]}
+/>
+
+<Callout type="merksatz" title="Aussage der CAR-Kurve (Press Day = Tag 0)">
+Am Ankündigungstag springt die grüne **Targets**-Kurve auf ca. **+16–17 %** und verbleibt dort; die orange **Acquirer**-Kurve bleibt nahe **0 bis +3 %**. Werte qualitativ/visuell abgelesen — keine exakten Prüfungszahlen.
+</Callout>
+
+### Markt: verwaltetes Vermögen
+
+<DataChart
+  type="bar"
+  title="Verwaltetes Vermögen der Hedgefonds weltweit (Mrd. USD)"
+  source="Asset Management · Folie 11 · Statista (nur beschriftete Datenlabels; übrige Jahre nur als Balken)"
+  height={320}
+  xKey="period"
+  yLabel="Mrd. USD"
+  series={[{ key: 'value', name: 'verwaltetes Vermögen', color: 'var(--color-module-blue)' }]}
+  data={[
+    { period: '2000', value: 263 },
+    { period: '2002', value: 455 },
+    { period: '2004', value: 1186 },
+    { period: '2006', value: 1696 },
+    { period: '2008', value: 1450 },
+    { period: '2010', value: 1403 },
+    { period: '2012', value: 1482 },
+    { period: '2014', value: 2025 },
+    { period: '2016', value: 2367 },
+    { period: '2018', value: 2878 },
+    { period: '2020', value: 3826 },
+    { period: '2022', value: 4844 },
+    { period: '2024', value: 5224 },
+    { period: 'Q2 2025', value: 5529 },
+  ]}
+/>
+
+<KpiGrid
+  items={[
+    { value: '263', label: 'Mrd. USD im Jahr 2000', accent: 'default' },
+    { value: '5.529', label: 'Mrd. USD in Q2 2025', accent: 'positive' },
+    { value: 'ab 2020', label: 'deutlicher Wachstumsschub', accent: 'accent' },
+  ]}
+/>
+
+### Renditeeigenschaften & Fazit (Folien 13, 14)
+
+<Columns count={2}>
+  <Card title="Eingeschränktes Diversifikationspotenzial" tone="warning">
+    - Korrelationen **nicht stabil**; in **schlechten Aktienmarktphasen** sogar **hoch**
+    - Renditen im Zeitablauf instabil — **Ausnahme: marktneutrale Strategien**
+    - Renditen meist **nicht normalverteilt** (**Linksschiefe**, **fette Enden**)
+    - bessere Performance **stark strategieabhängig**
+  </Card>
+  <Card title="Zusammenfassung Hedge Funds" tone="accent">
+    - komplexe, hochaktive Investitionsstrategien
+    - oberstes Ziel: **jederzeit positive Rendite** unabhängig vom Markt
+    - Rendite/Risiko je Strategie sehr unterschiedlich
+    - bis Finanzkrise oft risikoadjustierte Out-, danach im Schnitt **Unterperformance**
+  </Card>
+</Columns>
+
+</section>
+
+<section id="immobilien-grundlagen">
+
+## Immobilien: Argumente, Formen und Risikoklassen
+
+### Pro & Contra Immobilienanlage (Folien 15, 16)
+
+<CompareCard
+  items={[
+    {
+      tag: 'Pro',
+      title: 'Motive für die Immobilienanlage',
+      accent: 'positive',
+      points: [
+        'hohe reale Wertbeständigkeit',
+        'angenommene geringe Korrelation zu Aktien/Anleihen',
+        'Diversifikationseffekte',
+        'laufende Cash Flows durch Mieteinnahmen',
+        'natürlicher Hedge gegen Inflation (?)',
+        'sichere Einnahmen, langfristiger Anlagehorizont',
+      ],
+    },
+    {
+      tag: 'Contra',
+      title: 'Argumente gegen Immobilien-Investments',
+      accent: 'warning',
+      points: [
+        'geringe Liquidität',
+        'Bindung hoher Anlagegelder → Gefahr geringer Diversifikation',
+        'Bewertungsprobleme (keine täglichen Marktpreise)',
+      ],
+    },
+  ]}
+/>
+
+### Formen und Segmentierung (Folie 17)
+
+<Columns count={3}>
+  <Card title="Direkte Anlage" tone="accent">
+    - Wohnimmobilien
+    - Gewerbeimmobilien
+  </Card>
+  <Card title="Indirekte Anlage" tone="purple">
+    - geschlossene / offene Immobilienfonds
+    - Immobilienaktien
+    - REITs
+  </Card>
+  <Card title="Segmentierung" tone="teal">
+    - Regionen
+    - Nutzungsart (Wohn/Gewerbe; Eigen/Fremd)
+    - Standortfaktoren (Infrastruktur, Lage)
+    - → diverse Diversifikationsmöglichkeiten
+  </Card>
+</Columns>
+
+<Columns count={2}>
+  <Card title="Direktanlage — Vorteile (Folie 18)" tone="positive">
+    - individuelle Nutzungs- und Gestaltungsmöglichkeiten
+    - steuerliche Aspekte
+  </Card>
+  <Card title="Direktanlage — Nachteile" tone="warning">
+    - diversifiziertes Portfolio nur bei **erheblichem Mitteleinsatz**
+    - hohe Transaktionskosten
+    - spezifisches Know-how nötig
+  </Card>
+</Columns>
+
+### Klassifizierung nach Risiko (Folie 19)
+
+<DataTable
+  caption="Risikoklassen von Immobilieninvestments (steigendes Risiko Core → Opportunistic)"
+  columns={[
+    { key: 'klasse', label: 'Klasse' },
+    { key: 'risiko', label: 'Risikograd' },
+    { key: 'haltedauer', label: 'Haltedauer' },
+    { key: 'mieter', label: 'Mieterbasis' },
+    { key: 'lage', label: 'Lage' },
+  ]}
+  rows={[
+    { klasse: 'Core (Core Plus)', risiko: 'sehr gering (stabiler Cash-Flow, liquider Markt)', haltedauer: '8–15 Jahre', mieter: 'hoher Vermietungsgrad, langfristige Verträge (10–15 J.), bonitätsstark', lage: 'Top-Lagen, überregional liquide Märkte' },
+    { klasse: 'Value-Added', risiko: 'höher (geringer/volatiler Cash-Flow, geringere Liquidität)', haltedauer: '4–7 Jahre', mieter: 'mittelfristige Verträge (5–10 J.), geringer Anteil bonitätsstark', lage: 'B-Lagen, Märkte mit sich erholenden Ungleichgewichten' },
+    { klasse: 'Opportunistic', risiko: 'sehr hoch (sehr volatiler Cash-Flow, illiquider Markt)', haltedauer: '1–4 Jahre', mieter: 'kurzfristige/komplexe Verträge (0–5 J.), viele bonitätsschwache Mieter', lage: 'B-/C-Lagen, eher illiquide Märkte, kaum prognostizierbar' },
+  ]}
+/>
+
+<Columns count={3}>
+  <Card title="Core — Immobilientyp & Merkmale" tone="positive" compact>
+    - qualitativ hochwertige **Standardimmobilien** (Büro, Einzelhandel, Wohnen) mit wettbewerbsfähigem Ausstattungsstandard
+    - langfristige Investitionen mit **stabilen Renditen** in liquiden Märkten
+  </Card>
+  <Card title="Value-Added — Immobilientyp & Merkmale" tone="warning" compact>
+    - Standard- **und Sonderimmobilien** mit finanziellen, baulichen oder managementspezifischen Risikoaspekten (z. B. Hotels, Lagerhallen, Pflegeheime)
+    - mittelfristige Investitionen mit relativ stabilen Renditen
+  </Card>
+  <Card title="Opportunistic — Immobilientyp & Merkmale" tone="negative" compact>
+    - Standard- und Sonderimmobilien mit **hohen Risikoaspekten**
+    - kurzfristige Investitionen mit volatilen Renditen in illiquiden Märkten (i.d.R. hoher **Investitionsstau**)
+  </Card>
+</Columns>
+
+<Columns count={3}>
+  <Card title="Geschlossene Fonds (Folie 20)" tone="neutral">
+    - feststehendes Projekt mit fixem Finanzierungsplan; nach EK-Beschaffung **keine neuen Anteile**
+    - Rechtsform oft **Personenhandelsgesellschaft** (KG)
+    - **Nachteil:** kein effizienter Sekundärmarkt
+  </Card>
+  <Card title="Offene Fonds (Folie 21)" tone="neutral">
+    - rechtlich eigenständiges **Sondervermögen** (KAGG)
+    - Fondsvolumen/Anteilszahl **unbegrenzt**, Open-End-Prinzip
+    - **Vorteil:** Diversifikation auch bei kleinen Beträgen; mind. **10 Objekte**
+  </Card>
+  <Card title="Immobilien-AGs (Folie 22)" tone="neutral">
+    - börsennotierte AGs mit Schwerpunkt Immobilien
+    - **US-REIT Tax Exempt Status:** ≥ <Exam>75 % Vermögen</Exam> in Immobilien, **75 %** der Umsätze aus Miete/Pacht/Veräußerung, ≥ **95 %** Gewinnausschüttung
+  </Card>
+</Columns>
+
+</section>
+
+<section id="immobilien-indizes">
+
+## Immobilienindizes, Liegenschaftszins und Smoothing-Effekt
+
+<Callout type="info" title="Erschwerte Indexkonstruktion (Folie 23)">
+Immobilienindizes sind **schwerer zu konstruieren** als Aktien-/Anleihenindizes (hohe Heterogenität, kein organisierter Handel). Es gibt **drei Gruppen**: **Appraisal-Based**, **Transaction-Based** und **Immobilienaktien-Indizes**.
+</Callout>
+
+### Appraisal-Based Indizes & Liegenschaftszins (Folie 24)
+
+<DefinitionBox term="Appraisal-Based Indizes" source="Asset Management · Folie 24">
+Beruhen auf **Schätzwerten von Gutachtern** je Einzelobjekt (differenziert nach Nutzungsart/Lage). Da Immobilien **Unikate** sind, ist eine Duplizierung unmöglich; die Marktwerte werden fortlaufend über den **Liegenschaftszins (LZ)** geschätzt.
+</DefinitionBox>
+
+<Formula
+  display
+  title="Liegenschaftszins (Folie 24)"
+  expr="LZ = \frac{\text{Mieteinnahmen p.a.}}{\text{Kaufpreis}}"
+/>
+
+<Callout type="merksatz" title="Vervielfältiger als Bewertungsbrücke">
+Der **Kehrwert** des LZ ist der **Vervielfältiger**. Vervielfältiger × nachhaltig erzielbare Mieteinnahmen ≈ aktueller **Marktwert**.
+</Callout>
+
+<Columns count={2}>
+  <Card title="NCREIF Property Index (USA)" tone="accent">
+    - vierteljährliche Schätzung
+    - ca. **2.000** Einzelobjekte
+    - Historie seit **1978**
+  </Card>
+  <Card title="Investment Property Database IPD (GB)" tone="purple">
+    - **monatlich** seit 01/87
+    - ca. **2.700** Einzelobjekte
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Korrelationen Deutschland 1980–1998 (untere Dreiecksmatrix, Folie 25)"
+  columns={[
+    { key: 'klasse', label: 'Korrelationen D 1980–1998' },
+    { key: 'aktien', label: 'Aktien', align: 'right' },
+    { key: 'bonds', label: 'Bonds', align: 'right' },
+    { key: 'immo', label: 'Immobilien', align: 'right' },
+  ]}
+  rows={[
+    { klasse: 'Aktien', aktien: '1', bonds: '', immo: '' },
+    { klasse: 'Bonds', aktien: '0,21', bonds: '1', immo: '' },
+    { klasse: 'Immobilien', aktien: '−0,07', bonds: '−0,48', immo: '1' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Diversifikationsnutzen (Folie 25)">
+Immobilien zeigen für D 1980–1998 eine **sehr geringe bis leicht negative** Korrelation zu Aktien (**−0,07**) und Bonds (**−0,48**) — das belegt den **Diversifikationsnutzen**. Quelle: Maurer/Sebastian/Stephan (2000).
+</Callout>
+
+### Transaction-Based & Immobilienaktien-Indizes
+
+<Columns count={2}>
+  <Card title="Transaction-Based Indizes (Folie 26)" tone="teal">
+    - Basis: **am Markt realisierte Transaktionspreise** (keine Gutachterschätzwerte)
+    - Datenbasis: Stichprobe der Verkaufspreise
+    - **Problematik:** Preisunterschiede können Markt- ODER Qualitätsunterschiede sein
+    - Transaktionspreise sollten zeitlich eng beieinanderliegen
+  </Card>
+  <Card title="Immobilienaktien-Indizes (Folie 27)" tone="orange">
+    - Annahme: hohe Korrelation Börsenwert ↔ Immobilienwert
+    - **Problematik:** Kurs der Immobilien-AG hängt von weiteren Faktoren ab
+    - → höhere Korrelation zum **Aktienmarkt** als zum Immobilienbestand
+    - Wertentwicklung indexiert (Dez. 2000 = 100); konkrete Werte aus dem Render nicht zuverlässig lesbar
+  </Card>
+</Columns>
+
+### Smoothing-Effekt & (Nicht-)Normalverteilung
+
+<DefinitionBox term="Smoothing-Effekt" source="Asset Management · Folien 28, 29">
+Appraisal-basierte Bewertungen orientieren sich stark an **vorangegangenen Bewertungen** (**Anker-Effekt**) und liegen zeitlich versetzt → die gemessene **Volatilität wird künstlich gesenkt**. Übliche Gegenmaßnahme: **Entglättungsverfahren**.
+</DefinitionBox>
+
+<DataChart
+  type="line"
+  title="Listed UK REITs vs. IPD Property Index (indexiert, Start ≈ 100)"
+  source="Asset Management · Folie 28 · DataStream, Stand 01.10.12; alle Werte ca./visuell"
+  height={300}
+  xKey="t"
+  xLabel="Oktober 02 → 12"
+  yLabel="Index"
+  series={[
+    { key: 'reits', name: 'UK REITS (börsennotiert)', color: 'var(--color-module-blue)' },
+    { key: 'ipd', name: 'UK IPD TR (appraisal)', color: 'var(--color-module-teal)' },
+  ]}
+  data={[
+    { t: 'Okt 02', reits: 100, ipd: 100 },
+    { t: 'Okt 04', reits: 180, ipd: 135 },
+    { t: 'Okt 06', reits: 300, ipd: 175 },
+    { t: 'Okt 07', reits: 250, ipd: 195 },
+    { t: 'Okt 08', reits: 120, ipd: 160 },
+    { t: 'Okt 09', reits: 60, ipd: 125 },
+    { t: 'Okt 10', reits: 100, ipd: 150 },
+    { t: 'Okt 12', reits: 115, ipd: 175 },
+  ]}
+/>
+
+<Callout type="merksatz" title="Aussage Smoothing-Vergleich">
+Der **börsennotierte** UK-REIT-Index schwankt stark (Peak ca. 300, Tief ca. 60 in der Krise), der **appraisal-basierte** IPD-Index verläuft **erheblich glatter** (Peak ca. 195, Tief ca. 125) — sichtbarer Smoothing-Effekt.
+</Callout>
+
+<DataTable
+  caption="Normalitätstests (Folie 31) — Jarque-Bera-Probability 0,00 = Normalverteilung abgelehnt"
+  columns={[
+    { key: 'reihe', label: 'Zeitreihe' },
+    { key: 'jb', label: 'Jarque-Bera Stat', align: 'right' },
+    { key: 'jbp', label: 'Probability', align: 'right' },
+    { key: 'sw', label: 'Shapiro-Wilk', align: 'right' },
+    { key: 'swp', label: 'Probability', align: 'right' },
+  ]}
+  rows={[
+    { reihe: 'S&P 500', jb: '5.51', jbp: '0.06', sw: '0.97', swp: '0.04' },
+    { reihe: 'US Government Bonds', jb: '1.72', jbp: '0.42', sw: '0.99', swp: '0.39' },
+    { reihe: 'NCREIF Index', jb: '140.11', jbp: '0.00', sw: '0.84', swp: '0.00' },
+    { reihe: 'All Core Funds Index', jb: '300.39', jbp: '0.00', sw: '0.78', swp: '0.00' },
+    { reihe: 'All Opportunity Funds Index', jb: '130.44', jbp: '0.00', sw: '0.88', swp: '0.00' },
+    { reihe: 'US REITs', jb: '73.30', jbp: '0.00', sw: '0.92', swp: '0.00' },
+  ]}
+  highlight={(row) => row.jbp === '0.00'}
+/>
+
+<Callout type="pitfall" title="Renditen sind nicht normalverteilt">
+Die Histogramme (Folie 30) zeigen Schiefe (NCREIF: linker Ausläufer) bzw. **fette Enden** (Opportunity Fund). Die Tests lehnen die Normalverteilung für alle Immobilien-/REIT-Reihen ab (**Probability 0,00**) — nur für US Government Bonds **nicht**. Trotzdem unterstellen viele Investmentmethoden die Normalverteilung.
+</Callout>
+
+</section>
+
+<section id="rohstoffe">
+
+## Rohstoffe: Klassifizierung, Bewertung und Rollrendite
+
+### Überblick, Preisdeterminanten & Klassifizierung (Folien 33–35)
+
+<Columns count={2}>
+  <Card title="Kurzer Überblick (Folie 33)" tone="accent">
+    - Gold/Edelmetalle seit jeher Anlageobjekte; **Derivatemarkt** öffnet weitere Rohstoffe
+    - Erwartung: **geringe Korrelation** → **Diversifikationseffekt**
+    - Gold als **sicherer Hafen** in Krisen
+    - starker Investorenzustrom → <Exam>Finanzialisierung der Rohstoffmärkte</Exam>
+  </Card>
+  <Card title="Determinanten der Preise (Folie 35)" tone="purple">
+    - **kurzfristig:** Angebot/Nachfrage (Kartelle, Funde, Nachfrageschocks), Wechselkurs, Inflation, politische Risiken, Wetter/Klima (saisonale Muster), Transportkosten
+    - **langfristig:** Erwartung über die **Grenzkosten der Produktion**
+  </Card>
+</Columns>
+
+<Diagram
+  title="Klassifizierung von Rohstoffen (nicht abschließend, Folie 34)"
+  source="Grüner / Gutknecht (2022)"
+  height={360}
+  chart={`flowchart TD
+  R[Rohstoffe]
+  R --> HC[Hard Commodities]
+  R --> SC[Soft Commodities]
+  HC --> EN[Energie: Öl, Kohle, Gas]
+  HC --> ME[Metalle]
+  ME --> IN["Industrie:<br/>Aluminium, Zink, Kupfer,<br/>Blei, Nickel"]
+  ME --> ED["Edelmetall:<br/>Gold, Silber, Iridium,<br/>Palladium, Platin, Rhodium"]
+  SC --> VW["Viehwirtschaft:<br/>Mastrind, Lebendrind,<br/>Schweine"]
+  SC --> LW[Landwirtschaft]
+  LW --> SO["Softs:<br/>Kaffee, Kakao, Wolle,<br/>Zucker, Seide, Holz"]
+  LW --> KS["Korn/Saat:<br/>Weizen, Gerste, Mais,<br/>Hafer, Reis, Soja"]`}
+/>
+
+### Pro & Contra Commodities (Folie 36)
+
+<CompareCard
+  items={[
+    {
+      tag: 'Pro',
+      title: 'Vorteile von Commodities (Folie 36)',
+      accent: 'positive',
+      points: [
+        'begrenzte Ressourcen',
+        'Event-Risk treibt Preise (anders als Aktien/Bonds)',
+        'Hedge gegen Inflation',
+        'geringe Korrelation zu traditionellen Klassen',
+      ],
+    },
+    {
+      tag: 'Contra',
+      title: 'Nachteile von Commodities',
+      accent: 'warning',
+      points: [
+        'hohe Volatilität',
+        'keine/geringe laufende Erträge',
+        'zunehmende Institutionalisierung → Rollverluste',
+      ],
+    },
+  ]}
+/>
+
+### Renditekomponenten & Bewertung (Folien 37, 38)
+
+<Columns count={3}>
+  <Card title="Spot Return" tone="accent">
+    - prozentuale Veränderung des **Kassakurses** des Basisinstruments
+    - bei abnehmender Restlaufzeit nähern sich Kassa- und Terminkurs an
+  </Card>
+  <Card title="Collateral Yield" tone="purple">
+    - hinterlegte **Margins** werden zum **risikolosen Zinssatz** angelegt
+  </Card>
+  <Card title="Rollrendite" tone="teal" exam>
+    - **positiv** bei <Exam>Backwardation</Exam>
+    - **negativ** bei <Exam>Contango</Exam>
+  </Card>
+</Columns>
+
+<Callout type="info" title="Handel mit Rohstoffen (Folie 37)">
+Außer einigen Edelmetallen können Rohstoffe **nicht physisch erworben** werden (Transport- und Lagerhaltungskosten). **Lösung: Futures-Kontrakte** (für institutionelle Anleger).
+</Callout>
+
+<Formula
+  display
+  title="Cost-of-Carry-Bewertung von Rohstoff-Futures (Folie 38)"
+  expr="F_0 = S_0 \cdot e^{\,(r_f + u - y)\, \cdot\, T}"
+  legend={[
+    { sym: 'F_0', desc: 'Futures-Preis heute' },
+    { sym: 'S_0', desc: 'Kassakurs (Spot) heute' },
+    { sym: 'r_f', desc: 'risikoloser Zinssatz' },
+    { sym: 'u', desc: 'Lagerhaltungskosten (preissteigernd)' },
+    { sym: 'y', desc: 'Convenience Yield (preissenkend)' },
+    { sym: 'T', desc: 'Laufzeit' },
+  ]}
+/>
+
+<Card title="Convenience Yield (Folie 38)" tone="orange">
+- Ausdruck der **Vorteilhaftigkeit der Lagerhaltung** / Kosten der Versorgungssicherheit
+- in der Regel **positiv**
+- exakte Höhe unbekannt → muss aus **Future-Kursen abgeleitet** werden
+- **hoch**, wenn der Lagerbestand **gering** ist
+</Card>
+
+### Contango, Backwardation & Rollrendite (Folien 39, 40)
+
+<Columns count={2}>
+  <DataChart
+    type="line"
+    title="Contango: steigende Terminkurve"
+    source="Asset Management · Folie 39 · Steiner/Bruns (2017); qualitativ"
+    height={220}
+    xKey="t"
+    xLabel="Laufzeit"
+    yLabel="Futures-Kurs"
+    series={[{ key: 'kurs', name: 'Contango', color: 'var(--color-module-orange)' }]}
+    data={[
+      { t: 'kurz', kurs: 100 },
+      { t: 'mittel', kurs: 106 },
+      { t: 'lang', kurs: 113 },
+      { t: 'sehr lang', kurs: 120 },
+    ]}
+  />
+  <DataChart
+    type="line"
+    title="Backwardation: fallende Terminkurve"
+    source="Asset Management · Folie 39 · Steiner/Bruns (2017); qualitativ"
+    height={220}
+    xKey="t"
+    xLabel="Laufzeit"
+    yLabel="Futures-Kurs"
+    series={[{ key: 'kurs', name: 'Backwardation', color: 'var(--color-module-teal)' }]}
+    data={[
+      { t: 'kurz', kurs: 120 },
+      { t: 'mittel', kurs: 112 },
+      { t: 'lang', kurs: 105 },
+      { t: 'sehr lang', kurs: 100 },
+    ]}
+  />
+</Columns>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Contango',
+      title: 'Contango (Aufschlag)',
+      subtitle: 'Futures-Kurse umso höher, je länger die Laufzeit',
+      accent: 'orange',
+      points: [
+        'Beispiel: Futures auf Gold oder Finanzinstrumente',
+        'beim Rollen werden nächste Kontrakte teurer erworben → Break-Even-Kurs steigt → negative Rollrendite',
+      ],
+    },
+    {
+      tag: 'Backward.',
+      title: 'Backwardation (Abschlag)',
+      subtitle: 'Futures-Kurse umso niedriger, je länger die Laufzeit',
+      accent: 'teal',
+      points: [
+        'Beispiel: ausgewählte Rohstoff-Futures',
+        'Konsument zahlt Prämie für kurzfristig verfügbare Ware (geringe Lager, Unsicherheit)',
+        'Verkaufserlös übersteigt Wiederanlagebetrag → niedrigerer Break-Even → positive Rollrendite',
+      ],
+    },
+  ]}
+/>
+
+<Columns count={2}>
+  <Card title="Beispiel Rollen — Mechanik (Folie 40)" tone="neutral">
+    - Long-Futures-Position **Öl** (Fälligkeit Februar)
+    - zur Vermeidung der Lieferung: verkaufen und in den **März-Kontrakt** reinvestieren (**Rollen**)
+    - in **Backwardation:** Februar-Verkaufserlös **übersteigt** März-Wiederanlagebetrag
+    - → größere Menge erwerbbar → **niedrigerer Break-Even**
+  </Card>
+  <Card title="Beispiel Rollen — Fazit" tone="teal" exam>
+    - Anleger profitieren in <Exam>Backwardation</Exam> (Rendite über Kassamarkt)
+    - in **Contango** steigt der Break-Even → Rollverlust
+  </Card>
+</Columns>
+
+<Card title="Rohstoff-Indizes (Folie 41)" tone="accent">
+- Anlage meist über (breit diversifizierte) **Indizes** auf **nahe, regelmäßig gerollte Futures**
+- bekannteste: **CRB-Index**, **S&P GSCI**, **RICI**, **BCOM** (früher Dow Jones AIG)
+- Gewichtung je Anbieter verschieden: **Energieanteil S&P GSCI ca. 60 %**, **BCOM ca. 30 %**
+</Card>
+
+</section>
+
+<section id="digital-assets">
+
+## Digital Assets, Blockchain und Bitcoin
+
+<DefinitionBox term="Digital Assets / Kryptowährungen" source="Asset Management · Folie 43">
+<Exam>Nicht</Exam> von einer Zentralbank/Behörde emittierte oder garantierte digitale Vermögenswerte **ohne Rechtsstatus von Währung/Geld**, akzeptiert als Tausch-/Zahlungsmittel oder zu Anlagezwecken; elektronisch übertragbar, speicherbar, handelbar. **Kryptowährungen** sind die bekannteste Form.
+</DefinitionBox>
+
+### Begriffe: Kryptowertpapiere & Blockchain (Folien 43, 44)
+
+<Columns count={2}>
+  <Card title="Kryptowertpapiere" tone="purple">
+    - Sonderfall des **elektronischen Wertpapiers**
+    - deutsches Gesetz **2021** ermöglicht Emission im regulierten Umfeld
+    - Erwartung: digitale Begebung rückt stärker in den Fokus
+  </Card>
+  <Card title="Blockchain (Folie 44)" tone="teal">
+    - **dezentralisierte Datenbank** ohne zentrale Instanz
+    - Datenblöcke werden zur stetig wachsenden **Blockkette** verknüpft
+    - **kryptografische Mechanismen** machen Daten praktisch unveränderbar → manipulationssicher
+  </Card>
+</Columns>
+
+### Bitcoin: Ertrag, Risiko & Diversifikation (Folie 45)
+
+<Callout type="info" title="Vergleichszeitraum 31.08.2016 – 31.01.2022">
+Zwei Kernaussagen der Folie: **sehr hohe Volatilität** im Vergleich zu anderen Anlageklassen und **hohes Diversifikationspotenzial**. Quelle: Grüner / Gutknecht (2022), S. 297.
+</Callout>
+
+<Columns count={2}>
+  <Card title="Wertentwicklung (logarithmisch)" tone="accent">
+    - **Bitcoin** mit weitaus stärkstem Anstieg (annotiert: 3.195 $ → 18.940 $)
+    - Vergleichskurven: **Apple, MSCI World, Gold, USD/EUR** (flach)
+    - Y-Marker: 500 / 5.000 / 50.000 (log. Skalierung)
+  </Card>
+  <Card title="Volatilität (annualisiert)" tone="warning">
+    - **Bitcoin** mit Abstand am höchsten (Balken **ca. 70–80 %**, visuell)
+    - übrige Anlageklassen deutlich niedriger
+  </Card>
+</Columns>
+
+<DataTable
+  caption="Bitcoin-Korrelationsmatrix (untere Dreiecksmatrix, Folie 45; Bitcoin-Spalte hervorgehoben)"
+  columns={[
+    { key: 'klasse', label: 'Korrelationsmatrix' },
+    { key: 'btc', label: 'Bitcoin', align: 'right' },
+    { key: 'akt', label: 'Aktien', align: 'right' },
+    { key: 'anl', label: 'Anleihen', align: 'right' },
+    { key: 'immo', label: 'Immobilien', align: 'right' },
+    { key: 'gold', label: 'Gold', align: 'right' },
+  ]}
+  rows={[
+    { klasse: 'Bitcoin', btc: '1,00', akt: '', anl: '', immo: '', gold: '' },
+    { klasse: 'Aktien', btc: '0,22', akt: '1,00', anl: '', immo: '', gold: '' },
+    { klasse: 'Anleihen', btc: '0,02', akt: '−0,10', anl: '1,00', immo: '', gold: '' },
+    { klasse: 'Immobilien', btc: '0,16', akt: '0,75', anl: '0,11', immo: '1,00', gold: '' },
+    { klasse: 'Gold', btc: '0,12', akt: '0,14', anl: '0,37', immo: '0,18', gold: '1,00' },
+  ]}
+/>
+
+<Callout type="examfocus" title="Diversifikationspotenzial Bitcoin">
+Die **Bitcoin-Spalte** zeigt durchweg **geringe** Korrelationen: Aktien **0,22**, Anleihen **0,02**, Immobilien **0,16**, Gold **0,12** → hohes Diversifikationspotenzial bei zugleich extremer Volatilität.
+</Callout>
+
+<Card title="Zusammenfassung Digital Assets (Folie 46)" tone="accent" exam>
+- **Blockchain:** dezentrale, manipulationssichere Datenverwaltung ohne zentrale Instanz
+- **Kryptowährungen:** digitale Zahlungsmittel ohne zentrale Instanz auf Blockchain-Basis
+- erfüllen die <Exam>Funktionen des Geldes derzeit noch nicht</Exam> — Grund: enorm hohe Volatilität
+- Renditeperspektive: Investment ist im Kern eine **Spekulation** auf künftige wirtschaftliche Bedeutung
+</Card>
+
+<SourceNote>Asset Management · Kapitel 3 · Alternative Assetklassen · Folien 1–46</SourceNote>
+
+</section>
