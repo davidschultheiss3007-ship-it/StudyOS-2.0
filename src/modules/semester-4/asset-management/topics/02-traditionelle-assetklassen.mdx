@@ -379,33 +379,18 @@ Als Wertpapier **verbrieftes Forderungsrecht**. Der Käufer wird **Gläubiger**,
     { key: 'typ', label: 'Typ' },
     { key: 'merkmal', label: 'Verzinsung / Merkmal' },
     { key: 'lz', label: 'Laufzeit' },
+    { key: 'besonderheit', label: 'Besonderheit' },
   ]}
   rows={[
-    { typ: 'Festverzinslich (Straight / Plain Vanilla Bond)', merkmal: 'fixer Nominalzins über die gesamte Laufzeit; jährlich nachschüssig; endfällige Tilgung', lz: '1–30 Jahre' },
-    { typ: 'Variabel verzinslich (Floater / FRN)', merkmal: 'meist EURIBOR + Credit-Spread; Adjustierung alle 3/6 Monate', lz: '5–7 Jahre' },
-    { typ: 'Nullkupon (Zero Bond)', merkmal: 'kein laufender Kupon; Ertrag aus Differenz Ausgabe-/Rückzahlungsbetrag (Disagio)', lz: '10–30 Jahre' },
+    { typ: 'Festverzinslich (Straight / Plain Vanilla Bond)', merkmal: 'Fixer Nominalzins; jährlich, halbjährlich oder vierteljährlich; endfällige Tilgung', lz: '1–30 Jahre', besonderheit: 'Stufenzinsanleihen mit Step-Up- oder Step-Down-Covenant' },
+    { typ: 'Variabel verzinslich (Floater / FRN)', merkmal: 'Meist EURIBOR + Credit-Spread; Adjustierung alle 3/6 Monate', lz: '5–7 Jahre', besonderheit: 'Limitiertes Kursrisiko; Cap begrenzt das Risiko des Emittenten; Floor, Collared, Reverse und Inflation-Linked' },
+    { typ: 'Nullkupon (Zero Bond)', merkmal: 'Kein laufender Kupon; Zinsen werden bis zur Fälligkeit thesauriert', lz: '10–30 Jahre', besonderheit: 'Disagio oder Zuwachsanleihe; kein Wiederanlagerisiko; hohes Kurspotenzial bei sinkenden Zinsen' },
   ]}
 />
 
-<Columns count={3}>
-  <Card title="Festverzinslich" tone="accent">
-    - fixer Nominalzins, in % des Nominalwertes
-    - Zinstermine: jährlich, halbjährlich oder vierteljährlich
-    - aber: Stufenzinsanleihen mit **Step-Up-** / **Step-Down-Covenant**
-  </Card>
-  <Card title="Floater (FRN)" tone="purple">
-    - Verzinsung von externer Referenzgröße abhängig
-    - Credit-Spread abhängig von Ausfallwahrscheinlichkeit und Recovery Rate
-    - limitiertes Kursrisiko; Cap Floater begrenzt Risiko des Emittenten
-    - Varianten: Floor, Collared (Mini-Max), Reverse, Inflation-Linked
-  </Card>
-  <Card title="Nullkupon (Zero Bond)" tone="teal">
-    - Thesaurierung der Zinsen, Ausschüttung zum Fälligkeitstag
-    - Ausgabe mit Disagio (Normalfall) oder Zuwachsanleihe
-    - Vorteil Gläubiger: kein Wiederanlagerisiko
-    - hohes Kurspotenzial bei rückläufigen Zinsen
-  </Card>
-</Columns>
+<Callout type="info" title="Credit-Spread beim Floater">
+Der Credit-Spread hängt von Ausfallwahrscheinlichkeit und Recovery Rate ab. Die Verzinsung folgt damit einer externen Referenzgröße plus emittentenspezifischem Risikoaufschlag.
+</Callout>
 
 <Callout type="info" title="Marktbeispiel (Folie 38, Stichtag 22.03.2026)">
 comdirect-Screenshot zur **BMW Finance N.V. EO-MTN 2023(33)** (ISIN XS2698773913): Kurs **101,861 %** (über pari), Nominalzins **4,125 %**, **Rendite p.a. 3,826 %**. Konsistent mit dem Pari-Zusammenhang: **Kurs > pari → ytm < Nominalzins**. Reale Beispielwerte, keine Prüfungsformelwerte.
@@ -499,18 +484,18 @@ Verzinsliches Wertpapier, das **nicht an der Börse** gehandelt wird; **Banken**
   </Card>
 </Columns>
 
-<Columns count={3}>
-  <Card title="Tilgungsanleihen" tone="accent">
-    - Tilgung **stetig über die Laufzeit** statt in einem Betrag
-  </Card>
-  <Card title="Annuitätenanleihen" tone="purple">
-    - Tilgung über die gesamte Laufzeit
-    - steigender Tilgungsanteil am **konstanten Jahresbetrag**
-  </Card>
-  <Card title="Verlosungsanleihen" tone="teal">
-    - **Auslosung** von Tranchen zu regelmäßigen Terminen, die dann zurückgezahlt werden
-  </Card>
-</Columns>
+<DataTable
+  caption="Tilgungsformen im Vergleich"
+  columns={[
+    { key: 'form', label: 'Form' },
+    { key: 'logik', label: 'Tilgungslogik' },
+  ]}
+  rows={[
+    { form: 'Tilgungsanleihe', logik: 'Stetige Tilgung über die Laufzeit statt Rückzahlung in einem Betrag' },
+    { form: 'Annuitätenanleihe', logik: 'Konstanter Jahresbetrag mit über die Laufzeit steigendem Tilgungsanteil' },
+    { form: 'Verlosungsanleihe', logik: 'Regelmäßige Auslosung von Tranchen, die anschließend zurückgezahlt werden' },
+  ]}
+/>
 
 <DataTable
   caption="Acht Risikoarten von Anleihen (Folie 46)"

@@ -1,31 +1,10 @@
+{/* Kapitel 2 · Unternehmensstrategie und Personalpolitik. Palette via MDXProvider. */}
+
 <section id="generationen-und-fuehrung">
 
 ## Generationen und generationengerechte Führung
 
-<Callout type="merksatz" title="Kernaussage der Generationen-Timeline">
-- 2026 sind mehrere Generationen <Exam>gleichzeitig im Arbeitsleben</Exam> relevant
-- Führung muss parallel berücksichtigen:
-  - unterschiedliche **Sozialisationsprägungen**
-  - unterschiedliche **Erwerbsphasen**
-  - unterschiedliche Übergänge in den **Ruhestand**
-</Callout>
-
-### Generationen im Überblick
-
-<Columns count={2}>
-  <Card title="Vier relevante Generationen" tone="accent">
-    - **Baby Boomer** — frühe Phase, lange Erwerbsphase
-    - **Generation X** — sozialisiert um 1980/1990
-    - **Generation Y** — Erwerbsphase ab ca. 2020
-    - **Generation Z** — Erwerbsphase ab ca. 2020/2030
-  </Card>
-  <Card title="Führungsaufgabe 2026" tone="purple">
-    - alle vier Kohorten arbeiten **parallel**
-    - jede bringt eigene Prägung und Erwartung mit
-    - Übergänge in den **Ruhestand** laufen gestaffelt ab ca. 2040
-    - Aufgabe: <Exam>generationengerechte Führung</Exam>
-  </Card>
-</Columns>
+2026 sind vier Generationen **gleichzeitig im Arbeitsleben**, jede mit eigener Sozialisationsprägung, Erwerbsphase und gestaffeltem Übergang in den Ruhestand. Daraus folgt die Aufgabe <Exam>generationengerechter Führung</Exam>.
 
 <DataTable
   caption="Generationen entlang der Jahrzehnte (Sozialisation · Erwerbsphase · Ruhestand)"
@@ -36,49 +15,41 @@
     { key: 'ruh', label: 'Ruhestand' },
   ]}
   rows={[
-    { gen: 'Baby Boomer', soz: 'frühe/ältere Phase links der Mitte', erw: 'lange Erwerbsphase bis etwa 2030/2040', ruh: 'ab ca. 2040' },
-    { gen: 'Generation X', soz: 'ca. 1980/1990', erw: 'lange Erwerbsphase um 1990–2040/2050', ruh: 'späterer Ruhestand ca. 2050+' },
-    { gen: 'Generation Y', soz: 'ca. 2000/2010', erw: 'Erwerbsphase ab ca. 2020 bis 2050/2060', ruh: 'Ruhestand ca. 2060+' },
-    { gen: 'Generation Z', soz: 'ca. 2010/2020', erw: 'Erwerbsphase ab ca. 2020/2030 bis 2060+', ruh: 'Ruhestand ab ca. 2070+' },
+    { gen: 'Baby Boomer', soz: 'frühe/ältere Phase', erw: 'lange Erwerbsphase bis ca. 2030/2040', ruh: 'ab ca. 2040' },
+    { gen: 'Generation X', soz: 'ca. 1980/1990', erw: 'ca. 1990–2040/2050', ruh: 'ca. 2050+' },
+    { gen: 'Generation Y', soz: 'ca. 2000/2010', erw: 'ab ca. 2020 bis 2050/2060', ruh: 'ca. 2060+' },
+    { gen: 'Generation Z', soz: 'ca. 2010/2020', erw: 'ab ca. 2020/2030 bis 2060+', ruh: 'ab ca. 2070+' },
   ]}
 />
 
 <SourceNote>Future Talents Report 2022 (Generationen-Timeline mit Gegenwartsmarker 2026)</SourceNote>
 
-### Führen der unterschiedlichen Generationen — sechs Ansätze
+Die sechs Führungsansätze gruppieren sich in zwei Blöcke — Kultur/Kommunikation/Entwicklung einerseits, digitale Offenheit/Teams/Flexibilität andererseits:
 
-<Columns count={3}>
-  <Card title="1 · Kultur" tone="accent">
-    - Führungs- und Organisationskultur auf **Verständnis und Wertschätzung** ausrichten
-  </Card>
-  <Card title="2 · Feedback" tone="accent">
-    - offene und transparente **Feedback-Kultur** etablieren
-  </Card>
-  <Card title="3 · Entwicklung" tone="accent">
-    - individuelle Karriere-, Weiterbildungs- und Entwicklungsmöglichkeiten
-    - inkl. **Gesundheitsmanagement**
-  </Card>
-</Columns>
-
-<Columns count={3}>
-  <Card title="4 · Digitalisierung" tone="teal">
-    - digitales **Umdenken** fördern
-    - offen für neue Impulse; alle Generationen einbinden
-  </Card>
-  <Card title="5 · Teams" tone="teal">
-    - **intergenerative Teams** bilden
-    - unterschiedliche Stärken für Innovation nutzen
-  </Card>
-  <Card title="6 · Flexibilität" tone="teal">
-    - flexible Arbeitszeiten und Arbeitseinteilung
-    - individuelle Arbeitsbedingungen einführen
-  </Card>
-</Columns>
-
-<Callout type="info" title="Inhaltliche Schwerpunkte">
-- Ansätze **1–3** → Kultur, Kommunikation und Entwicklung
-- Ansätze **4–6** → digitale Offenheit, Teamzusammensetzung und Flexibilisierung
-</Callout>
+<CompareCard
+  items={[
+    {
+      tag: 'Ansätze 1–3',
+      title: 'Kultur, Kommunikation & Entwicklung',
+      accent: 'accent',
+      points: [
+        '**Kultur:** Führungs- und Organisationskultur auf Verständnis und Wertschätzung ausrichten',
+        '**Feedback:** offene, transparente Feedback-Kultur etablieren',
+        '**Entwicklung:** individuelle Karriere-/Weiterbildungswege inkl. Gesundheitsmanagement',
+      ],
+    },
+    {
+      tag: 'Ansätze 4–6',
+      title: 'Digitalisierung, Teams & Flexibilität',
+      accent: 'teal',
+      points: [
+        '**Digitalisierung:** digitales Umdenken fördern, alle Generationen einbinden',
+        '**Teams:** intergenerative Teams bilden, unterschiedliche Stärken für Innovation nutzen',
+        '**Flexibilität:** flexible Arbeitszeiten und individuelle Arbeitsbedingungen',
+      ],
+    },
+  ]}
+/>
 
 </section>
 
@@ -87,7 +58,7 @@
 ## Arbeitgeberqualität: Parameter und Branchen
 
 <DefinitionBox term="Arbeitgeberqualität" source="Future Talents Report 2022">
-Misst über **verschiedene Facetten der Arbeitszufriedenheit**, wie Unternehmen aus **interner Sicht** der Arbeitnehmer:innen bewertet werden. Sie ermöglicht einen Unternehmensvergleich und bildet eine <Exam>Achse der Employer Matrix</Exam>.
+Misst über verschiedene Facetten der Arbeitszufriedenheit, wie Unternehmen aus **interner Sicht** der Arbeitnehmer:innen bewertet werden. Sie ermöglicht den Unternehmensvergleich und bildet eine <Exam>Achse der Employer Matrix</Exam>.
 </DefinitionBox>
 
 <KpiGrid
@@ -98,116 +69,62 @@ Misst über **verschiedene Facetten der Arbeitszufriedenheit**, wie Unternehmen 
   ]}
 />
 
-### Acht Parameter der Arbeitgeberqualität
+Die <Exam>acht Parameter</Exam> bilden gemeinsam die Achse Arbeitgeberqualität:
 
-<Callout type="examfocus" title="Prüfungsfokus">
-Die <Exam>acht Parameter</Exam> nennen und einordnen können — sie bilden gemeinsam die Achse Arbeitgeberqualität der Employer Matrix.
-</Callout>
-
-<Columns count={2}>
-  <Card title="Aufgabenstellung (Puzzle)" tone="accent">
-    - Maß an **Autonomie**
-    - interessante Aufgaben und empfundener Mehrwert
-  </Card>
-  <Card title="Teamklima (Gruppe)" tone="purple">
-    - Arbeitsatmosphäre
-    - gegenseitige Unterstützung und Feedback im Team
-  </Card>
-  <Card title="Lernen (Bücher)" tone="accent">
-    - Zufriedenheit mit **Lernpotenzial**
-    - Weiterentwicklungsmöglichkeiten
-  </Card>
-  <Card title="Arbeitszeit (Uhr)" tone="purple">
-    - Angemessenheit der **Arbeitszeiten**
-  </Card>
-  <Card title="Arbeitsbedingungen (Aktentasche)" tone="accent">
-    - u.a. **Work-Life-Balance**
-    - Arbeitsbelastung
-  </Card>
-  <Card title="Grundsätzliche Bewertung (Daumen hoch)" tone="purple">
-    - Erwartungserfüllung, erneute Bewerbungsintention
-    - **Weiterempfehlungsquote**, allgemeine Zufriedenheit
-  </Card>
-  <Card title="Führung (Kompass)" tone="accent">
-    - Zufriedenheit mit Führungskraft bzw. Fachbetreuer:in
-  </Card>
-  <Card title="Vergütung (Münzstapel)" tone="purple">
-    - Angemessenheit der **Bezahlung**
-  </Card>
-</Columns>
-
-### Arbeitgeberqualität nach Branchen
+<DataTable
+  caption="Acht Parameter der Arbeitgeberqualität"
+  columns={[
+    { key: 'param', label: 'Parameter' },
+    { key: 'inhalt', label: 'Inhalt' },
+  ]}
+  rows={[
+    { param: 'Aufgabenstellung', inhalt: 'Maß an Autonomie, interessante Aufgaben, empfundener Mehrwert' },
+    { param: 'Teamklima', inhalt: 'Arbeitsatmosphäre, gegenseitige Unterstützung und Feedback im Team' },
+    { param: 'Lernen', inhalt: 'Zufriedenheit mit Lernpotenzial und Weiterentwicklung' },
+    { param: 'Arbeitszeit', inhalt: 'Angemessenheit der Arbeitszeiten' },
+    { param: 'Arbeitsbedingungen', inhalt: 'Work-Life-Balance, Arbeitsbelastung' },
+    { param: 'Grundsätzliche Bewertung', inhalt: 'Erwartungserfüllung, erneute Bewerbungsintention, Weiterempfehlungsquote' },
+    { param: 'Führung', inhalt: 'Zufriedenheit mit Führungskraft bzw. Fachbetreuer:in' },
+    { param: 'Vergütung', inhalt: 'Angemessenheit der Bezahlung' },
+  ]}
+/>
 
 <DataChart
   type="bar"
-  title="Arbeitgeberqualität nach Branchen (Skala 1–5, Auswahl)"
-  source="Future Talents Report 2022"
+  title="Arbeitgeberqualität nach Branchen (Skala 1–5)"
+  source="Future Talents Report 2022 (Beispielwerte)"
   xKey="kurz"
   yDomain={[3, 4.5]}
+  height={360}
   series={[{ key: 'wert', name: 'Arbeitgeberqualität', color: 'var(--color-module-orange)' }]}
   data={[
     { kurz: 'Elektrotechnik', wert: 4.3 },
     { kurz: 'Chemie', wert: 4.2 },
     { kurz: 'Baugewerbe', wert: 4.2 },
+    { kurz: 'Logistik', wert: 4.1 },
     { kurz: 'Maschinenbau', wert: 4.1 },
     { kurz: 'IT/Telko', wert: 4.1 },
-    { kurz: 'Logistik', wert: 4.1 },
+    { kurz: 'NGOs/Soziales', wert: 4.0 },
+    { kurz: 'Beratung/Recht', wert: 4.0 },
+    { kurz: 'Medien/Mktg', wert: 4.0 },
+    { kurz: 'Konsumgüter', wert: 4.0 },
     { kurz: 'Banken/Vers.', wert: 4.0 },
+    { kurz: 'Öff. Verwaltung', wert: 3.9 },
     { kurz: 'Gesundheit', wert: 3.9 },
+    { kurz: 'Fahrzeugbau', wert: 3.9 },
+    { kurz: 'Bildung', wert: 3.9 },
+    { kurz: 'Mischkonzern', wert: 3.8 },
     { kurz: 'Energie/Bau', wert: 3.8 },
+    { kurz: 'Pers.-Dienstl.', wert: 3.8 },
+    { kurz: 'Luft-/Raumf.', wert: 3.7 },
     { kurz: 'Hotel/Gastro', wert: 3.7 },
     { kurz: 'Forschung', wert: 3.5 },
     { kurz: 'Kultur/Sport', wert: 3.1 },
   ]}
 />
 
-<DataTable
-  caption="Arbeitgeberqualität nach Branchen — vollständige Werte (Skala 1–5, Future Talents Report 2022)"
-  columns={[
-    { key: 'branche', label: 'Branche' },
-    { key: 'wert', label: 'Wert', align: 'right' },
-  ]}
-  rows={[
-    { branche: 'Elektrotechnik, Feinmechanik & Optik', wert: '4,3' },
-    { branche: 'Chemie', wert: '4,2' },
-    { branche: 'Baugewerbe/-Industrie', wert: '4,2' },
-    { branche: 'Transport & Logistik', wert: '4,1' },
-    { branche: 'Maschinen- & Anlagenbau', wert: '4,1' },
-    { branche: 'IT, Internet & Telekommunikation', wert: '4,1' },
-    { branche: 'Vereine, NGOs & soziale Dienste', wert: '4,0' },
-    { branche: 'Beratung, Wirtschaftsprüfung & Recht', wert: '4,0' },
-    { branche: 'Medien & Marketing', wert: '4,0' },
-    { branche: 'Konsum- & Gebrauchsgüter', wert: '4,0' },
-    { branche: 'Banken, Finanzen & Versicherungen', wert: '4,0' },
-    { branche: 'Öffentliche Verwaltung', wert: '3,9' },
-    { branche: 'Gesundheit & Pharma', wert: '3,9' },
-    { branche: 'Fahrzeugbau / -Zulieferer', wert: '3,9' },
-    { branche: 'Bildung & Training', wert: '3,9' },
-    { branche: 'Mischkonzern', wert: '3,8' },
-    { branche: 'Energie, Bau- & Rohstoffe', wert: '3,8' },
-    { branche: '(Personal-)Dienstleistungen', wert: '3,8' },
-    { branche: 'Luft- & Raumfahrt', wert: '3,7' },
-    { branche: 'Hotel & Gastronomie', wert: '3,7' },
-    { branche: 'Forschung & Wissenschaft', wert: '3,5' },
-    { branche: 'Kultur, Sport & Touristik', wert: '3,1' },
-  ]}
-/>
-
-<Columns count={3}>
-  <Card title="Höchster Wert" tone="positive">
-    **Elektrotechnik, Feinmechanik & Optik** mit **4,3**.
-  </Card>
-  <Card title="Auf Durchschnittsniveau" tone="neutral">
-    **Chemie** und **Baugewerbe/-Industrie** mit **4,2**.
-  </Card>
-  <Card title="Niedrigster Wert" tone="negative">
-    **Kultur, Sport & Touristik** mit **3,1**.
-  </Card>
-</Columns>
-
 <Callout type="info" title="Interpretationsanker">
-- mehrere Branchen liegen knapp **unter dem Durchschnitt von 4,2**, obwohl die absoluten Werte hoch wirken
-- die Werte stammen aus einer **Befragung** → <Exam>Beispielwerte, keine fest zu lernenden Prüfungszahlen</Exam>
+Höchster Wert: **Elektrotechnik, Feinmechanik & Optik (4,3)**; niedrigster: **Kultur, Sport & Touristik (3,1)**. Mehrere Branchen liegen trotz hoher Absolutwerte knapp **unter dem Durchschnitt von 4,2**. Die Werte stammen aus einer Befragung → <Exam>Beispielwerte, keine fest zu lernenden Prüfungszahlen</Exam>.
 </Callout>
 
 </section>
@@ -216,54 +133,59 @@ Die <Exam>acht Parameter</Exam> nennen und einordnen können — sie bilden geme
 
 ## Ethik: Begriffe, Aristoteles und Kant
 
-<DefinitionBox term="Ethik" source="Scholz, 2013 (Definition); Begriffe i.A. Thürbach nach Holzmann, 2015">
-Ethik wird assoziativ über **Moral, Werte, Wahrheit, Respekt, Fairness, Integrität** und Handlungskriterien eingeführt. Sie ist die **kritische Reflexion** gesellschaftlicher Praxis und Moral — die Wissenschaft sittlichen und moralischen Handelns.
+<DefinitionBox term="Ethik" source="Scholz, 2013; Begriffe i.A. Thürbach nach Holzmann, 2015">
+Ethik wird assoziativ über Moral, Werte, Wahrheit, Respekt, Fairness und Integrität eingeführt. Sie ist die **kritische Reflexion** gesellschaftlicher Praxis und Moral — die Wissenschaft sittlichen und moralischen Handelns.
 </DefinitionBox>
 
-### Grundbegriffe
-
 <DataTable
-  caption="Grundbegriffe der Unternehmensethik (i.A. Thürbach nach Holzmann, Wirtschaftsethik, 2015)"
+  caption="Grundbegriffe der Unternehmensethik (i.A. Thürbach nach Holzmann, 2015)"
   columns={[
     { key: 'begriff', label: 'Begriff' },
     { key: 'def', label: 'Kurzdefinition' },
   ]}
   rows={[
-    { begriff: 'Ethik', def: 'Kritische Reflexion gesellschaftlicher Praxis und Moral; Wissenschaft sittlichen und moralischen Handelns.' },
-    { begriff: 'Moral', def: 'Akzeptierte Regeln der Gesellschaft; Wert- und Normengefüge eines Kulturkreises.' },
-    { begriff: 'Praxis', def: 'Tatsächliches Handeln der Gesellschaftsmitglieder.' },
-    { begriff: 'Tugend', def: 'Handeln, das einem Anspruch des Guten verpflichtet ist; im Deutschen oft Moralität/Sittlichkeit.' },
+    { begriff: 'Ethik', def: 'Kritische Reflexion gesellschaftlicher Praxis und Moral; Wissenschaft sittlichen Handelns' },
+    { begriff: 'Moral', def: 'Akzeptierte Regeln der Gesellschaft; Wert- und Normengefüge eines Kulturkreises' },
+    { begriff: 'Praxis', def: 'Tatsächliches Handeln der Gesellschaftsmitglieder' },
+    { begriff: 'Tugend', def: 'Handeln, das einem Anspruch des Guten verpflichtet ist (Moralität/Sittlichkeit)' },
   ]}
 />
 
-### Zwei klassische Positionen
-
-<Columns count={2}>
-  <Card title="Aristoteles (384–322 v. Chr.)" tone="accent" exam>
-    - Ursprungspunkt einer klassischen **Ethikperspektive** (philosophische Grundlagen)
-    - **Primat der Ethik** vor Politik und Ökonomik
-    - **Glück bzw. Glücksstreben** ist sachlich vorrangig
-  </Card>
-  <Card title="Immanuel Kant — Kategorischer Imperativ" tone="purple" exam>
-    - „Handle so, dass die Maxime deines Handelns jederzeit als Teil einer <Exam>allgemeinen Gesetzgebung</Exam> gelten könnte!"
-    - Maßstab ist die **Verallgemeinerbarkeit** der Handlungsregel
-  </Card>
-</Columns>
-
-### Von der Tugend zur Diskursethik
+<CompareCard
+  items={[
+    {
+      tag: 'Aristoteles',
+      title: 'Aristoteles (384–322 v. Chr.)',
+      subtitle: 'klassische Ethikperspektive',
+      accent: 'accent',
+      points: [
+        '**Primat der Ethik** vor Politik und Ökonomik',
+        '**Glück bzw. Glücksstreben** ist sachlich vorrangig',
+      ],
+    },
+    {
+      tag: 'Kant',
+      title: 'Kategorischer Imperativ',
+      subtitle: 'Maßstab: Verallgemeinerbarkeit',
+      accent: 'purple',
+      points: [
+        '„Handle so, dass die Maxime deines Handelns jederzeit als Teil einer **allgemeinen Gesetzgebung** gelten könnte!"',
+        'bewertet wird die Verallgemeinerbarkeit der Handlungsregel',
+      ],
+    },
+  ]}
+/>
 
 <Diagram
-  title="Argumentationskette: tugendhafte Menschen und Dialogethik"
+  title="Von der Tugend zur Diskursethik"
   source="HR2 · Folie 11"
   chart={`flowchart TD
   A["Aristoteles und Kant setzen<br/>Tugendhaftigkeit voraus"]
-  B["Nicht nur ethische Massstaebe,<br/>sondern auch der Wunsch<br/>ihrer Befolgung"]
+  B["nicht nur ethische Massstaebe,<br/>sondern auch der Wunsch<br/>ihrer Befolgung"]
   C["Dialog ist zentral fuer die<br/>Auseinandersetzung um<br/>ethische Grundlagen"]
-  D["Dialogethik bzw. Diskursethik<br/>leitet explizite<br/>Handlungsnormen ab"]
+  D["Dialog-/Diskursethik leitet<br/>explizite Handlungsnormen ab"]
   A --> B --> C --> D`}
 />
-
-### Zwei normative Grundtypen
 
 <CompareCard
   items={[
@@ -272,20 +194,14 @@ Ethik wird assoziativ über **Moral, Werte, Wahrheit, Respekt, Fairness, Integri
       title: 'Utilitaristische / konsequentialistische Ethik',
       subtitle: 'Leitfrage: **Was sind die Folgen?**',
       accent: 'accent',
-      points: [
-        'Eine Handlung ist gut, wenn die **Folgen nützlich** sind',
-        'Bewertung **vom Ergebnis her**',
-      ],
+      points: ['Eine Handlung ist gut, wenn die **Folgen nützlich** sind', 'Bewertung vom Ergebnis her'],
     },
     {
       tag: 'Pflicht',
       title: 'Deontologische Ethik',
-      subtitle: 'Leitfrage: **Was ist Pflicht / erforderlich?**',
+      subtitle: 'Leitfrage: **Was ist Pflicht?**',
       accent: 'purple',
-      points: [
-        'Der moralische Wert orientiert sich **nicht primär an den Folgen**',
-        'Bewertung **von der Pflicht / Regel her**',
-      ],
+      points: ['Der moralische Wert orientiert sich **nicht primär an den Folgen**', 'Bewertung von der Pflicht/Regel her'],
     },
   ]}
 />
@@ -299,13 +215,11 @@ Ethik wird assoziativ über **Moral, Werte, Wahrheit, Respekt, Fairness, Integri
 ## Unternehmensethik und ethische Bezugsfelder
 
 <DefinitionBox term="Unternehmensethik" source="i.A. Neugebauer">
-Ziel ist die Verankerung **moralischer Reflexion** im unternehmerischen Handeln. Kernfragen führen zu einem **ethischen Dilemma**: Werte stehen im Konflikt — z.B. **interkulturell** oder zwischen **Organisations- und Stakeholderzielen**.
+Ziel ist die Verankerung **moralischer Reflexion** im unternehmerischen Handeln. Kernfragen führen zu einem **ethischen Dilemma**: Werte stehen im Konflikt — etwa interkulturell oder zwischen Organisations- und Stakeholderzielen.
 </DefinitionBox>
 
-### Ethische Bezugsfelder: drei Ebenen
-
 <Diagram
-  title="Bezugsfelder als Ebenenmodell (eingebettet in Sozialethik)"
+  title="Ethische Bezugsfelder als Ebenenmodell (eingebettet in Sozialethik)"
   source="Kreikebaum, 1996, S. 14"
   chart={`flowchart TB
   S["Sozialethik"]
@@ -314,31 +228,9 @@ Ziel ist die Verankerung **moralischer Reflexion** im unternehmerischen Handeln.
   U --> F["Fuehrungsethik · Mikrolevel"]`}
 />
 
-<Columns count={3}>
-  <Card title="Wirtschaftsethik" tone="accent" exam>
-    **Makrolevel** — äußerster Rahmen, gesamtwirtschaftliche Perspektive.
-  </Card>
-  <Card title="Unternehmensethik" tone="purple" exam>
-    **Mesolevel** — Ebene des einzelnen Unternehmens.
-  </Card>
-  <Card title="Führungsethik" tone="teal" exam>
-    **Mikrolevel** — konkreteste Ebene des Führungshandelns.
-  </Card>
-</Columns>
-
 <Callout type="merksatz" title="Einordnung">
-- Unternehmens- und Führungsethik stehen **nicht isoliert**, sondern als Teilbereiche einer größeren Sozial- und Wirtschaftsethik
-- weitere Bereichsethiken: Individual-, Umwelt-, Medizin-, Tier-, Forschungs- und Marketingethik
+Unternehmens- und Führungsethik stehen **nicht isoliert**, sondern als Teilbereiche einer größeren Sozial- und Wirtschaftsethik. Weitere Bereichsethiken: Individual-, Umwelt-, Medizin-, Tier-, Forschungs- und Marketingethik. Typische Einzelfragen: Darf ich in China investieren? Sind gesundheitsschädliche Produkte legitim? Ist Werbung für Kinder legitim? Müssen Unternehmen nachhaltig sein?
 </Callout>
-
-<Card title="Einzelfragen der Unternehmensethik" tone="neutral">
-- Darf ich in China investieren?
-- Sind gesundheitsschädliche Produkte legitim?
-- Ist Werbung für Kinder legitim?
-- Müssen Unternehmen nachhaltig sein?
-</Card>
-
-### Graubereich zwischen Gesetz und Praxis
 
 <Diagram
   title="Gesetze und Praxis: der ethische Graubereich"
@@ -352,9 +244,7 @@ Ziel ist die Verankerung **moralischer Reflexion** im unternehmerischen Handeln.
 />
 
 <Callout type="examfocus" title="Legalität ist nicht gleich Moralität">
-- zwischen Gesetz und tatsächlicher Praxis existiert ein **Graubereich**
-- <Exam>Legalität ist Mindestanforderung</Exam>, aber nicht automatisch moralische Richtigkeit
-- Unternehmensethik wird relevant, wenn Handlungen **praktisch möglich und ggf. legal** sind, aber moralisch reflektiert werden müssen
+Zwischen Gesetz und tatsächlicher Praxis existiert ein **Graubereich**. <Exam>Legalität ist Mindestanforderung</Exam>, aber nicht automatisch moralische Richtigkeit. Unternehmensethik wird relevant, wenn Handlungen praktisch möglich und ggf. legal sind, aber moralisch reflektiert werden müssen.
 </Callout>
 
 </section>
@@ -363,74 +253,42 @@ Ziel ist die Verankerung **moralischer Reflexion** im unternehmerischen Handeln.
 
 ## Personalstrategie und Personalplanung
 
-<Columns count={2}>
-  <Card title="Herleitung und Rolle" tone="accent">
-    - <Exam>Ableitung aus der Unternehmenspolitik</Exam>
-    - Übertragung auf personalpolitische Ziele
-    - strategisches Personalmanagement ist **mehr als operative Umsetzung**
-    - kann eigenständige Impulse in Unternehmensplanung und -führung einbringen
-  </Card>
-  <Card title="Zwei Leitfragen" tone="purple">
-    - Wo möchte sich das Unternehmen in der **Personalarbeit positionieren**?
-    - Wie will das Unternehmen dieses **Ziel erreichen**?
-  </Card>
-</Columns>
-
-### Personalbeschaffung als integrierter Prozess
+Die Personalstrategie wird aus der **Unternehmenspolitik abgeleitet** und auf personalpolitische Ziele übertragen. Strategisches Personalmanagement ist mehr als operative Umsetzung — es kann eigene Impulse in Planung und Führung einbringen. Die zwei Leitfragen: Wo will sich das Unternehmen in der Personalarbeit **positionieren**, und wie will es dieses **Ziel erreichen**?
 
 <Diagram
   title="Integrierter Beschaffungsprozess (zyklisch)"
   source="HR2 · Folie 19"
-  chart={`flowchart TD
-  PL[Planung]
-  MA[Marketing]
-  AU[Auswahl]
-  PL --> MA --> AU --> PL`}
+  chart={`flowchart LR
+  PL[Planung] --> MA[Marketing] --> AU[Auswahl] --> PL`}
 />
 
-<Callout type="info" title="Kein linearer Prozess">
-- Planung, **Personalmarketing** und Auswahl greifen ineinander
-- sie können sich gegenseitig **rückkoppeln**
-- → integrierter, **wiederkehrender Kreislauf**
-</Callout>
+Planung, Personalmarketing und Auswahl greifen ineinander und koppeln zurück — ein integrierter, wiederkehrender Kreislauf statt eines linearen Prozesses. Die Personalbereitstellung hat dabei vier Dimensionen:
 
-### Vier Dimensionen der Personalbereitstellung
-
-<Columns count={2}>
-  <Card title="Anzahl — quantitativ" tone="accent">
-    - Wie viele Mitarbeitende werden benötigt?
-  </Card>
-  <Card title="Art — qualitativ" tone="purple">
-    - Mit welchen Qualifikationen und Anforderungen?
-  </Card>
-  <Card title="Zeitpunkt und Dauer — zeitlich" tone="teal">
-    - Wann und für welchen Zeitraum?
-  </Card>
-  <Card title="Einsatzort — räumlich" tone="orange">
-    - An welchem Ort wird Personal benötigt?
-  </Card>
-</Columns>
-
-<Callout type="examfocus" title="Vier Dimensionen merken">
-<Exam>quantitativ · qualitativ · zeitlich · räumlich</Exam> — die vier Dimensionen der Personalbereitstellung.
-</Callout>
-
-### Vier Schritte der Personalplanung
+<DataTable
+  caption="Vier Dimensionen der Personalbereitstellung"
+  columns={[
+    { key: 'dim', label: 'Dimension' },
+    { key: 'frage', label: 'Leitfrage' },
+  ]}
+  rows={[
+    { dim: 'Anzahl (quantitativ)', frage: 'Wie viele Mitarbeitende werden benötigt?' },
+    { dim: 'Art (qualitativ)', frage: 'Mit welchen Qualifikationen und Anforderungen?' },
+    { dim: 'Zeitpunkt & Dauer (zeitlich)', frage: 'Wann und für welchen Zeitraum?' },
+    { dim: 'Einsatzort (räumlich)', frage: 'An welchem Ort wird Personal benötigt?' },
+  ]}
+/>
 
 <Timeline
   events={[
-    { label: '1', title: 'Personalbestandsanalyse', text: 'Ermittlung der aktuellen Personalausstattung nach Quantität und Qualität.' },
-    { label: '2', title: 'Personalbedarfsanalyse', text: 'Ermittlung des zukünftigen Personalbedarfs nach Quantität und Qualität; Soll-Ermittlung.' },
-    { label: '3', title: 'Soll-Ist-Abgleich', text: 'Ermittlung des Netto-Bedarfs als Differenz zwischen künftigem Personalbestand und erwartetem Personalbedarf.' },
-    { label: '4', title: 'Planung der Maßnahmen', text: 'Ermittlung der Deckungsart; Maßnahmen gegen Über- oder Unterdeckung; Übergang zur Gewinnungs-, Entwicklungs- oder Abbauplanung.' },
+    { label: '1', title: 'Personalbestandsanalyse', text: 'Aktuelle Personalausstattung nach Quantität und Qualität ermitteln.' },
+    { label: '2', title: 'Personalbedarfsanalyse', text: 'Zukünftigen Bedarf nach Quantität und Qualität ermitteln (Soll).' },
+    { label: '3', title: 'Soll-Ist-Abgleich', text: 'Netto-Bedarf als Differenz aus künftigem Bestand und erwartetem Bedarf.' },
+    { label: '4', title: 'Planung der Maßnahmen', text: 'Deckungsart bestimmen; Maßnahmen gegen Über-/Unterdeckung; Übergang zur Gewinnungs-, Entwicklungs- oder Abbauplanung.' },
   ]}
 />
 
 <Callout type="pitfall" title="Zukunfts- statt vergangenheitsorientiert">
-- Bedarfsbestimmung ermittelt den **erforderlichen Soll-Personalbestand**
-- differenziert nach **Perioden und Qualifikationsgruppen**
-- muss <Exam>zukunftsorientiert</Exam> geplant werden, nicht vergangenheitsorientiert
-- denn Beschaffungs-/Freistellungsentscheidungen bestimmen die **Zukunftsfähigkeit** mit
+Die Bedarfsbestimmung ermittelt den erforderlichen **Soll-Personalbestand**, differenziert nach Perioden und Qualifikationsgruppen, und muss <Exam>zukunftsorientiert</Exam> geplant werden — denn Beschaffungs- und Freistellungsentscheidungen bestimmen die Zukunftsfähigkeit mit.
 </Callout>
 
 </section>
@@ -439,122 +297,72 @@ Ziel ist die Verankerung **moralischer Reflexion** im unternehmerischen Handeln.
 
 ## Personalbedarf, Bestand und Soll-Ist-Abgleich
 
+Brutto-Personalbedarf und Ist-Bestand werden verglichen; die Differenz ist der Netto-Bedarf, der zu Beschaffungs- oder Freisetzungsbedarf führt:
+
 <Diagram
   title="Personalbedarfsplanung: vom Bedarf/Bestand zu den Maßnahmen"
-  source="Bernd, R.; Fantapié Altobelli, C.; Sander, M.: Personalbedarfsplanung in international tätigen Unternehmen, 2016"
+  source="Bernd / Fantapié Altobelli / Sander, 2016"
   chart={`flowchart TB
-  PB["Personalbedarf:<br/>qualitativ, quantitativ,<br/>zeitlich"]
-  PI["Personalbestand:<br/>qualitativ, quantitativ,<br/>zeitlich"]
+  PB["Personalbedarf:<br/>qualitativ, quantitativ, zeitlich"]
+  PI["Personalbestand:<br/>qualitativ, quantitativ, zeitlich"]
   BB["Brutto-Personalbedarf"]
   IB["Personal-Istbestand"]
   V{"Vergleich"}
-  UE["Ueberdeckung"]
-  UN["Unterdeckung"]
   NB["Netto-Personalbedarf"]
   FB["Personalfreisetzungsbedarf"]
   BE["Personalbeschaffungsbedarf"]
   PB --> BB --> V
   PI --> IB --> V
-  V --- UE
-  V --- UN
   V --> NB
   NB --> FB
   NB --> BE`}
 />
 
-<Columns count={2}>
-  <Card title="Bestandsfortschreibung über das Jahr" tone="neutral">
-    - Personalausstattung am **Jahresanfang**
-    - **− Abgänge**
-    - **+ Zugänge**
-    - = Personalausstattung am **Anfang des Folgejahres**
-  </Card>
-  <Card title="Wer zählt in den Bestand?" tone="accent">
-    - auch Mitarbeitende **ohne aktuellen produktiven Einsatz**
-    - z.B. Elternzeit, längere Krankheit
-    - → zählen in die **Bestandsstatistik**
-  </Card>
-</Columns>
+<Formula
+  title="Bestandsfortschreibung über das Jahr"
+  expr="\text{Ausstattung}_{\text{Folgejahr}} = \text{Ausstattung}_{\text{Jahresanfang}} - \text{Abgänge} + \text{Zugänge}"
+/>
 
-### Maßnahmen bei Über- und Unterdeckung
+In den Bestand zählen auch Mitarbeitende **ohne aktuellen produktiven Einsatz** (z.B. Elternzeit, längere Krankheit). Je nach Vergleichsergebnis greifen unterschiedliche Maßnahmen:
 
 <CompareCard
   items={[
     {
       tag: 'Unterdeckung',
-      title: 'Unterdeckung — es fehlen Mitarbeiter',
-      subtitle: 'vorhandene Kapazität liegt unter Bedarf',
+      title: 'Es fehlen Mitarbeiter',
+      subtitle: 'Kapazität liegt **unter** Bedarf',
       accent: 'warning',
-      points: [
-        'Abstimmung und Konkretisierung des quantitativen/qualitativen Bedarfs',
-        'Übergang zur **Beschaffungs-/Gewinnungsplanung**',
-        'intern: v.a. **Personalentwicklung**',
-        'extern: **externe Personalrekrutierung**',
-      ],
+      points: ['Übergang zur **Beschaffungs-/Gewinnungsplanung**', 'intern: v.a. Personalentwicklung', 'extern: externe Personalrekrutierung'],
     },
     {
       tag: 'Überdeckung',
-      title: 'Überdeckung — mehr Mitarbeiter als benötigt',
-      subtitle: 'vorhandene Kapazität liegt über Bedarf',
+      title: 'Mehr Mitarbeiter als benötigt',
+      subtitle: 'Kapazität liegt **über** Bedarf',
       accent: 'negative',
-      points: [
-        'Abstimmung und Konkretisierung des Bedarfs',
-        'Maßnahmen gegen Überdeckung: **Freistellungsplanung**',
-        'intern: Reduktion der **Personalkapazität**',
-        'extern: Reduktion der **Beschäftigtenzahl**',
-      ],
+      points: ['Maßnahmen über die **Freistellungsplanung**', 'intern: Reduktion der Personalkapazität', 'extern: Reduktion der Beschäftigtenzahl'],
     },
   ]}
 />
 
-### Soll-Ist-Abgleich: Kapazität vs. schwankender Bedarf
-
-<Columns count={2}>
-  <Card title="Ist-Situation" tone="negative">
-    - schwankender Personalbedarf
-    - **starre** Personalressourcen, nur mit langer Reaktionszeit veränderbar
-    - Folge: Bereiche mit **Überdeckung** und **Unterdeckung**
-  </Card>
-  <Card title="Soll-Situation" tone="positive">
-    - Personaleinsatz an den Personalbedarf **angeglichen**
-    - Abweichungsflächen deutlich reduziert
-    - Ziel: bessere **Synchronisation** von Ressourcen mit schwankendem Bedarf
-  </Card>
-</Columns>
-
-<SourceNote>Atoss Software GmbH (Soll-Ist-Kapazitätsvergleich, Legende: dunkel = bedarfsgerecht, hellgrau = nicht bedarfsgerecht, orange = Über-/Unterdeckung)</SourceNote>
-
-### Rechenbeispiel: Brutto- und Netto-Personalbedarf
+Weil der Bedarf schwankt, die Personalressourcen aber starr sind, entstehen Über- und Unterdeckungsflächen. Ziel ist die bessere **Synchronisation** von Einsatz und Bedarf (Atoss-Soll-Ist-Kapazitätsvergleich). Ein Rechenbeispiel:
 
 <Formula
-  title="Brutto-Personalbedarf"
-  expr="\text{Einsatzbedarf } 600 + \text{Reservebedarf } 50 = \text{Brutto-Personalbedarf } 650"
-/>
-
-<Formula
-  title="Netto-Personalbedarf (als Klammerformel, damit das Ergebnis konsistent ist)"
-  expr="\text{Netto} = \text{Brutto} - (\text{Verfügbar} + \text{Neueinstellungen} - \text{Abgänge})"
-/>
-
-<Formula
-  title="Eingesetzte Werte"
-  expr="\text{Netto-Personalbedarf} = 650 - (620 + 40 - 30) = 20"
+  title="Netto-Personalbedarf (Klammerformel)"
+  expr="\text{Netto} = \text{Brutto} - (\text{Verfügbar} + \text{Neueinstellungen} - \text{Abgänge}) = 650 - (620 + 40 - 30) = 20"
 />
 
 <KpiGrid
   items={[
     { value: '650', label: 'Brutto-Personalbedarf (Einsatz 600 + Reserve 50)', accent: 'accent' },
     { value: '620', label: 'verfügbare Mitarbeiter', accent: 'default' },
-    { value: '20', label: 'Netto-Personalbedarf (zusätzlicher Bedarf)', accent: 'warning' },
+    { value: '20', label: 'Netto-Personalbedarf (zusätzlich)', accent: 'warning' },
   ]}
 />
 
 <Callout type="examfocus" title="Achtung Rechenlogik">
-- die Folie zeigt eine **lineare Operator-Reihe**
-- der Endwert <Exam>20</Exam> ist nur konsistent, wenn die verfügbaren künftigen Kapazitäten als **Klammer** verstanden werden
-- → **Netto = Brutto − (Verfügbar + Neueinstellungen − Abgänge)**
+Die Folie zeigt eine lineare Operator-Reihe; der Endwert <Exam>20</Exam> ist nur konsistent, wenn die verfügbaren künftigen Kapazitäten als **Klammer** verstanden werden: Netto = Brutto − (Verfügbar + Neueinstellungen − Abgänge).
 </Callout>
 
-<SourceNote>Human Resources · HR2 – Personalpolitik · Folien 1–31 (Quellen je Grafik: Future Talents Report 2022, Scholz 2013, Kreikebaum 1996, Pech 2016, Atoss Software GmbH, Bernd/Fantapié Altobelli/Sander 2016)</SourceNote>
+<SourceNote>Human Resources · HR2 – Personalpolitik · Folien 1–31</SourceNote>
 
 </section>

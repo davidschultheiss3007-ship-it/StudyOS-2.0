@@ -122,44 +122,37 @@ Vier konkurrierende Ziele — <Exam>nicht gleichzeitig maximierbar</Exam>: **Ren
 
 ## Anbieter und institutionelle Anleger
 
-<Columns count={3}>
-  <Card title="Banken" tone="accent">
-    - Information durch Berater
-    - Entscheidung beim Anleger
-  </Card>
-  <Card title="Privatkunden-Verwaltung" tone="teal">
-    - Musterdepots
-    - Anlagerichtlinien
-    - Einzeldisposition durch Verwalter
-  </Card>
-  <Card title="Institutionelle Verwaltung" tone="purple">
-    - Spezialfonds
-    - Wertpapier-/Liquiditätsmanagement
-    - Asset Allocation, **ALM**
-  </Card>
-</Columns>
+<DataTable
+  caption="Anbieterformen und Entscheidungsebene"
+  columns={[
+    { key: 'form', label: 'Form' },
+    { key: 'leistung', label: 'Leistung und Verantwortung' },
+  ]}
+  rows={[
+    { form: 'Banken', leistung: 'Information durch Berater; die Entscheidung bleibt beim Anleger' },
+    { form: 'Privatkunden-Verwaltung', leistung: 'Musterdepots, Anlagerichtlinien und Einzeldisposition durch den Verwalter' },
+    { form: 'Institutionelle Verwaltung', leistung: 'Spezialfonds, Wertpapier- und Liquiditätsmanagement, Asset Allocation und ALM' },
+  ]}
+/>
 
 <DefinitionBox term="ALM – Asset-Liability-Management">
 Abstimmung der **Fälligkeitsstruktur** aktiver und passiver Bilanzpositionen.
 </DefinitionBox>
 
-<Columns count={2}>
-  <Card title="Charakteristika institutioneller Anleger" tone="purple">
-    - juristische Person
-    - i.d.R. hohe Anlagebeträge und -bestände
-    - Anlage überwiegend **fremder** Mittel
-    - hohe Restriktionen: **KAGG · WpHG · KWG**
-    - Nachfrage nach professionellem Research
-    - häufig Entscheidung **in Gruppen**
-  </Card>
-  <Card title="Erscheinungsformen" tone="neutral">
-    - Kreditinstitute
-    - Versicherungen
-    - Pensionskassen
-    - Kapitalanlagegesellschaften / Investmentfonds
-    - Stiftungen
-  </Card>
-</Columns>
+### Institutionelle Anleger auf einen Blick
+
+<DataTable
+  columns={[
+    { key: 'dimension', label: 'Dimension' },
+    { key: 'auspraegung', label: 'Ausprägung' },
+  ]}
+  rows={[
+    { dimension: 'Rechtsform und Volumen', auspraegung: 'Juristische Person; in der Regel hohe Anlagebeträge und Bestände' },
+    { dimension: 'Mittel und Regulierung', auspraegung: 'Überwiegend fremde Mittel; hohe Restriktionen durch KAGG, WpHG und KWG' },
+    { dimension: 'Entscheidung', auspraegung: 'Nachfrage nach professionellem Research; Entscheidungen häufig in Gruppen' },
+    { dimension: 'Erscheinungsformen', auspraegung: 'Kreditinstitute, Versicherungen, Pensionskassen, Kapitalanlagegesellschaften beziehungsweise Investmentfonds und Stiftungen' },
+  ]}
+/>
 
 </section>
 

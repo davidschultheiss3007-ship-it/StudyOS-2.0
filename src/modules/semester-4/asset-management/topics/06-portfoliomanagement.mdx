@@ -105,50 +105,36 @@ Das <Exam>Investment Policy Statement</Exam> bildet die Grundlage für die Asset
 
 ### 2 · Strategische Asset Allocation (SAA)
 
-<Columns count={3}>
-  <Card title="Festlegung des Assetuniversums" tone="accent">
-    - Auswahl der Finanzmärkte
-    - Auswahl der Assetklassen
-  </Card>
-  <Card title="Aufstellung von Investmentguidelines" tone="purple">
-    - Definition der Benchmarks je Assetklasse
-    - Definition von Investmentlimits
-  </Card>
-  <Card title="Investmentphilosophie und -stile" tone="teal">
-    - Aktives vs. Passives Management
-    - Buy-and-Hold vs. Wertsicherungsstrategien (Risikomanagement → **DAA**, Dynamische Asset Allocation)
-  </Card>
-</Columns>
+Die SAA legt den langfristigen Handlungsrahmen fest. Drei Entscheidungen gehören zusammen:
+
+<DataTable
+  caption="Bausteine der Strategischen Asset Allocation"
+  columns={[
+    { key: 'baustein', label: 'Baustein' },
+    { key: 'entscheidungen', label: 'Festlegungen' },
+  ]}
+  rows={[
+    { baustein: 'Assetuniversum', entscheidungen: 'Finanzmärkte und Assetklassen' },
+    { baustein: 'Investmentguidelines', entscheidungen: 'Benchmarks je Assetklasse und Investmentlimits' },
+    { baustein: 'Investmentphilosophie und -stile', entscheidungen: 'Aktiv vs. passiv; Buy-and-Hold vs. Wertsicherung (Risikomanagement → DAA, Dynamische Asset Allocation)' },
+  ]}
+/>
 
 ### 3 · Portfoliomanagement i.e.S.
 
-<Columns count={2}>
-  <Card title="Research und Prognose" tone="accent">
-    - **Informationssammlung:** Buy-/Sellside-Analystenschätzungen; Erwartungen der Trading Desks
-    - **Einsatz von Prognosetechniken** (Bewertung der Informationen)
-  </Card>
-  <Card title="Portfoliobildung" tone="purple">
-    - **Erstmalige Zusammenstellung** des Portfolios
-    - Fokus auf Execution und Transaktionskosten
-  </Card>
-</Columns>
+<Timeline events={[
+  { label: 'a', title: 'Research und Prognose', text: 'Informationssammlung über Buy-/Sellside-Analystenschätzungen und Erwartungen der Trading Desks; Prognosetechniken bewerten diese Informationen.' },
+  { label: 'b', title: 'Portfoliobildung', text: 'Erstmalige Zusammenstellung des Portfolios mit Fokus auf Execution und Transaktionskosten.' },
+  { label: 'c', title: 'Taktische Asset Allocation', text: 'Branchen- und Einzeltitelauswahl; bei Anleihen Festlegung der Laufzeiten über Duration und Konvexität.' },
+  { label: 'd', title: 'Portfoliorevision', text: 'Neue Informationen und Erwartungen führen zu Rebalancing oder Upgrading.' },
+  { label: 'e', title: 'Trading', text: 'Kauf und Verkauf setzen die Entscheidungen um; Kapitalmarktanomalien können zusätzliche Performance liefern.' },
+]} />
 
-<Card title="Taktische Asset Allocation (Portfoliogenerierung)" tone="teal">
-- Branchen- und Einzeltitelauswahl
-- Festlegung der Laufzeiten bei Anleihen (**Duration und Konvexität**)
+<Card title="Portfoliorevision" tone="orange" exam>
+Nach Erscheinen neuer Information und Bildung neuer Erwartungen:
+- **Portfolio Rebalancing** = Umschichtungen zur **Wiederherstellung der ursprünglichen** Portfoliostruktur, bspw. nach Outperformance bestimmter Assetklassen
+- **Portfolio Upgrading** = **bewusste Veränderung** der Portfoliostruktur aufgrund neuer Informationen
 </Card>
-
-<Columns count={2}>
-  <Card title="Portfoliorevision" tone="orange" exam>
-    Nach Erscheinen neuer Information und Bildung neuer Erwartungen:
-    - **Portfolio Rebalancing** = Umschichtungen zur **Wiederherstellung der ursprünglichen** Portfoliostruktur, bspw. nach Outperformance bestimmter Assetklassen
-    - **Portfolio Upgrading** = **bewusste Veränderung** der Portfoliostruktur aufgrund neuer Informationen
-  </Card>
-  <Card title="Trading" tone="neutral">
-    - Umsetzung der Portfolioentscheidungen (Kauf/Verkauf von Assets)
-    - zusätzliche Performance durch **Ausnützung von Kapitalmarktanomalien**
-  </Card>
-</Columns>
 
 <Callout type="pitfall" title="Rebalancing vs. Upgrading">
 <Exam>Rebalancing</Exam> stellt die ursprüngliche Struktur wieder her — <Exam>Upgrading</Exam> verändert sie bewusst aufgrund neuer Informationen. Die beiden nicht verwechseln.
@@ -156,47 +142,31 @@ Das <Exam>Investment Policy Statement</Exam> bildet die Grundlage für die Asset
 
 #### Einflussfaktoren auf Transaktionskosten (Folie 11)
 
-<Columns count={3}>
-  <Card title="Brokerage" tone="accent" compact>
-    - Brokerage-Gebühren
-    - Provisionen
-    - Spesen
-  </Card>
-  <Card title="Geld-Brief-Spanne / Bid-Ask-Spread" tone="purple" compact>
-    - Liquidität der Aktie
-    - Risiko der Aktie (höheres Risiko → höherer Spread)
-    - absolutes Preisniveau (höher → höherer Spread)
-    - Informationstransparenz (intransparenter → höherer Spread)
-    - Börsensegment (elektronisch vs. Floor-Trading)
-  </Card>
-  <Card title="Handelbarkeit (Fungibilität)" tone="teal" compact>
-    - **hohe Liquidität:** standardisierte Anlagen (börsennotierte Aktien, Anleihen, Fonds)
-    - **geringe Liquidität:** nicht-standardisierte Assets (z. B. GmbH-Anteile)
-  </Card>
-</Columns>
+<DataTable
+  caption="Kostenblöcke und ihre Treiber"
+  columns={[
+    { key: 'kostenblock', label: 'Kostenblock' },
+    { key: 'treiber', label: 'Bestandteile und Einflussfaktoren' },
+  ]}
+  rows={[
+    { kostenblock: 'Brokerage', treiber: 'Brokerage-Gebühren, Provisionen und Spesen' },
+    { kostenblock: 'Geld-Brief-Spanne / Bid-Ask-Spread', treiber: 'Liquidität, Risiko, absolutes Preisniveau, Informationstransparenz und Börsensegment (elektronisch vs. Floor-Trading)' },
+    { kostenblock: 'Handelbarkeit (Fungibilität)', treiber: 'Hohe Liquidität bei standardisierten Anlagen wie börsennotierten Aktien, Anleihen und Fonds; geringe Liquidität bei nicht-standardisierten Assets wie GmbH-Anteilen' },
+  ]}
+/>
+
+<Callout type="info" title="Richtung der Spread-Treiber">
+Höheres Risiko und ein höheres absolutes Preisniveau erhöhen den Spread. Geringere Informationstransparenz wirkt ebenfalls spread-erhöhend.
+</Callout>
 
 ### 4 · Finanzcontrolling
 
-<Columns count={2}>
-  <Card title="Performanceanalyse" tone="accent">
-    - Performancemessung
-    - Performancebewertung
-  </Card>
-  <Card title="Risikoanalyse (Kennzahlenanalyse)" tone="purple">
-    - Asset-Liability-Management
-    - Stress-Test-Szenarien
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="Konkurrenzanalyse" tone="teal">
-    - Kennzahlenvergleich mit dem Markt (**Makroanalyse**)
-    - Kennzahlenvergleich mit Peer Group/Mitbewerbern (**Mikroanalyse**)
-  </Card>
-  <Card title="Reporting" tone="neutral">
-    - abschließende Berichterstattung des Finanzcontrollings
-  </Card>
-</Columns>
+<FactGrid columns={2} items={[
+  { label: 'Performanceanalyse', value: 'Performancemessung und Performancebewertung', accent: 'accent' },
+  { label: 'Risikoanalyse', value: 'Asset-Liability-Management und Stress-Test-Szenarien', accent: 'purple' },
+  { label: 'Konkurrenzanalyse', value: 'Marktvergleich (Makroanalyse) und Peer-Group-Vergleich (Mikroanalyse)', accent: 'teal' },
+  { label: 'Reporting', value: 'Abschließende Berichterstattung des Finanzcontrollings', accent: 'neutral' },
+]} />
 
 </section>
 
@@ -393,18 +363,11 @@ Die Asset Allocation erklärt mit <Exam>91,5 %</Exam> den größten Teil der Per
 
 ### Praktische Beschränkungen der SAA (Folien 22–23)
 
-<Columns count={3}>
-  <Card title="Rechtlicher Rahmen" tone="accent">
-    - Beachtung von **gesetzlichen und vertraglichen Rahmenbedingungen**
-  </Card>
-  <Card title="Finanzstärke" tone="purple">
-    - **aktive und passive Reservepolster** des Investors
-  </Card>
-  <Card title="Liquiditätserfordernisse" tone="teal">
-    - Konzentration auf Assetklassen mit **standardisierter Handelbarkeit** (Börsenhandel)
-    - **liquide Märkte** (Segmente mit hoher Marktkapitalisierung)
-  </Card>
-</Columns>
+<FactGrid columns={3} items={[
+  { label: 'Rechtlicher Rahmen', value: 'Gesetzliche und vertragliche Rahmenbedingungen' },
+  { label: 'Finanzstärke', value: 'Aktive und passive Reservepolster des Investors' },
+  { label: 'Liquidität', value: 'Standardisierte Handelbarkeit und liquide Märkte mit hoher Marktkapitalisierung' },
+]} />
 
 <CompareCard
   items={[
@@ -444,18 +407,19 @@ Das gebundene Vermögen eines VU/Pensionsfonds ist so anzulegen, dass möglichst
 
 ### Nebenbedingungen und Fazit (Folie 25)
 
-<Columns count={3}>
-  <Card title="Liquiditätserfordernisse" tone="teal" compact>
-    - **VU/Pensionsfonds:** dauerhafte Erfüllbarkeit der Versicherungsleistungen
-    - **Investmentfonds:** jederzeitiger Rückkauf der Anteile
-  </Card>
-  <Card title="Wettbewerbsfähige Renditen" tone="accent" compact>
-    - Erzielung **wettbewerbsfähiger Renditen**
-  </Card>
-  <Card title="Finanzstärke" tone="purple" compact>
-    - **Reservesituation** bestimmt das Exposure in riskante Anlagen
-  </Card>
-</Columns>
+<DataTable
+  caption="Nebenbedingungen institutioneller Portfolios"
+  columns={[
+    { key: 'nebenbedingung', label: 'Nebenbedingung' },
+    { key: 'konsequenz', label: 'Konsequenz' },
+  ]}
+  rows={[
+    { nebenbedingung: 'Liquidität bei VU und Pensionsfonds', konsequenz: 'Dauerhafte Erfüllbarkeit der Versicherungsleistungen' },
+    { nebenbedingung: 'Liquidität bei Investmentfonds', konsequenz: 'Jederzeitiger Rückkauf der Anteile' },
+    { nebenbedingung: 'Rendite', konsequenz: 'Erzielung wettbewerbsfähiger Renditen' },
+    { nebenbedingung: 'Finanzstärke', konsequenz: 'Die Reservesituation bestimmt das Exposure in riskante Anlagen' },
+  ]}
+/>
 
 <Callout type="pitfall" title="FAZIT">
 Für die Generierung effizienter Portfolios ist das <Exam>Portfolio-Selection-Modell von Markowitz für einen institutionellen Investor nicht ausreichend</Exam>.
@@ -473,26 +437,19 @@ Kurz- und langfristige **Anpassungen der Gewichte** der einzelnen Assetklassen a
 
 ### Merkmale der TAA
 
-<Columns count={2}>
-  <Card title="Risiko und Kompensation" tone="accent">
-    - Basis ist die Bereitschaft des Investors, **systematisches Risiko zu akzeptieren**
-    - nur für dieses erhält der Investor eine **Kompensation**
-  </Card>
-  <Card title="Anpassungsoptionen" tone="purple">
-    - gelegentliche, opportunistische **ad-hoc-Anpassungen**
-    - **regelmäßige** Anpassungen (z. B. quartalsweise)
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="Zielsetzung: Alpha" tone="teal">
-    - „Feinschliff" des Depots
-    - positive, risikoadjustierte <Exam>Überrendite (Alpha)</Exam>
-  </Card>
-  <Card title="Praxis" tone="orange">
-    - Anwendung durch **Derivate-Overlays**
-  </Card>
-</Columns>
+<DataTable
+  caption="Merkmale der taktischen Asset Allocation"
+  columns={[
+    { key: 'dimension', label: 'Dimension' },
+    { key: 'auspraegung', label: 'Ausprägung' },
+  ]}
+  rows={[
+    { dimension: 'Risiko und Kompensation', auspraegung: 'Akzeptanz systematischen Risikos; nur dieses wird kompensiert' },
+    { dimension: 'Anpassung', auspraegung: 'Opportunistisch ad hoc oder regelmäßig, zum Beispiel quartalsweise' },
+    { dimension: 'Ziel', auspraegung: 'Feinschliff des Depots und positive risikoadjustierte Überrendite (Alpha)' },
+    { dimension: 'Praxis', auspraegung: 'Umsetzung durch Derivate-Overlays' },
+  ]}
+/>
 
 ### Der Prozess im Überblick (Folie 27)
 
@@ -515,19 +472,11 @@ Kurz- und langfristige **Anpassungen der Gewichte** der einzelnen Assetklassen a
   PM --> KO(("Kontrolle"))`}
 />
 
-<Columns count={3}>
-  <Card title="Planung" tone="accent" compact>
-    - Input: Markteinschätzung (BIP, Inflation, Währungen)
-    - → Strategische Asset Allocation
-  </Card>
-  <Card title="Realisierung" tone="purple" compact>
-    - Input: Asset Valuation → Taktische Asset Selection
-    - Input: Handelskosten → Execution
-  </Card>
-  <Card title="Kontrolle" tone="teal" compact>
-    - Performance Messung (Kosten PFM, Risiko/Rendite, Outperform?)
-  </Card>
-</Columns>
+<Timeline events={[
+  { label: '1', title: 'Planung', text: 'Markteinschätzung zu BIP, Inflation und Währungen führt zur Strategischen Asset Allocation.' },
+  { label: '2', title: 'Realisierung', text: 'Asset Valuation führt zur taktischen Asset Selection; Handelskosten bestimmen die Execution.' },
+  { label: '3', title: 'Kontrolle', text: 'Performance-Messung prüft Kosten des Portfoliomanagements, Risiko und Rendite sowie eine mögliche Outperformance.' },
+]} />
 
 ### Beispiel: Taktische Asset Allocation bei Anleihen (Folie 28)
 
@@ -550,20 +499,17 @@ Kurz- und langfristige **Anpassungen der Gewichte** der einzelnen Assetklassen a
   ET --> KX["Konvexitaet"]`}
 />
 
-<Columns count={2}>
-  <Card title="Auswahlkriterien (Assetklassen-Ebene)" tone="accent">
-    - **Rendite**
-    - **Laufzeit:** kurzfristig · mittelfristig · langfristig
-    - **Schuldner:** Sovereigns · Supranationals · Corporates
-    - **Rating:** Investm. Grade · Specul. Grade · Junk Bonds
-  </Card>
-  <Card title="Einzeltitel-Merkmale" tone="purple">
-    - Coupon
-    - Stückzins
-    - **Duration**
-    - **Konvexität**
-  </Card>
-</Columns>
+<DataTable
+  caption="Auswahl von Anleihen auf zwei Ebenen"
+  columns={[
+    { key: 'ebene', label: 'Ebene' },
+    { key: 'kriterien', label: 'Kriterien' },
+  ]}
+  rows={[
+    { ebene: 'Assetklasse', kriterien: 'Rendite; Laufzeit kurz, mittel oder lang; Schuldner Sovereigns, Supranationals oder Corporates; Rating Investment Grade, Speculative Grade oder Junk Bonds' },
+    { ebene: 'Einzeltitel', kriterien: 'Coupon, Stückzins, Duration und Konvexität' },
+  ]}
+/>
 
 <SourceNote>Asset Management · Kapitel 6 · Portfoliomanagement · Folien 203-230</SourceNote>
 

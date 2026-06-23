@@ -1,85 +1,56 @@
+{/* Kapitel 8 · Personaladministration, Sozialversicherung und DSGVO. Palette via MDXProvider. */}
+
 <section id="personalbetreuung-sozialleistungen">
 
 ## Personalbetreuung und freiwillige Sozialleistungen
 
 <DefinitionBox term="Personalbetreuung" source="HR8 · Folie 2">
-Personalpflege als **System von Prinzipien und Methoden** zur Optimierung von Gesundheitszustand und Leistungsfähigkeit der Mitarbeiter:
-- umfasst alle Einrichtungen, Maßnahmen bzw. Leistungen, die dem Mitarbeiter <Exam>über das vereinbarte Entgelt hinaus</Exam> zukommen
-- kann staatliche Sozialleistungen ergänzen (**betriebliche Sozialarbeit**)
+Personalpflege als **System von Prinzipien und Methoden** zur Optimierung von Gesundheitszustand und Leistungsfähigkeit: alle Einrichtungen, Maßnahmen und Leistungen, die dem Mitarbeiter <Exam>über das vereinbarte Entgelt hinaus</Exam> zukommen — sie kann staatliche Sozialleistungen ergänzen (betriebliche Sozialarbeit).
 </DefinitionBox>
 
-### Ziele und Maßnahmen
+<CompareCard
+  items={[
+    {
+      tag: 'Ziele',
+      title: 'Ziele der Personalbetreuung',
+      accent: 'accent',
+      points: [
+        'bessere Arbeitsbedingungen; weniger Fehlzeiten, Unfälle, Krankenstände',
+        'geringere **Fluktuation**, positive Außenwirkung',
+        'mehr Leistungsbereitschaft, Zufriedenheit, Motivation',
+        'bessere soziale Beziehungen, stärkere **Identifikation**',
+      ],
+    },
+    {
+      tag: 'Maßnahmen',
+      title: 'Betreuungsmaßnahmen',
+      accent: 'teal',
+      points: [
+        'Mitarbeiterverpflegung, Gesundheitsfürsorge, Altersvorsorge',
+        'Familienbetreuung (Wohnung, Trennungsgeld, Kindertagesstätten)',
+        'Betriebsveranstaltungen und sonstige Vergünstigungen',
+      ],
+    },
+  ]}
+/>
 
-<Columns count={2}>
-  <Card title="Ziele der Personalbetreuung" tone="accent">
-    - Positive Beeinflussung der Arbeitsbedingungen im Betrieb
-    - Reduzierung von Fehlzeiten, Unfällen und Krankenständen
-    - Verringerung der **Fluktuation**
-    - Positive Außenwirkung
-    - Steigerung von Leistungsbereitschaft, Arbeitszufriedenheit und Motivation
-    - Verbesserung sozialer Beziehungen und Kontakte
-    - Förderung der **Identifikation** mit dem Unternehmen
-  </Card>
-  <Card title="Beispiele betrieblicher Betreuungsmaßnahmen" tone="teal">
-    - Mitarbeiterverpflegung
-    - Gesundheitsfürsorge
-    - Altersvorsorge
-    - Familienbetreuung (Wohnung, Trennungsgeld, Kindertagesstätten)
-    - Betriebsveranstaltungen
-    - Sonstige Angebote und Vergünstigungen
-  </Card>
-</Columns>
-
-### Freiwillige Sozialleistungen im Überblick
-
-<Columns count={2}>
-  <Card title="Vorsorgeleistungen" tone="accent">
-    - Betriebliche Altersvorsorge
-    - Invaliditätsversorgung
-    - Hinterbliebenenversorgung
-    - Unfallversicherung
-    - Lebensversicherung
-    - Vermögenswirksame Leistung
-  </Card>
-  <Card title="Geldleistungen" tone="purple">
-    - Weihnachtsgeld
-    - Urlaubsgeld
-    - 13. Monatsgehalt
-    - Beihilfen
-    - Dienstaltersprämie
-    - Jubiläumszuwendung
-    - Fahrkostenzuschuss
-    - Essenszuschuss
-    - Umzugszuschuss
-    - Firmendarlehen
-  </Card>
-</Columns>
-
-<Columns count={3}>
-  <Card title="Sachleistungen" tone="teal">
-    - Firmenwagen
-    - Arbeitskleidung
-    - Mitarbeiterrabatte
-    - Preisnachlässe
-    - Kostenlose Getränke und Früchte bzw. sonstige Verpflegung
-  </Card>
-  <Card title="Fürsorge- und Gesundheitspflege" tone="positive">
-    - Kostenlose Vorsorgeuntersuchung
-    - Grippenschutzimpfung *(so auf der Folie)*
-    - Gesundheitsdienst und Werksfürsorge
-    - Wellnessprogramme
-    - Krankenrückkehrgespräche
-  </Card>
-  <Card title="Sonstige Leistungen" tone="orange">
-    - Bildungs- und Freizeitangebote
-    - Werkswohnungen
-    - Kinderbetreuung
-    - Beratungs- und Betreuungsangebote
-  </Card>
-</Columns>
+<DataTable
+  caption="Freiwillige Sozialleistungen nach Kategorien"
+  columns={[
+    { key: 'kat', label: 'Kategorie' },
+    { key: 'bsp', label: 'Beispiele' },
+  ]}
+  rows={[
+    { kat: 'Vorsorgeleistungen', bsp: 'betriebliche Altersvorsorge, Invaliditäts-/Hinterbliebenenversorgung, Unfall-/Lebensversicherung, vermögenswirksame Leistung' },
+    { kat: 'Geldleistungen', bsp: 'Weihnachts-/Urlaubsgeld, 13. Monatsgehalt, Beihilfen, Dienstalters-/Jubiläumsprämie, Fahrt-/Essens-/Umzugszuschuss, Firmendarlehen' },
+    { kat: 'Sachleistungen', bsp: 'Firmenwagen, Arbeitskleidung, Mitarbeiterrabatte, kostenlose Getränke/Früchte' },
+    { kat: 'Fürsorge & Gesundheit', bsp: 'Vorsorgeuntersuchung, Grippeschutzimpfung, Werksfürsorge, Wellnessprogramme, Krankenrückkehrgespräche' },
+    { kat: 'Sonstige Leistungen', bsp: 'Bildungs-/Freizeitangebote, Werkswohnungen, Kinderbetreuung, Beratungsangebote' },
+  ]}
+/>
 
 <Callout type="merksatz" title="Kerngedanke">
-Freiwillige Sozialleistungen kommen **zusätzlich zum vereinbarten Entgelt** und sollen Bindung, Gesundheit und Motivation der Mitarbeiter stärken sowie die Fluktuation senken.
+Freiwillige Sozialleistungen kommen **zusätzlich zum vereinbarten Entgelt** und sollen Bindung, Gesundheit und Motivation stärken sowie die Fluktuation senken.
 </Callout>
 
 </section>
@@ -88,155 +59,66 @@ Freiwillige Sozialleistungen kommen **zusätzlich zum vereinbarten Entgelt** und
 
 ## Personaladministration: Gründe, Aufgaben und Daten
 
-<Columns count={2}>
-  <Card title="Externe Gründe" tone="accent">
-    - Gesetzliche und behördliche Veranlassungen
-    - Erfordernisse aus Tarifverträgen und Betriebsvereinbarungen
-    - Anforderungen von Verbänden und Sozialversicherungsträgern
-  </Card>
-  <Card title="Interne Gründe" tone="purple">
-    - Innerbetriebliche Bedürfnisse von Management, Personalleitung und Personalabteilung
-    - Anforderungen und Wünsche der Mitarbeiter
-  </Card>
-</Columns>
+Die Personaladministration entsteht aus **externen Gründen** (gesetzliche/behördliche Veranlassungen, Tarifverträge, Betriebsvereinbarungen, Anforderungen von Verbänden und Sozialversicherungsträgern) und **internen Gründen** (Bedürfnisse von Management, Personalleitung und Mitarbeitern).
 
-### Vier Aufgabenfelder der Personaladministration
+<DataTable
+  caption="Vier Aufgabenfelder der Personaladministration"
+  columns={[
+    { key: 'feld', label: 'Aufgabenfeld' },
+    { key: 'inhalt', label: 'Inhalt' },
+  ]}
+  rows={[
+    { feld: 'Information', inhalt: 'Gewinnung, Speicherung, Auswahl, Aufbereitung und Ausgabe von Personaldaten; Betriebsstatistiken' },
+    { feld: 'Abwicklung', inhalt: 'Einstellungen, Versetzungen, Beförderungen, Austritte, sonstige personelle Veränderungen' },
+    { feld: 'Abrechnung', inhalt: 'Entgeltabrechnungen, Zulagen, Steuern/SV-Abgaben, Reisekosten, Darlehen, Essenszuschüsse, Werksverkäufe' },
+    { feld: 'Überwachung', inhalt: 'Arbeitszeiterfassung, Fluktuation, Krankenstand, Überstunden, Urlaubsinanspruchnahme' },
+  ]}
+/>
 
-<Columns count={2}>
-  <Card title="Information" tone="accent">
-    *Bereitstellung aktueller Daten für interne und externe Belange*
-    - Gewinnung
-    - Speicherung
-    - Auswahl
-    - Aufbereitung
-    - Ausgabe von Personaldaten
-    - Erstellung von Betriebsstatistiken
-  </Card>
-  <Card title="Abwicklung" tone="purple">
-    *Administrative Abwicklung personalwirtschaftlicher Vorgänge*
-    - Einstellungen
-    - Versetzungen
-    - Beförderungen
-    - Austritte
-    - Sonstige personelle Veränderungen
-  </Card>
-</Columns>
+<CompareCard
+  items={[
+    {
+      tag: 'extern',
+      title: 'Externe Meldepflichten',
+      accent: 'accent',
+      points: [
+        'Arbeitsbescheinigungen ans Arbeitsamt (**§ 312 SGB III**)',
+        'Lohnnachweise für Berufsgenossenschaften, Lohnsteueranmeldung beim Finanzamt',
+        'Meldung zur Sozialversicherung (**§§ 28a–28c SGB IV**)',
+      ],
+    },
+    {
+      tag: 'intern',
+      title: 'Interne Meldungen',
+      accent: 'purple',
+      points: [
+        'Ablauf der Probezeit, Versetzungsmeldungen',
+        'Sonderzahlungen, Jubiläums-/Geburtstagsmeldungen',
+        'Schwerbeschädigtenverzeichnis',
+      ],
+    },
+  ]}
+/>
 
-<Columns count={2}>
-  <Card title="Abrechnung" tone="teal">
-    *Administrative und buchhalterische Bearbeitung der Personalzahlungsströme*
-    - Entgeltabrechnungen
-    - Lohn- und Gehaltszulagen
-    - Steuern und Sozialversicherungsabgaben
-    - Reisekosten, Fahrtgeld
-    - Darlehensgewährung
-    - Essenszuschüsse
-    - Werksverkäufe
-  </Card>
-  <Card title="Überwachung" tone="orange">
-    *Kontinuierliche Überwachung relevanter Personalkennzahlen*
-    - Arbeitszeiterfassung
-    - Fluktuation
-    - Krankenstand
-    - Überstundenanfall
-    - Urlaubsinanspruchnahme
-  </Card>
-</Columns>
+<DataTable
+  caption="Personalstammdaten und Datenarten"
+  columns={[
+    { key: 'art', label: 'Datenart' },
+    { key: 'bsp', label: 'Beispiele' },
+  ]}
+  rows={[
+    { art: 'Datenelemente', bsp: 'stellenbezogene Daten, mitarbeiterbezogene Daten, Beurteilungsdaten' },
+    { art: 'Zeitreihendaten', bsp: 'Belegschaftszahlen, Personalzugänge, Überstunden, Personalkosten, Aus-/Weiterbildung, Fluktuation' },
+    { art: 'Quantitative Strukturdaten', bsp: 'nach Anstellungsverhältnis (Arbeiter/Angestellte/Aushilfen) und Vergütungsgruppen (tariflich/außertariflich)' },
+    { art: 'Qualitative Strukturdaten', bsp: 'nach Ausbildungsabschluss (Un-/Angelernte, Facharbeiter, Techniker, Akademiker) und Fortbildungsstand' },
+    { art: 'Ereignisdaten', bsp: 'Fehlzeitenquote, Fluktuationsrate, Schwangerschaften, Umgruppierungen, Arbeitsausfälle/-unfälle' },
+    { art: 'Leistungsdaten', bsp: 'Umsatz/Wertschöpfung pro MA, Leistungs-/Anwesenheitszeit, unproduktive Zeiten, Ausschussquote' },
+    { art: 'Personen-/Stellen-/Produktionsbezogen', bsp: 'Personen-, Verhaltens-, Qualifikationsdaten; Aufgabenrahmen und Anforderungsprofile; Effizienz- und Personalkostenkennzahlen' },
+  ]}
+/>
 
-### Meldeaufgaben (gesetzliche Meldepflichten)
-
-<Columns count={2}>
-  <Card title="Extern" tone="accent" exam>
-    - Arbeitsbescheinigungen ans Arbeitsamt (<Exam>§ 312 SGB III</Exam>)
-    - Lohnnachweise für Berufsgenossenschaften
-    - Lohnsteueranmeldungen beim Finanzamt
-    - Meldung zur Sozialversicherung (<Exam>§§ 28a–28c SGB IV</Exam>)
-  </Card>
-  <Card title="Intern" tone="purple">
-    - Ablauf der Probezeit
-    - Versetzungsmeldungen
-    - Meldungen über Sonderzahlungen
-    - Jubiläums- und Geburtstagsmeldungen
-    - Schwerbeschädigtenverzeichnis
-  </Card>
-</Columns>
-
-### Personalstammdaten und Datenarten
-
-<Columns count={2}>
-  <Card title="Datenelemente" tone="accent">
-    - Stellenbezogene Daten (z. B. Stellenbeschreibung, Tätigkeiten, Rang)
-    - Mitarbeiterbezogene Daten (notwendige Qualifikationen etc.)
-    - Beurteilungsdaten (Art der Beurteilung, Kriterien, Kontrollmöglichkeiten)
-  </Card>
-  <Card title="Zeitreihendaten" tone="purple">
-    - Belegschaftszahlen
-    - Personalzugänge
-    - Überstunden
-    - Personalkosten
-    - Aus- und Weiterbildung
-    - Fluktuation
-  </Card>
-</Columns>
-
-<Callout type="info" title="Führungsdatei">
-Daten über die **Gesamtheit der Belegschaft**, häufig für statistische Zwecke. Einleitend bündeln Stammdateien alle relevanten Informationen zum Arbeitsplatz für Personalplanung, -beschaffung und -beurteilung.
-</Callout>
-
-<Columns count={2}>
-  <Card title="Quantitative Strukturdaten" tone="teal">
-    - Nach **Art des Anstellungsverhältnisses**: Arbeiter / gewerbliche, technische, kaufmännische Angestellte / Aushilfen / Festangestellte
-    - Nach **Vergütungsgruppen**: tariflich / außertariflich
-  </Card>
-  <Card title="Qualitative Strukturdaten" tone="orange">
-    - Nach **Ausbildungsabschluss**: Ungelernte, Angelernte, Facharbeiter, kaufmännisch Angestellte, Techniker, Akademiker
-    - Nach **Fortbildungsstand**: Maschinenkenntnisse, PC-Kenntnisse, Fremdsprachen, Kommunikationsschulung etc.
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="Ereignisdaten" tone="accent">
-    - Fehlzeitenquote (Soll-/Ist-Anwesenheit)
-    - Fluktuationsrate (Ausgeschiedene / Ø MA-Zahl)
-    - Anzahl Schwangerschaften
-    - Anzahl Umgruppierungen
-    - Anzahl Arbeitsausfälle
-    - Anzahl Arbeitsunfälle
-  </Card>
-  <Card title="Leistungsdaten" tone="purple">
-    - Umsatz pro Mitarbeiter
-    - Wertschöpfung pro Mitarbeiter
-    - Leistungs-/Anwesenheitszeit
-    - Unproduktive Zeiten
-    - Ausschussquote
-    - Fahr- und Einsatzzeiten
-  </Card>
-</Columns>
-
-<Columns count={3}>
-  <Card title="Personenbezogene Daten" tone="teal">
-    *Informationen über die gesamte Belegschaft oder Teile davon*
-    - Personendaten, persönliche Daten
-    - Verhaltensdaten (z. B. Urlaubsinanspruchnahme)
-    - Qualifikationsdaten
-  </Card>
-  <Card title="Stellen- und arbeitsplatzbezogene Daten" tone="positive">
-    *Informationen über Stellen bzw. Arbeitsplätze*
-    - Aufgabenrahmen
-    - Anforderungs- und Fähigkeitsprofile
-    - Organisatorische Einordnung
-  </Card>
-  <Card title="Produktionsbezogene Daten" tone="orange">
-    *Daten über die Produktivität des Betriebs*
-    - Kennzahlen der Effizienz des Personaleinsatzes
-    - Personalkostenanteil am Umsatz
-  </Card>
-</Columns>
-
-<Callout type="examfocus" title="Ziele der Personaladministration">
-1. **Transparenz** personalwirtschaftlicher Vorgänge (Strukturen, Bewegungen, Entwicklungen – z. B. Altersaufbau, Fluktuation, Lohnkostenentwicklung)
-2. Aktualität der Daten · 3. Fehlerfreiheit der Daten · 4. Aussagekraft der Daten
-5. Wirtschaftlichkeit der Datenverarbeitung · 6. Einhaltung des **Datenschutzes**
+<Callout type="examfocus" title="Sechs Ziele der Personaladministration">
+1. **Transparenz** personalwirtschaftlicher Vorgänge · 2. Aktualität · 3. Fehlerfreiheit · 4. Aussagekraft der Daten · 5. Wirtschaftlichkeit der Datenverarbeitung · 6. Einhaltung des **Datenschutzes**.
 </Callout>
 
 </section>
@@ -245,29 +127,7 @@ Daten über die **Gesamtheit der Belegschaft**, häufig für statistische Zwecke
 
 ## Das Sozialversicherungssystem in Deutschland
 
-<Callout type="merksatz" title="Solidaritätsprinzip">
-Ein soziales Netz, nach dem **Solidaritätsprinzip** als <Exam>Pflichtversicherung</Exam> organisiert – ein soziales Netz für alle Bürger in Deutschland.
-</Callout>
-
-### Drei Rollen im sozialen Netz
-
-<Columns count={3}>
-  <Card title="Staat" tone="accent">
-    - Kontrolliert das System
-    - Schafft die **Regeln** und gesetzlichen Rahmenbedingungen
-    - Bestimmt die **Leistungen**
-  </Card>
-  <Card title="Arbeitgeber + Arbeitnehmer" tone="purple">
-    - Zahlen die **Beiträge**
-    - Daraus wird das System **solidarisch finanziert**
-  </Card>
-  <Card title="Träger der Sozialversicherungen" tone="teal">
-    - Sorgen für die **Umsetzung**
-    - Setzen Leistungen und Maßnahmen um
-  </Card>
-</Columns>
-
-### Die fünf Zweige der Sozialversicherung
+Ein soziales Netz nach dem **Solidaritätsprinzip**, organisiert als <Exam>Pflichtversicherung</Exam> für alle Bürger. Drei Rollen tragen es: der **Staat** (kontrolliert, schafft Regeln, bestimmt Leistungen), **Arbeitgeber und Arbeitnehmer** (zahlen die Beiträge) und die **Träger der Sozialversicherungen** (setzen Leistungen um).
 
 <KpiGrid
   items={[
@@ -285,9 +145,9 @@ Ein soziales Netz, nach dem **Solidaritätsprinzip** als <Exam>Pflichtversicheru
   ]}
   rows={[
     { zweig: 'Arbeitslosenversicherung', aufgabe: 'Grundsicherung durch Arbeitslosengeld und Unterstützung bei der Arbeitsplatzsuche' },
-    { zweig: 'Krankenversicherung', aufgabe: 'Wiederherstellung der Gesundheit und Maßnahmen zur gesundheitlichen Prävention' },
-    { zweig: 'Unfallversicherung', aufgabe: 'Leistungen bei Arbeitsunfällen und bei Berufskrankheit' },
-    { zweig: 'Pflegeversicherung', aufgabe: 'Unterstützung bei Pflegeleistungen für dauerhaft pflegebedürftige Personen' },
+    { zweig: 'Krankenversicherung', aufgabe: 'Wiederherstellung der Gesundheit und gesundheitliche Prävention' },
+    { zweig: 'Unfallversicherung', aufgabe: 'Leistungen bei Arbeitsunfällen und Berufskrankheit' },
+    { zweig: 'Pflegeversicherung', aufgabe: 'Unterstützung bei Pflegeleistungen für dauerhaft Pflegebedürftige' },
     { zweig: 'Rentenversicherung', aufgabe: 'Sicherung des Lebensstandards im Alter durch eine Rentenzahlung' },
   ]}
 />
@@ -305,14 +165,10 @@ Ein soziales Netz, nach dem **Solidaritätsprinzip** als <Exam>Pflichtversicheru
   source="HR8 · Folie 18 · BWL-Lexikon.de"
   chart={`flowchart TD
   PK[Personalkosten]
-  L[Loehne]
-  G[Gehaelter]
-  PZK["Personal-<br/>zusatzkosten"]
-  SP["sonstige<br/>Personalkosten"]
-  PK --> L
-  PK --> G
-  PK --> PZK
-  PK --> SP
+  PK --> L[Loehne]
+  PK --> G[Gehaelter]
+  PK --> PZK["Personal-<br/>zusatzkosten"]
+  PK --> SP["sonstige<br/>Personalkosten"]
   L --> FL[Fertigungsloehne]
   L --> HL[Hilfsloehne]
   PZK --> GE[Gesetzlich]
@@ -321,51 +177,35 @@ Ein soziales Netz, nach dem **Solidaritätsprinzip** als <Exam>Pflichtversicheru
 />
 
 <Callout type="examfocus" title="Personalzusatzkosten">
-Die **Personalzusatzkosten** (gesetzlich, tariflich, freiwillig) betragen ca. <Exam>40 % des Bruttolohns</Exam>. „Gehälter“ und „sonstige Personalkosten“ haben keine Unteräste.
+Die **Personalzusatzkosten** (gesetzlich, tariflich, freiwillig) betragen ca. <Exam>40 % des Bruttolohns</Exam>. „Gehälter" und „sonstige Personalkosten" haben keine Unteräste.
 </Callout>
 
-<Columns count={2}>
-  <Card title="Zusatzkosten: Gesetz und Tarif" tone="accent">
-    - Bezahlte Ausfallzeiten
-    - Arbeitgeberbeiträge zur gesetzlichen Sozial- und Unfallversicherung
-    - Urlaub, Urlaubsgeld
-    - Schwerbehinderte
-    - Betriebsärztliche Betreuung
-    - Arbeitssicherheit
-    - Kosten für Betriebsverfassung und Mitbestimmung
-    - Vermögenswirksame Leistungen
-    - Aus- und Fortbildung
-    - Sonstige Kosten
-  </Card>
-  <Card title="Zusatzkosten: Freiwillig" tone="purple">
-    - Betriebliche Altersversorgung
-    - Küchen und Kantinen / Essenszuschüsse
-    - Wohnungsbeihilfen / Umzugskosten
-    - Fahrtkosten
-    - Urlaub / Urlaubsgeld
-    - Soziale Fürsorge
-    - Betriebskrankenkasse
-    - Versicherungen und Zuschüsse
-    - Bezahlung von Ausfallszeiten
-    - Aus- und Fortbildung, sonstige Leistungen
-  </Card>
-</Columns>
+<CompareCard
+  items={[
+    {
+      tag: 'Gesetz & Tarif',
+      title: 'Gesetzliche/tarifliche Zusatzkosten',
+      accent: 'accent',
+      points: [
+        'bezahlte Ausfallzeiten, AG-Beiträge zur Sozial-/Unfallversicherung',
+        'Urlaub/Urlaubsgeld, Schwerbehinderte, betriebsärztliche Betreuung, Arbeitssicherheit',
+        'Betriebsverfassung/Mitbestimmung, vermögenswirksame Leistungen, Aus-/Fortbildung',
+      ],
+    },
+    {
+      tag: 'Freiwillig',
+      title: 'Freiwillige Zusatzkosten',
+      accent: 'purple',
+      points: [
+        'betriebliche Altersversorgung, Kantinen/Essenszuschüsse',
+        'Wohnungs-/Umzugs-/Fahrtkosten, soziale Fürsorge, Betriebskrankenkasse',
+        'Versicherungen, bezahlte Ausfallzeiten, Aus-/Fortbildung',
+      ],
+    },
+  ]}
+/>
 
-### Brutto- und Nettorechnung
-
-<Columns count={2}>
-  <Card title="Bruttorechnung" tone="accent">
-    Ermittlung des **Bruttoentgelts** für eine Periode:
-    - Löhne
-    - Provisionen
-    - Gehälter
-    - Azubivergütungen
-  </Card>
-  <Card title="Nettorechnung" tone="purple">
-    Ermittlung des **Nettoverdienstes** durch Verrechnung der Abzüge:
-    - gliedert sich in <Exam>Zahlungs- und Auswertungsrechnung</Exam>
-  </Card>
-</Columns>
+Die Bruttorechnung ermittelt das **Bruttoentgelt** (Löhne, Provisionen, Gehälter, Azubivergütungen); die Nettorechnung den **Nettoverdienst** durch Verrechnung der Abzüge und gliedert sich in <Exam>Zahlungs- und Auswertungsrechnung</Exam>:
 
 <Diagram
   title="Ablauf der Entgeltabrechnung"
@@ -376,23 +216,22 @@ Die **Personalzusatzkosten** (gesetzlich, tariflich, freiwillig) betragen ca. <E
   N --> A[Auswertungsrechnung]`}
 />
 
-<Columns count={2}>
-  <Card title="Zahlungsrechnung" tone="teal">
-    - Steuerabrechnung
-    - Mitarbeiterabrechnung
-    - Sozialversicherungsabrechnung
-    - Vermögenswirksame Leistungen
-    - Lohnpfändungen
-    - Mieteinbehaltungen
-    - Vorschusszahlungen
-  </Card>
-  <Card title="Auswertungsrechnung" tone="orange">
-    - Buchhaltung
-    - Kostenrechnung
-    - Controlling
-    - Kostenstellenkontrolle
-  </Card>
-</Columns>
+<CompareCard
+  items={[
+    {
+      tag: 'Zahlung',
+      title: 'Zahlungsrechnung',
+      accent: 'teal',
+      points: ['Steuer-, Mitarbeiter-, Sozialversicherungsabrechnung', 'vermögenswirksame Leistungen, Lohnpfändungen', 'Mieteinbehaltungen, Vorschusszahlungen'],
+    },
+    {
+      tag: 'Auswertung',
+      title: 'Auswertungsrechnung',
+      accent: 'orange',
+      points: ['Buchhaltung, Kostenrechnung', 'Controlling, Kostenstellenkontrolle'],
+    },
+  ]}
+/>
 
 </section>
 
@@ -401,70 +240,51 @@ Die **Personalzusatzkosten** (gesetzlich, tariflich, freiwillig) betragen ca. <E
 ## Datenschutz und DSGVO
 
 <DefinitionBox term="Datenschutz" source="HR8 · Folie 22">
-**Maßnahmen zum Schutz vor dem Missbrauch personenbezogener Daten.** Ziele: Sicherung der Privatsphäre der Mitarbeiter, Bewahrung der Vertraulichkeit der Daten und Verhüten des Missbrauchs der Daten.
+**Maßnahmen zum Schutz vor dem Missbrauch personenbezogener Daten.** Ziele: Sicherung der Privatsphäre der Mitarbeiter, Vertraulichkeit der Daten und Verhütung des Datenmissbrauchs.
 </DefinitionBox>
 
-<Columns count={2}>
-  <Card title="DSGVO: Geltung" tone="accent" exam>
-    - In Kraft seit dem <Exam>25.05.2018</Exam>
-    - **Europäisches Recht**, unmittelbar anwendbar, gilt in ganz Europa
-    - auch für Firmen mit Sitz außerhalb der EU, die sich mit Angeboten an Personen in der EU richten
-    - das **BDSG (neue Fassung)** füllt nur noch Lücken über Öffnungsklauseln
-    - andere Gesetze mussten ggf. an die DSGVO angepasst werden
-  </Card>
-  <Card title="DSGVO: Neuerungen" tone="purple">
-    - Drastisch erhöhte Bußgelder
-    - Erweiterte zivilrechtliche Haftung
-    - Stark erweiterte Dokumentations- und Nachweispflichten
-    - Risikobasierter Datenschutz
-    - Erweiterte Meldepflichten bei Datenpannen
-    - Verschärfte Löschvorschriften
-    - **Recht auf Vergessenwerden** (im Internet)
-  </Card>
-</Columns>
+<CompareCard
+  items={[
+    {
+      tag: 'Geltung',
+      title: 'DSGVO: Geltung',
+      accent: 'accent',
+      points: [
+        'in Kraft seit dem **25.05.2018**',
+        '**europäisches Recht**, unmittelbar in ganz Europa anwendbar',
+        'auch für Firmen außerhalb der EU mit Angeboten an Personen in der EU; das **BDSG-neu** füllt nur Lücken über Öffnungsklauseln',
+      ],
+    },
+    {
+      tag: 'Neuerungen',
+      title: 'DSGVO: Neuerungen',
+      accent: 'purple',
+      points: [
+        'drastisch erhöhte Bußgelder, erweiterte zivilrechtliche Haftung',
+        'erweiterte Dokumentations-/Nachweis- und Meldepflichten, risikobasierter Datenschutz',
+        'verschärfte Löschvorschriften, **Recht auf Vergessenwerden**',
+      ],
+    },
+  ]}
+/>
 
-<SourceNote>Neuerungen: vgl. Wickert R. Dornbach (2018)</SourceNote>
-
-### Zentrale Artikel der DSGVO
-
-<Columns count={2}>
-  <Card title="Artikel 1 – Gegenstand und Ziele" tone="accent">
-    - Abs. 1: Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten
-    - Abs. 2: Schutz der Grundrechte natürlicher Personen, insbesondere des Rechts auf Schutz personenbezogener Daten
-  </Card>
-  <Card title="Artikel 4 Nr. 1 – Personenbezogene Daten" tone="purple">
-    Alle Informationen, die sich auf eine <Exam>identifizierte oder identifizierbare</Exam> natürliche Person beziehen – direkt oder indirekt:
-    - Name
-    - Kennnummer
-    - Standortdaten
-    - Online-Kennung
-    - besondere Merkmale
-  </Card>
-</Columns>
+<DataTable
+  caption="Zentrale Artikel der DSGVO"
+  columns={[
+    { key: 'art', label: 'Artikel' },
+    { key: 'inhalt', label: 'Inhalt' },
+  ]}
+  rows={[
+    { art: 'Art. 1 – Gegenstand & Ziele', inhalt: 'Schutz natürlicher Personen bei der Verarbeitung und freier Datenverkehr; Schutz der Grundrechte, insb. des Rechts auf Schutz personenbezogener Daten' },
+    { art: 'Art. 4 Nr. 1 – Personenbezogene Daten', inhalt: 'alle Informationen zu einer identifizierten oder identifizierbaren Person (Name, Kennnummer, Standortdaten, Online-Kennung, besondere Merkmale)' },
+    { art: 'Art. 5 – Sieben Grundsätze', inhalt: 'Rechtmäßigkeit/Treu&Glauben/Transparenz, Zweckbindung, Datenminimierung, Richtigkeit, Speicherbegrenzung, Integrität/Vertraulichkeit, Rechenschaftspflicht' },
+    { art: 'Art. 7 – Einwilligung', inhalt: 'freiwillig, informiert, für bestimmte Zwecke, jederzeit widerrufbar mit Wirkung ab sofort' },
+  ]}
+/>
 
 <DefinitionBox term="Verarbeitung (Art. 4 Nr. 2 DSGVO)" source="HR8 · Folie 27">
-Jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang im Zusammenhang mit personenbezogenen Daten: u. a. **Erheben, Erfassen, Organisation, Ordnen, Speicherung, Anpassung/Veränderung, Auslesen, Abfragen, Verwendung, Offenlegung, Bereitstellung, Abgleich, Verknüpfung, Einschränkung, Löschen, Vernichtung.**
+Jeder mit/ohne automatisierte Verfahren ausgeführte Vorgang mit personenbezogenen Daten: u.a. **Erheben, Erfassen, Ordnen, Speichern, Verändern, Auslesen, Abfragen, Verwenden, Offenlegen, Abgleichen, Verknüpfen, Einschränken, Löschen, Vernichten.**
 </DefinitionBox>
-
-<Columns count={2}>
-  <Card title="Art. 5 – Sieben Grundsätze" tone="accent" exam>
-    1. Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz
-    2. Zweckbindung
-    3. Datenminimierung
-    4. Richtigkeit
-    5. Speicherbegrenzung
-    6. Integrität und Vertraulichkeit
-    7. Rechenschaftspflicht
-  </Card>
-  <Card title="Art. 7 – Bedingungen für die Einwilligung" tone="purple">
-    - **Freiwillige** Entscheidung der betroffenen Person
-    - **Informierte** Entscheidung der betroffenen Person
-    - Für einen oder mehrere **bestimmte Zwecke**
-    - **Jederzeit widerrufbar** mit Wirkung ab sofort
-  </Card>
-</Columns>
-
-### Sanktionen und Bußgelder
 
 <CompareCard
   items={[
@@ -474,8 +294,8 @@ Jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang im Zusa
       subtitle: 'untere Bußgeldstufe',
       accent: 'accent',
       points: [
-        'Verstoß gegen: Schutzmaßnahmen, Auftragsdatenverarbeitung, Datenschutz-Folgeabschätzung, Bestellung Datenschutzbeauftragten',
-        'Bußgeld bis **10 Mio. €** oder bis zu **2 %** des weltweiten Jahresumsatzes (Vorjahr)',
+        'Verstoß gegen Schutzmaßnahmen, Auftragsverarbeitung, Folgeabschätzung, Bestellung des DSB',
+        'bis **10 Mio. €** oder bis **2 %** des weltweiten Jahresumsatzes (Vorjahr)',
       ],
     },
     {
@@ -484,90 +304,58 @@ Jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang im Zusa
       subtitle: 'obere Bußgeldstufe',
       accent: 'negative',
       points: [
-        'Verstoß gegen: Grundsätze des Art. 5, Rechtmäßigkeit der Verarbeitung, Einwilligungsgrundsätze, Rechte der Betroffenen, Zusammenarbeit mit Aufsichtsbehörde',
-        'Bußgeld bis **20 Mio. €** oder bis zu **4 %** des weltweiten Jahresumsatzes (Vorjahr)',
+        'Verstoß gegen Grundsätze (Art. 5), Rechtmäßigkeit, Einwilligung, Betroffenenrechte, Behörden-Zusammenarbeit',
+        'bis **20 Mio. €** oder bis **4 %** des weltweiten Jahresumsatzes (Vorjahr)',
       ],
     },
   ]}
 />
 
-<DataTable
-  caption="Abgestuftes Sanktionssystem der DSGVO (Folie 32)"
-  columns={[
-    { key: 'sanktion', label: 'Sanktion' },
-    { key: 'norm', label: 'Norm' },
-    { key: 'folge', label: 'Höhe / Folge' },
-  ]}
-  rows={[
-    { sanktion: 'Datenpannen / Datenverlust', norm: 'Art. 33', folge: '„Vergleichbar wirksame“ öffentliche Bekanntmachung, wenn Mitteilung an Betroffene nicht möglich' },
-    { sanktion: 'Kleinere Verstöße', norm: 'Art. 83 Abs. 4', folge: 'bis 10 Mio. € oder bis 2 % Weltjahresumsatz (Vorjahr)' },
-    { sanktion: 'Größere Verstöße', norm: 'Art. 83 Abs. 5', folge: 'bis 20 Mio. € oder bis 4 % Weltjahresumsatz (Vorjahr)' },
-    { sanktion: 'Recht auf Schadenersatz des Betroffenen', norm: 'Art. 82', folge: 'zivilrechtlicher Schadenersatzanspruch' },
+<Callout type="info" title="Verfolgung und weitere Sanktionen">
+Datenschutzverstößen gehen die **Landesdatenschutzbehörden** nach; als KMU gerät man eher selten ins Visier. Das Gesetz schreibt **keine konkreten Schutzmaßnahmen** vor — der Schutz muss dem **Stand der Technik** entsprechen. Weiter: Datenpannen (Art. 33) erfordern ggf. öffentliche Bekanntmachung; Betroffene haben Anspruch auf Schadenersatz (Art. 82).
+</Callout>
+
+<CompareCard
+  items={[
+    {
+      tag: 'Praxis',
+      title: 'Praktische Regeln',
+      accent: 'teal',
+      points: ['Double-Opt-in bei Newslettern', 'korrekte Datenschutzerklärung auf der Website', 'Widerrufsmanagement für Datenprozesse'],
+    },
+    {
+      tag: 'Aufgaben',
+      title: 'Aufgaben im Datenschutz',
+      accent: 'orange',
+      points: ['DSB bestellen, Verarbeitungsverzeichnis anlegen', 'Prozesse/Prozesshandbuch festlegen', 'Datenschutz-Folgeabschätzung; alles dokumentieren'],
+    },
   ]}
 />
 
-<Callout type="info" title="Wer verfolgt Verstöße?">
-Die Aufgabe, Datenschutzverstößen nachzugehen und ggf. einzuschreiten, liegt bei den **Landesdatenschutzbehörden**. Als KMU ist es eher unwahrscheinlich, ins Visier zu geraten. Das Gesetz schreibt **keine konkreten Schutzmaßnahmen** vor – Unternehmen wählen risikoangemessen die Rechtsgrundlage; der Schutz muss dem **Stand der Technik** entsprechen. Im Zweifel sollte man bei den Datenschutzbehörden nachfragen.
+<Callout type="merksatz" title="Drei-Fragen-Schema">
+**Was** (welche personenbezogenen Daten?) · **Wo** (in welchen Abteilungen?) · **Wie** (in welchen Prozessen?) — die Grundlage für Betroffenenrechte, Verarbeitungsverzeichnis, Meldung von Datenpannen und Dokumentationspflichten.
 </Callout>
 
-### Praktische Umsetzung und Aufgaben
+Ein **Datenschutzbeauftragter (DSB)** ist zu benennen (Art. 37 DSGVO i.V.m. § 38 BDSG-neu) ab <Exam>20 Personen</Exam>, die ständig automatisiert personenbezogene Daten verarbeiten, bei einer Kerntätigkeit umfangreicher Überwachung/sensibler Daten oder wenn eine Datenschutz-Folgeabschätzung nötig ist:
 
-<Columns count={2}>
-  <Card title="Praktische Regeln" tone="teal">
-    - Double-Opt-in bei Newsletter-Anmeldungen
-    - Richtige Datenschutzerklärung auf der Website
-    - Widerrufsmanagement für Datenprozesse (Aufklärung, wie Kunden die Verarbeitungserlaubnis widerrufen können)
-  </Card>
-  <Card title="Aufgaben im Datenschutz" tone="orange">
-    - Bestellung eines Datenschutzbeauftragten
-    - Verzeichnis der Verarbeitungstätigkeiten anlegen
-    - Prozesse festlegen und Prozesshandbuch schreiben
-    - Datenschutz-Folgeabschätzung durchführen (wenn nötig)
-    - Alle Anstrengungen dokumentieren
-  </Card>
-</Columns>
-
-<Callout type="merksatz" title="Drei-Fragen-Schema als Grundlage">
-**Was** (welche personenbezogenen Daten?) · **Wo** (in welchen Abteilungen?) · **Wie** (in welchen Prozessen?) – diese drei Fragen bilden die Grundlage für Betroffenenrechte, das Verzeichnis der Verarbeitungstätigkeiten, die Meldung von Datenpannen und die Erfüllung der Dokumentationspflichten.
-</Callout>
-
-### Der/die Datenschutzbeauftragte (DSB)
-
-<Card title="Benennungspflicht" tone="accent" exam>
-Art. 37 Abs. 1 DSGVO i. V. m. § 38 Abs. 1 BDSG-neu:
-- ab <Exam>20 Personen</Exam>, die ständig mit der automatisierten personenbezogenen Datenverarbeitung beschäftigt sind
-- bei einer **Kerntätigkeit** der umfangreichen, systematischen Überwachung oder Verarbeitung sensibler Daten (Art. 9 oder 10 DSGVO)
-- unabhängig von der Personenzahl, wenn Verarbeitungen einer **Datenschutz-Folgeabschätzung** unterliegen
-</Card>
-
-<Columns count={3}>
-  <Card title="Aufgaben (Beratung & Schulung)" tone="accent">
-    - berät die Verantwortlichen – **trifft selbst keine Entscheidung**
-    - sensibilisiert und schult Mitarbeiter (z. B. sicheres Passwort)
-    - arbeitet mit der Datenschutzbehörde zusammen
-    - ist Ansprechpartner für betroffene Personen
-    - berät bei der Datenschutz-Folgeabschätzung
-  </Card>
-  <Card title="Aufgaben (Verzeichnisse & Sicherheit)" tone="purple">
-    - führt Übersicht über die Art der gespeicherten Daten
-    - führt Liste regelmäßiger Empfänger
-    - überwacht Softwareanwendung und Datensicherheit
-    - veranlasst Berichtigung, Löschung, Sperrung
-    - belehrt Mitarbeiter und verpflichtet sie auf das Datenschutzgeheimnis
-  </Card>
-  <Card title="Aufgaben (Schutzgegenstand & Beratung)" tone="teal">
-    - schützt nur **personenbezogene** (keine reinen Unternehmens-)Daten: Kundendaten mit Personenbezug, Personaldaten
-    - erstellt und pflegt das Verarbeitungsverzeichnis
-    - berät das Unternehmen, erstellt datenschutzrelevante Verträge
-    - kommuniziert auf Wunsch mit Aufsicht und Behörden
-  </Card>
-</Columns>
+<DataTable
+  caption="Aufgaben des/der Datenschutzbeauftragten"
+  columns={[
+    { key: 'bereich', label: 'Bereich' },
+    { key: 'aufgaben', label: 'Aufgaben' },
+  ]}
+  rows={[
+    { bereich: 'Beratung & Schulung', aufgaben: 'berät die Verantwortlichen (trifft selbst keine Entscheidung), schult Mitarbeiter, arbeitet mit der Behörde zusammen, ist Ansprechpartner für Betroffene' },
+    { bereich: 'Verzeichnisse & Sicherheit', aufgaben: 'führt Übersicht der gespeicherten Daten und Empfängerliste, überwacht Software/Datensicherheit, veranlasst Berichtigung/Löschung/Sperrung' },
+    { bereich: 'Schutzgegenstand', aufgaben: 'schützt nur personenbezogene Daten (Kunden-/Personaldaten), pflegt das Verarbeitungsverzeichnis, erstellt datenschutzrelevante Verträge' },
+  ]}
+/>
 
 <Callout type="examfocus" title="Besonderer Status des DSB">
-- **Abberufungsschutz** und Benachteiligungsverbot
-- **Kündigungsschutz**: nur fristlose Kündigung aus wichtigem Grund möglich (Basis: BDSG-neu)
-- Anspruch auf Einbindung, Fortbildung und Unterstützung
+**Abberufungsschutz** und Benachteiligungsverbot, **Kündigungsschutz** (nur fristlose Kündigung aus wichtigem Grund, Basis BDSG-neu), Anspruch auf Einbindung, Fortbildung und Unterstützung.
 </Callout>
+
+<SourceNote>Neuerungen: vgl. Wickert R. Dornbach (2018)</SourceNote>
 
 </section>
 
@@ -576,67 +364,37 @@ Art. 37 Abs. 1 DSGVO i. V. m. § 38 Abs. 1 BDSG-neu:
 ## Personalcontrolling
 
 <DefinitionBox term="Personalcontrolling (PC)" source="HR8 · Folie 45">
-**Anwendung des Controllinggedankens der BWL auf die Personalwirtschaft.** Controlling bedeutet steuern, regeln, lenken und wird häufig als **Regelkreis** interpretiert. Es ist <Exam>nicht gleichbedeutend mit „Kontrolle“</Exam> (ex post), sondern umfasst zusätzlich die **Gestaltung der Zukunft** (ex ante: Steuerung, Regelung, Koordination, Evaluation).
+**Anwendung des Controllinggedankens auf die Personalwirtschaft** — steuern, regeln, lenken, oft als **Regelkreis** interpretiert. PC ist <Exam>nicht gleichbedeutend mit „Kontrolle"</Exam> (ex post), sondern umfasst die **Gestaltung der Zukunft** (ex ante: Steuerung, Regelung, Koordination, Evaluation).
 </DefinitionBox>
 
 <Diagram
   title="Controlling-Regelkreis"
   source="HR8 · Folie 46"
   chart={`flowchart LR
-  ZP["Ziel-Planung<br/>Kennzahlen und Ergebnisse"] --> ME["Messung aktueller<br/>Personaldaten / Ist-Analyse"]
+  ZP["Ziel-Planung<br/>Kennzahlen"] --> ME["Messung / Ist-Analyse"]
   ME --> SI["Soll-Ist-Vergleich<br/>Abweichungsanalyse"]
-  SI --> MA["Empfehlung und Durchfuehrung<br/>von Massnahmen"]
+  SI --> MA["Massnahmen"]
   MA --> ZP
   PIS[("Personal-<br/>informationssystem")] --- ZP`}
 />
 
-<Callout type="info" title="Begleittext zum Regelkreis">
-Dieser ständig ablaufende Prozess leistet einen wichtigen Beitrag zum Erreichen **qualitäts-, mengen-, kosten- und zeitbezogener HR-Ziele** im Unternehmen. Im Zentrum steht das **Personalinformationssystem**.
-</Callout>
-
-### Gegenstandsbereich – „Was ist zu controllen?“
-
-<Columns count={2}>
-  <Card title="Die Personalarbeit und ihre Produkte" tone="accent">
-    Prozesse, Verfahren, Projekte, Programme und Strukturen der Personalabteilung:
-    - Anzahl laufender Rekrutierungsprozesse
-    - Stand des Projektes „elektronische Personalakte“
-  </Card>
-  <Card title="Das Personal des Unternehmens" tone="purple">
-    Art, Zustand und Menge des „Produktionsfaktors“ Arbeit:
-    - Anzahl der Mitarbeiter nach Funktion und Regionen
-    - Anzahl der Azubis
-  </Card>
-</Columns>
-
-<Callout type="merksatz" title="Zwei Begriffspaare des PC">
-Je nach Gegenstandsbereich und Zielperspektive unterscheidet man **quantitatives vs. qualitatives** sowie **strategisches vs. operatives** Personalcontrolling.
-</Callout>
+Der ständig ablaufende Prozess dient qualitäts-, mengen-, kosten- und zeitbezogenen HR-Zielen; im Zentrum steht das **Personalinformationssystem**. Gegenstand des Controllings sind sowohl die **Personalarbeit und ihre Produkte** (Prozesse, Projekte, Strukturen der Personalabteilung) als auch das **Personal selbst** (Art, Zustand, Menge des Faktors Arbeit). Je nach Perspektive unterscheidet man **strategisch vs. operativ** und **quantitativ vs. qualitativ**:
 
 <CompareCard
   items={[
     {
       tag: 'Strategisch',
       title: 'Strategisches PC',
-      subtitle: 'WOHIN – „die richtigen Dinge tun“',
+      subtitle: 'WOHIN – „die richtigen Dinge tun"',
       accent: 'accent',
-      points: [
-        'Fokus auf strategische Ziele und Potenziale des Unternehmens',
-        'Aufgabe: Maßnahmen i. H. a. Personal-/Unternehmensstrategie überprüfen, Änderungen früh erkennen, rechtzeitig korrigieren',
-        'Zeitperspektive **langfristig** (Feedforward-Kontrollen)',
-        'Beispiele: Anteil flexibler Personalkosten, Arbeitgeberattraktivität',
-      ],
+      points: ['Fokus auf strategische Ziele und Potenziale', '**langfristig** (Feedforward-Kontrollen)', 'z.B. Anteil flexibler Personalkosten, Arbeitgeberattraktivität'],
     },
     {
       tag: 'Operativ',
       title: 'Operatives PC',
-      subtitle: 'WIE – „die Dinge richtig tun“',
+      subtitle: 'WIE – „die Dinge richtig tun"',
       accent: 'purple',
-      points: [
-        'Fokus auf Kosten, Erfolg und Nutzen von Maßnahmen',
-        'Zeitperspektive **kurzfristig** (Feedback-Kontrollen)',
-        'Beispiele: Anzahl offener Stellen, durchschnittliche Besetzungsdauer',
-      ],
+      points: ['Fokus auf Kosten, Erfolg und Nutzen von Maßnahmen', '**kurzfristig** (Feedback-Kontrollen)', 'z.B. Anzahl offener Stellen, Besetzungsdauer'],
     },
   ]}
 />
@@ -648,73 +406,35 @@ Je nach Gegenstandsbereich und Zielperspektive unterscheidet man **quantitatives
       title: 'Quantitatives PC',
       subtitle: 'meist direkt messbar',
       accent: 'teal',
-      points: [
-        'Personalstrukturdaten (Anzahl MA nach Funktion, Region, Qualifikation, Alter, Geschlecht, Vertragsstatus, Betriebszugehörigkeit)',
-        'Personalkostendaten (fixe/variable Entgelte, Personalzusatzkosten, Kostenentwicklung nach Mengen- und „Preis“-Effekten)',
-      ],
+      points: ['Personalstrukturdaten (Anzahl nach Funktion, Region, Qualifikation, Alter, Status)', 'Personalkostendaten (fixe/variable Entgelte, Zusatzkosten, Mengen-/Preiseffekte)'],
     },
     {
       tag: 'Qualitativ',
       title: 'Qualitatives PC',
-      subtitle: '„weiche Faktoren“ – nicht direkt messbar',
+      subtitle: 'weiche Faktoren',
       accent: 'warning',
-      points: [
-        'Mitarbeiterzufriedenheit, Leistungskultur, Führungsverhalten, Potentialanalysen',
-        'Abbildung über Indikatoren: **Commitment-Index** (emotionale Bindung), **Innovationsindex** (Ideen-/Kreativitätslevel)',
-      ],
+      points: ['Mitarbeiterzufriedenheit, Leistungskultur, Führungsverhalten, Potentialanalysen', 'Indikatoren: **Commitment-Index** (Bindung), **Innovationsindex** (Kreativität)'],
     },
   ]}
 />
 
-### Ausgewählte Instrumente des Personalcontrollings
-
-<Columns count={2}>
-  <Card title="Soll-Ist-Vergleiche / Kennzahlen" tone="accent">
-    - Laufende Soll-Ist-Vergleiche → Ursachenanalyse und Maßnahmen
-    - Kennzahlen zeigen Ansatzpunkte: Fluktuationsquote, Führungsquote, Prozesskostenanalyse
-  </Card>
-  <Card title="Benchmarking" tone="purple">
-    - **Intern** (z. B. Vertriebsregionen) oder **extern** (andere Unternehmen) via Kennzahlen
-    - Orientierung an **Best Practices** für Prozess- und Effizienzverbesserungen
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="Zeitreihen" tone="teal">
-    - Beschreiben Entwicklungen **ex post**, prognostizieren **ex ante**
-    - Dienen der Evaluierung von Maßnahmen
-    - Früherkennung von Fehlentwicklungen
-  </Card>
-  <Card title="Szenario-Technik" tone="orange">
-    - Meist computergestützte Abbildung von Handlungsoptionen
-    - Systematische Variation interner/externer Faktoren
-    - Erarbeitung von Zukunftsszenarien und bestmöglicher Strategie
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="Mitarbeiterbefragungen" tone="accent">
-    - Befragungen (z. B. **Austrittsinterviews**)
-    - Liefern Informationen über Stärken und Defizite des Unternehmens
-  </Card>
-  <Card title="Human Resource Scorecard" tone="purple">
-    - Im Rahmen der **Balanced Scorecard**
-    - Erfolgskritische Ziele und KPIs auch für „Mitarbeiter“
-    - Ausgewogenes Kennzahlensystem
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="HR Due Diligence / HR Audits" tone="teal">
-    - Chancen und Risiken der Ressource „Personal“ frühzeitig erkennen
-    - Meist im Vorfeld von **Unternehmenskäufen und -fusionen**
-  </Card>
-  <Card title="Humanvermögensrechnung (HVR)" tone="orange">
-    - Bilanz-Aktiva geben das Unternehmensvermögen nicht ausreichend wieder
-    - Immaterielle Teile (engagierte, kompetente Mitarbeiter) als **Wertschöpfungsfaktor**
-    - Erfassung und Bewertung über die HVR
-  </Card>
-</Columns>
+<DataTable
+  caption="Ausgewählte Instrumente des Personalcontrollings"
+  columns={[
+    { key: 'instr', label: 'Instrument' },
+    { key: 'beschr', label: 'Beschreibung' },
+  ]}
+  rows={[
+    { instr: 'Soll-Ist-Vergleiche / Kennzahlen', beschr: 'laufende Vergleiche → Ursachenanalyse; Kennzahlen wie Fluktuations-/Führungsquote, Prozesskostenanalyse' },
+    { instr: 'Benchmarking', beschr: 'intern (z.B. Regionen) oder extern (andere Unternehmen) via Kennzahlen; Orientierung an Best Practices' },
+    { instr: 'Zeitreihen', beschr: 'Entwicklungen ex post beschreiben, ex ante prognostizieren; Maßnahmen evaluieren, Fehlentwicklungen früh erkennen' },
+    { instr: 'Szenario-Technik', beschr: 'computergestützte Variation interner/externer Faktoren; Zukunftsszenarien und beste Strategie' },
+    { instr: 'Mitarbeiterbefragungen', beschr: 'z.B. Austrittsinterviews; Informationen über Stärken und Defizite' },
+    { instr: 'HR Scorecard', beschr: 'im Rahmen der Balanced Scorecard: erfolgskritische Ziele und KPIs für „Mitarbeiter"' },
+    { instr: 'HR Due Diligence / Audits', beschr: 'Chancen/Risiken der Ressource Personal früh erkennen, meist vor Käufen/Fusionen' },
+    { instr: 'Humanvermögensrechnung (HVR)', beschr: 'erfasst immaterielle Werte (kompetente Mitarbeiter) als Wertschöpfungsfaktor, die die Bilanz nicht abbildet' },
+  ]}
+/>
 
 <SourceNote>Human Resources · Kapitel 8 · Personaladministration, Sozialversicherung und DSGVO · Folien 1–51</SourceNote>
 

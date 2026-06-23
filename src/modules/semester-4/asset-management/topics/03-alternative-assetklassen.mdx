@@ -120,29 +120,23 @@ Es existiert **keine einheitliche Klassifizierung** von Hedgefonds-Strategien. I
 
 ### Die drei Hauptstrategiegruppen (Folien 8, 10)
 
-<Columns count={3}>
-  <Card title="1 · Marktneutral (Relative Value)" tone="accent">
-    - Ausnutzung von **Fehlbewertungen** einzelner Wertpapiere
-    - Marktrisiken (Beta/Duration) weitgehend **eliminiert**
-    - Beispiel **Equity-Market-Neutral:** fremdfinanzierte Long-Short-Position; gleich große Long- und Short-Positionen schalten das Marktrisiko aus
-  </Card>
-  <Card title="2 · Ereignisorientiert (Event Driven)" tone="purple">
-    - schnelles, gewinnbringendes Ausnutzen **angekündigter/erwarteter Ereignisse**
-    - Ausnutzung von Fehleinschätzungen / Unsicherheiten
-    - Beispiele: **Merger Arbitrage**, **Distressed Securities**
-  </Card>
-  <Card title="3 · Opportunistisch / Direktional" tone="teal">
-    - Positionen je nach **Markteinschätzung** auf-/abgebaut
-    - **Long-Short Equity:** Netto-Long-Position (anders als Market Neutral)
-    - **Global Macro:** Wetten auf Makrothemen, meist stark gehebelt
-  </Card>
-</Columns>
+<DataTable
+  caption="Die drei Hauptstrategiegruppen"
+  columns={[
+    { key: 'gruppe', label: 'Strategiegruppe' },
+    { key: 'logik', label: 'Anlagelogik' },
+    { key: 'beispiele', label: 'Beispiele' },
+  ]}
+  rows={[
+    { gruppe: 'Marktneutral (Relative Value)', logik: 'Fehlbewertungen ausnutzen; Marktrisiken wie Beta und Duration weitgehend eliminieren', beispiele: 'Equity-Market-Neutral mit gleich großen, fremdfinanzierten Long- und Short-Positionen' },
+    { gruppe: 'Ereignisorientiert (Event Driven)', logik: 'Angekündigte oder erwartete Ereignisse sowie Fehleinschätzungen und Unsicherheiten ausnutzen', beispiele: 'Merger Arbitrage, Distressed Securities' },
+    { gruppe: 'Opportunistisch / Direktional', logik: 'Positionen abhängig von der Markteinschätzung auf- oder abbauen', beispiele: 'Long-Short Equity mit Netto-Long-Position; Global Macro, meist stark gehebelt' },
+  ]}
+/>
 
-<Card title="Wachstumstreiber Hedge Funds (Folie 10)" tone="orange">
-- **steigende Korrelationen** zwischen „klassischen Assetklassen"
-- **geringe Renditen** „klassischer Assetklassen"
-- **Derivatisierung** an den Kapitalmärkten
-</Card>
+<Callout type="info" title="Wachstumstreiber von Hedgefonds (Folie 10)">
+Steigende Korrelationen und geringe Renditen klassischer Assetklassen sowie die Derivatisierung der Kapitalmärkte unterstützen die Nachfrage.
+</Callout>
 
 ### Beispiel Merger Arbitrage: Event Study (Folie 9)
 
@@ -296,6 +290,8 @@ Am Ankündigungstag springt die grüne **Targets**-Kurve auf ca. **+16–17 %** 
   </Card>
 </Columns>
 
+#### Direktanlage: Nutzen und Aufwand
+
 <Columns count={2}>
   <Card title="Direktanlage — Vorteile (Folie 18)" tone="positive">
     - individuelle Nutzungs- und Gestaltungsmöglichkeiten
@@ -341,22 +337,21 @@ Am Ankündigungstag springt die grüne **Targets**-Kurve auf ca. **+16–17 %** 
   </Card>
 </Columns>
 
-<Columns count={3}>
-  <Card title="Geschlossene Fonds (Folie 20)" tone="neutral">
-    - feststehendes Projekt mit fixem Finanzierungsplan; nach EK-Beschaffung **keine neuen Anteile**
-    - Rechtsform oft **Personenhandelsgesellschaft** (KG)
-    - **Nachteil:** kein effizienter Sekundärmarkt
-  </Card>
-  <Card title="Offene Fonds (Folie 21)" tone="neutral">
-    - rechtlich eigenständiges **Sondervermögen** (KAGG)
-    - Fondsvolumen/Anteilszahl **unbegrenzt**, Open-End-Prinzip
-    - **Vorteil:** Diversifikation auch bei kleinen Beträgen; mind. **10 Objekte**
-  </Card>
-  <Card title="Immobilien-AGs (Folie 22)" tone="neutral">
-    - börsennotierte AGs mit Schwerpunkt Immobilien
-    - **US-REIT Tax Exempt Status:** ≥ <Exam>75 % Vermögen</Exam> in Immobilien, **75 %** der Umsätze aus Miete/Pacht/Veräußerung, ≥ **95 %** Gewinnausschüttung
-  </Card>
-</Columns>
+#### Investitionsvehikel im Vergleich
+
+<DataTable
+  caption="Indirekte Immobilienanlagen"
+  columns={[
+    { key: 'vehikel', label: 'Vehikel' },
+    { key: 'struktur', label: 'Struktur' },
+    { key: 'konsequenz', label: 'Konsequenz für Anleger' },
+  ]}
+  rows={[
+    { vehikel: 'Geschlossener Fonds', struktur: 'Feststehendes Projekt mit fixem Finanzierungsplan; nach Eigenkapitalbeschaffung keine neuen Anteile; häufig KG', konsequenz: 'Kein effizienter Sekundärmarkt' },
+    { vehikel: 'Offener Fonds', struktur: 'Rechtlich eigenständiges Sondervermögen nach KAGG; unbegrenztes Fondsvolumen und Open-End-Prinzip', konsequenz: 'Diversifikation auch bei kleinen Beträgen; mindestens 10 Objekte' },
+    { vehikel: 'Immobilien-AG / US-REIT', struktur: 'Börsennotierte AG mit Immobilienschwerpunkt; Tax Exempt Status bei mindestens 75 % Immobilienvermögen und 75 % immobilienbezogenen Umsätzen', konsequenz: 'Mindestens 95 % Gewinnausschüttung' },
+  ]}
+/>
 
 </section>
 

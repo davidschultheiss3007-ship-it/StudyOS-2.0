@@ -308,18 +308,11 @@ Robo-Advice ist innerhalb der FinTech-Landschaft dem Segment <Exam>Vermögensver
 
 ### 1 · Investor Screening & Onboarding
 
-<Columns count={2}>
-  <Card title="Vorgehen" tone="accent">
-    - nutzerfreundliche Websites oder Smartphone-Apps
-    - Kooperationen zwischen FinTechs und traditionellen Asset-Management-Anbietern
-    - Investorenanalyse durch **Online-Fragebögen** (i. d. R. Multiple Choice)
-  </Card>
-  <Card title="Folge" tone="warning">
-    - Fragebögen unterstellen implizit **vergleichbare Anlegertypen**
-    - die Antworten sind aber subjektiv
-    - **Folge: Response Bias**
-  </Card>
-</Columns>
+Nutzerfreundliche Websites oder Smartphone-Apps führen durch die Investorenanalyse. Robo Advisors arbeiten dabei teils mit traditionellen Asset-Management-Anbietern zusammen und erfassen das Profil über **Online-Fragebögen**, meist im Multiple-Choice-Format.
+
+<Callout type="pitfall" title="Response Bias">
+Die Fragebögen unterstellen vergleichbare Anlegertypen, obwohl Antworten subjektiv sind. Daraus entsteht ein systematisches Verzerrungsrisiko.
+</Callout>
 
 <Columns count={2}>
   <Card title="Pro · Online-Fragebogen" tone="positive">
@@ -336,34 +329,19 @@ Robo-Advice ist innerhalb der FinTech-Landschaft dem Segment <Exam>Vermögensver
 
 ### Typische Fragestellungen im (digitalen) Kundenprofiling
 
-<Columns count={2}>
-  <Card title="Was ist Ihnen bei der Geldanlage am wichtigsten?" tone="neutral" compact>
-    - Riskante Vermögensanlage
-    - Sorgenfrei Vermögen aufbauen
-    - Gewinne möglichst maximieren
-  </Card>
-  <Card title="Wie lange möchten Sie Ihr Geld anlegen?" tone="neutral" compact>
-    - Weniger als 3 Jahre
-    - 3 bis 10 Jahre
-    - Mehr als 10 Jahre
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="EUR 10.000 verliert an Wert — wann verkaufen Sie?" tone="neutral" compact>
-    - Bei EUR 1.000 Verlust (−10 %)
-    - Bei EUR 2.000 Verlust (−20 %)
-    - Bei EUR 5.000 Verlust (−50 %)
-    - Ich verkaufe nicht
-    - Ich meide diese Investition
-  </Card>
-  <Card title="Wie schätzen Sie Ihre Erfahrung/Kenntnisse ein?" tone="neutral" compact>
-    - Gering (erste Investition)
-    - Mittel (bereits erste Erfahrungen)
-    - Gut (investiere bereits seit längerer Zeit)
-    - Sehr gut (arbeite/studiere in diesem Bereich)
-  </Card>
-</Columns>
+<DataTable
+  caption="Fragen und typische Antwortskalen"
+  columns={[
+    { key: 'frage', label: 'Profilfrage' },
+    { key: 'antworten', label: 'Antwortoptionen' },
+  ]}
+  rows={[
+    { frage: 'Was ist bei der Geldanlage am wichtigsten?', antworten: 'Riskante Vermögensanlage; sorgenfrei Vermögen aufbauen; Gewinne maximieren' },
+    { frage: 'Wie lange möchten Sie Ihr Geld anlegen?', antworten: 'Unter 3 Jahre; 3 bis 10 Jahre; mehr als 10 Jahre' },
+    { frage: 'EUR 10.000 verliert an Wert: wann verkaufen Sie?', antworten: 'Bei −10 %, −20 % oder −50 %; nicht verkaufen; Investition meiden' },
+    { frage: 'Wie schätzen Sie Erfahrung und Kenntnisse ein?', antworten: 'Gering; mittel; gut; sehr gut' },
+  ]}
+/>
 
 <Callout type="info" title="Was wird über wenige Multiple-Choice-Fragen erhoben?">
 - **Anlageziel**

@@ -1,18 +1,16 @@
+{/* Kapitel 7 · Personalauswahl – Verfahren. Palette via MDXProvider. */}
+
 <section id="auswahlinstrumente-ueberblick">
 
 ## Instrumente der Personalauswahl im Überblick
 
-<Callout type="merksatz" title="Gesamtüberblick">
-Die Personalauswahl nutzt ein **Bündel aufeinander folgender Instrumente** — von der Bewerbungs-/Datenanalyse bis zur abschließenden ärztlichen Eignungsuntersuchung.
-</Callout>
-
-### Reihenfolge im Überblick
+Die Personalauswahl nutzt ein **Bündel aufeinander folgender Instrumente** — von der Bewerbungs-/Datenanalyse bis zur abschließenden ärztlichen Eignungsuntersuchung:
 
 <Diagram
   title="Ablauf der Auswahlinstrumente (Folie 1)"
   source="Human Resources · HR7 · Folie 1"
   chart={`flowchart TD
-  A["Analyse der Bewerbung oder Daten"] <--> F["Fragebogen"]
+  A["Analyse der Bewerbung/Daten"] <--> F["Fragebogen"]
   A -.-> BC["Background-Check"]
   F -.-> BC
   A --> VG["Vorstellungsgespraech"]
@@ -30,36 +28,8 @@ Die Personalauswahl nutzt ein **Bündel aufeinander folgender Instrumente** — 
   end`}
 />
 
-### Bausteine und Abgrenzung
-
-<Columns count={3}>
-  <Card title="Stufen der Auswahl" tone="accent">
-    - Analyse der Bewerbung / Daten (mit Fragebogen verknüpft)
-    - Fragebogen
-    - Background-Check
-    - Vorstellungsgespräch, Testverfahren, situative Verfahren
-    - grafologische Gutachten
-    - ärztliche Eignungsuntersuchung (abschließend)
-  </Card>
-  <Card title="Assessment Center" tone="purple" exam>
-    - umfasst genau **drei** Verfahren:
-    - Vorstellungsgespräch
-    - Testverfahren
-    - situative Verfahren
-    - <Exam>grafologische Gutachten gehören NICHT dazu</Exam> — sie stehen eigenständig daneben
-  </Card>
-  <Card title="Abschluss-Stufe" tone="teal">
-    - **ärztliche Eignungsuntersuchung** steht am Ende
-    - erst nach allen Verfahren
-    - prüft die gesundheitliche Eignung
-  </Card>
-</Columns>
-
-<Callout type="pitfall" title="Pfeil- und Bandlogik">
-- durchgezogene Pfeile = Hauptweg
-- gestrichelte Pfeile führen von Bewerbungsanalyse und Fragebogen zum Background-Check
-- das Band „= Assessment Center" liegt **nur** unter den ersten drei Verfahren
-- <Exam>nicht unter den grafologischen Gutachten</Exam>
+<Callout type="pitfall" title="Assessment Center und Abschluss-Stufe">
+Das Band „= Assessment Center" liegt **nur** unter Vorstellungsgespräch, Testverfahren und situativen Verfahren — <Exam>grafologische Gutachten gehören NICHT dazu</Exam>, sie stehen eigenständig daneben. Die **ärztliche Eignungsuntersuchung** steht am Ende, erst nach allen Verfahren.
 </Callout>
 
 </section>
@@ -68,46 +38,31 @@ Die Personalauswahl nutzt ein **Bündel aufeinander folgender Instrumente** — 
 
 ## Anforderungsmerkmale und Umsetzungskriterien
 
-<Callout type="info" title="Prinzip der Operationalisierung">
-- Anforderungsmerkmale werden über konkrete, **beobachtbare Umsetzungskriterien** messbar gemacht
-- abstraktes Merkmal → beobachtbares Verhalten übersetzt
-- <Exam>Grundlage für die Bewertung im Assessment Center</Exam>
-</Callout>
-
-### Zwei Anforderungsmerkmale im Vergleich
-
-Beide Merkmale folgen demselben Muster: ein abstraktes Merkmal wird über eine Definition und konkrete, beobachtbare **Umsetzungskriterien** messbar gemacht.
+Anforderungsmerkmale werden über konkrete, **beobachtbare Umsetzungskriterien** messbar gemacht: ein abstraktes Merkmal wird in beobachtbares Verhalten übersetzt — die <Exam>Grundlage für die Bewertung im Assessment Center</Exam>.
 
 <CompareCard
   items={[
     {
       tag: 'Folie 2',
-      title: '1 · Kommunikationsfähigkeit',
-      subtitle: 'Definition: Fähigkeit, durch eigene Aktionen und Reaktionen eine **vertrauensvolle Beziehung** zum Gesprächspartner oder zur Gruppe aufzubauen und weiterzuentwickeln.',
+      title: 'Kommunikationsfähigkeit',
+      subtitle: 'eine **vertrauensvolle Beziehung** zum Gesprächspartner/zur Gruppe aufbauen',
       accent: 'accent',
       points: [
-        'dem Gesprächspartner zugewandte Körperhaltung',
-        'sucht und hält Blickkontakt',
+        'zugewandte Körperhaltung, sucht und hält Blickkontakt',
         'zeigt Wertschätzung, achtet die Person des anderen',
-        'stellt sich auf seine Gesprächspartner ein',
-        'dokumentiert durch Fragen sein Interesse',
-        'lässt andere ausreden',
-        'bezieht passive Gesprächspartner ein',
-        'löst emotionale Spannungen im Gespräch auf',
+        'stellt sich auf Gesprächspartner ein, dokumentiert Interesse durch Fragen',
+        'lässt andere ausreden, bezieht passive Partner ein, löst Spannungen auf',
       ],
     },
     {
       tag: 'Folie 3',
-      title: '2 · Beobachtungsfähigkeit',
-      subtitle: 'Definition: Inwieweit geht der/die Teilnehmer/in auf die **Bedürfnisse des Kunden** ein?',
+      title: 'Beobachtungsfähigkeit',
+      subtitle: 'inwieweit geht der/die Teilnehmer/in auf die **Bedürfnisse des Kunden** ein?',
       accent: 'teal',
       points: [
-        'baut positive Atmosphäre auf',
-        'hört aktiv zu',
-        'hält Blickkontakt',
-        'achtet die Person des anderen',
-        'lässt den Kunden ausreden',
-        'zeigt seinem Gesprächspartner Wertschätzung',
+        'baut positive Atmosphäre auf, hört aktiv zu',
+        'hält Blickkontakt, achtet die Person des anderen',
+        'lässt den Kunden ausreden, zeigt Wertschätzung',
       ],
     },
   ]}
@@ -121,29 +76,7 @@ Beide Merkmale folgen demselben Muster: ein abstraktes Merkmal wird über eine D
 
 ## Drei Analysedimensionen: Kompetenzen, Verhalten, Motive
 
-<Callout type="merksatz" title="Ganzheitliche Personalauswahl">
-- ganzheitliche Auswahl betrachtet **drei Ebenen**: Können, Wie, Wollen
-- jede Dimension hat ein eigenes diagnostisches Instrument
-- <Exam>Kompetenzen (Können) · Verhalten (Wie) · Motive (Wollen)</Exam>
-</Callout>
-
-<Columns count={3}>
-  <Card title="Kompetenzen" tone="orange" exam>
-    - Frage: **Was kann die Person?**
-    - Instrument: Bericht / Skalen (Auswertungsbogen)
-    - misst Fähigkeiten und Leistungspotenzial
-  </Card>
-  <Card title="Verhalten" tone="accent" exam>
-    - Frage: **Wie verhält sich die Person?**
-    - Instrument: Insights-Farbrad
-    - beschreibt typische Verhaltensstile
-  </Card>
-  <Card title="Motive" tone="purple" exam>
-    - Frage: **Was treibt die Person an?**
-    - Instrument: farbiges Tortenrad
-    - erfasst Antriebe und Beweggründe
-  </Card>
-</Columns>
+Ganzheitliche Auswahl betrachtet drei Ebenen — <Exam>Kompetenzen (Können) · Verhalten (Wie) · Motive (Wollen)</Exam> —, jede mit eigenem diagnostischem Instrument:
 
 <DataTable
   caption="Dimension → Leitfrage → Instrument (Folie 4)"
@@ -166,74 +99,28 @@ Beide Merkmale folgen demselben Muster: ein abstraktes Merkmal wird über eine D
 ## Insights-MDI: Farbtypologie und Persönlichkeitstypen
 
 <DefinitionBox term="Insights-MDI" source="Human Resources · HR7 · Folien 5–9">
-Das Insights-MDI-Modell ordnet **vier Grund-Persönlichkeitstypen** je einer Farbe zu (Rot, Gelb, Grün, Blau) mit charakteristischen Eigenschaften. Die vier Typen bilden gemeinsam das vollständige Insights-Farbrad.
+Das Insights-MDI-Modell ordnet **vier Grund-Persönlichkeitstypen** je einer Farbe (Rot, Gelb, Grün, Blau) mit charakteristischen Eigenschaften zu. Die vier Typen bilden gemeinsam das vollständige Insights-Farbrad.
 </DefinitionBox>
 
-### 1 · Einführung der Farbtypologie (Folie 5)
-
 <DataTable
-  caption="Erste Charakterisierung der vier Farbtypen mit Naturbild (Folie 5)"
-  columns={[
-    { key: 'farbe', label: 'Farbe' },
-    { key: 'foto', label: 'Naturbild' },
-    { key: 'eig', label: 'Eigenschaften' },
-  ]}
-  rows={[
-    { farbe: 'ROT', foto: 'Feuer', eig: 'bestimmt, risikofreudig, zielorientiert, positiv' },
-    { farbe: 'GELB', foto: 'gelbe Blüte', eig: 'fröhlich, aufmunternd, schwungvoll, lebhaft' },
-    { farbe: 'GRÜN', foto: 'grünes Blatt', eig: 'besänftigend, gelassen, mitfühlend, zurückhaltend' },
-    { farbe: 'BLAU', foto: 'Wasser', eig: 'taktvoll, scharfsinnig, anspruchsvoll' },
-  ]}
-/>
-
-### 2 · Die vier Farbtypen und ihre Eigenschaften
-
-<Columns count={2}>
-  <Card title="ROT – dominant (oben rechts)" tone="negative">
-    - fordernd, entschlossen, entschieden
-    - zielgerichtet, willensstark, sachorientiert
-    - Naturbild: Feuer
-  </Card>
-  <Card title="GELB – initiativ (unten rechts)" tone="warning">
-    - umgänglich, enthusiastisch, ausdrucksstark
-    - dynamisch, offen, überzeugend
-    - Naturbild: gelbe Blüte
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="GRÜN – stetig (unten links)" tone="positive">
-    - vertrauenvoll, ermutigend, mitfühlend
-    - geduldig, freundlich, entspannt
-    - Naturbild: grünes Blatt
-  </Card>
-  <Card title="BLAU – analytisch (oben links)" tone="accent">
-    - vorsichtig, präzise, besonnen
-    - hinterfragend, formal, analytisch
-    - Naturbild: Wasser
-  </Card>
-</Columns>
-
-<DataTable
-  caption="Vollständiges Insights-Farbrad – Quadranten-Positionen (Folie 9)"
+  caption="Die vier Farbtypen im Insights-Farbrad (Folien 5 & 9)"
   columns={[
     { key: 'farbe', label: 'Farbe' },
     { key: 'typ', label: 'Typ' },
-    { key: 'position', label: 'Position im Rad' },
+    { key: 'pos', label: 'Position' },
+    { key: 'natur', label: 'Naturbild' },
     { key: 'eig', label: 'Kerneigenschaften' },
   ]}
   rows={[
-    { farbe: 'BLAU', typ: 'analytisch', position: 'oben links', eig: 'vorsichtig, präzise, besonnen, hinterfragend, formal, analytisch' },
-    { farbe: 'ROT', typ: 'dominant', position: 'oben rechts', eig: 'fordernd, entschlossen, entschieden, zielgerichtet, willensstark, sachorientiert' },
-    { farbe: 'GRÜN', typ: 'stetig', position: 'unten links', eig: 'vertrauenvoll, ermutigend, mitfühlend, geduldig, freundlich, entspannt' },
-    { farbe: 'GELB', typ: 'initiativ', position: 'unten rechts', eig: 'umgänglich, enthusiastisch, ausdrucksstark, dynamisch, offen, überzeugend' },
+    { farbe: 'BLAU', typ: 'analytisch', pos: 'oben links', natur: 'Wasser', eig: 'vorsichtig, präzise, besonnen, hinterfragend, formal' },
+    { farbe: 'ROT', typ: 'dominant', pos: 'oben rechts', natur: 'Feuer', eig: 'fordernd, entschlossen, zielgerichtet, willensstark, sachorientiert' },
+    { farbe: 'GRÜN', typ: 'stetig', pos: 'unten links', natur: 'grünes Blatt', eig: 'vertrauensvoll, ermutigend, mitfühlend, geduldig, entspannt' },
+    { farbe: 'GELB', typ: 'initiativ', pos: 'unten rechts', natur: 'gelbe Blüte', eig: 'umgänglich, enthusiastisch, ausdrucksstark, dynamisch, offen, überzeugend' },
   ]}
 />
 
-### 3 · Selbstbild vs. Fremdbild
-
 <Callout type="examfocus" title="Dieselbe Eigenschaft – zwei Wahrnehmungen">
-Ein und dieselbe Persönlichkeitseigenschaft kann positiv (Selbstbild) oder negativ (Fremdbild) wahrgenommen werden. Jede Stärke aus Außensicht kann auch als Schwäche erscheinen — z. B. „fordernd/willensstark" wird zu „beherrschend/antreibend".
+Ein und dieselbe Eigenschaft kann positiv (Selbstbild) oder negativ (Fremdbild) wahrgenommen werden: Jede Stärke aus Außensicht kann zur Schwäche werden — etwa „fordernd/willensstark" → „beherrschend/antreibend".
 </Callout>
 
 <CompareCard
@@ -241,23 +128,21 @@ Ein und dieselbe Persönlichkeitseigenschaft kann positiv (Selbstbild) oder nega
     {
       tag: 'Selbstbild',
       title: 'Wie wir uns selbst sehen (positiv)',
-      subtitle: 'Selbstwahrnehmung',
       accent: 'positive',
       points: [
         '**BLAU:** vorsichtig, präzise, besonnen, hinterfragend, formal',
-        '**ROT:** fordernd, entschlossen, willensstark, zielgerichtet, sachorientiert',
-        '**GRÜN:** vertrauensvoll, ermutigend, mitfühlend, geduldig, entspannt',
-        '**GELB:** umgänglich, enthusiastisch, offen, überzeugend, redegewandt',
+        '**ROT:** fordernd, entschlossen, willensstark, zielgerichtet',
+        '**GRÜN:** vertrauensvoll, ermutigend, mitfühlend, geduldig',
+        '**GELB:** umgänglich, enthusiastisch, offen, überzeugend',
       ],
     },
     {
       tag: 'Fremdbild',
-      title: 'Wie uns das Gegenüber sehen könnte (negativ)',
-      subtitle: 'Fremdwahrnehmung',
+      title: 'Wie das Gegenüber uns sehen könnte (negativ)',
       accent: 'negative',
       points: [
         '**BLAU:** steif, misstrauisch, kalt, reserviert, unentschlossen',
-        '**ROT:** aggressiv, beherrschend, antreibend, intolerant, anmassend',
+        '**ROT:** aggressiv, beherrschend, antreibend, intolerant, anmaßend',
         '**GRÜN:** fügsam, indifferent, beleidigt, abhängig, stur',
         '**GELB:** erregt, hektisch, indiskret, extravagant, voreilig',
       ],
@@ -265,28 +150,12 @@ Ein und dieselbe Persönlichkeitseigenschaft kann positiv (Selbstbild) oder nega
   ]}
 />
 
-### 4 · Acht Haupttypen
+Aus den vier Grundfarben werden **acht differenzierte Haupttypen** als Mischtypen abgeleitet, im Uhrzeigersinn ab oben angeordnet:
 
-<Callout type="info" title="Ableitung der acht Typen">
-- aus den vier Grundfarben werden **acht differenzierte Haupttypen** abgeleitet
-- es sind **Mischtypen** zwischen den Farbquadranten
-- entlang des Farbrades angeordnet (im Uhrzeigersinn ab oben)
-</Callout>
-
-<Columns count={2}>
-  <Card title="Obere Hälfte (ab oben im Uhrzeigersinn)" tone="accent">
-    - Reformer (oben)
-    - Direktor
-    - Motivator
-    - Inspirator
-  </Card>
-  <Card title="Untere Hälfte (weiter im Uhrzeigersinn)" tone="teal">
-    - Berater (unten)
-    - Unterstützer
-    - Koordinator
-    - Beobachter
-  </Card>
-</Columns>
+<TagList
+  tone="accent"
+  items={['Reformer', 'Direktor', 'Motivator', 'Inspirator', 'Berater', 'Unterstützer', 'Koordinator', 'Beobachter']}
+/>
 
 </section>
 
@@ -294,26 +163,19 @@ Ein und dieselbe Persönlichkeitseigenschaft kann positiv (Selbstbild) oder nega
 
 ## Stilanalyse und DISG-Kurztest
 
-<Callout type="merksatz" title="Adaptierter Stil vs. Basis-Stil">
-- **adaptierter Stil** = situativ angepasstes Verhalten
-- **Basis-Stil** = Grundprägung / natürliches Verhalten
-- Gegenüberstellung über die vier Dimensionen D/I/S/G
-- <Exam>macht Unterschiede zwischen gezeigtem und natürlichem Verhalten sichtbar</Exam>
-</Callout>
-
-### Stilanalyse-Profil
+Die Stilanalyse stellt den **adaptierten Stil** (situativ angepasstes Verhalten) dem **Basis-Stil** (natürliche Grundprägung) über die vier Dimensionen D/I/S/G gegenüber — und macht so <Exam>Unterschiede zwischen gezeigtem und natürlichem Verhalten sichtbar</Exam>:
 
 <DataChart
   type="bar"
-  title="Stilanalyse: adaptierter vs. Basis-Stil (Folie 12, Werte visuell abgelesen)"
-  source="Human Resources · HR7 · Folie 12 · Basis: deutschsprachige Normierungsstudie 2017 R4"
+  title="Stilanalyse: adaptierter vs. Basis-Stil (Folie 12)"
+  source="Human Resources · HR7 · Folie 12 · deutschsprachige Normierungsstudie 2017 R4 (Werte visuell abgelesen)"
   xKey="dim"
   xLabel="Dimension (D/I/S/G)"
   yLabel="Wert (0–100)"
   yDomain={[0, 100]}
   series={[
-    { key: 'adaptiert', name: 'Adaptierter Stil (Grafik I)', color: 'var(--color-module-blue)' },
-    { key: 'basis', name: 'Basis-Stil (Grafik II)', color: 'var(--color-module-orange)' },
+    { key: 'adaptiert', name: 'Adaptierter Stil', color: 'var(--color-module-blue)' },
+    { key: 'basis', name: 'Basis-Stil', color: 'var(--color-module-orange)' },
   ]}
   data={[
     { dim: 'D (rot)', adaptiert: 42, basis: 55 },
@@ -323,34 +185,13 @@ Ein und dieselbe Persönlichkeitseigenschaft kann positiv (Selbstbild) oder nega
   ]}
 />
 
-### Dimensionen und Kurztest
-
-<Columns count={2}>
-  <Card title="Die vier DISG-Dimensionen" tone="accent" exam>
-    - **D** (rot): Dominanz
-    - **I** (gelb): Initiative
-    - **S** (grün): Stetigkeit
-    - **G** (blau): Gewissenhaftigkeit
-    - Referenzlinie der Diagramme bei **50**
-  </Card>
-  <Card title="DISG-Kurztest (Folie 13)" tone="teal">
-    - frei verfügbarer **Online-Kurztest**
-    - ermittelt das individuelle DISG-Profil
-    - über die vier DISG-Dimensionen
-    - Hinweis „100% kostenlos", Button „Zum Test"
-    - didaktischer Selbstanwendungs-Hinweis
-  </Card>
-</Columns>
-
-<SourceNote>Basis der Stilanalyse-Werte: deutschsprachige Normierungsstudie 2017 R4 (Folie 12); Werte visuell abgelesen.</SourceNote>
+Die vier DISG-Dimensionen sind **D** = Dominanz (rot), **I** = Initiative (gelb), **S** = Stetigkeit (grün), **G** = Gewissenhaftigkeit (blau); die Referenzlinie der Diagramme liegt bei **50**. Ein frei verfügbarer Online-Kurztest (Folie 13) ermittelt das individuelle DISG-Profil über diese vier Dimensionen.
 
 </section>
 
 <section id="profilext">
 
 ## ProfileXT: Bausteine und Auswertungsskalen
-
-### Die fünf Bausteine
 
 <DefinitionBox term="ProfileXT" source="Human Resources · HR7 · Folie 14">
 ProfileXT analysiert die Eignung über **fünf Bausteine**: das Anforderungsprofil der Stelle sowie Denkmuster (Können), Verhaltensmerkmale (Wie), Berufsinteressen (Wollen) und das daraus resultierende Job-Match (Passung).
@@ -367,49 +208,40 @@ ProfileXT analysiert die Eignung über **fünf Bausteine**: das Anforderungsprof
     { begriff: 'Denkmuster', leitfrage: 'Kann die Person die Arbeit leisten?' },
     { begriff: 'Verhaltensmerkmale', leitfrage: 'Wie wird die Person die Arbeit machen?' },
     { begriff: 'Berufsinteressen', leitfrage: 'Will die Person die Arbeit machen?' },
-    { begriff: 'Job-Match', leitfrage: 'Passen die Person und die Arbeit zusammen?' },
+    { begriff: 'Job-Match', leitfrage: 'Passen Person und Arbeit zusammen?' },
   ]}
 />
 
 <Callout type="examfocus" title="Logik der ProfileXT-Skala">
-- jede Skala ist eine **1-10-Leiste**
-- **dunkles Anforderungsband** = stellenspezifisches Soll (hier Position ZZ_Business Coach)
-- **individuelles Ergebnis** wird damit verglichen
-- <Exam>liegt das Ergebnis außerhalb des Bandes, ist es hervorgehoben</Exam>
-- alle Werte aus dem Auswertungsbogen visuell abgelesen
+Jede Skala ist eine **1–10-Leiste**: das **dunkle Anforderungsband** zeigt das stellenspezifische Soll (hier ZZ_Business Coach), das **individuelle Ergebnis** wird damit verglichen. <Exam>Liegt das Ergebnis außerhalb des Bandes, ist es hervorgehoben</Exam>. Alle Werte sind visuell abgelesen.
 </Callout>
 
-### 1 · Denkmuster (Folie 15)
-
 <DataTable
-  caption="Profil des Denkmusters – Anforderungsband / Ergebnis (visuell abgelesen)"
+  caption="Denkmuster – Anforderungsband / Ergebnis (Folie 15, visuell abgelesen)"
   columns={[
     { key: 'skala', label: 'Skala' },
     { key: 'beschr', label: 'Beschreibung' },
-    { key: 'band', label: 'Anforderungsband / Ergebnis' },
+    { key: 'band', label: 'Band / Ergebnis' },
   ]}
   rows={[
-    { skala: 'Lernindex', beschr: 'Index für Lernfähigkeit, Denkvermögen und Problemlösungspotenzial', band: 'Band 5–8 (Ergebnis ca. 8 im Band)' },
-    { skala: 'Verbaler Ausdruck', beschr: 'Kommunikationsstärke über den verfügbaren Wortschatz', band: 'Band 5–8 (Ergebnis ca. 8 im Band)' },
-    { skala: 'Verbales Denken', beschr: 'Wörter als Grundlage für Überlegungen und Problemlösungen', band: 'Band 5–8, Ergebnis 9 (hervorgehoben)' },
-    { skala: 'Umgang mit Zahlen', beschr: 'Fähigkeit, Berechnungen anzustellen', band: 'Band 5–8 (Ergebnis ca. 8 im Band)' },
-    { skala: 'Numerisches Denken', beschr: 'Zahlen als Grundlage für Überlegungen und Problemlösungen', band: 'Band 5–8 (Ergebnis ca. 8 im Band)' },
+    { skala: 'Lernindex', beschr: 'Lernfähigkeit, Denkvermögen, Problemlösungspotenzial', band: 'Band 5–8, Ergebnis ~8' },
+    { skala: 'Verbaler Ausdruck', beschr: 'Kommunikationsstärke über den Wortschatz', band: 'Band 5–8, Ergebnis ~8' },
+    { skala: 'Verbales Denken', beschr: 'Wörter als Grundlage für Problemlösungen', band: 'Band 5–8, Ergebnis 9 (hervorgehoben)' },
+    { skala: 'Umgang mit Zahlen', beschr: 'Berechnungen anstellen', band: 'Band 5–8, Ergebnis ~8' },
+    { skala: 'Numerisches Denken', beschr: 'Zahlen als Grundlage für Problemlösungen', band: 'Band 5–8, Ergebnis ~8' },
   ]}
 />
-
-### 2 · Verhaltensmerkmale (Folien 16–17)
 
 <DataChart
   type="bar"
   title="Verhaltensmerkmale – individuelle Ergebniswerte (Folien 16–17, visuell abgelesen)"
-  source="Human Resources · HR7 · Folien 16–17 · Position ZZ_Business Coach; Bänder siehe Tabelle"
+  source="Human Resources · HR7 · Folien 16–17 · Position ZZ_Business Coach"
   xKey="merkmal"
   xLabel="Verhaltensmerkmal"
-  yLabel="Ergebnis (Skala 1–10)"
+  yLabel="Ergebnis (1–10)"
   yDomain={[0, 10]}
-  series={[
-    { key: 'ergebnis', name: 'Individuelles Ergebnis', color: 'var(--color-module-orange)' },
-  ]}
+  height={360}
+  series={[{ key: 'ergebnis', name: 'Individuelles Ergebnis', color: 'var(--color-module-orange)' }]}
   data={[
     { merkmal: 'Energie-Ebene', ergebnis: 9 },
     { merkmal: 'Durchsetzungsstärke', ergebnis: 2 },
@@ -422,28 +254,8 @@ ProfileXT analysiert die Eignung über **fünf Bausteine**: das Anforderungsprof
   ]}
 />
 
-<DataTable
-  caption="Verhaltensmerkmale – Beschreibung und Band/Ergebnis (visuell abgelesen)"
-  columns={[
-    { key: 'merkmal', label: 'Verhaltensmerkmal' },
-    { key: 'beschr', label: 'Beschreibung' },
-    { key: 'band', label: 'Band / Ergebnis' },
-  ]}
-  rows={[
-    { merkmal: 'Energie-Ebene', beschr: 'Tendenz zur Ausdauer und Potenzial für Schnelligkeit', band: 'Band 2–6, Ergebnis 9' },
-    { merkmal: 'Durchsetzungsstärke', beschr: 'Tendenz, Menschen zu führen und Situationen zu kontrollieren', band: 'Band 4–7, Ergebnis 2' },
-    { merkmal: 'Soziale Ausrichtung', beschr: 'Kommunikationsorientierung; geht auf Menschen zu', band: 'Band 5–8, Ergebnis 1' },
-    { merkmal: 'Lenkbarkeit', beschr: 'Vorschriften beachten, Kontrolle akzeptieren, Regeln einhalten', band: 'Band 6–9, Ergebnis 3' },
-    { merkmal: 'Grundeinstellung', beschr: 'positive Haltung gegenüber Menschen und Ergebnissen', band: 'Band 6–9 (Ergebnis im Band)' },
-    { merkmal: 'Entscheidungsstärke', beschr: 'verfügbare Informationen für schnelle Entscheidungen nutzen', band: 'Band 3–7, Ergebnis 5' },
-    { merkmal: 'Kompromissfähigkeit', beschr: 'Freundlichkeit, Kooperation, Einvernehmlichkeit; Team-Player', band: 'Band 5–8, Ergebnis 9' },
-    { merkmal: 'Unabhängigkeit', beschr: 'autark sein, unabhängig handeln, selbst entscheiden', band: 'Band 5–7, Ergebnis 8' },
-    { merkmal: 'Objektivität', beschr: 'sachlich denken, objektiv in Entscheidungen sein', band: 'Band 5–7, Ergebnis 4' },
-  ]}
-/>
-
 <Callout type="pitfall" title="Beispielwerte, keine Normwerte">
-Die ProfileXT-Werte stammen aus dem Auswertungsbogen der Beispiel-Position ZZ_Business Coach und sind visuell abgelesene Näherungswerte — kein allgemeingültiger Prüfungswert.
+Die ProfileXT-Werte stammen aus dem Auswertungsbogen der Beispiel-Position ZZ_Business Coach und sind visuell abgelesene Näherungswerte — kein allgemeingültiger Prüfungswert. Auffällig sind die starken Soll-Ist-Abweichungen bei Durchsetzungsstärke (Soll 4–7, Ist 2) und sozialer Ausrichtung (Soll 5–8, Ist 1).
 </Callout>
 
 </section>
@@ -452,35 +264,20 @@ Die ProfileXT-Werte stammen aus dem Auswertungsbogen der Beispiel-Position ZZ_Bu
 
 ## Bewerbungsgespräch und Gehaltsverhandlung
 
-<Callout type="merksatz" title="Strukturierter Gesprächsablauf">
-- das Bewerbungsgespräch verläuft in **typischen Phasen**
-- vom informellen Einstieg über Selbstvorstellung
-- freies, biografisches und situatives Fragen
-- Tätigkeitsinformationen bis zum zusammenfassenden Abschluss
-</Callout>
-
-### Phasen des Gesprächs
+Das Bewerbungsgespräch verläuft in typischen Phasen — vom informellen Einstieg über Selbstvorstellung, freies, biografisches und situatives Fragen bis zum zusammenfassenden Abschluss:
 
 <Timeline
   events={[
     { label: '1', title: 'Gesprächsbeginn', text: 'kurze informelle Unterhaltung' },
     { label: '2', title: 'Selbstvorstellung', text: 'Selbstvorstellung des Bewerbers' },
     { label: '3', title: 'Freies Gespräch', text: 'der Bewerber kann offene Fragen stellen' },
-    { label: '4', title: 'Berufswahl', text: 'Berufsinteressen, Berufs-/Organisationswahl werden erfragt' },
+    { label: '4', title: 'Berufswahl', text: 'Berufsinteressen, Berufs-/Organisationswahl' },
     { label: '5', title: 'Biografiebezogene Fragen', text: 'Fragen zum bisherigen Werdegang' },
     { label: '6', title: 'Tätigkeitsinformationen', text: 'Informationen über Arbeitsplatz und Unternehmen' },
-    { label: '7', title: 'Situative Fragen', text: 'z. B. „Erzählen Sie mir von einem Ereignis, bei dem Sie mit einem Kunden …"' },
+    { label: '7', title: 'Situative Fragen', text: '„Erzählen Sie von einem Ereignis, bei dem Sie mit einem Kunden …"' },
     { label: '8', title: 'Gesprächsabschluss', text: 'Fragen des Bewerbers, Zusammenfassung' },
   ]}
 />
-
-<Card title="Gruppenübung: Vorstellungsgespräch (Folie 20)" tone="neutral">
-- jeweils **zwei** bereiten sich als Arbeitgeber auf das Gespräch vor
-- **eine/einer** ist der Bewerbungskandidat
-- Rollenspiel zur Anwendung der behandelten Inhalte (Arbeitgeberseite vs. Bewerber)
-</Card>
-
-### Gehaltsverhandlungen: fünf typische Fehler
 
 <DataTable
   caption="Typische Fehler in Gehaltsverhandlungen mit Gegenstrategie (Folie 21)"
@@ -490,20 +287,16 @@ Die ProfileXT-Werte stammen aus dem Auswertungsbogen der Beispiel-Position ZZ_Bu
     { key: 'gegen', label: 'Gegenstrategie' },
   ]}
   rows={[
-    { nr: '1', fehler: 'Bescheiden sein', gegen: 'viele Führungskräfte kommen nicht von sich aus — selbst aktiv werden' },
-    { nr: '2', fehler: '„Vier Jahre dabei, aber keine Gehaltserhöhung!"', gegen: 'aufzählen, was geleistet wurde und welche Stärken man hat' },
+    { nr: '1', fehler: 'Bescheiden sein', gegen: 'Vorgesetzte kommen oft nicht von sich aus — selbst aktiv werden' },
+    { nr: '2', fehler: '„Vier Jahre dabei, aber keine Erhöhung!"', gegen: 'aufzählen, was geleistet wurde und welche Stärken man hat' },
     { nr: '3', fehler: 'auf fairen Vorschlag warten', gegen: 'selbst recherchieren und eigene Vorstellung nennen' },
-    { nr: '4', fehler: '„Das bringt unser Gehaltsgefüge durcheinander"', gegen: 'nicht abspeisen lassen; andere Leistungen einbringen: Bonus, Fortbildung, Urlaubstage etc.' },
+    { nr: '4', fehler: '„Das bringt unser Gehaltsgefüge durcheinander"', gegen: 'nicht abspeisen lassen; Bonus, Fortbildung, Urlaubstage einbringen' },
     { nr: '5', fehler: 'Chef weiß danach noch alle Details', gegen: 'Protokoll verfassen' },
   ]}
 />
 
 <Callout type="examfocus" title="Muster der Gegenstrategien">
-- selbstbewusst auftreten und selbst aktiv werden
-- eigene **Leistungen belegen**
-- eigenständig recherchieren statt auf faire Vorschläge warten
-- Alternativen verhandeln (Bonus, Fortbildung, Urlaubstage)
-- <Exam>das Ergebnis schriftlich festhalten (Protokoll)</Exam>
+Selbstbewusst auftreten und aktiv werden, eigene **Leistungen belegen**, eigenständig recherchieren, Alternativen verhandeln (Bonus, Fortbildung, Urlaubstage) und <Exam>das Ergebnis schriftlich festhalten (Protokoll)</Exam>.
 </Callout>
 
 <SourceNote>Human Resources · Kapitel 7 · Personalauswahl – Verfahren · Folien 1–21. Insights-/ProfileXT-Werte visuell abgelesen; Stilanalyse-Basis: deutschsprachige Normierungsstudie 2017 R4.</SourceNote>

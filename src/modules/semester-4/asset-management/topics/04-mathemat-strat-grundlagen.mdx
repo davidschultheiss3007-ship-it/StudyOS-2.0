@@ -39,18 +39,19 @@
   ]}
 />
 
-<Columns count={2}>
-  <Card title="Median" tone="purple">
-    - mittlerer Wert einer **der Größe nach sortierten** Gruppe
-    - ungerade Anzahl: Position (n+1)/2
-    - gerade Anzahl: Ø der Positionen n/2 und (n+2)/2
-    - geeigneter Durchschnitt beim Auftreten von **Extremwerten**
-  </Card>
-  <Card title="Modus & gewichtetes Mittel" tone="orange">
-    - **Modus:** häufigster Wert einer diskreten bzw. Maximum einer stetigen Häufigkeitsverteilung (z. B. „Sieger" in Umfragen)
-    - **Gewichtetes Mittel:** unterschiedliche Gewichtung einzelner Komponenten
-  </Card>
-</Columns>
+<DataTable
+  caption="Weitere Lageparameter"
+  columns={[
+    { key: 'mass', label: 'Maß' },
+    { key: 'definition', label: 'Definition und Einsatz' },
+    { key: 'bestimmung', label: 'Bestimmung' },
+  ]}
+  rows={[
+    { mass: 'Median', definition: 'Mittlerer Wert einer sortierten Gruppe; robust bei Extremwerten', bestimmung: 'Ungerade: Position (n+1)/2; gerade: Mittel der Positionen n/2 und (n+2)/2' },
+    { mass: 'Modus', definition: 'Häufigster Wert einer diskreten beziehungsweise Maximum einer stetigen Häufigkeitsverteilung', bestimmung: 'Beispiel: Sieger in Umfragen' },
+    { mass: 'Gewichtetes Mittel', definition: 'Mittelwert bei unterschiedlicher Bedeutung einzelner Komponenten', bestimmung: 'Jeder Beobachtungswert erhält ein Gewicht' },
+  ]}
+/>
 
 <Formula
   display
@@ -72,16 +73,10 @@
   ]}
 />
 
-<Columns count={2}>
-  <Card title="Arithmetisch" tone="negative">
-    - r̄ = (100 % − 50 %) / 2 = **25 %**
-    - überschätzt die Wertentwicklung
-  </Card>
-  <Card title="Geometrisch" tone="positive">
-    - r̄ = ((1 + 100 %)(1 − 50 %))^(1/2) − 1 = **0 %**
-    - entspricht dem tatsächlichen Kursverlauf (100 → 100)
-  </Card>
-</Columns>
+<CompareCard items={[
+  { tag: 'Arithmetisch', title: '25 %', accent: 'negative', points: ['(100 % − 50 %) / 2', 'Überschätzt die tatsächliche Wertentwicklung.'] },
+  { tag: 'Geometrisch', title: '0 %', accent: 'positive', points: ['((1 + 100 %)(1 − 50 %))^(1/2) − 1', 'Entspricht dem tatsächlichen Kursverlauf von 100 zurück auf 100.'] },
+]} />
 
 <Callout type="pitfall" title="Das arithmetische Mittel liefert einen falschen Wert!">
 Bei schwankenden Mehrperiodenrenditen überschätzt das arithmetische Mittel (25 %) die tatsächliche Entwicklung — der Kurs steht nach zwei Jahren wieder bei 100 EUR, das geometrische Mittel (0 %) ist korrekt.

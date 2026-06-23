@@ -4,28 +4,9 @@
 
 ### Überblick: drei Ausprägungen
 
-<Columns count={2}>
-  <Card title="Differenzierung (Folie 3)" tone="neutral">
-    <Diagram
-      title="Investmentphilosophien"
-      source="Asset Management · Folie 3"
-      chart={`flowchart TD
-  IP[Investmentphilosophien]
-  A[Aktiv]
-  P[Passiv]
-  T[Tilted = Mischform]
-  IP --> A
-  IP --> P
-  A --> T
-  P --> T`}
-    />
-  </Card>
-  <Card title="Die drei Pole im Überblick" tone="accent">
-    - **Aktiv** und **passiv** bilden die Pole
-    - **Tilted** ist die **Mischform**
-    - tilted weicht ausgehend vom **passiven** Management gezielt nach **Risikofaktoren** ab
-  </Card>
-</Columns>
+**Aktiv** und **passiv** bilden die Pole. **Tilted Management** ist die Mischform und weicht, ausgehend vom passiven Management, gezielt nach Risikofaktoren ab.
+
+<SourceNote>Asset Management · Folie 3</SourceNote>
 
 ### Aktives vs. passives Management
 
@@ -46,35 +27,32 @@
   </Card>
 </Columns>
 
-<Columns count={2}>
-  <Card title="Prognosearten im aktiven Management" tone="purple">
-    - **Technisch/quantitativ:** Charttechnik bzw. Zeitreihenanalysen
-    - **Fundamental/qualitativ:** Schätzung des inneren Werts eines Assets als Barwert der zukünftig erwarteten Cash Flows
-  </Card>
-  <Card title="Aktive Strategien: relative vs. absolute Return" tone="orange">
-    - **Relative Return:** gemessen an einer Benchmark
-    - **Absolute Return:** agiert losgelöst von einer Benchmark, z.B. **Hedge Fonds**
-    - Idee: positive Rendite weitgehend unabhängig von der allgemeinen Marktentwicklung
-  </Card>
-</Columns>
+<DataTable
+  caption="Werkzeuge und Zielgrößen des aktiven Managements"
+  columns={[
+    { key: 'dimension', label: 'Dimension' },
+    { key: 'ansatz', label: 'Ansatz' },
+    { key: 'aussage', label: 'Aussage' },
+  ]}
+  rows={[
+    { dimension: 'Prognose', ansatz: 'Technisch / quantitativ', aussage: 'Charttechnik beziehungsweise Zeitreihenanalysen' },
+    { dimension: 'Prognose', ansatz: 'Fundamental / qualitativ', aussage: 'Innerer Wert als Barwert der künftig erwarteten Cashflows' },
+    { dimension: 'Strategie', ansatz: 'Relative Return', aussage: 'Erfolg wird an einer Benchmark gemessen' },
+    { dimension: 'Strategie', ansatz: 'Absolute Return', aussage: 'Losgelöst von einer Benchmark, zum Beispiel Hedgefonds; positive Rendite möglichst unabhängig von der Marktentwicklung' },
+  ]}
+/>
 
 ### Tilted Management als Core-Satellite-Strategie
 
-<Columns count={3}>
-  <Card title="Tilted Management" tone="purple">
-    - Mischform; ausgehend vom **passiven** Management
-    - Abweichung nach ausgewählten **Risikofaktoren** von der passiven Strategie
-  </Card>
-  <Card title="Core-Satellite-Logik" tone="accent">
-    - **Core:** fixe Anlage, <Exam>passiv</Exam>
-    - **Satellites:** aktive Beimischung
-    - Beimischung: Small Caps, Branchen, Emerging Markets, Themen (Infrastruktur)
-  </Card>
-  <Card title="Core-Satellite-Struktur (Folie 5)" tone="neutral">
-    <Diagram
-      title="Core-Satellite"
-      source="Asset Management · Folie 5"
-      chart={`flowchart TD
+<FactGrid columns={2} items={[
+  { label: 'Tilted Management', value: 'Mischform auf Basis des **passiven** Managements; gezielte Abweichung nach ausgewählten **Risikofaktoren**' },
+  { label: 'Core-Satellite-Logik', value: '**Core:** fixe, passive Anlage. **Satellites:** aktive Beimischung aus Small Caps, Branchen, Emerging Markets und Themen wie Infrastruktur' },
+]} />
+
+<Diagram
+  title="Core-Satellite-Struktur (Folie 5)"
+  source="Asset Management · Folie 5"
+  chart={`flowchart TD
   CORE[Core: fixe Anlage, passiv]
   S1[Small Caps]
   S2[Branchen]
@@ -84,9 +62,7 @@
   CORE --- S2
   CORE --- S3
   CORE --- S4`}
-    />
-  </Card>
-</Columns>
+/>
 
 </section>
 

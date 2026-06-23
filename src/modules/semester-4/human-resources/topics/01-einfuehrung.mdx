@@ -1,15 +1,10 @@
+{/* Kapitel 1 · Einführung in das HRM. Palette via MDXProvider. */}
+
 <section id="grundlagen-hrm">
 
 ## Grundlagen: HRM, Organisation und Begriffe
 
-<Callout type="info" title="Einstiegsfragen der Vorlesung">
-- Worum geht es beim Human Resource Management (HRM)?
-- Warum und wann braucht man HRM?
-- Was sind die Kernaufgaben des HRM?
-- Mit welchen Herausforderungen hat man es im HRM zu tun?
-</Callout>
-
-### HRM vs. Organisation
+Die Vorlesung geht von vier Leitfragen aus: **Worum** geht es beim Human Resource Management, **warum und wann** braucht man es, was sind seine **Kernaufgaben** und welchen **Herausforderungen** begegnet es? Den Ausgangspunkt bildet die Abgrenzung der funktionalen HRM-Sicht von der strukturellen Organisationssicht.
 
 <CompareCard
   items={[
@@ -19,10 +14,10 @@
       subtitle: '**funktionale** Perspektive',
       accent: 'teal',
       points: [
-        'Bereich der Betriebswirtschaft, der sich mit dem **Produktionsfaktor Arbeit** bzw. dem Personal befasst',
+        'Bereich der BWL, der sich mit dem **Produktionsfaktor Arbeit** (dem Personal) befasst',
         'zielt auf nachhaltigen Erfolg, Werterhaltung und Wertschöpfung **auf lange Sicht**',
-        'zielorientierte Maßnahmen und Ressourcenplanung zum Erreichen der Unternehmensziele',
-        'konkrete Ausgestaltung variiert in individuellen Unternehmen',
+        'zielorientierte Maßnahmen und Ressourcenplanung für die Unternehmensziele',
+        'konkrete Ausgestaltung variiert je Unternehmen',
       ],
     },
     {
@@ -31,25 +26,23 @@
       subtitle: '**strukturelle** Perspektive',
       accent: 'accent',
       points: [
-        'Institution, in der eine abgegrenzte Gruppe von Personen ein auf Dauer angelegtes **Regelsystem** planvoll geschaffen hat',
-        'Ziel: gemeinsam Ziele verfolgen',
-        'in der Ordnung können auch Strukturen **von selbst** entstehen',
+        'Institution mit einem auf Dauer angelegten, planvoll geschaffenen **Regelsystem**',
+        'eine abgegrenzte Personengruppe verfolgt gemeinsam Ziele',
+        'Strukturen können auch **von selbst** entstehen',
       ],
     },
   ]}
 />
 
-### Themenfelder des Personalmanagements
+Die Themenfelder des Personalmanagements bauen aufeinander auf — vom theoretischen Standbein (Grundlagen) bis zum praktischen (Erfahrungen aus Unternehmen):
 
-<Card title="Wesentliche Themenfelder" tone="accent">
-  <TagList
-    tone="accent"
-    items={['Personalbeschaffung', 'Personalauswahl', 'Personalentwicklung', 'Personalführung', 'Personalbeurteilung', 'Personalfreisetzung', 'Personaleinsatz', 'Personalkostenmanagement']}
-  />
-</Card>
+<TagList
+  tone="accent"
+  items={['Personalbeschaffung', 'Personalauswahl', 'Personaleinsatz', 'Personalführung', 'Personalbeurteilung', 'Personalentwicklung', 'Personalfreisetzung', 'Personalkostenmanagement']}
+/>
 
 <Diagram
-  title="Vorgehen im HRM – Ablauf der Themenfelder"
+  title="Vorgehen im HRM – typischer Ablauf der Themenfelder"
   source="Human Resources · HR1"
   chart={`flowchart LR
   A[Personal-beschaffung] --> B[Personal-einsatz]
@@ -59,42 +52,20 @@
   E --> F[Personal-freisetzung]`}
 />
 
-<Columns count={2}>
-  <Card title="Standbein 1 · Theorie" tone="teal" compact>
-    - theoretische Grundlagen des HRM
-  </Card>
-  <Card title="Standbein 2 · Praxis" tone="orange" compact>
-    - Praxis und Erfahrungen aus Unternehmen
-  </Card>
-</Columns>
-
-### Begriffsklärung
-
-<Columns count={2}>
-  <Card title="Personal" tone="neutral">
-    - Gesamtheit der **abhängig beschäftigten** Arbeitnehmer einer Unternehmung
-    - einschließlich leitender Angestellter
-  </Card>
-  <Card title="Personalmanagement" tone="teal">
-    - gesamter Aufgabenbereich für personelle Fragen
-    - **Systemgestaltung** (Führungstätigkeiten)
-    - **Verhaltenssteuerung** (Mitarbeiterführung durch Vorgesetzte)
-  </Card>
-  <Card title="Personalmarketing" tone="accent">
-    - marktorientierte Betrachtung des Personals
-    - **Personalbeschaffung** hat dominierende Bedeutung
-  </Card>
-  <Card title="Personalpolitik" tone="purple">
-    - Gestaltungsrahmen für die Ziele der Personalwirtschaft
-    - ausgerichtet an der Unternehmenspolitik
-    - Entscheidungen und Durchsetzung personalwirtschaftlicher Leitlinien
-  </Card>
-</Columns>
-
-<Card title="Personalorganisation" tone="orange" compact>
-- betrachtet Mitarbeiter als Teil der Unternehmensstruktur
-- organisatorische Merkmale: **Quantität, Qualifikation, Einsatz**
-</Card>
+<DataTable
+  caption="Zentrale Begriffe der Personalwirtschaft"
+  columns={[
+    { key: 'begriff', label: 'Begriff' },
+    { key: 'bedeutung', label: 'Bedeutung' },
+  ]}
+  rows={[
+    { begriff: 'Personal', bedeutung: 'Gesamtheit der abhängig beschäftigten Arbeitnehmer einer Unternehmung, einschließlich leitender Angestellter' },
+    { begriff: 'Personalmanagement', bedeutung: 'Gesamter Aufgabenbereich für personelle Fragen: Systemgestaltung (Führungstätigkeiten) und Verhaltenssteuerung (Mitarbeiterführung durch Vorgesetzte)' },
+    { begriff: 'Personalmarketing', bedeutung: 'Marktorientierte Betrachtung des Personals; die Personalbeschaffung hat dominierende Bedeutung' },
+    { begriff: 'Personalpolitik', bedeutung: 'Gestaltungsrahmen für die Ziele der Personalwirtschaft, ausgerichtet an der Unternehmenspolitik (Leitlinien festlegen und durchsetzen)' },
+    { begriff: 'Personalorganisation', bedeutung: 'Betrachtet Mitarbeiter als Teil der Unternehmensstruktur; Merkmale: Quantität, Qualifikation, Einsatz' },
+  ]}
+/>
 
 <SourceNote>Quelle: Bea (2018); Olfert, K.: Personalwirtschaft (2019)</SourceNote>
 
@@ -104,63 +75,47 @@
 
 ## Ziele, Aufgaben und Einordnung des HRM
 
-### Drei Zielkategorien
+Das HRM verfolgt drei Zielkategorien gleichzeitig. Soziale und individuelle Ziele **überschneiden sich nur teilweise** — sie sind nicht identisch (wirtschaftliche Ziele nach Eckardstein und Schnellinger, 1978).
 
-<Columns count={3}>
-  <Card title="Wirtschaftliche Ziele" tone="teal">
-    - optimaler Einsatz des Elementarfaktors „menschliche Arbeit" und beste Kombination mit übrigen Einsatzfaktoren
-    - **Minimierung** der Kostensumme aller Einsatzfaktoren
-    - Steuerung der menschlichen Arbeitsleistung
-    - Nutzung von **Kreativität und Erfahrung** der Mitarbeiter
-  </Card>
-  <Card title="Soziale Ziele" tone="accent">
-    - bestmögliche Gestaltung der **Arbeitsumstände**
-    - u.a. Arbeitsphysiologie, Arbeitsplatzgestaltung, Arbeitsschutz, Arbeitszeit, Entlohnung, Ergonomie, Führung, Mitarbeiterentwicklung, Mitbestimmung
-  </Card>
-  <Card title="Individuelle Ziele" tone="purple">
-    - Erfüllung individueller Bedürfnisse (interessante, selbstständige Arbeit)
-    - gesichertes Einkommen
-    - Entfaltung der Persönlichkeit durch befriedigende Berufsarbeit
-    - soziale Geltung und Kooperation
-  </Card>
-</Columns>
+<CompareCard
+  items={[
+    {
+      tag: 'wirtschaftlich',
+      title: 'Wirtschaftliche Ziele',
+      accent: 'teal',
+      points: [
+        'optimaler Einsatz des Elementarfaktors „menschliche Arbeit" und beste Kombination mit den übrigen Einsatzfaktoren',
+        '**Minimierung** der Kostensumme aller Einsatzfaktoren',
+        'Steuerung der Arbeitsleistung, Nutzung von Kreativität und Erfahrung',
+      ],
+    },
+    {
+      tag: 'sozial',
+      title: 'Soziale Ziele',
+      accent: 'accent',
+      points: [
+        'bestmögliche Gestaltung der **Arbeitsumstände**',
+        'u.a. Arbeitsphysiologie, Arbeitsplatzgestaltung, Arbeitsschutz, Arbeitszeit, Entlohnung, Ergonomie, Führung, Mitbestimmung',
+      ],
+    },
+    {
+      tag: 'individuell',
+      title: 'Individuelle Ziele',
+      accent: 'purple',
+      points: [
+        'Erfüllung individueller Bedürfnisse (interessante, selbstständige Arbeit)',
+        'gesichertes Einkommen, Entfaltung der Persönlichkeit',
+        'soziale Geltung und Kooperation',
+      ],
+    },
+  ]}
+/>
 
-<Callout type="info" title="Quellen & Überschneidung">
-- wirtschaftliche Ziele nach **Eckardstein und Schnellinger (1978)**
-- individuelle Ziele überschneiden sich **nur teilweise** mit den sozialen Zielen – nicht identisch
+<Callout type="examfocus" title="Hauptaufgabe des HRM">
+Das erforderliche Personal **in allen Bereichen, in erforderlicher Zahl, in fachlicher/menschlicher/gesundheitlicher Eignung, termingerecht und am rechten Ort** zur Verfügung stellen, einsetzen und erhalten — unter Berücksichtigung <Exam>langfristiger Wirtschaftlichkeit</Exam> (unternehmensgemäß) und <Exam>menschlicher Erwartungen und Bedürfnisse</Exam> (mitarbeitergemäß). *(Freund u.a., 2002)*
 </Callout>
 
-### Hauptaufgabe des HRM
-
-<Card title="Personal bereitstellen, einsetzen und erhalten" tone="teal" exam>
-Das HRM soll das erforderliche Personal …
-- in allen Unternehmensbereichen
-- in erforderlicher Zahl
-- in **fachlicher, menschlicher und gesundheitlicher** Eignung
-- termingerecht
-- am rechten Ort
-- unter Berücksichtigung <Exam>langfristiger Wirtschaftlichkeit</Exam> (unternehmensgemäß)
-- unter Berücksichtigung <Exam>menschlicher Erwartungen und Bedürfnisse</Exam> (mitarbeitergemäß)
-
-… zur Verfügung stellen, einsetzen und erhalten.
-</Card>
-
-<SourceNote>Quelle: Freund u.a.: Praxisorientierte Personalwirtschaftslehre (2002)</SourceNote>
-
-### Einordnung in die Unternehmenshierarchie
-
-<Columns count={2}>
-  <Card title="Einflussfaktoren der Eingliederung" tone="accent">
-    - Unternehmensgröße
-    - Produktions-/Leistungsgegenstand
-    - organisatorische Struktur
-    - Anzahl der Hierarchiestufen
-  </Card>
-  <Card title="Größenabhängige Praxis" tone="purple">
-    - **kleine Unternehmen:** HR-Funktionen direkt durch die oberste Führungsebene oder an Personalberater vergeben
-    - **große Unternehmen:** Auslagerung bestimmter Bereiche (z.B. Lohn- und Gehaltsbuchhaltung) – <Exam>Outsourcing</Exam>
-  </Card>
-</Columns>
+Wo die HR-Einheit hängt, hängt von Unternehmensgröße, Leistungsgegenstand, Struktur und Anzahl der Hierarchiestufen ab. Kleine Unternehmen lösen HR über die oberste Führungsebene oder Berater; große lagern Teilbereiche aus (<Exam>Outsourcing</Exam>, z.B. Lohnbuchhaltung):
 
 <DataTable
   caption="Beispiele für die Einbettung der HR-Einheit in die Unternehmensstruktur"
@@ -170,10 +125,12 @@ Das HRM soll das erforderliche Personal …
     { key: 'hr', label: 'Einordnung HR' },
   ]}
   rows={[
-    { firma: 'Hilti', struktur: 'Board of Trustees → CEO; Sparten Market Development, Field Operations, Business Administration', hr: 'Human Resources liegt unter Business Administration (neben Finance, Controlling, IT Services)' },
-    { firma: 'Deutsche Bahn (DB-Konzern)', struktur: 'Vorstand mit Ressorts; darunter Geschäftsfelder (DB Schenker, DB Fernverkehr, DB Regio, DB Cargo, …)', hr: 'eigenes Vorstandsressort „Personal & Recht"' },
+    { firma: 'Hilti', struktur: 'Board of Trustees → CEO; Sparten Market Development, Field Operations, Business Administration', hr: 'HR unter Business Administration (neben Finance, Controlling, IT Services)' },
+    { firma: 'Deutsche Bahn', struktur: 'Vorstand mit Ressorts; darunter Geschäftsfelder (DB Schenker, Fernverkehr, Regio, Cargo, …)', hr: 'eigenes Vorstandsressort „Personal & Recht"' },
   ]}
 />
+
+<SourceNote>Quelle: Freund u.a.: Praxisorientierte Personalwirtschaftslehre (2002)</SourceNote>
 
 </section>
 
@@ -181,48 +138,33 @@ Das HRM soll das erforderliche Personal …
 
 ## Entwicklungsphasen und theoretische Ansätze
 
-### Entwicklungsphasen ab 1960
+Seit 1960 wandelt sich die Personalarbeit vom administrativen Personalwesen zum strategischen, integrativen HRM:
 
 <Timeline
   events={[
     { label: 'ab 1960', title: 'Personalverwaltung', text: 'Schwerpunkt: Abrechnung und Mitbestimmung' },
-    { label: '↓', title: 'Personalstrukturierung', text: 'Schwerpunkt: Institutionalisierung und Personalisierung' },
-    { label: '↓', title: 'Personalentwicklung', text: 'Schwerpunkt: Personalentwicklung und Karriereplanung' },
-    { label: '↓', title: 'Personalstrategie', text: 'Schwerpunkt: Verbesserung der Wettbewerbsposition' },
-    { label: 'ab 1990', title: 'Personalinterfunktionalität', text: 'Schwerpunkt: Professionalisierung, Personalrevision' },
+    { label: '↓', title: 'Personalstrukturierung', text: 'Institutionalisierung und Personalisierung' },
+    { label: '↓', title: 'Personalentwicklung', text: 'Personalentwicklung und Karriereplanung' },
+    { label: '↓', title: 'Personalstrategie', text: 'Verbesserung der Wettbewerbsposition' },
+    { label: 'ab 1990', title: 'Personalinterfunktionalität', text: 'Professionalisierung, Personalrevision' },
     { label: 'ab 2000', title: 'Personalkompetenzintegration', text: 'integratives, strategisches HRM' },
   ]}
 />
 
-<Callout type="merksatz" title="Entwicklungslinie">
-Die Personalarbeit wandelt sich vom **administrativen** Personalwesen hin zum **strategischen und integrativen** HRM.
-</Callout>
+Parallel entwickelte sich die HR-Theorie vom **mechanistischen Menschenbild** des frühen 20. Jahrhunderts zu modernen, komplexen und interpretativen Ansätzen:
 
-### Theoretische Ansätze auf der Zeitachse
-
-<Columns count={3}>
-  <Card title="Frühe Ansätze" tone="neutral">
-    - Scientific Management
-    - Administrationsansatz
-    - Bürokratieansatz
-  </Card>
-  <Card title="Verhaltensorientierte Phase" tone="accent">
-    - Human-Relations-Ansatz
-    - Verhaltensorientierter Ansatz
-    - Systemtheoretischer Ansatz
-  </Card>
-  <Card title="Neuere Ansätze" tone="purple">
-    - Institutionalistische Ansätze
-    - Situativer Ansatz
-    - Interpretative Ansätze
-    - Ökonomie und Ethik
-    - Evolutionstheorien
-  </Card>
-</Columns>
-
-<Callout type="info" title="Entwicklung der HR-Theorie">
-Die Theorie entwickelt sich vom **mechanistischen Menschenbild** des frühen 20. Jahrhunderts zu **modernen, komplexen und interpretativen** Ansätzen.
-</Callout>
+<DataTable
+  caption="Theoretische Ansätze auf der Zeitachse"
+  columns={[
+    { key: 'phase', label: 'Phase' },
+    { key: 'ansaetze', label: 'Ansätze' },
+  ]}
+  rows={[
+    { phase: 'Frühe Ansätze', ansaetze: 'Scientific Management · Administrationsansatz · Bürokratieansatz' },
+    { phase: 'Verhaltensorientierte Phase', ansaetze: 'Human-Relations-Ansatz · Verhaltensorientierter Ansatz · Systemtheoretischer Ansatz' },
+    { phase: 'Neuere Ansätze', ansaetze: 'Institutionalistische Ansätze · Situativer Ansatz · Interpretative Ansätze · Ökonomie und Ethik · Evolutionstheorien' },
+  ]}
+/>
 
 </section>
 
@@ -230,37 +172,23 @@ Die Theorie entwickelt sich vom **mechanistischen Menschenbild** des frühen 20.
 
 ## Einflussfaktoren auf das HRM
 
-<Callout type="merksatz" title="Fünf vernetzte Einflussfaktoren">
-**Werte · Technologie · Markt · Organisation · Globalisierung** stehen miteinander in Beziehung und beeinflussen sich gegenseitig.
-</Callout>
+Fünf vernetzte Faktoren prägen das HRM und beeinflussen sich gegenseitig: **Werte, Technologie, Markt, Organisation und Globalisierung**.
 
-### Die fünf Faktoren im Überblick
+<DataTable
+  caption="Die fünf Einflussfaktoren im Überblick"
+  columns={[
+    { key: 'faktor', label: 'Faktor' },
+    { key: 'inhalt', label: 'Wirkung auf das HRM' },
+  ]}
+  rows={[
+    { faktor: 'Werte', inhalt: 'kognitive Präferenzstrukturen als Entscheidungsregeln; Wertewandel von der stillen Generation bis Generation Z, jede mit eigenem Wertesystem' },
+    { faktor: 'Technologie / Digitalisierung', inhalt: 'Strukturwandel zur Informations- und Dienstleistungsgesellschaft; neue Berufsbilder; IT lässt räumliche/zeitliche Distanz schwinden; Bedarf an flexiblen, wissensorientierten Mitarbeitern' },
+    { faktor: 'Markt', inhalt: 'Bevölkerungsrückgang, mehr ältere Mitarbeiter, Mangel an Nachwuchskräften — „War for talents"' },
+    { faktor: 'Globalisierung', inhalt: 'grenzlose/virtuelle Organisation, Wegfall hierarchischer Ebenen; höhere Qualifikationsanforderungen; mehr Projekt- statt Lebenszeitbeschäftigung; Mobilität, Vereinheitlichung von Arbeitskulturen, Standortverlagerungen' },
+  ]}
+/>
 
-<Columns count={2}>
-  <Card title="Werte" tone="teal">
-    - Werte = kognitive **Präferenzstrukturen**, die als Entscheidungsregeln das Verhalten steuern
-    - **Wertewandel:** von der stillen Generation zu Generation Z – jede Generation hat ihr eigenes Wertesystem
-  </Card>
-  <Card title="Technologie / Digitalisierung" tone="accent">
-    - Verschiebungen zwischen den Wirtschaftssektoren (Strukturwandel zur Informations- und Dienstleistungsgesellschaft)
-    - neue interdisziplinäre Berufsbilder, Bedeutung von Innovationen
-    - IT und Netzwerke: Schwinden räumlicher und zeitlicher Distanz
-    - Bedarf an flexiblen, wissensorientierten, kommunikationsversierten Mitarbeitern
-  </Card>
-  <Card title="Markt" tone="purple">
-    - Rückgang der Bevölkerung
-    - Zunahme älterer Mitarbeiter (Anpassung von Arbeitsorganisation und -umfeld)
-    - Mangel an Nachwuchskräften
-    - <Exam>„War for talents"</Exam>
-  </Card>
-  <Card title="Globalisierung" tone="orange">
-    - **Organisatorischer Wandel:** grenzlose Unternehmung, virtuelle Organisationen, Wegfall hierarchischer Ebenen
-    - **Qualifikation:** steigende Anforderungen an das Humankapital, Abstimmung Wissenschaft–Praxis
-    - **Beschäftigung:** mehr Projektbeschäftigung, weniger Lebenszeitbeschäftigung
-  </Card>
-</Columns>
-
-### Wertewandel: Arbeitszeit vs. Freizeit
+Besonders deutlich wird der Wertewandel an der Verschiebung von Arbeitszeit zu Freizeit:
 
 <SpectrumAxis
   caption="Verschiebung der Präferenz von Arbeitszeit zu Freizeit"
@@ -273,49 +201,23 @@ Die Theorie entwickelt sich vom **mechanistischen Menschenbild** des frühen 20.
   ]}
 />
 
-<Callout type="examfocus" title="Merklinie Werte">
-1950 dominierte die **Arbeitszeit**, 1970 holte die Freizeit auf, <Exam>1990 überholte die Freizeit die Arbeitszeit</Exam>.
+<Callout type="examfocus" title="Merklinie Werte & Markt">
+1950 dominierte die **Arbeitszeit**, 1970 holte die Freizeit auf, <Exam>1990 überholte die Freizeit die Arbeitszeit</Exam>. Der Vergleich der Bevölkerungspyramiden 1950 · 2020 · 2060 zeigt die **Überalterung** — die Bevölkerung verengt sich über die Zeit.
 </Callout>
 
-### Globalisierung – weitere Aspekte
-
-<Columns count={3}>
-  <Card title="Mobilität" tone="teal" compact>
-    - globale Entsendungen, Reintegration
-    - Reisezeiten- und Reisekostenmanagement
-  </Card>
-  <Card title="Vereinheitlichung von Arbeitskulturen" tone="accent" compact>
-    - Führungsverständnisse, Kommunikationsformen
-    - interkulturelles Management, Sprachkompetenzen
-  </Card>
-  <Card title="Standortverlagerungen" tone="purple" compact>
-    - Economies of Scale
-    - Konzentration von Back-Office-Bereichen
-  </Card>
-</Columns>
-
-### Demografischer Wandel (Markt)
-
-<Callout type="info" title="Bevölkerungspyramiden 1950 · 2020 · 2060">
-Der Vergleich der Pyramiden (Männer links, Frauen rechts, Altersgruppen) zeigt: Die Bevölkerung **verengt sich** über die Zeit (Überalterung). Daraus folgen demografische Herausforderungen für das HRM.
-</Callout>
-
-### Rahmenbedingungen (Vier-Felder)
-
-<Columns count={2}>
-  <Card title="Arbeitsmarkt" tone="teal" compact>
-    - qualifizierter, älter, anspruchsvoller, informierter, flexibler
-  </Card>
-  <Card title="Werte" tone="purple" compact>
-    - sinnstiftend, spaßig, freier, ethisch
-  </Card>
-  <Card title="Technologie" tone="accent" compact>
-    - komplexer, schneller, kurzlebiger, ökologischer
-  </Card>
-  <Card title="Wirtschaft" tone="orange" compact>
-    - internationaler, intensiver, virtueller, transparenter
-  </Card>
-</Columns>
+<DataTable
+  caption="Rahmenbedingungen im Wandel (Vier-Felder)"
+  columns={[
+    { key: 'feld', label: 'Feld' },
+    { key: 'trend', label: 'Tendenz' },
+  ]}
+  rows={[
+    { feld: 'Arbeitsmarkt', trend: 'qualifizierter, älter, anspruchsvoller, informierter, flexibler' },
+    { feld: 'Werte', trend: 'sinnstiftend, spaßig, freier, ethisch' },
+    { feld: 'Technologie', trend: 'komplexer, schneller, kurzlebiger, ökologischer' },
+    { feld: 'Wirtschaft', trend: 'internationaler, intensiver, virtueller, transparenter' },
+  ]}
+/>
 
 </section>
 
@@ -323,67 +225,37 @@ Der Vergleich der Pyramiden (Männer links, Frauen rechts, Altersgruppen) zeigt:
 
 ## Spannungsfelder und Zielkonflikte
 
-### Extern vs. Intern
+Das HRM vermittelt zwischen **externen Anforderungen** und **internen Rahmenbedingungen** — und das im Spannungsfeld vieler Anspruchsgruppen.
 
 <CompareCard
   items={[
     {
       tag: 'Extern',
       title: 'Unternehmensexterne Einflüsse',
-      subtitle: 'wirken **von außen** auf das HRM',
+      subtitle: 'wirken **von außen**',
       accent: 'accent',
-      points: [
-        'politische Faktoren',
-        'gesetzliche Faktoren',
-        'technologische Faktoren',
-        'gesellschaftliche Faktoren',
-      ],
+      points: ['politische Faktoren', 'gesetzliche Faktoren', 'technologische Faktoren', 'gesellschaftliche Faktoren'],
     },
     {
       tag: 'Intern',
       title: 'Unternehmensinterne Einflüsse',
       subtitle: 'interne **Rahmenbedingungen**',
       accent: 'teal',
-      points: [
-        'Strategie',
-        'Marktsituation',
-        'Ertragslage',
-        'Kultur',
-        'Arbeitsbedingungen',
-      ],
+      points: ['Strategie', 'Marktsituation', 'Ertragslage', 'Kultur', 'Arbeitsbedingungen'],
     },
   ]}
 />
 
-<Callout type="info" title="Vermittlungsrolle des HRM">
-Das HRM vermittelt zwischen **externen Anforderungen** und **internen Rahmenbedingungen**.
+<TagList
+  tone="purple"
+  items={['Staat', 'Gesellschaft', 'Betriebsrat', 'Gewerkschaften', 'Führungskräfte', 'Mitarbeiter', 'Unternehmen']}
+/>
+
+Menschen sind nicht nur Objekte, sondern **Subjekte mit eigenen Zielen** — daraus folgt hoher Regelungsbedarf, denn der wirtschaftlich-humanitäre Zielkonflikt kann in beide Richtungen übersteuern:
+
+<Callout type="pitfall" title="Übersteuerung des Zielkonflikts">
+**Zu hohe humanitäre Ziele** senken die Produktivität → <Exam>„Ausbeutung des Kapitals"</Exam>. **Zu starke Gewinnorientierung** geht zu Lasten humaner Arbeitsbedingungen → <Exam>„Ausbeutung der Arbeit"</Exam>. Wirtschaftlich erfolgreiche Unternehmen können humanitäre Ziele jedoch besser erfüllen und ziehen so Talente an.
 </Callout>
-
-### Anspruchsgruppen (Stakeholder)
-
-<Card title="HRM im Spannungsfeld der Stakeholder" tone="purple">
-  <TagList
-    tone="purple"
-    items={['Staat', 'Gesellschaft', 'Betriebsrat', 'Gewerkschaften', 'Führungskräfte', 'Mitarbeiter', 'Unternehmen']}
-  />
-
-  HR-Entscheidungen werden **im Spannungsfeld verschiedenster Anspruchsgruppen** getroffen.
-</Card>
-
-### Zielkonflikt wirtschaftlich ↔ humanitär
-
-<Columns count={2}>
-  <Card title="Beziehung & Regelungsbedarf" tone="accent">
-    - Beziehungen können **konfliktär, neutral oder harmonisch** sein
-    - wirtschaftlich erfolgreiche Unternehmen können humanitäre Ziele besser erfüllen → ziehen **Talente** an
-    - Menschen sind nicht nur Objekte, sondern **Subjekte mit eigenen Zielen**
-    - daraus folgt **hoher Regelungsbedarf**
-  </Card>
-  <Card title="Gefahr der Übersteuerung" tone="negative" exam>
-    - **zu hohe humanitäre Ziele** senken die Produktivität → <Exam>„Ausbeutung des Kapitals"</Exam>
-    - **zu starke Gewinnorientierung** geht zu Lasten humaner Arbeitsbedingungen → <Exam>„Ausbeutung der Arbeit"</Exam>
-  </Card>
-</Columns>
 
 </section>
 
@@ -391,11 +263,7 @@ Das HRM vermittelt zwischen **externen Anforderungen** und **internen Rahmenbedi
 
 ## Personalverwaltung vs. Personalmanagement
 
-<Callout type="examfocus" title="Wandel vom administrativen zum strategischen Personalwesen">
-Die Gegenüberstellung verdeutlicht den Übergang von der **klassischen Personalverwaltung** zum modernen, **mitarbeiterorientierten Personalmanagement**.
-</Callout>
-
-### Gegenüberstellung nach Dimensionen
+Die Gegenüberstellung verdeutlicht den Übergang von der klassischen **Personalverwaltung** zum modernen, mitarbeiterorientierten **Personalmanagement** — über alle Dimensionen hinweg:
 
 <DataTable
   caption="Personalverwaltung vs. Personalmanagement nach Dimensionen"
@@ -408,25 +276,16 @@ Die Gegenüberstellung verdeutlicht den Übergang von der **klassischen Personal
     { dim: 'Ziele', verwaltung: 'Rechtmäßigkeit, Arbeitsproduktivität', management: 'Zufriedenheit, Wirtschaftlichkeit' },
     { dim: 'Leitbilder', verwaltung: 'Bürokratie (Verwaltungsorientierung)', management: 'Markt- und Wettbewerbsorientierung' },
     { dim: 'Menschenbild', verwaltung: 'homo oeconomicus, Normarbeiter', management: 'complex man, Organisationsmitglied' },
-    { dim: 'Wissenschaftliche Grundlagen', verwaltung: 'Recht, Verwaltungs-, Ingenieurwissenschaften', management: 'Betriebswirtschaftslehre, Verhaltenswissenschaften' },
+    { dim: 'Grundlagen', verwaltung: 'Recht, Verwaltungs-, Ingenieurwissenschaften', management: 'Betriebswirtschaftslehre, Verhaltenswissenschaften' },
     { dim: 'Umweltzustand', verwaltung: 'statisch', management: 'dynamisch' },
     { dim: 'Antriebskräfte', verwaltung: 'Gesetzgeber', management: 'Wettbewerb' },
-    { dim: 'Instrumente', verwaltung: 'Dienstanweisungen, Verwaltungsvorschriften, Senioritätsprinzip, Hierarchie, formale Qualifikationen', management: 'leistungsorientierte Anreizsysteme, Partizipation, Personalcontrolling, Gruppenarbeit' },
+    { dim: 'Instrumente', verwaltung: 'Dienstanweisungen, Senioritätsprinzip, Hierarchie, formale Qualifikationen', management: 'leistungsorientierte Anreizsysteme, Partizipation, Personalcontrolling, Gruppenarbeit' },
   ]}
 />
 
-### Merkhilfen
-
-<Columns count={2}>
-  <Card title="Menschenbild" tone="neutral" exam>
-    - Verwaltung: <Exam>homo oeconomicus</Exam>, Normarbeiter
-    - Management: <Exam>complex man</Exam>, Organisationsmitglied
-  </Card>
-  <Card title="Antriebskräfte" tone="neutral" exam>
-    - Verwaltung wird vom <Exam>Gesetzgeber</Exam> getrieben
-    - Management wird vom <Exam>Wettbewerb</Exam> getrieben
-  </Card>
-</Columns>
+<Callout type="examfocus" title="Die zwei Merksatz-Paare">
+Menschenbild: Verwaltung = <Exam>homo oeconomicus</Exam> / Normarbeiter, Management = <Exam>complex man</Exam> / Organisationsmitglied. Antriebskraft: Verwaltung wird vom <Exam>Gesetzgeber</Exam> getrieben, Management vom <Exam>Wettbewerb</Exam>.
+</Callout>
 
 </section>
 
@@ -434,25 +293,25 @@ Die Gegenüberstellung verdeutlicht den Übergang von der **klassischen Personal
 
 ## Interdisziplinäre Schnittmenge und Arbeitsrecht
 
-### Bezugswissenschaften des HRM
+Das HRM schöpft aus mehreren Bezugswissenschaften:
 
-<Columns count={3}>
-  <Card title="Sozialwissenschaften" tone="teal">
-    - **Soziologie:** soziales Handeln in Gruppen/Institutionen → Zwischenmenschliches im Unternehmen
-    - **Psychologie:** individuelles Verhalten → Verhalten und Erleben im Betrieb
-    - **Pädagogik:** Bildungsprozesse → Aus-/Weiterbildung und Mitarbeiterentwicklung
-  </Card>
-  <Card title="Arbeits- & Organisationswissenschaften" tone="accent">
-    - **Arbeitsphysiologie:** Funktionen des Körpers bei der Arbeit → Arbeit an den Menschen anpassen
-    - **Informatik:** systematische Informationsverarbeitung → elektronische Unterstützung der HR-Prozesse
-  </Card>
-  <Card title="Medizin" tone="purple">
-    - Prävention, Therapie, Rehabilitation
-    - relevant für Personaleinstellung, Sicherheitswesen, Arbeitsplatzgestaltung (Licht, Lärm), Erste Hilfe
-  </Card>
-</Columns>
+<DataTable
+  caption="Bezugswissenschaften des HRM"
+  columns={[
+    { key: 'feld', label: 'Wissenschaft' },
+    { key: 'beitrag', label: 'Beitrag zum HRM' },
+  ]}
+  rows={[
+    { feld: 'Soziologie', beitrag: 'soziales Handeln in Gruppen/Institutionen → Zwischenmenschliches im Unternehmen' },
+    { feld: 'Psychologie', beitrag: 'individuelles Verhalten → Verhalten und Erleben im Betrieb' },
+    { feld: 'Pädagogik', beitrag: 'Bildungsprozesse → Aus-/Weiterbildung und Mitarbeiterentwicklung' },
+    { feld: 'Arbeitsphysiologie', beitrag: 'Funktionen des Körpers bei der Arbeit → Arbeit an den Menschen anpassen' },
+    { feld: 'Informatik', beitrag: 'systematische Informationsverarbeitung → elektronische Unterstützung der HR-Prozesse' },
+    { feld: 'Medizin', beitrag: 'Prävention, Therapie, Reha → Einstellung, Sicherheitswesen, Arbeitsplatzgestaltung (Licht, Lärm)' },
+  ]}
+/>
 
-### Rechtswissenschaften: Gliederung des Arbeitsrechts
+Die Rechtswissenschaft liefert das Arbeitsrecht, das sich in zwei Äste gliedert:
 
 <Diagram
   title="Baum des Arbeitsrechts"
@@ -473,83 +332,32 @@ Die Gegenüberstellung verdeutlicht den Übergang von der **klassischen Personal
   KOL --> MBR`}
 />
 
-### Individuelles Arbeitsrecht
-
-<Columns count={2}>
-  <Card title="Arbeitsvertragsrecht" tone="accent">
-    Regelt v.a.:
-    - Zustandekommen des Arbeitsverhältnisses
-    - Pflichten von Arbeitgeber und Arbeitnehmer
-    - Störungen im Arbeitsverhältnis
-    - Beendigung / Kündigung
-
-    <FactGrid
-      columns={1}
-      items={[
-        { label: 'Gesetze', value: '**BGB** (z.B. § 305), **HGB** (§§ 59, 62), **GewO** (§§ 105, 106, 110), **NachwG** (§ 2)' },
-      ]}
-    />
-  </Card>
-  <Card title="Arbeitsschutzrecht" tone="teal">
-    Schutz des Arbeitnehmers als „schwächere" Partei:
-    - Schutz vor Gefahren / Unfallschutz
-    - Schutz vor Willkür des Arbeitgebers (z.B. Kündigungsschutz)
-    - Schutz besonders Schutzbedürftiger (werdende Mütter, Jugendliche, Schwerbehinderte)
-
-    <FactGrid
-      columns={1}
-      items={[
-        { label: 'Gesetze', value: '**BGB § 618**, **KSchG**, **ArbSchG**, **ASiG**, **ArbZG** (§§ 3 ff.), **BUrlG**, **MuSchG** (§§ 2, 3), **JArbSchG**' },
-      ]}
-    />
-  </Card>
-</Columns>
-
-### Kollektives Arbeitsrecht
-
-<Columns count={2}>
-  <Card title="Tarifvertragsrecht" tone="purple">
-    - Grundlage für Tarifverträge und Arbeitskampfmaßnahmen
-    - Tarifverträge: schriftliche Vereinbarungen zwischen Arbeitgebervereinigungen und Gewerkschaften
-    - Arten: **Entgelt-, Rahmen- und Manteltarifverträge**
-
-    <FactGrid
-      columns={1}
-      items={[
-        { label: 'Gesetze', value: '**TVG**, **BetrVG**' },
-      ]}
-    />
-  </Card>
-  <Card title="Mitbestimmungsrecht" tone="orange">
-    - regelt Einflussmöglichkeiten der Arbeitnehmervertretung (i.d.R. **Betriebsrat**) bei betrieblichen Entscheidungen
-  </Card>
-</Columns>
-
-### Vier Ebenen der Mitbestimmung
-
-<SpectrumAxis
-  caption="Abgestufte Einflussmöglichkeiten – von stark nach schwach"
-  min="stark"
-  max="schwach"
-  markers={[
-    { at: 5, label: '1 · Mitbestimmung', sub: 'gemeinsame Entscheidung' },
-    { at: 38, label: '2 · Anhörung/Zustimmung', sub: 'Einverständnis nötig' },
-    { at: 70, label: '3 · Mitwirkung', sub: 'gemeinsames Gespräch' },
-    { at: 95, label: '4 · Information', sub: 'nur informieren' },
+<DataTable
+  caption="Die vier Rechtsgebiete mit ihren wichtigsten Gesetzen"
+  columns={[
+    { key: 'gebiet', label: 'Rechtsgebiet' },
+    { key: 'regelt', label: 'Regelt v.a.' },
+    { key: 'gesetze', label: 'Gesetze' },
+  ]}
+  rows={[
+    { gebiet: 'Arbeitsvertragsrecht (individuell)', regelt: 'Zustandekommen, Pflichten von AG/AN, Störungen, Beendigung/Kündigung', gesetze: 'BGB (§ 305), HGB (§§ 59, 62), GewO (§§ 105, 106, 110), NachwG (§ 2)' },
+    { gebiet: 'Arbeitsschutzrecht (individuell)', regelt: 'Schutz des AN als schwächere Partei: Unfallschutz, Schutz vor Willkür, Schutz Schutzbedürftiger (Mütter, Jugendliche, Schwerbehinderte)', gesetze: 'BGB § 618, KSchG, ArbSchG, ASiG, ArbZG (§§ 3 ff.), BUrlG, MuSchG (§§ 2, 3), JArbSchG' },
+    { gebiet: 'Tarifvertragsrecht (kollektiv)', regelt: 'Tarifverträge und Arbeitskampf; Arten: Entgelt-, Rahmen- und Manteltarifverträge', gesetze: 'TVG, BetrVG' },
+    { gebiet: 'Mitbestimmungsrecht (kollektiv)', regelt: 'Einflussmöglichkeiten der Arbeitnehmervertretung (i.d.R. Betriebsrat)', gesetze: 'BetrVG' },
   ]}
 />
 
-<DataTable
+Die Mitbestimmung ist nach Stärke abgestuft — vom gemeinsamen Entscheid bis zur bloßen Information:
+
+<SpectrumAxis
   caption="Vier Ebenen der Mitbestimmung – von stark nach schwach"
-  columns={[
-    { key: 'ebene', label: 'Ebene' },
-    { key: 'inhalt', label: 'Inhalt' },
-  ]}
-  rows={[
-    { ebene: '1 · Mitbestimmungsrechte', inhalt: 'Betriebsrat entscheidet gemeinsam mit dem Arbeitgeber' },
-    { ebene: '2 · Anhörungs- und Zustimmungsrechte', inhalt: 'Arbeitgeber muss anhören und informieren; Betriebsrat muss sein Einverständnis geben (Zustimmungsrecht)' },
-    { ebene: '3 · Mitwirkungsrechte / Beratungsrecht', inhalt: 'Arbeitgeber und Betriebsrat führen ein gemeinsames Gespräch' },
-    { ebene: '4 · Informationsrecht', inhalt: 'Arbeitgeber muss den Betriebsrat über eine geplante Maßnahme informieren' },
+  min="stark"
+  max="schwach"
+  markers={[
+    { at: 5, label: '1 · Mitbestimmung', sub: 'Betriebsrat entscheidet gemeinsam mit dem AG' },
+    { at: 38, label: '2 · Anhörung/Zustimmung', sub: 'AG muss anhören/informieren; Einverständnis nötig' },
+    { at: 70, label: '3 · Mitwirkung/Beratung', sub: 'AG und Betriebsrat führen ein gemeinsames Gespräch' },
+    { at: 95, label: '4 · Information', sub: 'AG informiert nur über die geplante Maßnahme' },
   ]}
 />
 

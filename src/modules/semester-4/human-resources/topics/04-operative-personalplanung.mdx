@@ -1,31 +1,19 @@
+{/* Kapitel 4 · Operative Personalplanung. Palette via MDXProvider. */}
+
 <section id="personalgewinnungsplanung">
 
 ## Personalgewinnungsplanung und Festlegung offener Positionen
 
 <DefinitionBox term="Personalgewinnungsplanung" source="HR4 · Folie 1">
-Vorgelagerte **Strukturierung des Beschaffungsprozesses**: Sie bündelt alle Informationen, die benötigt werden, um offene Stellen **planbar, budgetierbar und kontrollierbar** zu besetzen.
+Vorgelagerte **Strukturierung des Beschaffungsprozesses**: Sie bündelt alle Informationen, um offene Stellen <Exam>planbar, budgetierbar und kontrollierbar</Exam> zu besetzen — ein koordinierter Prozess mit mehreren Beteiligten und Prozessschritten.
 </DefinitionBox>
 
-### Was die Gewinnungsplanung festlegt
+Die Gewinnungsplanung legt sieben Punkte fest:
 
-<Columns count={2}>
-  <Card title="Sieben Planungsinhalte" tone="accent">
-    - offene Positionen
-    - geplanter **Besetzungszeitpunkt**
-    - Planung der **Beschaffungswege**
-    - beteiligte Personen
-    - Festlegung der **Gehaltsspannen**
-    - geplante **Gewinnungskosten**
-    - Status des Gewinnungsprozesses
-  </Card>
-  <Card title="Charakter des Prozesses" tone="teal">
-    - koordinierter Beschaffungsprozess mit **mehreren Beteiligten**
-    - mehrere Prozessschritte und Informationspunkte
-    - Ziel: <Exam>planbare, budgetierbare und kontrollierbare</Exam> Stellenbesetzung
-  </Card>
-</Columns>
-
-### Festlegung offener Positionen — dreistufige Logik
+<TagList
+  tone="accent"
+  items={['offene Positionen', 'Besetzungszeitpunkt', 'Beschaffungswege', 'beteiligte Personen', 'Gehaltsspannen', 'Gewinnungskosten', 'Status des Prozesses']}
+/>
 
 <DecisionTree
   nodes={[
@@ -35,12 +23,9 @@ Vorgelagerte **Strukturierung des Beschaffungsprozesses**: Sie bündelt alle Inf
       children: [
         {
           label: '2 · Anforderungs-/Kompetenzprofil erstellen',
-          detail: 'aktuelles Profil vorhanden nutzen oder neu erstellen',
+          detail: 'vorhandenes Profil nutzen oder neu erstellen',
           children: [
-            {
-              label: '3 · Aus den Anforderungen ableiten',
-              detail: 'präferierte Auswahl-Zielgruppe und geeigneter Beschaffungsweg',
-            },
+            { label: '3 · Aus den Anforderungen ableiten', detail: 'präferierte Auswahl-Zielgruppe und geeigneter Beschaffungsweg' },
           ],
         },
       ],
@@ -62,71 +47,29 @@ Erst wenn die offene Position konkret beschrieben ist, lassen sich **Zielgruppe*
 Anforderungsprofile dürfen sich nicht auf fachliche Qualifikationen verengen. Relevant sind **vier** Kompetenzarten: <Exam>fachlich, persönlich, methodisch und sozial</Exam>.
 </Callout>
 
-### Das Kompetenzmodell (vier Quadranten)
-
-<Columns count={2}>
-  <Card title="Fachkompetenz" tone="accent">
-    - Ausbildung
-    - Fachkenntnisse
-    - Berufserfahrung
-    - Projekterfahrung
-  </Card>
-  <Card title="Persönlichkeitskompetenz" tone="purple">
-    - Basisantrieb, Energie
-    - Analytische Fähigkeiten
-    - Kreativität / Innovationsfähigkeit
-    - Leidenschaft, Stabilität
-    - Moral, Ethik, Integrität
-  </Card>
-</Columns>
-
-<Columns count={2}>
-  <Card title="Methodenkompetenz" tone="teal">
-    - Projektmanagement
-    - Zeitmanagement
-    - Anwendungswissen
-    - Problemlösungskompetenz
-    - Präsentationstechniken / Moderation
-  </Card>
-  <Card title="Sozialkompetenz" tone="orange">
-    - Kommunikation
-    - Teamfähigkeit
-    - Konflikt- und Kritikfähigkeit
-    - Motivations-, Überzeugungsfähigkeit
-    - Empathie
-  </Card>
-</Columns>
-
-### Erstellung des Profils — Informationskette
+<DataTable
+  caption="Das Kompetenzmodell (vier Quadranten)"
+  columns={[
+    { key: 'art', label: 'Kompetenzart' },
+    { key: 'inhalt', label: 'Merkmale' },
+  ]}
+  rows={[
+    { art: 'Fachkompetenz', inhalt: 'Ausbildung, Fachkenntnisse, Berufs- und Projekterfahrung' },
+    { art: 'Persönlichkeitskompetenz', inhalt: 'Basisantrieb/Energie, analytische Fähigkeiten, Kreativität, Stabilität, Moral/Ethik/Integrität' },
+    { art: 'Methodenkompetenz', inhalt: 'Projekt- und Zeitmanagement, Anwendungswissen, Problemlösung, Präsentation/Moderation' },
+    { art: 'Sozialkompetenz', inhalt: 'Kommunikation, Teamfähigkeit, Konflikt-/Kritikfähigkeit, Überzeugungskraft, Empathie' },
+  ]}
+/>
 
 <Timeline
   events={[
     { label: '1', title: 'Organisatorische Informationen', text: 'Rahmen aus Aufbau- und Ablauforganisation' },
     { label: '2', title: 'Stellenbezogene Informationen', text: 'Aufgaben, Verantwortung und Anforderungen der konkreten Stelle' },
-    { label: '3', title: 'Ausprägung des persönlichen Kompetenzprofils', text: 'abgeleitete Soll-Ausprägungen je Kompetenzmerkmal' },
+    { label: '3', title: 'Persönliches Kompetenzprofil', text: 'abgeleitete Soll-Ausprägungen je Kompetenzmerkmal' },
   ]}
 />
 
-<Columns count={2}>
-  <Card title="Inhalt des Anforderungsprofils" tone="accent">
-    - Hauptaufgaben
-    - Verantwortungsbereiche
-    - Anforderungen und Wünsche des Unternehmens an den Mitarbeiter
-    - fachliche Anforderungsmerkmale
-    - persönliche Anforderungsmerkmale
-  </Card>
-  <Card title="Entstehung und Verwendung" tone="purple">
-    - **neu erstellen** oder aus Grundlagen weiterentwickeln (z.B. Bereichsentwicklungspläne, Stellenbeschreibungen)
-    - **Idealfall:** Ableitung aus vorhandener Stellenbeschreibung
-    - **Profilvergleich:** Unternehmensprofil wird mit dem individuellen Kompetenzprofil der Bewerber verglichen
-  </Card>
-</Columns>
-
-### Beispiel: Muster-Anforderungsprofil für eine Führungsaufgabe
-
-<Callout type="info" title="Skala 1–7">
-Pro Kompetenzmerkmal markiert eine gefüllte Skala den **gewünschten Sollwert**. Die folgenden Werte sind aus der Folie visuell rekonstruiert (Näherung, **ca.**).
-</Callout>
+Das Profil wird neu erstellt oder aus Grundlagen (Bereichsentwicklungspläne, Stellenbeschreibungen) abgeleitet — Idealfall ist die Ableitung aus einer vorhandenen Stellenbeschreibung. Im **Profilvergleich** wird das Unternehmensprofil dem individuellen Kompetenzprofil der Bewerber gegenübergestellt. Pro Merkmal markiert eine Skala 1–7 den gewünschten Sollwert:
 
 <DataChart
   type="bar"
@@ -153,30 +96,8 @@ Pro Kompetenzmerkmal markiert eine gefüllte Skala den **gewünschten Sollwert**
   yDomain={[0, 7]}
 />
 
-<Columns count={3}>
-  <Card title="Führungskompetenz" tone="accent">
-    - Zielorientierung — ca. 5
-    - MA-Controlling — ca. 6
-    - MA-Motivation — ca. 5
-    - Konfliktfähigkeit — ca. 5
-    - Verantwortungsbereitschaft — ca. 5
-    - Entscheidungsfähigkeit — ca. 6
-    - Sensibilität — ca. 5
-  </Card>
-  <Card title="Fachkompetenz" tone="purple">
-    - Analytisches Denken — ca. 3
-    - Konzeptionelles/lösungs­orientiertes Denken — ca. 3
-    - Beratungskompetenz — ca. 3
-    - Eigeninitiative — ca. 4
-  </Card>
-  <Card title="Zwischenmenschliche Kompetenz" tone="teal">
-    - Kommunikationskompetenz — ca. 6
-    - Selbstdarstellung und Auftreten — ca. 5
-  </Card>
-</Columns>
-
 <Callout type="merksatz" title="Funktion des Profils">
-Ein Anforderungsprofil übersetzt abstrakte Anforderungen in **messbare Soll-Ausprägungen** und macht so den Vergleich von Bewerber- und Stellenprofil systematisch möglich.
+Ein Anforderungsprofil übersetzt abstrakte Anforderungen in **messbare Soll-Ausprägungen** und macht den Vergleich von Bewerber- und Stellenprofil systematisch möglich. Die Merkmale gruppieren sich in Führungs-, Fach- und zwischenmenschliche Kompetenz.
 </Callout>
 
 </section>
@@ -189,22 +110,7 @@ Ein Anforderungsprofil übersetzt abstrakte Anforderungen in **messbare Soll-Aus
 Zusammenfassung der **Summe aller Anforderungsprofile** eines Unternehmens. Sie ordnet jedes Profil einer **Funktionsfamilie** und einem **Verantwortungs-/Kompetenzlevel** zu und macht Entwicklungswege zwischen Profilen sichtbar.
 </DefinitionBox>
 
-<Columns count={2}>
-  <Card title="Was die Matrix leistet" tone="accent">
-    - fasst alle Anforderungsprofile zusammen
-    - zeigt Entwicklungswege zwischen Anforderungsprofilen
-    - ordnet jedes Profil einer Funktionsfamilie + einem Level zu
-    - bildet die **Hauptfunktionen** der Unternehmensprozesse ab
-  </Card>
-  <Card title="Lesart der Achsen" tone="purple" exam>
-    - **vertikal:** Aufstieg über Level **A–F**
-    - **horizontal:** Wechsel zwischen **Funktionsfamilien**
-    - **rechts:** Einordnung in Führungs- oder Mitarbeiterebene
-    - **unten:** Zuordnung der Funktionsfamilien
-  </Card>
-</Columns>
-
-### Beispiel-Matrix: Level (A–F) × Funktionsfamilien
+Lesart der Achsen: **vertikal** der Aufstieg über die Level <Exam>A–F</Exam>, **horizontal** der Wechsel zwischen **Funktionsfamilien**; rechts die Einordnung in Führungs- oder Mitarbeiterebene.
 
 <DataTable
   caption="Funktionsmatrix – Beispielpositionen (HR4 · Folie 9)"
@@ -216,21 +122,21 @@ Zusammenfassung der **Summe aller Anforderungsprofile** eines Unternehmens. Sie 
     { key: 'technik', label: 'Technik' },
     { key: 'marketing', label: 'Marketing' },
     { key: 'vertrieb', label: 'Vertrieb' },
-    { key: 'finanzen', label: 'Finanzen & Controlling' },
+    { key: 'finanzen', label: 'Finanzen & Co.' },
     { key: 'ebene', label: 'Ebene' },
   ]}
   rows={[
-    { level: 'A', consulting: 'Geschäftsführer', personal: 'Geschäftsführer', callcenter: 'Geschäftsführer', technik: 'Geschäftsführer', marketing: 'Geschäftsführer', vertrieb: 'Geschäftsführer', finanzen: 'Geschäftsführer', ebene: 'obere Führungsebene' },
-    { level: 'B', consulting: 'Direktor Consulting', personal: 'Direktor Personal & Recht', callcenter: 'Direktor Kunden', technik: 'Direktor IT', marketing: 'Direktor Marketing', vertrieb: 'Direktor Vertrieb', finanzen: 'Direktor Finanzen & Controlling', ebene: 'obere Führungsebene' },
-    { level: 'C', consulting: 'Leiter Consulting', personal: 'Leiter Personal', callcenter: 'Leiter Kundenbetreuung', technik: 'IT-Leiter', marketing: 'Leiter Marketing', vertrieb: 'Leiter Vertrieb', finanzen: 'Leiter Controlling', ebene: 'mittlere Führungsebene' },
-    { level: 'D', consulting: 'Senior Berater', personal: 'Jurist; Personalreferent', callcenter: 'Senior Kundenbetreuer', technik: 'Senior Softwareentwickler; Senior Systemspezialist', marketing: 'Marketingreferent; Public Relations-Referent', vertrieb: 'Vertriebsspezialist', finanzen: 'Senior Controller', ebene: 'Mitarbeiter (Senior Status)' },
-    { level: 'E', consulting: 'Berater', personal: 'Mitarbeiter Gehaltsabrechnung', callcenter: 'Kundenbetreuer', technik: 'Softwareentwickler', marketing: 'Mitarbeiter Produktmarketing', vertrieb: 'Vertriebsmitarbeiter', finanzen: 'Buchhalter; Controller', ebene: 'Mitarbeiter' },
-    { level: 'F', consulting: 'Beratungsassistenz', personal: 'Personalassistent/in', callcenter: 'Teamassistentin', technik: 'Systembetreuer; Hotline-Mitarbeiter', marketing: 'Marketingassistentin', vertrieb: 'Mitarbeiter Vertriebsunterstützung; Vertriebsassistentin', finanzen: 'Teamassistentin', ebene: 'Mitarbeiter' },
+    { level: 'A', consulting: 'Geschäftsführer', personal: 'Geschäftsführer', callcenter: 'Geschäftsführer', technik: 'Geschäftsführer', marketing: 'Geschäftsführer', vertrieb: 'Geschäftsführer', finanzen: 'Geschäftsführer', ebene: 'obere Führung' },
+    { level: 'B', consulting: 'Direktor Consulting', personal: 'Direktor Personal & Recht', callcenter: 'Direktor Kunden', technik: 'Direktor IT', marketing: 'Direktor Marketing', vertrieb: 'Direktor Vertrieb', finanzen: 'Direktor Finanzen', ebene: 'obere Führung' },
+    { level: 'C', consulting: 'Leiter Consulting', personal: 'Leiter Personal', callcenter: 'Leiter Kundenbetreuung', technik: 'IT-Leiter', marketing: 'Leiter Marketing', vertrieb: 'Leiter Vertrieb', finanzen: 'Leiter Controlling', ebene: 'mittlere Führung' },
+    { level: 'D', consulting: 'Senior Berater', personal: 'Jurist; Personalreferent', callcenter: 'Senior Kundenbetreuer', technik: 'Senior Softwareentwickler', marketing: 'Marketing-/PR-Referent', vertrieb: 'Vertriebsspezialist', finanzen: 'Senior Controller', ebene: 'MA (Senior)' },
+    { level: 'E', consulting: 'Berater', personal: 'MA Gehaltsabrechnung', callcenter: 'Kundenbetreuer', technik: 'Softwareentwickler', marketing: 'MA Produktmarketing', vertrieb: 'Vertriebsmitarbeiter', finanzen: 'Buchhalter; Controller', ebene: 'Mitarbeiter' },
+    { level: 'F', consulting: 'Beratungsassistenz', personal: 'Personalassistent/in', callcenter: 'Teamassistentin', technik: 'Systembetreuer; Hotline', marketing: 'Marketingassistentin', vertrieb: 'Vertriebsassistentin', finanzen: 'Teamassistentin', ebene: 'Mitarbeiter' },
   ]}
 />
 
 <Callout type="info" title="Brücke zur Karriereplanung">
-Die Funktionsmatrix verbindet **Personalplanung, Kompetenzprofile und Karriereentwicklung** und macht sichtbar, welche Entwicklungswege zwischen Funktionen und Leveln bestehen.
+Die Funktionsmatrix verbindet **Personalplanung, Kompetenzprofile und Karriereentwicklung** und zeigt, welche Entwicklungswege zwischen Funktionen und Leveln bestehen.
 </Callout>
 
 </section>
@@ -243,28 +149,16 @@ Die Funktionsmatrix verbindet **Personalplanung, Kompetenzprofile und Karriereen
 Karriere bedeutet **nicht nur disziplinarische Führung**. Neben der klassischen Führungslaufbahn sollten <Exam>gleichwertige Alternativen mit gleicher Verantwortungsstufe</Exam> angeboten werden.
 </Callout>
 
-<Columns count={3}>
-  <Card title="Linien-Management" tone="accent">
-    - klassische **Führungslaufbahn**
-    - disziplinarische Verantwortung
-    - Aufstieg über Hierarchieebenen
-  </Card>
-  <Card title="Fach-Management" tone="purple">
-    - **Fachlaufbahn** als Alternative
-    - Experten- und Spezialistenrollen
-    - gleichwertig zur Führungsebene
-  </Card>
-  <Card title="Projektmanagement" tone="teal">
-    - **Projektlaufbahn**
-    - Verantwortung über Projekte
-    - laufbahnübergreifende Einsätze
-  </Card>
-</Columns>
-
-### Beispiel 1 · Klassisches Karrieremodell
+<CompareCard
+  items={[
+    { tag: 'Linie', title: 'Linien-Management', accent: 'accent', points: ['klassische **Führungslaufbahn**', 'disziplinarische Verantwortung', 'Aufstieg über Hierarchieebenen'] },
+    { tag: 'Fach', title: 'Fach-Management', accent: 'purple', points: ['**Fachlaufbahn** als Alternative', 'Experten- und Spezialistenrollen', 'gleichwertig zur Führungsebene'] },
+    { tag: 'Projekt', title: 'Projektmanagement', accent: 'teal', points: ['**Projektlaufbahn**', 'Verantwortung über Projekte', 'laufbahnübergreifende Einsätze'] },
+  ]}
+/>
 
 <DataTable
-  caption="Klassisches Modell – Leitungsebene vs. Fachlaufbahn (Friedl, V.: Die betriebliche Karriereplanung, 2002)"
+  caption="Klassisches Modell – Leitungsebene vs. Fachlaufbahn (Friedl, 2002)"
   columns={[
     { key: 'rang', label: 'Rangstufe' },
     { key: 'leitung', label: 'Leitungsebene' },
@@ -279,26 +173,7 @@ Karriere bedeutet **nicht nur disziplinarische Führung**. Neben der klassischen
   ]}
 />
 
-<Callout type="merksatz" title="Aussage des Klassikers">
-Leitungsebene und Fachlaufbahn stehen **nebeneinander** — die Fachkarriere wird so als echte Alternative zur Führungslaufbahn sichtbar.
-</Callout>
-
-### Beispiel 2 · Modernes Modell (Rheinmetall)
-
-<Columns count={2}>
-  <Card title="Hierarchieebenen (Spitze → Basis)" tone="accent">
-    1. **Executives** (Spitze)
-    2. Top Management
-    3. Senior Management
-    4. Management
-    5. **Professionals** (breite Basis)
-  </Card>
-  <Card title="Drei parallele Laufbahnen" tone="purple">
-    - Fachkräfte
-    - Führungskräfte
-    - Projektmanagement
-  </Card>
-</Columns>
+Das moderne Modell (Rheinmetall) staffelt fünf Hierarchieebenen — **Executives**, Top Management, Senior Management, Management, **Professionals** (Basis) — und führt drei parallele Laufbahnen darüber hinweg: Fachkräfte, Führungskräfte, Projektmanagement.
 
 <Callout type="info" title="Kerngedanke">
 Karrierepfade verlaufen **parallel**: <Exam>Karriere = Laufbahn + Hierarchieebene</Exam>. Fach-, Führungs- und Projektlaufbahn werden über die Hierarchieebenen hinweg gedacht.
@@ -311,26 +186,8 @@ Karrierepfade verlaufen **parallel**: <Exam>Karriere = Laufbahn + Hierarchieeben
 ## Stellenbeschreibung
 
 <DefinitionBox term="Stellenbeschreibung" source="HR4 · Folie 13–14">
-Altbewährtes Instrument der Personalplanung; zugleich **Führungs- und Organisationsinstrument**. Sie wird **funktionsbezogen und mitarbeiterunabhängig** (unabhängig vom aktuellen Stelleninhaber) erstellt.
+Altbewährtes **Führungs- und Organisationsinstrument**, erstellt **funktionsbezogen und mitarbeiterunabhängig** (unabhängig vom aktuellen Stelleninhaber). Sie grenzt Tätigkeits- und Verantwortungsbereich verbindlich ab und ist <Exam>kein fester Bestandteil des Arbeitsvertrags</Exam>, damit sie jederzeit änderbar bleibt.
 </DefinitionBox>
-
-### Nutzen einer Stellenbeschreibung
-
-<Columns count={2}>
-  <Card title="Was sie leistet" tone="positive">
-    - Überblick über Befugnisse, Art und Umfang der Anforderungen
-    - verbindliche Abgrenzung von **Tätigkeits- und Verantwortungsbereich**
-    - Einordnung des Arbeitsplatzes in die betriebliche Organisation
-    - ergänzt Kompetenzprofile um **diskriminierungsfreie** Informationen
-  </Card>
-  <Card title="Was beachtet werden muss" tone="warning">
-    - legt Aufgaben **funktionsbezogen und mitarbeiterunabhängig** fest
-    - erfolgt unabhängig vom aktuellen Stelleninhaber
-    - <Exam>kein fester Bestandteil des Arbeitsvertrags</Exam>, damit sie jederzeit änderbar bleibt
-  </Card>
-</Columns>
-
-### Vor- und Nachteile
 
 <CompareCard
   items={[
@@ -338,84 +195,56 @@ Altbewährtes Instrument der Personalplanung; zugleich **Führungs- und Organisa
       tag: 'Pro',
       title: 'Vorteile',
       accent: 'positive',
-      points: [
-        'klare Abgrenzung von Aufgaben und Kompetenzen',
-        'festgelegte Vertretung und Vollmachten',
-        'gute Grundlage für **Personalbeschaffung, -beurteilung und -entwicklung**',
-      ],
+      points: ['klare Abgrenzung von Aufgaben und Kompetenzen', 'festgelegte Vertretung und Vollmachten', 'gute Grundlage für **Beschaffung, Beurteilung und Entwicklung**'],
     },
     {
       tag: 'Contra',
       title: 'Nachteile',
       accent: 'negative',
-      points: [
-        'großer Arbeitsaufwand bei ständiger Aktualisierung',
-        'starre Aufgabenbestimmung – mögliche Zusatzaufgaben müssen nicht erfüllt werden',
-        'geringe Flexibilität bei Änderungen',
-      ],
+      points: ['großer Aufwand bei ständiger Aktualisierung', 'starre Aufgabenbestimmung – Zusatzaufgaben nicht abgedeckt', 'geringe Flexibilität bei Änderungen'],
     },
   ]}
 />
 
-### Beispielstruktur einer Stellenbeschreibung
+<DataTable
+  caption="Beispielstruktur einer Stellenbeschreibung"
+  columns={[
+    { key: 'abschnitt', label: 'Abschnitt' },
+    { key: 'inhalt', label: 'Inhalt' },
+  ]}
+  rows={[
+    { abschnitt: 'Kopfdaten & Arbeitszeit', inhalt: 'Stellenbezeichnung, Bereich/Abteilung, Kostenstelle, Arbeitszeit (z.B. Vollzeit 40 Std./Woche)' },
+    { abschnitt: 'Ziel & Aufgaben', inhalt: 'Ziel der Stelle, Aufgaben-/Verantwortungs-/Kompetenzbereich, markt- und zielgruppenorientierte Ausrichtung' },
+    { abschnitt: 'Organisation & Formales', inhalt: 'Unterstellung, Vertretung und Vollmacht, Unterschriften (Stelleninhaber, Vorgesetzte/r, Personalleitung)' },
+  ]}
+/>
 
-<Callout type="info" title="Aufbau (Beispiel International Sales Manager)">
-Eine Stellenbeschreibung ist **mehr als eine Aufgabenliste**: Sie verbindet Positionsdaten, Arbeitszeit, Ziele, Aufgaben, Verantwortung, Unterstellung, Vertretung, Vollmacht und formale Bestätigung.
-</Callout>
+Beide Beispiele folgen demselben Aufbauschema, setzen aber andere Schwerpunkte:
 
-<Columns count={3}>
-  <Card title="Kopfdaten & Arbeitszeit" tone="accent">
-    - Stellenbezeichnung, Bereich/Abteilung
-    - Kostenstelle
-    - Arbeitszeit (z.B. Vollzeit 40 Std./Woche)
-  </Card>
-  <Card title="Ziel & Aufgaben" tone="purple">
-    - Ziel der Stelle (z.B. Umsatz-/Gewinnmaximierung)
-    - Aufgaben-, Verantwortungs- und Kompetenzbereich
-    - markt-/zielgruppenorientierte Ausrichtung
-  </Card>
-  <Card title="Organisation & Formales" tone="teal">
-    - Unterstellung (z.B. Geschäftsführer)
-    - Vertretung und Vollmacht (z.B. i.A.)
-    - Unterschriften: Stelleninhaber, Vorgesetzte/r, Personalleitung
-  </Card>
-</Columns>
-
-#### Beispielvergleich der sichtbaren Schwerpunkte (Folie 16–17)
-
-<Columns count={2}>
-  <Card title="International Sales Manager" tone="accent" compact>
-    **Bereich:** Vertrieb / Export
-
-    - Vertriebsentwicklung
-    - Marktbeobachtung
-    - Verkaufsstrategien
-    - Aufbau von Exportstrukturen
-    - Umsatz-/Ergebnisverantwortung
-    - Vertriebscontrolling
-  </Card>
-  <Card title="Produktmanager/in" tone="teal" compact>
-    **Bereich:** Marketing & Produktmanagement
-
-    - Pflege des Produktinformationssystems (PIM)
-    - Dokumentation
-    - Marktanalysen
-    - Produktpräsentationen
-    - Schnittstellenunterstützung
-  </Card>
-</Columns>
-
-<Callout type="info" title="Gleiche Logik, anderer Schwerpunkt">
-Beide folgen demselben **Aufbauschema**; beim Produktmanager liegt der Fokus stärker auf **Produktdaten, Dokumentation, Marktanalyse und Präsentation**.
-</Callout>
+<CompareCard
+  items={[
+    {
+      tag: 'Vertrieb',
+      title: 'International Sales Manager',
+      subtitle: 'Vertrieb / Export',
+      accent: 'accent',
+      points: ['Vertriebsentwicklung, Marktbeobachtung', 'Verkaufsstrategien, Aufbau von Exportstrukturen', 'Umsatz-/Ergebnisverantwortung, Vertriebscontrolling'],
+    },
+    {
+      tag: 'Marketing',
+      title: 'Produktmanager/in',
+      subtitle: 'Marketing & Produktmanagement',
+      accent: 'teal',
+      points: ['Pflege des Produktinformationssystems (PIM), Dokumentation', 'Marktanalysen, Produktpräsentationen', 'Schnittstellenunterstützung'],
+    },
+  ]}
+/>
 
 </section>
 
 <section id="personalbesetzung-und-arbeitsmarkt">
 
 ## Personalbesetzung und Arbeitsmarktforschung
-
-### Prozessschema zur Besetzung einer konkreten Position
 
 <Diagram
   title="Besetzungsprozess – zentraler Verzweigungspunkt: Entscheidung Beschaffungsweg"
@@ -429,7 +258,7 @@ Beide folgen demselben **Aufbauschema**; beim Produktmanager liegt der Fokus st�
   ENDE[Ende der Vorbereitungsaufgaben]
   INT[Interne Stellenausschreibung]
   BV[Befoerderung bzw. Versetzung]
-  AW["Auswahl geeigneter<br/>Beschaffungswege<br/>im Unternehmen"]
+  AW["Auswahl geeigneter<br/>Beschaffungswege"]
   P --> A --> G --> E
   E -->|extern| EXT --> ENDE
   E -->|intern| INT --> BV --> AW
@@ -437,87 +266,30 @@ Beide folgen demselben **Aufbauschema**; beim Produktmanager liegt der Fokus st�
 />
 
 <Callout type="examfocus" title="Zentraler Entscheidungspunkt">
-Die <Exam>Entscheidung über den Beschaffungsweg (intern oder extern)</Exam> ist der **zentrale Verzweigungspunkt**. Vorher werden Bedarf und Genehmigung geklärt; danach werden je nach Beschaffungsweg passende Maßnahmen gewählt. Auf Folie 24 ist genau dieser Diamant rot hervorgehoben.
+Die <Exam>Entscheidung über den Beschaffungsweg (intern oder extern)</Exam> ist der **zentrale Verzweigungspunkt** — auf Folie 24 rot hervorgehoben. Vorher werden Bedarf und Genehmigung geklärt; danach folgen die zentralen Entscheidungen über **Beschaffungswege, Beschaffungsmedien und Auswahlmethoden** (unterstützt durch Formblätter: Personalanforderung, interne Ausschreibung, Beförderung, Versetzung).
 </Callout>
-
-<Columns count={2}>
-  <Card title="Zentrale Entscheidungen (Folie 19)" tone="accent">
-    - **Beschaffungswege**
-    - **Beschaffungsmedien**
-    - **Auswahlmethoden**
-  </Card>
-  <Card title="Hilfsmittel / Formblätter (Folie 18)" tone="neutral">
-    - Personalanforderung (HI888237)
-    - Interne Stellenausschreibung (HI708535)
-    - Beförderung (HI906805)
-    - Versetzung (HI875189 / HI585113)
-  </Card>
-</Columns>
-
-### Arbeitsmarktforschung: Beschaffungspotential
 
 <CompareCard
   items={[
-    {
-      tag: 'offen',
-      title: 'Offenes Beschaffungspotential',
-      subtitle: 'verfügbar oder suchend',
-      accent: 'accent',
-      points: [
-        'Arbeitslose',
-        'arbeitsplatzsuchende Beschäftigte',
-        'neu Eintretende',
-      ],
-    },
-    {
-      tag: 'latent',
-      title: 'Latentes Beschaffungspotential',
-      subtitle: 'noch zu aktivieren',
-      accent: 'purple',
-      points: [
-        'Abwerben von Arbeitskräften anderer Firmen',
-        'Steigerung der Erwerbstätigkeit',
-      ],
-    },
+    { tag: 'offen', title: 'Offenes Beschaffungspotential', subtitle: 'verfügbar oder suchend', accent: 'accent', points: ['Arbeitslose', 'arbeitsplatzsuchende Beschäftigte', 'neu Eintretende'] },
+    { tag: 'latent', title: 'Latentes Beschaffungspotential', subtitle: 'noch zu aktivieren', accent: 'purple', points: ['Abwerben von Arbeitskräften anderer Firmen', 'Steigerung der Erwerbstätigkeit'] },
   ]}
 />
 
-### Innerbetriebliche vs. außerbetriebliche Analyse
-
-<Columns count={2}>
-  <Card title="Innerbetriebliche Analyse" tone="teal">
-    - Erforschung des Mitarbeiterpotenzials (Personalverwaltung, -planung, -entwicklung)
-    - **Herkunft räumlich:** innerhalb des Betriebs, andere Betriebsteile, Gesamtunternehmen/Konzern
-    - **Herkunft inhaltlich:** gleicher Tätigkeitsbereich oder anderer Tätigkeitsbereich
-  </Card>
-  <Card title="Außerbetriebliche Analyse" tone="orange">
-    - **Angebot:** Alter, Qualifikation
-    - **Nachfrage:** Branchenverteilung, Berufsverteilung
-    - **Entwicklung:** Qualifikationstrends, Branchen- und Berufsbildentwicklung
-  </Card>
-</Columns>
-
-### Abhängigkeiten des Arbeitsmarktes
-
-<Columns count={3}>
-  <Card title="Markt- und Konjunkturlage" tone="accent" compact>
-    - strukturelle Veränderungen
-    - konjunkturelle Schwankungen
-    - saisonale Schwankungen
-  </Card>
-  <Card title="Bevölkerung & Beschäftigung" tone="teal" compact>
-    - Bevölkerungsstruktur
-    - Beschäftigungsstruktur
-  </Card>
-  <Card title="Staatspolitik" tone="purple" compact>
-    - Bildungspolitik
-    - Sozialpolitik
-    - Wirtschaftspolitik
-  </Card>
-</Columns>
+<DataTable
+  caption="Arbeitsmarktanalyse: innerbetrieblich vs. außerbetrieblich"
+  columns={[
+    { key: 'art', label: 'Analyse' },
+    { key: 'inhalt', label: 'Inhalt' },
+  ]}
+  rows={[
+    { art: 'Innerbetrieblich', inhalt: 'Mitarbeiterpotenzial; räumlich: Betrieb/Betriebsteile/Konzern; inhaltlich: gleicher oder anderer Tätigkeitsbereich' },
+    { art: 'Außerbetrieblich', inhalt: 'Angebot (Alter, Qualifikation); Nachfrage (Branchen-/Berufsverteilung); Entwicklung (Qualifikations- und Berufsbildtrends)' },
+  ]}
+/>
 
 <Callout type="merksatz" title="Kein isolierter Markt">
-Der Arbeitsmarkt wird durch langfristige **Strukturveränderungen, Konjunktur, Saison, Demografie, Beschäftigungsmuster und politische Rahmenbedingungen** beeinflusst.
+Der Arbeitsmarkt hängt von **Markt- und Konjunkturlage** (Struktur-, Konjunktur-, Saisonschwankungen), von **Bevölkerungs- und Beschäftigungsstruktur** sowie von der **Staatspolitik** (Bildungs-, Sozial-, Wirtschaftspolitik) ab.
 </Callout>
 
 <SourceNote>Human Resources · Kapitel 4 · Operative Personalplanung · Folien 1–25</SourceNote>

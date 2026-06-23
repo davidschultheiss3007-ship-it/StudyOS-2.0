@@ -2,36 +2,21 @@
 
 ## Einordnung, Definition und Ziele
 
-<Diagram
-  title="Finanzcontrolling: die drei Säulen (Folie 3)"
-  source="Asset Management · Folie 233"
-  height={240}
-  chart={`flowchart TD
-  FC[Finanzcontrolling]
-  PA[Performanceanalyse]
-  RA[Risikoanalyse]
-  RE[Reporting]
-  FC --> PA
-  FC --> RA
-  FC --> RE`}
+<DataTable
+  caption="Die drei Säulen des Finanzcontrollings"
+  columns={[
+    { key: 'saeule', label: 'Säule' },
+    { key: 'aufgabe', label: 'Aufgabe' },
+    { key: 'kontext', label: 'Instrumente und Adressaten' },
+  ]}
+  rows={[
+    { saeule: 'Performanceanalyse', aufgabe: 'Renditekontrolle und -steuerung des gesamten Portfolios oder einzelner Teile inklusive Benchmarking', kontext: 'Intern: selbstgesteuertes Portfolio; extern: Spezialfonds' },
+    { saeule: 'Risikoanalyse', aufgabe: 'Risikokontrolle und -steuerung des Gesamtportfolios', kontext: 'Limit-, Derivate- und Einhaltungskontrollen; Insurance-Strategien, ALM und Stress Tests' },
+    { saeule: 'Reporting', aufgabe: 'Interne Performance-, Risiko-, Bestands- und Spezialberichte', kontext: 'Extern: BaFin pflichtgemäß, GDV vereinbarungsgemäß, Analysten und Presse freiwillig' },
+  ]}
 />
 
-<Columns count={3}>
-  <Card title="Performanceanalyse" tone="accent">
-    - Renditekontrolle und -steuerung des gesamten oder von Teilen des Portfolios inkl. **Benchmarking**
-    - intern: selbstgesteuertes PF
-    - extern: (Spezial)fonds
-  </Card>
-  <Card title="Risikoanalyse" tone="teal">
-    - Risikokontrolle und -steuerung des Gesamtportfolios
-    - Limit-, Derivate-, Einhaltungskontrollen
-    - Insurance-Strategien, Asset-Liability-Management, Stress Tests
-  </Card>
-  <Card title="Reporting" tone="purple">
-    - **intern:** Performance-, Risiko-, Bestands-, Spezialberichte
-    - **extern:** BaFin (pflichtgemäß), GDV (vereinbarungsgem.), Analysten & Presse (freiwillig)
-  </Card>
-</Columns>
+<SourceNote>Asset Management · Folie 233</SourceNote>
 
 <DefinitionBox term="Performanceanalyse" source="Asset Management · Folie 234">
 Die Performanceanalyse ermöglicht die **Messung** und leistungsorientierte **Bewertung** des Kapitalanlageerfolges eines (institutionellen) Investors.
@@ -39,40 +24,27 @@ Die Performanceanalyse ermöglicht die **Messung** und leistungsorientierte **Be
 
 ### Messung: Was? · Wer? · Warum?
 
-<Columns count={3}>
-  <Card title="Was? (Messobjekte)" tone="accent">
-    - Rendite
-    - Risiko
-    - **risikoadjustierte Rendite**
-  </Card>
-  <Card title="Wer? (Objekt / Subjekt)" tone="neutral">
-    - **Objekt:** gesamtes oder Teile des Portfolios
-    - intern = Versicherungsportfolio (Gesamtportfolio)
-    - extern = Spezial- und Publikumsfonds (Mandate)
-    - **Subjekt:** Portfoliomanager
-  </Card>
-  <Card title="Warum? (Zweck)" tone="neutral">
-    - Erfolgskontrolle
-    - Steuerung
-  </Card>
-</Columns>
+<FactGrid columns={3} items={[
+  { label: 'Was wird gemessen?', value: 'Rendite, Risiko und **risikoadjustierte Rendite**' },
+  { label: 'Wer oder was wird bewertet?', value: '**Objekt:** Gesamtportfolio oder Teile davon, intern Versicherungsportfolio, extern Spezial- und Publikumsfonds. **Subjekt:** Portfoliomanager' },
+  { label: 'Wozu?', value: 'Erfolgskontrolle und Steuerung' },
+]} />
 
 ### Vier Funktionen der Performanceanalyse (Folie 5)
 
-<Columns count={2}>
-  <Card title="Kontrollfunktion" tone="accent">
-    - Messung des Anlageerfolges in Relation zur **Benchmark**
-  </Card>
-  <Card title="Steuerungsfunktion" tone="teal">
-    - Eingreifen in die **Asset Allocation** bei Fehlentwicklungen
-  </Card>
-  <Card title="Beurteilungs- & Anreizfunktion" tone="purple">
-    - Bewertung und leistungsgerechte **Entlohnung** des Portfoliomanagers
-  </Card>
-  <Card title="Marketingfunktion" tone="orange">
-    - Vergleich mit den **Wettbewerbern** und Kundenwerbung
-  </Card>
-</Columns>
+<DataTable
+  caption="Vier Funktionen der Performanceanalyse"
+  columns={[
+    { key: 'funktion', label: 'Funktion' },
+    { key: 'nutzen', label: 'Konkreter Nutzen' },
+  ]}
+  rows={[
+    { funktion: 'Kontrollfunktion', nutzen: 'Messung des Anlageerfolges in Relation zur Benchmark' },
+    { funktion: 'Steuerungsfunktion', nutzen: 'Eingreifen in die Asset Allocation bei Fehlentwicklungen' },
+    { funktion: 'Beurteilungs- und Anreizfunktion', nutzen: 'Bewertung und leistungsgerechte Entlohnung des Portfoliomanagers' },
+    { funktion: 'Marketingfunktion', nutzen: 'Vergleich mit Wettbewerbern und Kundenwerbung' },
+  ]}
+/>
 
 </section>
 

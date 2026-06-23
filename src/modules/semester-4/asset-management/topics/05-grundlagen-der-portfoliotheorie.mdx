@@ -427,20 +427,19 @@ Die Endpunkte der Effizienzgrenze (hier Coca-Cola und Intel) sind für **alle** 
 
 ## Gemeinsames vs. unabhängiges Risiko
 
-<Columns count={3}>
-  <Card title="Gemeinsames Risiko" tone="negative">
-    - Risiko, das **perfekt korreliert** ist
-    - betrifft **alle** Wertpapiere
-  </Card>
-  <Card title="Unabhängiges Risiko" tone="positive">
-    - Risiko, das **unkorreliert** ist
-    - betrifft eine **bestimmte** Sicherheit
-  </Card>
-  <Card title="Diversifikation" tone="accent">
-    - **Mittelwertbildung** aus unabhängigen Risiken
-    - wirkt in einem **großen** Portfolio
-  </Card>
-</Columns>
+<DataTable
+  caption="Risikotyp und Diversifizierbarkeit"
+  columns={[
+    { key: 'typ', label: 'Begriff' },
+    { key: 'beziehung', label: 'Beziehung zwischen Wertpapieren' },
+    { key: 'wirkung', label: 'Wirkung im Portfolio' },
+  ]}
+  rows={[
+    { typ: 'Gemeinsames Risiko', beziehung: 'Perfekt korreliert; betrifft alle Wertpapiere', wirkung: 'Bleibt auch in einem großen Portfolio bestehen' },
+    { typ: 'Unabhängiges Risiko', beziehung: 'Unkorreliert; betrifft eine bestimmte Sicherheit', wirkung: 'Kann durch Mittelwertbildung reduziert werden' },
+    { typ: 'Diversifikation', beziehung: 'Bündelt viele unabhängige Risiken', wirkung: 'Wirkt mit wachsender Portfoliogröße' },
+  ]}
+/>
 
 ### Versicherungsbeispiel: Einbruch vs. Erdbeben
 
@@ -650,20 +649,11 @@ Einsetzen der Beispieldaten (σ_A = 0,14 · σ_B = 0,11 · ρ = 0,5):
 James Tobin (1918–2002) erweiterte 1958 den Markowitz-Ansatz (1952) um die Möglichkeit der **sicheren Geldanlage**.
 </DefinitionBox>
 
-<Columns count={3}>
-  <Card title="Annahmen" tone="accent">
-    - **vollkommener** Kapitalmarkt
-    - Kapital lässt sich aufnehmen **und** anlegen
-  </Card>
-  <Card title="Risikoloses Asset F" tone="positive">
-    - Zinssatz r_f
-    - **σ_f = 0**
-  </Card>
-  <Card title="Risikobehaftetes Asset P" tone="warning">
-    - μ_P und σ_P
-    - Aufteilung: Anteil **x** in P, **(1 − x)** in F
-  </Card>
-</Columns>
+<FactGrid columns={3} items={[
+  { label: 'Kapitalmarkt', value: '**Vollkommen**; Kapital kann aufgenommen und angelegt werden' },
+  { label: 'Risikoloses Asset F', value: 'Zinssatz r_f und **σ_f = 0**' },
+  { label: 'Riskantes Asset P', value: 'μ_P und σ_P; Anteil **x** in P, **(1 − x)** in F' },
+]} />
 
 <Formula
   display
@@ -689,19 +679,19 @@ James Tobin (1918–2002) erweiterte 1958 den Markowitz-Ansatz (1952) um die Mö
 Die Steigung **b = (μ_P − r_f)/σ_P** setzt die **Überrendite** ins Verhältnis zum eingegangenen Risiko — <Exam>je höher, desto besser</Exam>.
 </Callout>
 
-<Columns count={3}>
-  <Card title="x unter 100 %" tone="positive">
-    - Mischung aus **risikoloser Anlage + P**
-    - Punkte **links** von P auf der CML
-  </Card>
-  <Card title="x = 100 % (= P)" tone="accent">
-    - vollständig in das **riskante** Portfolio investiert
-  </Card>
-  <Card title="x über 100 %" tone="warning">
-    - **kreditfinanzierter** Kauf von P (Darlehensaufnahme)
-    - Punkte **rechts** von P (z. B. x = 150 %, 200 %)
-  </Card>
-</Columns>
+<DataTable
+  caption="Position auf der Kapitalmarktlinie in Abhängigkeit von x"
+  columns={[
+    { key: 'x', label: 'Anteil x in P' },
+    { key: 'finanzierung', label: 'Finanzierung' },
+    { key: 'position', label: 'Position auf der CML' },
+  ]}
+  rows={[
+    { x: 'unter 100 %', finanzierung: 'Mischung aus risikoloser Anlage und P', position: 'Links von P' },
+    { x: '100 %', finanzierung: 'Vollständig in das riskante Portfolio P investiert', position: 'P' },
+    { x: 'über 100 %', finanzierung: 'Kreditfinanzierter Kauf von P, zum Beispiel x = 150 % oder 200 %', position: 'Rechts von P' },
+  ]}
+/>
 
 <DataChart
   type="scatter"

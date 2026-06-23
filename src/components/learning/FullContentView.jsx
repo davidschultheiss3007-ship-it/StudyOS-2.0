@@ -5,17 +5,19 @@ import { SectionNav } from '../navigation/SectionNav.jsx';
 import { mdxComponents } from './visuals/index.jsx';
 import './FullContentView.css';
 
-export function FullContentView({ topic }) {
+export function FullContentView({ topic, moduleId }) {
+  const moduleClass = moduleId ? ` full-content-view--${moduleId}` : '';
+
   if (!topic.sections?.length) {
     return (
-      <div className="full-content-view topic-detail full-content-view--empty">
+      <div className={`full-content-view topic-detail full-content-view--empty${moduleClass}`}>
         <p>Kein Inhalt verfügbar.</p>
       </div>
     );
   }
 
   return (
-    <div className="full-content-view topic-detail">
+    <div className={`full-content-view topic-detail${moduleClass}`}>
       <SectionNav sections={topic.sections} />
 
       <div className="full-content-view__content topic-content">

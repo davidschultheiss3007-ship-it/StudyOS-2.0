@@ -21,6 +21,7 @@ export function Topic() {
   const topicContent = getTopicById(moduleId, topicId);
   const topicMeta = mod?.topics?.find(topic => topic.id === topicId) ?? null;
   const topic = topicContent ?? topicMeta;
+  const displayTitle = topic?.title?.replaceAll(' · ', '\u00a0· ') ?? '';
   const done = doneState.topicId === topicId ? doneState.value : isTopicDone(topicId);
 
   useEffect(() => {
@@ -72,7 +73,7 @@ export function Topic() {
         ]} />
 
         <div className="topic-page__title-row">
-          <h1 className="topic-page__title">{topic.title}</h1>
+          <h1 className="topic-page__title">{displayTitle}</h1>
           <div className="topic-page__title-actions">
             <Button
               variant={done && hasContent ? 'success' : 'secondary'}
@@ -110,7 +111,7 @@ export function Topic() {
 
       <div className="topic-page__content">
         {hasContent ? (
-          <FullContentView key={`${moduleId}-${topicId}`} topic={topic} />
+          <FullContentView key={`${moduleId}-${topicId}`} topic={topic} moduleId={moduleId} />
         ) : (
           <div className="topic-page__placeholder">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
